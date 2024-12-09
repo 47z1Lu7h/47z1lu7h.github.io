@@ -13,4 +13,9 @@ children:
   - title: divider
   - title: blog
     permalink: /blog/
----
+  - title: hackthebox
+    permalink: 
+  - title: divider
+  - title: pentest
+    permalink: /blog/
+------
