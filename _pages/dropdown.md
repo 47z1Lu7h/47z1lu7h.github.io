@@ -7,8 +7,8 @@ dropdown: true
 children:
   - title: divider
   - title: divider
-  - title: News
-    permalink: /news/
+  - title: nothing to sea here at the moment :/
+  #    permalink: /news/
   - title: divider
   - title: divider
 ---
