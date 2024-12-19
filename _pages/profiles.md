@@ -19,7 +19,7 @@ profiles:
       <p>Your City, State 12345</p>
   - align: left
     image: HTB.png
-    content: about_einstein.md
+    content: 
     image_circular: false # crops the image to make it circular
     more_info: >
       <p>555 your office number</p>
