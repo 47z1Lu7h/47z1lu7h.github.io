@@ -190,12 +190,12 @@ collections:
     defaults:
       layout: post
     output: true
-    permalink: /:collection/:title/
+    permalink: /:collection/:categories/:title/:name/
   pentest:
     defaults:
       layout: post
     output: true
-    permalink: /:collection/:categories/:title/
+    permalink: /:collection/:categories/:title/:name/
     lsi: true # produce an index for related posts
   awake:
     defaults:
@@ -305,8 +305,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["images", "links", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services", "sample-posts", "work", "light side", "dark side"] # these categories will be displayed on the front page of your blog
+display_tags: ["images"] # these tags will be displayed on the front page of your blog
+display_categories: ["light side", "dark side"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
