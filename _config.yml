@@ -159,16 +159,6 @@ giscus:
   lang: en, es
 
 # Disqus comments (DEPRECATED)
-jekyll-disqus:
-  shortname: 47z1lu7h # put your disqus shortname
-  id_prefix:
-  post_selector: "include.post"
-  ui:
-    layouts:
-      - "post"
-  counter:
-    layouts:
-      - "all"
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -250,10 +240,6 @@ exclude:
   - docker-compose-slim.yml
   - Gemfile
   - Gemfile.lock
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
   - LICENSE
   - lighthouse_results/
   - package.json
@@ -284,7 +270,6 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
-  - disqus-for-jekyll
 
 # Sitemap settings
 defaults:
