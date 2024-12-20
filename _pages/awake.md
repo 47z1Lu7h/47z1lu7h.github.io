@@ -5,7 +5,7 @@ permalink: /awake/
 description: A growing collection of videos of topics that make yo think.
 nav: true
 nav_order: 3
-display_categories: [light side, dark side]
+display_categories: [light_side, dark_side]
 horizontal: true
 ---
 

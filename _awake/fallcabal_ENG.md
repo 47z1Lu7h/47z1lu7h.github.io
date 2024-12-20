@@ -4,7 +4,7 @@ title: the Fall of Cabal - ENG
 description: Documentary video made by Janet Ossebaard
 img: assets/img/fallCabal/fallCabal-1.png
 importance: 1
-category: "dark side"
+category: dark_side
 giscus_comments: true
 thumbail: assets/img/fallCabal/fallCabalLogo.png
 toc:

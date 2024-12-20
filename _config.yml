@@ -297,7 +297,7 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: ["formatting", "code"] # these tags will be displayed on the front page of your blog
-display_categories: ["light side", "dark side"] # these categories will be displayed on the front page of your blog
+display_categories: ["light_side", "dark_side"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

@@ -4,7 +4,7 @@ title: Mas allá del 2012
 description: Documental Mas allá del 2012
 img: assets/img/awake/VictorBrossah.jpg
 importance: 1
-category: "light side"
+category: light_side
 thumbnail: assets/img/awake/corazon.jpg
 giscus_comments: true
 related_posts: false
