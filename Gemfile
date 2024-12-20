@@ -26,3 +26,5 @@ group :other_plugins do
     gem 'feedjira'
     gem 'httparty'
 end
+
+gem "jekyll-disqus-plugin", "~> 1.0", :group => :jekyll_plugins
