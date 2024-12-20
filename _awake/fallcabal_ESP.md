@@ -7,6 +7,7 @@ importance: 1
 tag: "dark side"
 category: "dark side"
 giscus_comments: true
+comments: true
 thumbail: assets/img/fallCabal/fallCabalLogo.png
 toc:
   beginning: true

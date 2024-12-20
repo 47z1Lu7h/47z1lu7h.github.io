@@ -159,7 +159,8 @@ giscus:
   lang: en, es
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: 47z1lu7h # put your disqus shortname
+disqus:
+  shortname: 47z1lu7h # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -233,7 +234,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages"]
+include: ["_pages", "_awake", "_pentest"]
 exclude:
   - bin/
   - Dockerfile
@@ -271,6 +272,7 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+  - disqus-for-jekyll
 
 # Sitemap settings
 defaults:
