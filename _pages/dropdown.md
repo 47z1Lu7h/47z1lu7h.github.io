@@ -11,12 +11,12 @@ children:
     permalink: /news/
   - title: divider
   - title: divider
-  - title: profiles
+  - title: prof
     permalink: /people/
   - title: divider
   - title: divider
   - title: Cv
-    permalink: /c/
+    permalink: /cv/
   - title: divider
   - title: divider
 ---

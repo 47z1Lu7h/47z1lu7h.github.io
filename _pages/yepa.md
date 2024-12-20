@@ -1,7 +1,7 @@
 ---
 layout: profiles
 permalink: /people/
-title: peñaaa
+title: p3ñ4
 description: members of the lab
 nav: true
 nav_order: 7
@@ -10,7 +10,7 @@ profiles:
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
   - align: right
-    image: assets/img/47z1D0wn.jpg
+    image: 47z1D0wn.jpg
     content:
     image_circular: true # crops the image to make it circular
     more_info: >
