@@ -9,17 +9,24 @@ tabs: true
 ---
 
 # Hack The Box
+
+ <div class="row mt-3">
+    <div class="col-lg mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/pentest/h4Ck/Boxes.gif" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <hr>
 
 The Hack The Box platform provides a wealth of challenges - in the form of virtual machines - simulating real-world security issues and vulnerabilities that are constantly provided and updated by the community. Some of them simulate real-world scenarios, and some lean more toward a CTF-style of approach.
 
 ### Machines
+
 <hr>
 Machines are instances of vulnerable virtual machines. These are virtualized services, virtualized operating systems, and virtualized hardware that all run on our servers. Machines can be Easy, Medium, Hard or Insane and can host different Operating Systems; Linux, Windows, FreeBSD, and more.
 
 Whether you’re a new player or a veteran in Hack The Box, this guide will give you some useful tips and guidance on how to play Machines in the new platform design.
 
-Here I leave a video doing the machine 'Broker', an easy machine just retired form the actives and free to play
+- Here I leave a video doing the machine 'Broker', an easy machine just retired form the actives and free to play
 
 <hr>
 <div class="vidjet-video-wrapper" style="width:100%; padding-bottom: 45%; position: relative; overflow: hidden; height: auto; margin: 0px auto; " > 
