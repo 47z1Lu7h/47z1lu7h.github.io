@@ -2,11 +2,10 @@
 layout: post
 title: the Fall of Cabal - ENG
 description: Documentary video made by Janet Ossebaard
-img:
+img: assets/img/fallCabal/fallCabal-1.png
 importance: 1
 category: dark_side
-giscus_comments: true
-thumbail: assets/img/fallCabal/fallCabalLogo.png
+comments: true
 toc:
   beginning: true
 ---
@@ -56,7 +55,7 @@ All we have to do is be patient, watch everything unfold, trust the plan, do wha
 
 <hr>
 
-## Part 3 - ## The Alien Invasion
+## Part 3 - The Alien Invasion
 
 <div class="container-xl">
     {% include video.liquid path="assets/video/fallCabal/ENG/part3.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
