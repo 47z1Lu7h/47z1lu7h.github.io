@@ -6,7 +6,7 @@ img: assets/img/awake/VictorBrossah.jpg
 importance: 1
 category: light_side
 thumbnail: assets/img/awake/corazon.jpg
-giscus_comments: true
+comments: true
 related_posts: false
 related_publications: false
 ---

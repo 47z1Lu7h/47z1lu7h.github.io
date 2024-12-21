@@ -1,23 +1,26 @@
 ---
 layout: post
-title: how_to_play_hackthebox
-date: 2024-05-01 00:32:13
-description: how_to_play_hachthebox.com
+title: how to play hackthebox.com
+date: 2024-05-01
+description: write up machine broker
 tags: hackthebox
 categories: pentest
 tabs: true
+coments: true
 ---
 
 # Hack The Box
 
+<hr>
  <div class="row mt-3">
     <div class="col-lg mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/pentest/h4Ck/Boxes.gif" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<hr>
 
 The Hack The Box platform provides a wealth of challenges - in the form of virtual machines - simulating real-world security issues and vulnerabilities that are constantly provided and updated by the community. Some of them simulate real-world scenarios, and some lean more toward a CTF-style of approach.
+
+<hr>
 
 ### Machines
 

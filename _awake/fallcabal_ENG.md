@@ -2,7 +2,7 @@
 layout: post
 title: the Fall of Cabal - ENG
 description: Documentary video made by Janet Ossebaard
-img: assets/img/fallCabal/fallCabal-1.png
+img:
 importance: 1
 category: dark_side
 giscus_comments: true
@@ -13,7 +13,7 @@ toc:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/fallCabal/fallCabal-1.png" title="" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/fallCabal/Janet-Ossebaard-The-Fall-of-the-Cabal.jpg" title="" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
