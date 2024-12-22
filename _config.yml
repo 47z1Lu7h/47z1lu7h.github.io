@@ -296,7 +296,7 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["formatting", "code"] # these tags will be displayed on the front page of your blog
+display_tags: ["formatting", "code", "pentes", "hackthebox"] # these tags will be displayed on the front page of your blog
 display_categories: ["light_side", "dark_side"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
@@ -376,7 +376,7 @@ enable_publication_thumbnails: true
 
 # These are the defaults
 external_links:
-  enabled: true
+  enabled: false
   rel: external nofollow noopener
   target: _blank
   exclude:

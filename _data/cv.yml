@@ -2,11 +2,11 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Roi Diz Diéguez
     - name: Date of Birth
-      value: 14th March 1879
+      value: 10th Diciembre 1987
     - name: Languages
-      value: English, German
+      value: Spanish, English
 
 - title: Education
   type: time_table
