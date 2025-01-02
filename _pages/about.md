@@ -1,23 +1,39 @@
 ---
 layout: about
 title: about
-permalink: /about/
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Etc...
+permalink: /
+subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
   image: logos/47z1Right.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>your something number</p>
+    <p>your blalbla number</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+# Welcome to the Awakening Nexus
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<br>
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+In a world full of secrets and shadows, understanding the truth has never been more essential. This space is dedicated to hacking—not just into systems, but into the very fabric of reality itself. We explore the codes of control, the conspiracies that shape our lives, and the ultimate truth of what it means to be infinite beings.
+The Art of Hacking
+
+Hacking goes beyond keyboards and firewalls. It’s a mindset—a relentless pursuit of freedom and knowledge. Learn how ethical hackers and digital warriors challenge systems of oppression while protecting the vulnerable in the age of surveillance.
+Conspiracies Unveiled
+
+Dive into the rabbit hole with us as we explore the untold stories of secret societies, hidden technologies, and the manipulation of mass consciousness. Are you ready to question everything you've been told?
+Awakening to Infinity
+
+What if you are more than flesh and bone? Discover the profound truth that we are infinite, eternal beings experiencing a temporary human reality. Through ancient wisdom, quantum physics, and personal exploration, we uncover the limitless potential within us all.
+<br>
+
+## Recent Highlights
+
+    ´The Great Deception:´ A deep dive into how modern systems keep us distracted and asleep.
+    'Quantum Realities:' The science behind the multiverse and how our consciousness shapes reality.
+    ´The Awakening Wave:´ Stories from individuals breaking free from the matrix and embracing their infinite nature.
