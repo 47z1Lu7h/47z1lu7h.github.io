@@ -6,16 +6,16 @@ nav_order: 8
 dropdown: true
 children:
   - title: divider
-  - title: interesting news
-    permalink: /news/
-  - title: divider
-  - title: divider
   - title: about
     permalink: /about/
   - title: divider
   - title: divider
-  - title: blog
-    permalink: /teaching/
+  - title: news
+    permalink: /news/
+  - title: divider
+  - title: divider
+  - title: cv
+    permalink: /cv/
   - title: divider
   - title: divider
   - title: profiles

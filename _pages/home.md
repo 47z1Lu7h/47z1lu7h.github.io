@@ -13,7 +13,6 @@ profile:
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
 ---
 
 # Welcome to the Awakening Nexus
@@ -34,6 +33,6 @@ What if you are more than flesh and bone? Discover the profound truth that we ar
 
 ## Recent Highlights
 
-´The Great Deception:´ A deep dive into how modern systems keep us distracted and asleep.
-'Quantum Realities:' The science behind the multiverse and how our consciousness shapes reality.
-´The Awakening Wave:´ Stories from individuals breaking free from the matrix and embracing their infinite nature.
+- `The Great Deception:` A deep dive into how modern systems keep us distracted and asleep.
+- `Quantum Realities:` The science behind the multiverse and how our consciousness shapes reality.
+- `The Awakening Wave:` Stories from individuals breaking free from the matrix and embracing their infinite nature.
