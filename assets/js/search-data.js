@@ -49,7 +49,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/people/";
+            window.location.href = "/profiles/";
           },
         },{id: "dropdown-about",
               title: "about",
