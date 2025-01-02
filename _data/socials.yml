@@ -48,8 +48,6 @@ x_username: 4tz1luth
 # spotify_id: # your spotify id
 # stackoverflow_id: # your stackoverflow id
 custom_social: # can be any name here other than the ones already defined above
-  logo: assets/img/logos/htb+.png
-  # https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkrQ6ElBN8pgzZ8YTMK0Wegqju23v3ANClA&s # can be png, svg, jpg
-  # https://defqg3hhd82zq.cloudfront.net/61ae2b3cce142ae5cd0bbdca/jpeg/@1x/1200x630/Untitled_design_84_.png
+  logo: assets/img/logos/hthW.png
   title: Hackthebox
   url: https://app.hackthebox.com/profile/642903

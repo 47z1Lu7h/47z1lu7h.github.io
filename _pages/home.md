@@ -9,7 +9,7 @@ profile:
   image: logos/47z1Right.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>your blalbla number</p>
+    <p>blablabla </p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -34,6 +34,6 @@ What if you are more than flesh and bone? Discover the profound truth that we ar
 
 ## Recent Highlights
 
-    ´The Great Deception:´ A deep dive into how modern systems keep us distracted and asleep.
-    'Quantum Realities:' The science behind the multiverse and how our consciousness shapes reality.
-    ´The Awakening Wave:´ Stories from individuals breaking free from the matrix and embracing their infinite nature.
+´The Great Deception:´ A deep dive into how modern systems keep us distracted and asleep.
+'Quantum Realities:' The science behind the multiverse and how our consciousness shapes reality.
+´The Awakening Wave:´ Stories from individuals breaking free from the matrix and embracing their infinite nature.

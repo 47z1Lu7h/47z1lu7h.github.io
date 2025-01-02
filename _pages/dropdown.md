@@ -7,11 +7,11 @@ dropdown: true
 children:
   - title: divider
   - title: divider
-  - title: publications
-    permalink: /publications/
+  - title: about
+    permalink: /about/
   - title: divider
-  - title: projects
-    permalink: /projects/
+  - title: blog
+    permalink: /blog/
   - title: divider
   - title: divider
   - title: interesting news
