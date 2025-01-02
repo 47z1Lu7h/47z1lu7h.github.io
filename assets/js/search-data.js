@@ -30,9 +30,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+        },{id: "nav-",
+          title: "",
+          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -51,22 +51,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "dropdown-interesting-news",
-              title: "interesting news",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-about",
+        },{id: "dropdown-about",
               title: "about",
               description: "",
               section: "Dropdown",
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "dropdown-blog",
-              title: "blog",
+            },{id: "dropdown-news",
+              title: "news",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-cv",
+              title: "cv",
               description: "",
               section: "Dropdown",
               handler: () => {
