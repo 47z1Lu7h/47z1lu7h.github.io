@@ -10,7 +10,7 @@ children:
     permalink: /news/
   - title: divider
   - title: divider
- - title: about
+  - title: about
     permalink: /about/
   - title: divider
   - title: blog
@@ -18,6 +18,6 @@ children:
   - title: divider
   - title: divider
   - title: profiles
-    permalink: /people/ 
+    permalink: /people/
   - title: divider
 ---
