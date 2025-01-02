@@ -79,7 +79,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-a-post-with-image-galleries",
+            },{id: "post-how-to-aproach-ctf-39-s",
+      
+        title: "How to aproach CTF&#39;s",
+      
+      description: "How to of getting into CTF&#39;s challenges",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/how-to-aproach-CTF's/";
+        
+      },
+    },{id: "post-a-post-with-image-galleries",
       
         title: "a post with image galleries",
       
@@ -110,6 +121,17 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2024/tabs/";
+        
+      },
+    },{id: "post-how-to-play-hackthebox-com",
+      
+        title: "how to play hackthebox.com",
+      
+      description: "write up machine broker",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2024/how-to-play-hackthebox/";
         
       },
     },{id: "post-a-post-with-typograms",
