@@ -13,6 +13,7 @@ children:
   - title: about
     permalink: /about/
   - title: divider
+  - title: divider
   - title: blog
     permalink: /teaching/
   - title: divider
