@@ -8,6 +8,8 @@ middle_name:
 last_name:
 email: 47z1lu7h@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
+contact_note: >
+  The biggest adventure you can take is to live the life of your dream
 footer_text: >
   Love is life. And if you miss love, you miss life.
 keywords: # add your own keywords or leave empty
@@ -263,7 +265,7 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: ["pentest", "ctf", hackthebox", "awakening", "formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["light_side", "dark_side", "awake", htb", "hackthebox", "pentest", "external-services"] # these categories will be displayed on the front page of your blog
+display_categories: ["light_side", "dark_side", "awake", "htb", "hackthebox", "pentest", "external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
