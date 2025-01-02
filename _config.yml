@@ -37,7 +37,7 @@ repo_trophies:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: fa
+rss_icon: false
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -82,8 +82,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: 47z!h4Ck # blog_name will be displayed in your blog page
+blog_description: a cibersecurity enthusiast
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -226,7 +226,7 @@ defaults:
   - scope:
       path: "assets"
     values:
-      sitemap: false
+      sitemap: true
 
 sass:
   style: compressed
@@ -252,7 +252,7 @@ terser:
 # -----------------------------------------------------------------------------
 
 jekyll-archives:
-  enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+  enabled: all # enables year, tag and category archives (remove if you need to disable one of them).
   layouts:
     year: archive-year
     tag: archive-tag
