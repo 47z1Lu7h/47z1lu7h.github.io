@@ -6,14 +6,10 @@
 # blogger_url: # your blogger URL
 # bluesky_url: # your bluesky URL
 # dblp_url: # your DBLP profile url
-# discord_id: # your discord id (18-digit unique numerical identifier)
-email: you@example.com # your email address
-# facebook_id: # your facebook id
 # flickr_id: # your flickr id
-# github_username: # your GitHub user name
 # gitlab_username: # your GitLab user name
 # ieee_id: # your ieeexplore.ieee.org/author/id
-inspirehep_id: 1010907 # Inspire HEP author ID
+# inspirehep_id: # Inspire HEP author ID
 # instagram_id: # your instagram id
 # kaggle_id: # your kaggle id
 # keybase_username: # your keybase user name
@@ -29,23 +25,32 @@ inspirehep_id: 1010907 # Inspire HEP author ID
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
-rss_icon: true # set to true to show the RSS icon
-scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
+# rss_icon: true # set to true to show the RSS icon
+# scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
-# spotify_id: # your spotify id
-# stackoverflow_id: # your stackoverflow id
-# telegram_username: # your Telegram user name
 # unsplash_id: # your unsplash id
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
-# whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 # wikidata_id: # your wikidata id
 # wikipedia_id: # your wikipedia id (Case sensitive)
 # work_url: # work page URL
-# x_username: # your X handle
-# youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
+github_username: 47z1Lu7h
+instagram_id: 47z1lu7h
+facebook_id: 47z1lu7h
+x_username: 4tz1luth
+youtube_id: 47z1lu7h
+# whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
+# telegram_username: A7Z1lU7h # your Telegram user name
+# discord_id:  780129867655807007 # your discord id (18-digit unique numerical identifier)
+# email: 47z1Lu7h@gamil.com # your email address
+# spotify_id: # your spotify id
+# stackoverflow_id: # your stackoverflow id
 custom_social: # can be any name here other than the ones already defined above
-  logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
-  title: Custom Social
-  url: https://www.alberteinstein.com/
+  logo: https://defqg3hhd82zq.cloudfront.net/61ae2b3cce142ae5cd0bbdca/jpeg/@1x/1200x630/Untitled_design_84_.png # can be png, svg, jpg
+  #  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkrQ6ElBN8pgzZ8YTMK0Wegqju23v3ANClA&s
+  title: H7B
+  url: https://app.hackthebox.com/profile/642903
+
+contact_note: >
+  The biggest adventure you can take is to live the life of your dream

@@ -56,11 +56,11 @@
     display: none;
   }
 
-  .only-light {
+  .repo-img-light {
     display: block;
   }
 
-  .only-dark {
+  .repo-img-dark {
     display: none;
   }
 
@@ -78,15 +78,15 @@
 html[data-theme="dark"] {
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
+  --global-text-color: #{$green-color-light};
   --global-text-color-light: #{$grey-color};
   --global-theme-color: #{$cyan-color};
   --global-hover-color: #{$cyan-color};
-  --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
+  --global-hover-text-color: #{$green-color-dark};
+  --global-footer-bg-color: #{$grey-900};
+  --global-footer-text-color: #{$green-color-dark};
+  --global-footer-link-color: #{$cyan-color};
+  --global-distill-app-color: #{$grey-color-dark};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
   --global-back-to-top-bg-color: rgba(
@@ -112,11 +112,11 @@ html[data-theme="dark"] {
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
-  .only-light {
+  .repo-img-light {
     display: none;
   }
 
-  .only-dark {
+  .repo-img-dark {
     display: block;
   }
 }
