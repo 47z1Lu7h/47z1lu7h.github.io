@@ -47,9 +47,9 @@ youtube_id: 47z1lu7h
 # spotify_id: # your spotify id
 # stackoverflow_id: # your stackoverflow id
 custom_social: # can be any name here other than the ones already defined above
-  logo: https://defqg3hhd82zq.cloudfront.net/61ae2b3cce142ae5cd0bbdca/jpeg/@1x/1200x630/Untitled_design_84_.png # can be png, svg, jpg
-  #  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkrQ6ElBN8pgzZ8YTMK0Wegqju23v3ANClA&s
-  title: H7B
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkrQ6ElBN8pgzZ8YTMK0Wegqju23v3ANClA&s
+  # https://defqg3hhd82zq.cloudfront.net/61ae2b3cce142ae5cd0bbdca/jpeg/@1x/1200x630/Untitled_design_84_.png # can be png, svg, jpg
+  title: Hackthebox
   url: https://app.hackthebox.com/profile/642903
 
 contact_note: >
