@@ -5,6 +5,7 @@ date: 2025-01-02 00:00:00
 description: How to of getting into CTF's challenges
 tags: ctf
 categories: sample-posts external-services pentest
+thumbnail: assets/img/pentest/ctf.jpeg
 disqus_comments: true
 related_posts: true
 toc:
