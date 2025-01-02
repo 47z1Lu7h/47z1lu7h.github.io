@@ -111,28 +111,28 @@ giscus:
   lang: en, es
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: 47z1lu7h # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
+  - name:
+    rss_url:
+  - name:
     posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+      - url:
+        published_date:
 
 # -----------------------------------------------------------------------------
 # Newsletter
 # -----------------------------------------------------------------------------
 
-newsletter:
-  enabled: false
-  endpoint: # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
-  # https://loops.so/docs/forms/custom-form
+# newsletter:
+#  enabled: false
+#  endpoint: # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
+# https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -262,8 +262,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["pentest", "hackthebox", "awakening", "formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["light_side", "dark_side", "awakening", htb", "hackthebox", "pentest", "external-services"] # these categories will be displayed on the front page of your blog
+display_tags: ["pentest", "ctf", hackthebox", "awakening", "formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
+display_categories: ["light_side", "dark_side", "awake", htb", "hackthebox", "pentest", "external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

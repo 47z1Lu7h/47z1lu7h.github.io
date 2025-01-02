@@ -39,7 +39,8 @@ github_username: 47z1Lu7h
 instagram_id: 47z1lu7h
 facebook_id: 47z1lu7h
 x_username: 4tz1luth
-youtube_id: 47z1lu7h
+#youtube_id: 47z1lu7h
+soundcloud: fino-lozano-977412476
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 # telegram_username: A7Z1lU7h # your Telegram user name
 # discord_id:  780129867655807007 # your discord id (18-digit unique numerical identifier)
@@ -47,8 +48,8 @@ youtube_id: 47z1lu7h
 # spotify_id: # your spotify id
 # stackoverflow_id: # your stackoverflow id
 custom_social: # can be any name here other than the ones already defined above
-  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkrQ6ElBN8pgzZ8YTMK0Wegqju23v3ANClA&s
-  # https://defqg3hhd82zq.cloudfront.net/61ae2b3cce142ae5cd0bbdca/jpeg/@1x/1200x630/Untitled_design_84_.png # can be png, svg, jpg
+  logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkrQ6ElBN8pgzZ8YTMK0Wegqju23v3ANClA&s # can be png, svg, jpg
+  # https://defqg3hhd82zq.cloudfront.net/61ae2b3cce142ae5cd0bbdca/jpeg/@1x/1200x630/Untitled_design_84_.png
   title: Hackthebox
   url: https://app.hackthebox.com/profile/642903
 
