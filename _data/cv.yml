@@ -2,18 +2,18 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Roi Diz Diéguez
     - name: Date of Birth
-      value: 14th March 1879
+      value: 10th Decembre 1987
     - name: Languages
-      value: English, German
+      value: Spanish, German
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Grado Superior Administracion de Sistemas
+      institution: IES Teis, Vigo, Galicia, Spain
+      year: 2024
       description:
         - Description 1.
         - Description 2.
@@ -21,9 +21,9 @@
           contents:
             - Sub-description 1.
             - Sub-description 2.
-    - title: Federal teaching diploma
+    - title: Grado medio
       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+      year: 2005
       description:
         - Description 1.
         - Description 2.
