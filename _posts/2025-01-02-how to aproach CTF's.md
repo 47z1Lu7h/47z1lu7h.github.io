@@ -9,7 +9,7 @@ thumbnail: assets/img/pentest/ctf/ctf.jpeg
 disqus_comments: true
 related_posts: true
 toc:
-  sidebar: left
+  beginig: true
 ---
 
 # CTF strategies & techniques
