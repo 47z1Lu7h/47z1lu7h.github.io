@@ -2,19 +2,16 @@
 layout: about
 title: about
 permalink: /about/
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
+subtitle: <a href='#'>yeeepal333</a>.
+news: true # includes a list of news items
+social: true # includes social icons at the bottom of the page
+img: assets/img/logos/HTB.png
 profile:
   align: right
   image: logos/47z1Right.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>your blalbla number</p>
-
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-thumbail: assets/img/logos/HTB.png
 ---
 
 # Welcome! 😍
@@ -35,8 +32,8 @@ Let’s journey together—through the digital, the spiritual, and the conspirat
 
 <br>
 
-### Recent Highlights
+#### - Recent Highlights
 
-- The Great Deception: A deep dive into how modern systems keep us distracted and asleep.
-- Quantum Realities: The science behind the multiverse and how our consciousness shapes reality.
-- The Awakening Wave: Stories from individuals breaking free from the matrix and embracing their infinite nature.
+- <The Great Deception>: A deep dive into how modern systems keep us distracted and asleep.
+- <Quantum Realities>: The science behind the multiverse and how our consciousness shapes reality.
+- <The Awakening Wave>: Stories from individuals breaking free from the matrix and embracing their infinite nature.

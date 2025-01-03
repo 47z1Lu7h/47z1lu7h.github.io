@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: page
 title: how to play hackthebox.com
 date: 2024-05-01
 description: write up machine broker
 tags: hackthebox
-categories: pentest
+categories: linux hacking
 tabs: true
 related_posts: true
 discus_comments: true

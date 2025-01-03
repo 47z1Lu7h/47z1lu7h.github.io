@@ -4,7 +4,7 @@ title: project 1
 description: with background image
 img: assets/img/12.jpg
 importance: 1
-category: light_side, awake, htb, hackthebox, hacking, external-services
+category: hackthebox, hacking, external-services
 related_posts: true
 ---
 

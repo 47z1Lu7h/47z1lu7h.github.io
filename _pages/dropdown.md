@@ -12,7 +12,7 @@ children:
   - title: divider
   - title: divider
   - title: publications
-    permalink: /publications/
+    permalink: /pbs/
   - title: divider
   - title: divider
   - title: news
@@ -20,7 +20,7 @@ children:
   - title: divider
   - title: divider
   - title: repos
-    permalink: /repos/
+    permalink: /rps/
   - title: divider
   - title: divider
 ---
