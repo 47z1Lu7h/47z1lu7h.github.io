@@ -35,17 +35,17 @@ ninja.data = [{
           description: "Have a look at my repositories :)",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/repos/";
+            window.location.href = "/_pages/repos/";
           },
-        },{id: "dropdown-repos",
-              title: "repos",
+        },{id: "dropdown-about",
+              title: "about",
               description: "",
               section: "Dropdown",
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "dropdown-about",
-              title: "about",
+            },{id: "dropdown-publications",
+              title: "publications",
               description: "",
               section: "Dropdown",
               handler: () => {
@@ -53,6 +53,13 @@ ninja.data = [{
               },
             },{id: "dropdown-news",
               title: "news",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-repos",
+              title: "repos",
               description: "",
               section: "Dropdown",
               handler: () => {
