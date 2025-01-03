@@ -7,6 +7,7 @@ nav: true
 nav_order: 3
 display_categories: [awakening light_side dark_side system food]
 horizontal: false
+img: assets/img/awake/bashar/Bashar-q1.jpg
 ---
 
 <!-- pages/projects.md -->

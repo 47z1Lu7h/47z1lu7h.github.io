@@ -15,10 +15,10 @@ children:
   - title: divider
   - title: divider
   - title: cv
-    permalink: /cv/
+    permalink: /curriculum/
   - title: divider
   - title: divider
-  - title: profiles
-    permalink: /people/
+  - title: prof
+    permalink: //
   - title: divider
 ---

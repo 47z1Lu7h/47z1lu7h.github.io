@@ -14,6 +14,7 @@ profile:
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+thumbail: assets/img/awake/bashar/bashar-m1.jpeg
 ---
 
 # Welcome to the Awakening Nexus
@@ -32,8 +33,8 @@ Awakening to Infinity
 What if you are more than flesh and bone? Discover the profound truth that we are infinite, eternal beings experiencing a temporary human reality. Through ancient wisdom, quantum physics, and personal exploration, we uncover the limitless potential within us all.
 <br>
 
-## Recent Highlights
+### Recent Highlights
 
-    ´The Great Deception:´ A deep dive into how modern systems keep us distracted and asleep.
-    'Quantum Realities:' The science behind the multiverse and how our consciousness shapes reality.
-    ´The Awakening Wave:´ Stories from individuals breaking free from the matrix and embracing their infinite nature.
+- The Great Deception: A deep dive into how modern systems keep us distracted and asleep.
+- Quantum Realities: The science behind the multiverse and how our consciousness shapes reality.
+- The Awakening Wave: Stories from individuals breaking free from the matrix and embracing their infinite nature.
