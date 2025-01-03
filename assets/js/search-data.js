@@ -23,12 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/awakening/";
           },
-        },{id: "nav-pentesting",
-          title: "pentesting",
+        },{id: "nav-pentest",
+          title: "pentest",
           description: "A growing collection of hacking stuff...",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/pentest/";
+            window.location.href = "/pentesting/";
           },
         },{id: "nav-repositories",
           title: "repositories",
@@ -36,6 +36,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
+          },
+        },{id: "nav-",
+          title: "",
+          description: "This is my curriculum.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/curriculum/";
           },
         },{id: "dropdown-about",
               title: "about",
@@ -58,8 +65,8 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "dropdown-profiles",
-              title: "profiles",
+            },{id: "dropdown-prof",
+              title: "prof",
               description: "",
               section: "Dropdown",
               handler: () => {
