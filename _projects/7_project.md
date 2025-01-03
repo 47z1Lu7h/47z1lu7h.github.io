@@ -5,7 +5,7 @@ description: with background image
 img: assets/img/4.jpg
 importance: 1
 category: work
-related_publications: false
+related_posts: true
 ---
 
 Every project has a beautiful feature showcase page.

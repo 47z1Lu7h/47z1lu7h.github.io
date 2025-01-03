@@ -9,10 +9,11 @@ profile:
   image: logos/47z1Right.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>blablabla </p>
+    <p>Life is not a period or a question mark,</p>
+    <p>It's an exclamation point.</p>
 
 news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+related_posts: true
 ---
 
 # Welcome to the Awakening Nexus

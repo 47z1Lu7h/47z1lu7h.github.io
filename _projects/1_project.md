@@ -5,7 +5,7 @@ description: with background image
 img: assets/img/12.jpg
 importance: 1
 category: light_side, awake, htb, hackthebox, hacking, external-services
-related_publications: false
+related_posts: true
 ---
 
 Every project has a beautiful feature showcase page.
