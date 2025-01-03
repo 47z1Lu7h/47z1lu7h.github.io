@@ -5,13 +5,13 @@ permalink: /awakening/
 description: A growing collection of things that make you thing/awake... if you want ☺️ 😜
 nav: true
 nav_order: 3
-display_categories: [Spirituality, Light_Side, Dark-Side, System, Food]
+display_categories: [Spirituality, Light-Side, Dark-Side, System, Food]
 horizontal: false
 ---
 
 <div class="row mt-3">
     <div class="col-lg mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/awake/bashar/Bashar-q1.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/awake/bashar/bashar-m1.jpeg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

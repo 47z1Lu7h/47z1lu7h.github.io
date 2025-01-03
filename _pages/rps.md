@@ -1,6 +1,6 @@
 ---
-layout: default
-permalink: /repos/
+layout: post
+permalink: /rps/
 # title:
 description: Have a look at my repositories :)
 nav: true
