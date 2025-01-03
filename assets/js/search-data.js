@@ -30,9 +30,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/pentesting/";
           },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+        },{id: "nav-repos",
+          title: "repos",
+          description: "Have a look at my repositories :)",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
@@ -81,6 +81,28 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2025/how-to-aproach-CTF's/";
+        
+      },
+    },{id: "post-a-post-with-tikzjax",
+      
+        title: "a post with TikZJax",
+      
+      description: "this is what included TikZ code could look like",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/tikzjax/";
+        
+      },
+    },{id: "post-a-post-with-images",
+      
+        title: "a post with images",
+      
+      description: "this is what included images could look like",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/images/";
         
       },
     },{id: "post-a-post-with-image-galleries",
@@ -213,17 +235,6 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2024/chartjs/";
-        
-      },
-    },{id: "post-a-post-with-tikzjax",
-      
-        title: "a post with TikZJax",
-      
-      description: "this is what included TikZ code could look like",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2023/tikzjax/";
         
       },
     },{id: "post-a-post-with-bibliography",
@@ -400,17 +411,6 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2015/code/";
-        
-      },
-    },{id: "post-a-post-with-images",
-      
-        title: "a post with images",
-      
-      description: "this is what included images could look like",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2015/images/";
         
       },
     },{id: "post-a-post-with-formatting-and-links",
