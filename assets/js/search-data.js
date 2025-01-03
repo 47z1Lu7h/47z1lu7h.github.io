@@ -16,8 +16,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-projects",
-          title: "projects",
+        },{id: "nav-awakening",
+          title: "awakening",
           description: "A growing collection of your cool projects.",
           section: "Navigation",
           handler: () => {
@@ -30,26 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
         },{id: "nav-",
           title: "",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
-          },
-        },{id: "nav-",
-          title: "",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/profiles/";
           },
         },{id: "dropdown-about",
               title: "about",
@@ -502,6 +488,13 @@ ninja.data = [{
           window.open("https://instagram.com/47z1lu7h", "_blank");
         },
       },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://app.hackthebox.com/profile/642903", "_blank");
+        },
+      },{
         id: 'social-facebook',
         title: 'Facebook',
         section: 'Socials',
@@ -514,13 +507,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://twitter.com/4tz1luth", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://app.hackthebox.com/profile/642903", "_blank");
         },
       },{
       id: 'light-theme',
