@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-awake",
-          title: "awake",
-          description: "A growing collection of things that make you thing\awake :)",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/awakening/";
-          },
         },{id: "nav-pentest",
           title: "pentest",
           description: "A growing collection of hacking stuff...",
@@ -31,18 +24,11 @@ ninja.data = [{
             window.location.href = "/pentesting/";
           },
         },{id: "nav-repos",
-          title: "Repos",
+          title: "repos",
           description: "Have a look at my repositories :)",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
-          },
-        },{id: "nav-",
-          title: "",
-          description: "This is my curriculum.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/curriculum/";
           },
         },{id: "dropdown-about",
               title: "about",
@@ -53,20 +39,6 @@ ninja.data = [{
               },
             },{id: "dropdown-news",
               title: "news",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-cv",
-              title: "cv",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-prof",
-              title: "prof",
               description: "",
               section: "Dropdown",
               handler: () => {
@@ -432,8 +404,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-wink",
+          title: 'A simple inline announcement with Markdown emoji! :sparkles: :wink:',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
