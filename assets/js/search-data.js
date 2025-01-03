@@ -16,12 +16,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-pro",
-          title: "pro",
-          description: "A growing collection of your cool projects.",
+        },{id: "nav-awake",
+          title: "awake",
+          description: "A growing collection of things that make you thing\awake :)",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/awakening/";
+          },
+        },{id: "nav-pentesting",
+          title: "pentesting",
+          description: "A growing collection of hacking stuff...",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/pentest/";
           },
         },{id: "nav-repositories",
           title: "repositories",
@@ -29,13 +36,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
-          },
-        },{id: "nav-awakening",
-          title: "awakening",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
           },
         },{id: "dropdown-about",
               title: "about",
