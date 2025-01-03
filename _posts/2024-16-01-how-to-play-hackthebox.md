@@ -8,6 +8,9 @@ categories: pentest
 tabs: true
 related_posts: true
 discus_comments: true
+featured: true
+toc:
+  beginning: true
 ---
 
 # Hack The Box

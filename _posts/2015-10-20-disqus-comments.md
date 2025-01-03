@@ -6,7 +6,6 @@ description: an example of a blog post with disqus comments
 tags: comments
 categories: light_side, dark_side, awake, htb, hackthebox, hacking, external-services
 disqus_comments: true
-# coments: true
 related_posts: false
 ---
 

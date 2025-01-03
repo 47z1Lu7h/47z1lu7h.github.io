@@ -8,8 +8,9 @@ categories: sample-posts external-services pentest
 thumbnail: assets/img/pentest/ctf/ctf.jpeg
 disqus_comments: true
 related_posts: true
+featured: true
 toc:
-  beginig: true
+  beginning: true
 ---
 
 # CTF strategies & techniques
