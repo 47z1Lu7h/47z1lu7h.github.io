@@ -5,7 +5,7 @@ permalink: /awakening/
 description: A growing collection of things that make you thing\awake :)
 nav: true
 nav_order: 3
-display_categories: [awakening light_side dark_side system food]
+display_categories: [awakening sample-posts light_side dark_side system food]
 horizontal: false
 img: assets/img/awake/bashar/Bashar-q1.jpg
 ---
