@@ -31,7 +31,7 @@ ninja.data = [{
             window.location.href = "/pentesting/";
           },
         },{id: "nav-repos",
-          title: "repos",
+          title: "Repos",
           description: "Have a look at my repositories :)",
           section: "Navigation",
           handler: () => {
