@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 permalink: /repos/
 # title:
 description: Have a look at my repositories :)
