@@ -4,7 +4,7 @@ title: how to play hackthebox.com
 date: 2024-05-01
 description: write up machine broker
 tags: hackthebox
-categories: linux hacking
+category: hacking
 tabs: true
 related_posts: true
 discus_comments: true
