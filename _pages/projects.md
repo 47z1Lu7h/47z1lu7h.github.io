@@ -1,11 +1,11 @@
 ---
 layout: page
-title: awakening
+title: pro
 permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
 nav_order: 3
-display_categories: []
+display_categories: ["light_side", "dark_side", "awake", "htb", "hackthebox", "hacking", "external-services"]
 horizontal: false
 ---
 
