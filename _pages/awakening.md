@@ -2,10 +2,10 @@
 layout: page
 title: awake
 permalink: /awakening/
-description: A growing collection of things that make you thing/awake... if you want :sparkles: :wink:
+description: A growing collection of things that make you thing/awake... if you want ☺️ 😜
 nav: true
 nav_order: 3
-display_categories: [ awakening, light_side, dark_side, system, food, sample-posts ]
+display_categories: [awakening, light_side, dark_side, system, food, sample-posts]
 horizontal: false
 ---
 
