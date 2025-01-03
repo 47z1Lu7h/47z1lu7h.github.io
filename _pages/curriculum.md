@@ -1,3 +1,5 @@
+<!--
+
 ---
 layout: cv
 permalink: /curriculum/
@@ -9,3 +11,5 @@ description: This is my curriculum.
 toc:
 sidebar: left
 ---
+
+-->

@@ -2,13 +2,21 @@
 layout: page
 title: awake
 permalink: /awakening/
-description: A growing collection of things that make you thing\awake :)
+description: A growing collection of things that make you thing/awake... if you want :sparkles: :wink:
 nav: true
 nav_order: 3
-display_categories: [awakening sample-posts light_side dark_side system food]
+display_categories: [ awakening, light_side, dark_side, system, food, sample-posts ]
 horizontal: false
-img: assets/img/awake/bashar/Bashar-q1.jpg
 ---
+
+<div class="row mt-3">
+    <div class="col-lg mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/awake/bashar/Bashar-q1.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+  You are a dream of the infinite creation. 😍 
+</div>
 
 <!-- pages/projects.md -->
 <div class="projects">

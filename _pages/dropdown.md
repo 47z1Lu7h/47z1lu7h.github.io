@@ -14,11 +14,4 @@ children:
     permalink: /news/
   - title: divider
   - title: divider
-  - title: cv
-    permalink: /curriculum/
-  - title: divider
-  - title: divider
-  - title: prof
-    permalink: //
-  - title: divider
 ---

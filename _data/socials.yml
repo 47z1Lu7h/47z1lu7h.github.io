@@ -10,7 +10,6 @@
 # gitlab_username: # your GitLab user name
 # ieee_id: # your ieeexplore.ieee.org/author/id
 # inspirehep_id: # Inspire HEP author ID
-# instagram_id: # your instagram id
 # kaggle_id: # your kaggle id
 # keybase_username: # your keybase user name
 # lastfm_id: # your lastfm id
@@ -38,7 +37,7 @@
 github_username: 47z1Lu7h
 instagram_id: 47z1lu7h
 custom_social: # can be any name here other than the ones already defined above
-  logo: assets/img/logos/hthW.png
+  img: assets/img/logos/hthW.png
   title: Hackthebox
   url: https://app.hackthebox.com/profile/642903
 facebook_id: 47z1lu7h
