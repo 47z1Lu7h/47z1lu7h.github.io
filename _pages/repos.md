@@ -1,6 +1,6 @@
 ---
 layout: page
-# permalink: /repos/
+permalink: /repos/
 # title:
 description: Have a look at my repositories :)
 nav: true
