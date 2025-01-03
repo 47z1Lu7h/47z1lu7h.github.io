@@ -16,8 +16,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-awakening",
-          title: "awakening",
+        },{id: "nav-pro",
+          title: "pro",
           description: "A growing collection of your cool projects.",
           section: "Navigation",
           handler: () => {
@@ -30,19 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-",
-          title: "",
+        },{id: "nav-awakening",
+          title: "awakening",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
-          },
-        },{id: "nav-",
-          title: "",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/profiles/";
           },
         },{id: "dropdown-about",
               title: "about",
