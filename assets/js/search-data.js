@@ -325,9 +325,9 @@ ninja.data = [{
           window.location.href = "/blog/2023/table-of-contents/";
         
       },
-    },{id: "post-a-post-with-giscus-comments",
+    },{id: "post-a-post-with-discus-commen",
       
-        title: "a post with giscus comments",
+        title: "a post with discus commen",
       
       description: "an example of a blog post with giscus comments",
       section: "Posts",
