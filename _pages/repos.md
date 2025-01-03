@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /repos/
-# title: repos
+# permalink: /repos/
+# title:
 description: Have a look at my repositories :)
 nav: true
 nav_order: 4
