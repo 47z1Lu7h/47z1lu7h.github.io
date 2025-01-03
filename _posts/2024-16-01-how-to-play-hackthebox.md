@@ -7,7 +7,7 @@ tags: hackthebox
 categories: pentest
 tabs: true
 related_posts: true
-giscus_comments: true
+discus_comments: true
 ---
 
 # Hack The Box
