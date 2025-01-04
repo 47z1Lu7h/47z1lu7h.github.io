@@ -4,7 +4,7 @@ title: How to aproach CTF's
 date: 2025-01-02 00:00:00
 description: How to of getting into CTF's challenges
 tags: ctf
-category: hacking
+category: Hacking
 thumbnail: assets/img/pentest/ctf/ctf.jpeg
 disqus_comments: true
 related_posts: true
