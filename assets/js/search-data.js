@@ -44,7 +44,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "post-how-to-aproach-ctf-39-s",
+            },{id: "post-brute-force-attack",
+      
+        title: "Brute Force Attack",
+      
+      description: "A brute force attack is a hacking method that uses trial and error to crack passwords, login credentials, and encryption keys. It is a simple yet reliable tactic for gaining unauthorized access to individual accounts and organizations&#39; systems and networks.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/BruteForce/";
+        
+      },
+    },{id: "post-how-to-aproach-ctf-39-s",
       
         title: "How to aproach CTF&#39;s",
       
@@ -53,17 +64,6 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2025/how-to-aproach-CTF's/";
-        
-      },
-    },{id: "post-a-post-with-tikzjax",
-      
-        title: "a post with TikZJax",
-      
-      description: "this is what included TikZ code could look like",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/tikzjax/";
         
       },
     },{id: "post-a-post-with-images",
@@ -97,6 +97,17 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2024/photo-gallery/";
+        
+      },
+    },{id: "post-write-up-machine-keeper-hackthebox-easy",
+      
+        title: "Write Up Machine Keeper, Hackthebox - Easy",
+      
+      description: "write up easy machine Keeper - hackthebox",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2024/writeUp-keeper/";
         
       },
     },{id: "post-a-post-with-tabs",
@@ -437,11 +448,6 @@ ninja.data = [{
           description: "an other project with a background image and giscus comments",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
             },},{id: "projects-alien-wisdom",
           title: 'Alien Wisdom',
           description: "",
