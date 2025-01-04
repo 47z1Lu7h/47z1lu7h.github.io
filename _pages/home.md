@@ -18,7 +18,7 @@ related_posts: true
 
 # Welcome to the Awakening Nexus
 
-<br>
+<hr>
 
 In a world full of secrets and shadows, understanding the truth has never been more essential. This space is dedicated to hacking—not just into systems, but into the very fabric of reality itself. We explore the codes of control, the conspiracies that shape our lives, and the ultimate truth of what it means to be infinite beings.
 The Art of Hacking
@@ -30,7 +30,8 @@ Dive into the rabbit hole with us as we explore the untold stories of secret soc
 Awakening to Infinity
 
 What if you are more than flesh and bone? Discover the profound truth that we are infinite, eternal beings experiencing a temporary human reality. Through ancient wisdom, quantum physics, and personal exploration, we uncover the limitless potential within us all.
-<br>
+
+<hr>
 
 Welcome to my digital sanctuary, a space where the boundaries of curiosity, technology, and philosophy intertwine. This blog is a reflection of the many layers of my journey—part technical exploration, part personal odyssey, and entirely authentic.
 
@@ -44,11 +45,11 @@ This blog is more than just a collection of topics; it’s a community for those
 
 Let’s journey together—through the digital, the spiritual, and the conspiratorial—unearthing knowledge, challenging perceptions, and growing in understanding every step of the way.
 
-<br>
+<hr>
 
-#### - Recent Highlights
+### Highlights
 
-- <The Great Deception>: A deep dive into how modern systems keep us distracted and asleep.
+- `The Great Deception:` A deep dive into how modern systems keep us distracted and asleep.
 - `The Awakening Wave:` Stories from individuals breaking free from the matrix and embracing their infinite nature.
-- <Quantum Realities>: The science behind the multiverse and how our consciousness shapes reality.
-- <The Awakening Wave>: Stories from individuals breaking free from the matrix and embracing their infinite nature.
+- `Quantum Realities:` The science behind the multiverse and how our consciousness shapes reality.
+- `The Awakening Wave:` Stories from individuals breaking free from the matrix and embracing their infinite nature.

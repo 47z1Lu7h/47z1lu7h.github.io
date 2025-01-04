@@ -58,7 +58,8 @@ pagination:
 
 {% assign featured_posts = site.posts | where: "featured", "true" %}
 {% if featured_posts.size > 0 %}
-<br>
+
+<hr>
 
 <div class="container featured-posts">
 {% assign is_even = featured_posts.size | modulo: 2 %}
