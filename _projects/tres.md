@@ -2,7 +2,7 @@
 layout: page
 title: project 1
 description: with background image
-img: assets/img/logos/HTB.png
+img: assets/img/logos/htb.jpeg
 importance: 1
 category: Dark-Side
 related_posts: true

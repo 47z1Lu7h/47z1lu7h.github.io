@@ -2,39 +2,40 @@
 layout: page
 title: Alien Wisdom
 description:
-img: assets/img/3.jpg
 importance: 1
 category: "Alien Wisdom"
-img: assets/img/awake/bashar/bashar-m1.jpeg
+img: assets/img/awake/bashar/basharInPerson.jpeg
 discus_comments: true
 ---
 
 ## Who is Bashar?
 
 Bashar is a physical E.T, a friend from the future who has spoken for the past 37 years through channel Darryl Anka. He has brought through a wave of new information that clearly explains in detail how the universe works, and how each person creates the reality they experience. Over the years, thousands of individuals have had the opportunity to apply these principles, and see that they really work to change their lives and create the reality that they desire.
-
 <br>
 
 <div class="row mt-3">
     <div class="col-xl mt-3 mt-md-0">
         {% include video.liquid path="assets/video/awakening/bashar/You.mp4" class="img-fluid rounded z-depth-1" %}
     </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/awake/bashar/basharChanneling.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
+<br>
+
+#### `Overwhelmingly, the response we receive is, “This works!” Some of the feedback our listeners have shared include:`
 
 <br>
 
-#### Overwhelmingly, the response we receive is, “This works!” Some of the feedback our listeners have shared include:
+    - Enhanced creativity and abundance
+    - Mental and emotional clarity
+    - Improved health
+    - Enhanced love relationships
+    - Expanded psychic ability
+    - Increased self-love and self-acceptance
+    - Greater self-empowerment
 
-- Enhanced creativity and abundance
-- Mental and emotional clarity
-- Improved health
-- Enhanced love relationships
-- Expanded psychic ability
-- Increased self-love and self-acceptance
-- Greater self-empowerment
-
-<br>
-
+<hr><br>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/awake/mindUniv.png" class="img-fluid rounded z-depth-1" %}
@@ -43,9 +44,8 @@ Bashar is a physical E.T, a friend from the future who has spoken for the past 3
         {% include figure.liquid loading="eager" path="assets/img/awake/bashar/basharInPerson.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<br>
 
-### Why Do These Concepts Work?
+`### Why Do These Concepts Work?`
 
 <br>
 Bashar would be the first to say that it’s because this information is based on the laws of physics and is not just a nice New-Age philosophy. Perhaps this is a more advanced version of physics than you may have encountered in the past.  But nevertheless, it is based on physics. Hence, when you apply these principles and techniques to your day-to-day life, you can see dramatic results both in what you experience and how you feel.
@@ -71,12 +71,13 @@ Bashar describes the importance of belief systems and explains how to change wha
     - Future Technology
     - Sacred Geometry
 
+<br>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/awake/bashar/bash1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/awake/bashar/bash2.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/awake/bashar/bash2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -94,15 +95,3 @@ Bashar describes the planet as going through a major transformation, an evolutio
 <br>
 
 Bashar’s message helps to expand your capacity for learning and change. It reawakens your ability to use your imagination and express yourself creatively, so that you can experience the ecstasy that is your birthright. The techniques that are contained in the Bashar material are fun, challenging and interesting to work with and Bashar’s uniquely humorous and direct approach enhances the entire experience!
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/awake/bashar/bashar1.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/awake/bashar/bashar2.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-  You are a dream of the infinite creation. 😍 
-</div>

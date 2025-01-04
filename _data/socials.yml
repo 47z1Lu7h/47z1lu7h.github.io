@@ -1,39 +1,3 @@
-# this file contains the social media links and usernames of the author
-# the commented lines are the default social media links supported by the template
-# the socials will be displayed in the order they are defined here
-
-# acm_id: # your dl.acm.org/profile/id
-# blogger_url: # your blogger URL
-# bluesky_url: # your bluesky URL
-# dblp_url: # your DBLP profile url
-# flickr_id: # your flickr id
-# gitlab_username: # your GitLab user name
-# ieee_id: # your ieeexplore.ieee.org/author/id
-# inspirehep_id: # Inspire HEP author ID
-# kaggle_id: # your kaggle id
-# keybase_username: # your keybase user name
-# lastfm_id: # your lastfm id
-# lattes_id: # your ID on Lattes (Brazilian Lattes CV)
-# leetcode_id: # your LeetCode id
-# linkedin_username: # your LinkedIn user name
-# mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-# medium_username: # your Medium username
-# orcid_id: # your ORCID ID
-# osf_id: # your OSF ID
-# pinterest_id: # your pinterest id
-# publons_id: # your ID on Publons
-# quora_username: # your Quora username
-# research_gate_profile: # your profile on ResearchGate
-# rss_icon: true # set to true to show the RSS icon
-# scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
-# scopus_id: # your profile on Scopus
-# semanticscholar_id: # your Semantic Scholar ID
-# unsplash_id: # your unsplash id
-# wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
-# wikidata_id: # your wikidata id
-# wikipedia_id: # your wikipedia id (Case sensitive)
-# work_url: # work page URL
-# zotero_username: # your zotero username
 github_username: 47z1Lu7h
 instagram_id: 47z1lu7h
 custom_social: # can be any name here other than the ones already defined above
@@ -42,11 +6,12 @@ custom_social: # can be any name here other than the ones already defined above
   url: https://app.hackthebox.com/profile/642903
 facebook_id: 47z1lu7h
 x_username: 4tz1luth
-#youtube_id: 47z1lu7h
-#soundcloud: fino-lozano-977412476
-# whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-# telegram_username: A7Z1lU7h # your Telegram user name
-# discord_id:  780129867655807007 # your discord id (18-digit unique numerical identifier)
+# linkedin_username: # your LinkedIn user name
+# youtube_id: 47z1lu7h
+# whatsapp_number: +34 610 616 357
+# telegram_username: A7Z1lU7h
+# discord_id:  780129867655807007
 # email: 47z1Lu7h@gamil.com # your email address
+
 # spotify_id: # your spotify id
 # stackoverflow_id: # your stackoverflow id
