@@ -121,17 +121,17 @@ CTFs test a variety of cyber security capabilities and best practices, including
 
      - `Organizational resilience:` Can your tea withstand cyber attacks? Do they have the resources, skills, and knowledge necessary to bounce back after an attack? CTFs will test your team’s readiness to withstand cyber threats and maintain operations (to the best of their ability) after an attack.
 
-### CTF exercises help build a robust response team
+## CTF exercises help build a robust response team
 
 <br>
 One of the best ways to build a robust response team is through CTF events. Learning new skills is a crucial part of any employee’s development and CTFs are an effective way to foster collaboration, build expertise, and train new employees through real-world scenarios. CTFs test your team’s skills and apply the knowledge they’ve acquired through classes and training.
 
-### CTF exercises are incredibly valuable for onboarding, training, and assessing new employees
+## CTF exercises are incredibly valuable for onboarding, training, and assessing new employees
 
 <br>
 Newer members of your security team will likely participate in CTF exercises as part of their onboarding process. CTFs are valuable for both the organization and new employees because it allows the company to gauge the skill level and provides them with the opportunity to test their skills in a real-world scenario. In addition, CTF exercises help foster a collaborative, creative culture among your team members. Because they’re tested under pressure and often in an unfamiliar environment (i.e. they don’t have access to their usual tools, equipment, or workflows), CTFs require team members to work together and think outside the box.
 
-### Maximizing Cybersecurity Through CTFs
+## Maximizing Cybersecurity Through CTFs
 
 <br>
 Capture the flag exercises are designed to challenge your team’s problem-solving and collaboration skills, but most importantly, they are a proactive way to test your incident response readiness and processes. When conducted in production environments combined with red teaming or breach and attack simulation solutions, they can validate the effectiveness of your security detection and response architecture.  They can also be a fun way to engage with your employees and give them a taste of red teaming.
@@ -175,8 +175,7 @@ Successful CTF participation begins with thoroughly analyzing the challenge. Com
 
 Once a CTF challenge is clearly defined, competitors should leverage all available resources to comprehensively investigate the problem space. Search online documentation, forums, and prior solutions to fully grasp the challenge's context. Immersing yourself in relevant information illuminates possible approaches, while uncovering past pitfalls provides hard-won insight. Instead of remaining insular, seek knowledge from diverse external sources. Connecting details gathered from study and research creates an intricate understanding of the challenge and optimal solution pathways. With a solid foundation laid through diligent information gathering, participants can devise effective strategies. Knowledge builds capacity to innovatively solve CTFs — and maintaining curiosity and actively educating oneself cultivates success during competitions and beyond.
 
-## --> Analyze clues
-
+- ## Analyze clues
 <br>
 
 CTF challenges reward those able to see through subterfuge to uncover obscured connections and intentions. Competitors should meticulously analyze all available clues, focusing on decrypting hidden patterns and meanings. Apparent red herrings may conceal vital links when approached from creative angles. Seemingly unrelated puzzle pieces can yield larger insights when assembled without assumptions. Mastering cryptoanalysis and reverse engineering allows decoding of superficially garbled information. Persistent, flexible, and expansive analysis reveals the core of obfuscated challenges. Rather than taking clues at face value, unravel and reframe them to expose underlying significance and make the implicit explicit by questioning assumptions and considering diverse perspectives.
