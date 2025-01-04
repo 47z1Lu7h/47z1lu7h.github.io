@@ -2,9 +2,9 @@
 layout: page
 title: Alien Wisdom
 description:
+img: assets/img/logos/alien.png
 importance: 1
 category: "Alien Wisdom"
-img: assets/img/awake/bashar/basharInPerson.jpeg
 discus_comments: true
 ---
 
@@ -15,7 +15,7 @@ Bashar is a physical E.T, a friend from the future who has spoken for the past 3
 <hr>
 
 <div class="row mt-3">
-    <div class="col-xl mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/video/awakening/bashar/You.mp4" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
@@ -37,7 +37,7 @@ Bashar is a physical E.T, a friend from the future who has spoken for the past 3
     - Greater self-empowerment
 
 <hr><hr>
-<div class="row mt-3">
+<div class="row mt-3"> 
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/awake/mindUniv.png" class="img-fluid rounded z-depth-1" %}
     </div>

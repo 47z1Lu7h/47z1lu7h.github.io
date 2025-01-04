@@ -4,7 +4,8 @@ title: project 4
 description: another without an image
 img:
 importance: 3
-category: fun
+category: System
+discus_comments: true
 ---
 
 Every project has a beautiful feature showcase page.

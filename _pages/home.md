@@ -7,13 +7,13 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 profile:
   align: right
   image: logos/47z1Right.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: true
   more_info: >
     <p>Life is not a period or a question mark,</p>
     <p>It's an exclamation point.</p>
 
-news: true # includes a list of news items
-related_posts: true
+related posts: true
+news: true
 ---
 
 # Welcome to the Awakening Nexus

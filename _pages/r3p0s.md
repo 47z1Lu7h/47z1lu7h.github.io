@@ -1,7 +1,7 @@
 ---
 layout: post
-permalink: /rps/
-# title:
+permalink: /r3p0s/
+title: repositories
 description: Have a look at my repositories :)
 nav: true
 nav_order: 4

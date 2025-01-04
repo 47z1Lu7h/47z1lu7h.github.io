@@ -6,6 +6,7 @@ img: assets/img/4.jpg
 importance: 1
 category: work
 related_posts: true
+discus_comments: true
 ---
 
 Every project has a beautiful feature showcase page.
