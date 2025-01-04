@@ -14,6 +14,7 @@ related_posts: true
 featured: true
 toc:
   beginning: true
+  sideber: rigth
 
 ---
 
