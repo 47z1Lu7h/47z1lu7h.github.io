@@ -1,7 +1,7 @@
 github_username: 47z1Lu7h
 instagram_id: 47z1lu7h
 custom_social: # can be any name here other than the ones already defined above
-  img: assets/img/logos/hthW.png
+  img: logos/hthW.png
   title:
   url: https://app.hackthebox.com/profile/642903
 facebook_id: 47z1lu7h
