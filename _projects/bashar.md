@@ -5,7 +5,7 @@ description:
 img: assets/img/3.jpg
 importance: 1
 category: "Alien Wisdom"
-thumbail: assets/img/awake/bashar/bashar-m1.jpeg
+img: assets/img/awake/bashar/bashar-m1.jpeg
 discus_comments: true
 ---
 
