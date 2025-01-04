@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/pentesting/";
           },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Have a look at my repositories :)",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/r3p0s/";
+          },
         },{id: "dropdown-about",
               title: "about",
               description: "",
@@ -39,6 +46,13 @@ ninja.data = [{
               },
             },{id: "dropdown-news",
               title: "news",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-repos",
+              title: "repos",
               description: "",
               section: "Dropdown",
               handler: () => {
