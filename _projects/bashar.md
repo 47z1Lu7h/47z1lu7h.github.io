@@ -15,7 +15,15 @@ Bashar is a physical E.T, a friend from the future who has spoken for the past 3
 
 <br>
 
-Overwhelmingly, the response we receive is, “This works!” Some of the feedback our listeners have shared include:
+<div class="row mt-3">
+    <div class="col-xl mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/awakening/bashar/You.mp4" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<br>
+
+#### Overwhelmingly, the response we receive is, “This works!” Some of the feedback our listeners have shared include:
 
 - Enhanced creativity and abundance
 - Mental and emotional clarity
@@ -37,7 +45,7 @@ Overwhelmingly, the response we receive is, “This works!” Some of the feedba
 </div>
 <br>
 
-## Why Do These Concepts Work?
+### Why Do These Concepts Work?
 
 <br>
 Bashar would be the first to say that it’s because this information is based on the laws of physics and is not just a nice New-Age philosophy. Perhaps this is a more advanced version of physics than you may have encountered in the past.  But nevertheless, it is based on physics. Hence, when you apply these principles and techniques to your day-to-day life, you can see dramatic results both in what you experience and how you feel.
@@ -65,7 +73,7 @@ Bashar describes the importance of belief systems and explains how to change wha
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path=""assets/img/awake/bashar/bash1.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/awake/bashar/bash1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/awake/bashar/bash2.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
