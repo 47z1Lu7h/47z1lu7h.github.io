@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-",
-          title: "",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/pbs/";
-          },
         },{id: "nav-awake",
           title: "awake",
           description: "A growing collection of things that make you thing/awake... if you want ☺️ 😜",
@@ -37,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/pentesting/";
           },
-        },{id: "nav-",
-          title: "",
-          description: "Have a look at my repositories :)",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/rps/";
-          },
         },{id: "dropdown-about",
               title: "about",
               description: "",
@@ -51,22 +37,8 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "dropdown-publications",
-              title: "publications",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
             },{id: "dropdown-news",
               title: "news",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-repos",
-              title: "repos",
               description: "",
               section: "Dropdown",
               handler: () => {
@@ -435,12 +407,7 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-wink",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :wink:',
           description: "",
-          section: "News",},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
+          section: "News",},{id: "projects-project-3-with-very-long-name",
           title: 'project 3 with very long name',
           description: "a project that redirects to another website",
           section: "Projects",handler: () => {
@@ -475,6 +442,11 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-alien-wisdom",
+          title: 'Alien Wisdom',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/bashar/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
