@@ -4,8 +4,7 @@ title: a post with disqus comments
 date: 2015-10-20 11:59:00-0400
 description: an example of a blog post with disqus comments
 tags:
-category:
-disqus_comments: true
+comments: true
 related_posts: false
 ---
 
