@@ -6,6 +6,7 @@ description: an example of a blog post with giscus comments
 coments: true
 categories: sample-posts external-services
 comments: true
+disqus_comments: true
 related_posts: false
 ---
 
