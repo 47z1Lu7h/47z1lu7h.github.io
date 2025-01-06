@@ -21,7 +21,9 @@ group :jekyll_plugins do
     gem 'terser'
     gem 'unicode_utils'
     gem 'webrick'
+    gem "jekyll-polyglot"
     gem 'jekyll-language-plugin'
+
 end
 group :other_plugins do
     gem 'css_parser'
