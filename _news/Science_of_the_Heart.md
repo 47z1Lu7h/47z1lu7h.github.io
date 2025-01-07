@@ -15,17 +15,16 @@ Traditionally, the study of communication pathways between the head and heart ha
 
 New research shows the human heart is much more than an efficient pump that sustains life. Our research suggests the heart also is an access point to a source of wisdom and intelligence that we can call upon to live our lives with more balance, greater creativity and enhanced intuitive capacities. All of these are important for increasing personal effectiveness, improving health and relationships and achieving greater fulfillment.
 
-##### The heart communicates with the brain and body in four ways:
+##### `The heart communicates with the brain and body in four ways:`
 
 ---
 
-´´´<ul>
-<li>Neurological communication (nervous system)</li>
-<li>Biochemical communication (hormones)</li>
-<li>Biophysical communication (pulse wave)</li>
-<li>Energetic communication (electromagnetic fields)</li>
-
-</ul>´´´
+<ul>
+    <li>Neurological communication (`nervous system``)</li
+    <li>Biochemical communication (hormones)</li>
+    <li>Biophysical communication (pulse wave)</li>
+    <li>Energetic communication (electromagnetic fields)</li>
+</ul>
 
 ## Energetic Communication
 
@@ -43,10 +42,11 @@ The magnetic field produced by the human heart is more than 100 times greater in
 <div class="caption">
    The heart’s magnetic field, which is the strongest rhythmic field produced by the human body, not only envelops every cell of the body, but also extends out in all directions into the space around us. The heart’s magnetic field can be measured several feet away from the body by sensitive magnetometers. Research conducted at HMI suggests the heart’s field is an important carrier of information.
 </div>
+<br>
 
 ---
 
-##### For a visual explanation of the heart's electromagnetic field, you might find the following video informative
+##### ´For a visual explanation of the heart's electromagnetic field, you might find the following video informative´
 
 ---
 
@@ -56,12 +56,6 @@ The magnetic field produced by the human heart is more than 100 times greater in
     </div>
 </div>
 ---
-
-<div class="row mt-3">
-    <div class="col-xl mt-3 mt-md-0">
-        {% include video.liquid path="https://www.youtube.com/embed/yAoLbbyjHjQ?si=d3D8U0BxDHuzQr9U" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 
 ##### Science of the Heart
 
