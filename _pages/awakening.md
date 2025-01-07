@@ -7,6 +7,8 @@ nav: true
 nav_order: 3
 display_categories: [Light-Side, Dark-Side, System, "Alien Wisdom", Spirituality, Food]
 horizontal: false
+news: true
+social: true
 ---
 
 <!-- pages/projects.md -->

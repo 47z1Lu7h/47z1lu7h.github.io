@@ -5,6 +5,8 @@ title: repositories
 description: Have a look at my repositories :)
 nav: true
 nav_order: 4
+news: true
+social: true
 ---
 
 {% if site.data.repositories.github_users %}
