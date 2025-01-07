@@ -46,6 +46,8 @@ Putting your security team through these high-pressure and realistic situations 
 
 ## Types of Capture the Flag in Cybersecurity Games
 
+---
+
 Explore the different formats of CTF exercises commonly used in cybersecurity to sharpen skills and prepare for potential threats:
 
 #### Jeopardy-style CTF
@@ -164,13 +166,13 @@ The purpose of this article is to provide beginner-friendly strategies and techn
 
 ---
 
-In a CTF challenge, participants are presented with a set of tasks or puzzles that they must complete to earn points. Some common CTF challenge scenarios include:
+`In a CTF challenge, participants are presented with a set of tasks or puzzles that they must complete to earn points. Some common CTF challenge scenarios include:`
 
-- A web application challenge where participants must find and exploit vulnerabilities to gain access to sensitive data or elevate privileges.
-- A cryptography challenge where participants must crack a password or decode an encrypted message.
-- A reverse engineering challenge where participants must analyze a malware sample to understand its behavior and identify potential vulnerabilities.
-- A vulnerability exploitation challenge where participants must exploit a known vulnerability to gain access to a system or application.
-- A flag retrieval challenge where participants must carefully observe an image, file, or piece of text to find a hidden flag.
+- A `web application` challenge where participants must find and exploit vulnerabilities to gain access to sensitive data or elevate privileges.
+- A `cryptography`` challenge where participants must crack a password or decode an encrypted message.
+- A `reverse engineering` challenge where participants must analyze a malware sample to understand its behavior and identify potential vulnerabilities.
+- A `vulnerability exploitation` challenge where participants must exploit a known vulnerability to gain access to a system or application.
+- A `flag retrieval` challenge where participants must carefully observe an image, file, or piece of text to find a hidden flag.
 
 These are just a few examples of the many types of challenges that can be found in a CTF competition. By understanding the different types of challenges and the skills required to solve them, participants can better prepare themselves for success.
 
