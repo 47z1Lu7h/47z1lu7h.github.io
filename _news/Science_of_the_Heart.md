@@ -26,6 +26,8 @@ New research shows the human heart is much more than an efficient pump that sust
     <li>Energetic communication (electromagnetic fields)</li>
 </ul>
 
+---
+
 ## Energetic Communication
 
 ---
@@ -46,7 +48,7 @@ The magnetic field produced by the human heart is more than 100 times greater in
 
 ---
 
-##### ´For a visual explanation of the heart's electromagnetic field, you might find the following video informative´
+##### `For a visual explanation of the heart's electromagnetic field, you might find the following video informative:`
 
 ---
 
