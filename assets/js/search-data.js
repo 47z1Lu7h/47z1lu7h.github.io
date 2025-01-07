@@ -424,11 +424,11 @@ ninja.data = [{
     },{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
+          section: "News",},{id: "news-science-of-the-heart",
+          title: 'Science of the Heart',
+          description: "Electromagnetic field of the heart",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
+              window.location.href = "/news/Science_of_the_Heart/";
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-wink",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :wink:',
           description: "",
