@@ -21,7 +21,6 @@ group :jekyll_plugins do
     gem 'terser'
     gem 'unicode_utils'
     gem 'webrick'
-    gem "jekyll-polyglot"
     gem 'jekyll-language-plugin'
 
 end
