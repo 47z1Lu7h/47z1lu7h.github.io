@@ -20,7 +20,7 @@ discus_comments: true
 
 ## Bashar is a physical E.T, a friend from the future who has spoken for the past 37 years through channel Darryl Anka. He has brought through a wave of new information that clearly explains in detail how the universe works, and how each person creates the reality they experience. Over the years, thousands of individuals have had the opportunity to apply these principles, and see that they really work to change their lives and create the reality that they desire.
 
-<div class="row mt-3">
+<div class="container">
     <div class="col-lg mt-3 mt-md-0">
         {% include video.liquid path="assets/video/awakening/bashar/y0u.mp4" class="img-fluid rounded z-depth-1" %}
     </div>
