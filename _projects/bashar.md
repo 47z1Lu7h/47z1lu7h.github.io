@@ -8,7 +8,7 @@ category: "Alien Wisdom"
 discus_comments: true
 ---
 
-## `Who is Bashar?``
+## `Who is Bashar?`
 
 ---
 
@@ -18,17 +18,11 @@ discus_comments: true
     </div>
 </div>
 
-    Bashar is a physical E.T, a friend from the future who has spoken for the past 37 years through channel Darryl Anka. He has brought through a wave of new information that clearly explains in detail how the universe works, and how each person creates the reality they experience. Over the years, thousands of individuals have had the opportunity to apply these principles, and see that they really work to change their lives and create the reality that they desire.
+`Bashar is a physical E.T, a friend from the future who has spoken for the past 37 years through channel Darryl Anka. He has brought through a wave of new information that clearly explains in detail how the universe works, and how each person creates the reality they experience. Over the years, thousands of individuals have had the opportunity to apply these principles, and see that they really work to change their lives and create the reality that they desire.`
 
-###### Overwhelmingly, the response we receive is, “This works!” Some of the feedback our listeners have shared include:
+##### Overwhelmingly, the response we receive is, “This works!” Some of the feedback our listeners have shared include:
 
 ---
-
-<div class="container">
-    <div class="col-lg mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/awakening/bashar/y0u.mp4" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 
     - Enhanced creativity and abundance
     - Mental and emotional clarity
@@ -59,7 +53,7 @@ Bashar describes the importance of belief systems and explains how to change wha
 
 ---
 
-###### Bashar provides cutting-edge information on a wide range of topics:
+##### Bashar provides cutting-edge information on a wide range of topics:
 
     - Personal Transformation
     - History of the Universe
@@ -99,30 +93,32 @@ Bashar’s message helps to expand your capacity for learning and change. It rea
 
 #### `The Follow Your Excitement Formula`
 
----
+## Bashar's follow your excitement formul is the key to being your True Self and living your dreams!
 
-Bashar's follow your excitement formul is the key to being your True Self and living your dreams!
-
-- `Step 1:` Act on your excitement, your passion, whatever is most exciting to you, in the moment. Do this every moment that you can.
-
-- `Step 2:` Do this to the best of your ability. Take it as far as you can go until you cannot take it any further.
-
-- `Step 3:` Act on your excitement/passion with absolutely no insistence, assumption or expectation of what the outcome should be.
-
-- `Step 4:` Choose to remain in a positive state regardless of what happens.
-
-- `Step 5:` Constantly investigate your belief systems. Release & replace the un-preferred beliefs: fear-based beliefs, and the beliefs not in alignment with who you prefer to be.
+    - Step 1: Act on your excitement, your passion, whatever is most exciting to you, in the moment. Do this every moment that you can.
+    - Step 2: Do this to the best of your ability. Take it as far as you can go until you cannot take it any further.
+    - Step 3: Act on your excitement/passion with absolutely no insistence, assumption or expectation of what the outcome should be.
+    - Step 4: Choose to remain in a positive state regardless of what happens.
+    - Step 5: Constantly investigate your belief systems. Release & replace the un-preferred beliefs: fear-based beliefs, and the beliefs not in alignment with who you prefer to be.
 
 #### `The Five Laws of Creation`
 
 ---
 
-- I --> `You exist`
+- I: `You exist`
 
-- II --> `Everything is here and now`
+- II: `Everything is here and now`
 
-- III --> `The One is the All and the All are the One`
+- III: `The One is the All and the All are the One`
 
-- IV --> `What you put out is what you get back`
+- IV: `What you put out is what you get back`
 
-- V --> `Everything changes except the first 4 Laws`
+- V: `Everything changes except the first 4 Laws`
+
+---
+
+<div class="container">
+    <div class="col-lg mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/awakening/bashar/y0u.mp4" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>

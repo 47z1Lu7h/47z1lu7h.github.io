@@ -17,14 +17,12 @@ New research shows the human heart is much more than an efficient pump that sust
 
 ##### `The heart communicates with the brain and body in four ways:`
 
----
-
-    <ul>
-        <li>Neurological communication (nervous system)</li
-        <li>Biochemical communication (hormones)</li>
-        <li>Biophysical communication (pulse wave)</li>
-        <li>Energetic communication (electromagnetic fields)</li>
-    </ul>
+<ul>
+    <li>Neurological communication (nervou system)</li
+    <li>Biochemical communication (hormones)</li>
+    <li>Biophysical communication (pulse wave)</li>
+    <li>Energetic communication (electromagnetic fields)</li>
+</ul>
 
 ## Energetic Communication
 
@@ -46,13 +44,11 @@ The magnetic field produced by the human heart is more than 100 times greater in
 </div>
 <br>
 
-##### `For a visual explanation of the heart's electromagnetic field, you might find the following video informative:`
-
----
+## `For a visual explanation of the heart's electromagnetic field, you might find the following video informative:`
 
 <div class="rcontainer">
     <div class="row justify-content-md-center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/yAoLbbyjHjQ?si=d3D8U0BxDHuzQr9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/yAoLbbyjHjQ?si=d3D8U0BxDHuzQr9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
 
