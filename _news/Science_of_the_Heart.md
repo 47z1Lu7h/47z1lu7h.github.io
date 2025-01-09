@@ -18,7 +18,7 @@ New research shows the human heart is much more than an efficient pump that sust
 ##### `The heart communicates with the brain and body in four ways:`
 
 <ul>
-    <li>Neurological communication (nervou system)</li>
+    <li>Neurological communication (nervous system)</li>
     <li>Biochemical communication (hormones)</li>
     <li>Biophysical communication (pulse wave)</li>
     <li>Energetic communication (electromagnetic fields)</li>
@@ -44,7 +44,7 @@ The magnetic field produced by the human heart is more than 100 times greater in
 </div>
 <br>
 
-#### `For a visual explanation of the heart's electromagnetic field, you might find the following video informative:`
+##### `For a visual explanation of the heart's electromagnetic field, you might find the following video informative:`
 
 <div class="rcontainer">
     <div class="row justify-content-md-center">
@@ -58,11 +58,10 @@ The magnetic field produced by the human heart is more than 100 times greater in
 
 ---
 
-<ul>
-    <li>[The Heart's Electromagnetic Field Is Your Superpower](https://www.psychologytoday.com/intl/blog/building-the-habit-of-hero/202011/the-hearts-electromagnetic-field-is-your-superpower)</li> 
-    <li>[Magnetic field measurements of the human heart with small sensors operating at room temperature](https://www.ptb.de/cms/en/presseaktuelles/journalisten/news-press-releases/archives-of-press-releases/archive-of-press-release.html?cHash=54f29032dfdd429124482497ce1b02b2&tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bday%5D=11&tx_news_pi1%5Bmonth%5D=12&tx_news_pi1%5Bnews%5D=210&tx_news_pi1%5Byear%5D=2009&utm_source=chatgpt.com)</li>
-    <li>[Science of the Heart](https://faseb.onlinelibrary.wiley.com/doi/epdf/10.1096/fj.202300201RR?utm_source=chatgpt.com)</li>
-    <li>[Magnetocardiography](https://en.wikipedia.org/wiki/Magnetocardiography?utm_source=chatgpt.com)</li>
-    <li>[Magnetic field imaging](https://en.wikipedia.org/wiki/Magnetic_field_imaging?utm_source=chatgpt.com)</li>
-    <li>[Bioelectromagnetic medicine](https://en.wikipedia.org/wiki/Bioelectromagnetic_medicine?utm_source=chatgpt.com)</li>
-</ul>
+[- The Heart's Electromagnetic Field Is Your Superpower](https://www.psychologytoday.com/intl/blog/building-the-habit-of-hero/202011/the-hearts-electromagnetic-field-is-your-superpower)
+
+- [Magnetic field measurements of the human heart with small sensors operating at room temperature](https://www.ptb.de/cms/en/presseaktuelles/journalisten/news-press-releases/archives-of-press-releases/archive-of-press-release.html?cHash=54f29032dfdd429124482497ce1b02b2&tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bday%5D=11&tx_news_pi1%5Bmonth%5D=12&tx_news_pi1%5Bnews%5D=210&tx_news_pi1%5Byear%5D=2009&utm_source=chatgpt.com)
+- [Science of the Heart](https://faseb.onlinelibrary.wiley.com/doi/epdf/10.1096/fj.202300201RR?utm_source=chatgpt.com)
+- [Magnetocardiography](https://en.wikipedia.org/wiki/Magnetocardiography?utm_source=chatgpt.com)
+- [Magnetic field imaging](https://en.wikipedia.org/wiki/Magnetic_field_imaging?utm_source=chatgpt.com)
+- [Bioelectromagnetic medicine](https://en.wikipedia.org/wiki/Bioelectromagnetic_medicine?utm_source=chatgpt.com)

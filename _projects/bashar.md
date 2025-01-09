@@ -95,11 +95,11 @@ Bashar’s message helps to expand your capacity for learning and change. It rea
 
 ## Bashar's follow your excitement formul is the key to being your True Self and living your dreams!
 
-    - Step 1: Act on your excitement, your passion, whatever is most exciting to you, in the moment. Do this every moment that you can.
-    - Step 2: Do this to the best of your ability. Take it as far as you can go until you cannot take it any further.
-    - Step 3: Act on your excitement/passion with absolutely no insistence, assumption or expectation of what the outcome should be.
-    - Step 4: Choose to remain in a positive state regardless of what happens.
-    - Step 5: Constantly investigate your belief systems. Release & replace the un-preferred beliefs: fear-based beliefs, and the beliefs not in alignment with who you prefer to be.
+- Step 1: Act on your excitement, your passion, whatever is most exciting to you, in the moment. Do this every moment that you can.
+- Step 2: Do this to the best of your ability. Take it as far as you can go until you cannot take it any further.
+- Step 3: Act on your excitement/passion with absolutely no insistence, assumption or expectation of what the outcome should be.
+- Step 4: Choose to remain in a positive state regardless of what happens.
+- Step 5: Constantly investigate your belief systems. Release & replace the un-preferred beliefs: fear-based beliefs, and the beliefs not in alignment with who you prefer to be.
 
 #### `The Five Laws of Creation`
 
