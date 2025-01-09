@@ -44,7 +44,7 @@ The magnetic field produced by the human heart is more than 100 times greater in
 </div>
 <br>
 
-##### `For a visual explanation of the heart's electromagnetic field, you might find the following video informative:`
+#### For a visual explanation of the heart's electromagnetic field, you might find the following video informative:
 
 <div class="rcontainer">
     <div class="row justify-content-md-center">
