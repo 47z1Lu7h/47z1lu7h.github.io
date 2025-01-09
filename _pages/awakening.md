@@ -1,6 +1,6 @@
 ---
 layout: page
-title: awake
+title: awakening
 permalink: /awakening/
 description: A growing collection of things that make you thing/awake... if you want ☺️ 😜
 nav: true
