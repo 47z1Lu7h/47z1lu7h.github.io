@@ -53,7 +53,7 @@ Bashar describes the importance of belief systems and explains how to change wha
 
 ---
 
-##### Bashar provides cutting-edge information on a wide range of topics:
+###### Bashar provides cutting-edge information on a wide range of topics:
 
     - Personal Transformation
     - History of the Universe
