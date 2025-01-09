@@ -16,15 +16,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-awake",
-          title: "awake",
+        },{id: "nav-awakening",
+          title: "awakening",
           description: "A growing collection of things that make you thing/awake... if you want ☺️ 😜",
           section: "Navigation",
           handler: () => {
             window.location.href = "/awakening/";
           },
-        },{id: "nav-pentest",
-          title: "pentest",
+        },{id: "nav-pentesting",
+          title: "pentesting",
           description: "A growing collection of hacking stuff...",
           section: "Navigation",
           handler: () => {
