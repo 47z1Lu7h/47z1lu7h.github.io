@@ -5,6 +5,7 @@ description: Electromagnetic field of the heart
 date: 2015-11-01
 inline: false
 related_posts: true
+news: true
 ---
 
 ## Heart-Brain Communication

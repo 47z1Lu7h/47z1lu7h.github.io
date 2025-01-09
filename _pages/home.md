@@ -8,6 +8,7 @@ profile:
   align: right
   image: logos/47z1Right.jpg
   image_circular: true
+  content: about_me.md
   more_info: >
     <p>Life is not a period or a question mark,</p>
     <p>It's an exclamation point.</p>
@@ -26,14 +27,17 @@ The Art of Hacking
 Hacking goes beyond keyboards and firewalls. It’s a mindset—a relentless pursuit of freedom and knowledge. Learn how ethical hackers and digital warriors challenge systems of oppression while protecting the vulnerable in the age of surveillance.
 Conspiracies Unveiled
 
-    Dive into the rabbit hole with us as we explore the untold stories of secret societies, hidden technologies, and the manipulation of mass consciousness. Are you ready to question everything you've been told?
-    Awakening to Infinity
+`Dive into the rabbit hole with us as we explore the untold stories of secret societies, hidden technologies, and the manipulation of mass consciousness. Are you ready to question everything you've been told?`
 
-What if you are more than flesh and bone? Discover the profound truth that we are infinite, eternal beings experiencing a temporary human reality. Through ancient wisdom, quantum physics, and personal exploration, we uncover the limitless potential within us all.
+#### Awakening to Infinity
 
 ---
 
-### Highlights
+What if you are more than flesh and bone? Discover the profound truth that we are infinite, eternal beings experiencing a temporary human reality. Through ancient wisdom, quantum physics, and personal exploration, we uncover the limitless potential within us all.
+
+##### Highlights
+
+---
 
 - `The Great Deception:` A deep dive into how modern systems keep us distracted and asleep.
 - `The Awakening Wave:` Stories from individuals breaking free from the matrix and embracing their infinite nature.
@@ -51,5 +55,3 @@ And for those who, like me, are fascinated by the unconventional, I delve into c
 This blog is more than just a collection of topics; it’s a community for those who seek to learn, question, and explore. Whether you’re here for cybersecurity insights, spiritual reflections, or to entertain new perspectives on hidden truths, you’ll find a home here.
 
 Let’s journey together—through the digital, the spiritual, and the conspiratorial—unearthing knowledge, challenging perceptions, and growing in understanding every step of the way.
-
-<hr>
