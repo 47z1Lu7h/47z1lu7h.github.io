@@ -58,8 +58,7 @@ The magnetic field produced by the human heart is more than 100 times greater in
 
 ---
 
-[- The Heart's Electromagnetic Field Is Your Superpower](https://www.psychologytoday.com/intl/blog/building-the-habit-of-hero/202011/the-hearts-electromagnetic-field-is-your-superpower)
-
+- [The Heart's Electromagnetic Field Is Your Superpower](https://www.psychologytoday.com/intl/blog/building-the-habit-of-hero/202011/the-hearts-electromagnetic-field-is-your-superpower)
 - [Magnetic field measurements of the human heart with small sensors operating at room temperature](https://www.ptb.de/cms/en/presseaktuelles/journalisten/news-press-releases/archives-of-press-releases/archive-of-press-release.html?cHash=54f29032dfdd429124482497ce1b02b2&tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bday%5D=11&tx_news_pi1%5Bmonth%5D=12&tx_news_pi1%5Bnews%5D=210&tx_news_pi1%5Byear%5D=2009&utm_source=chatgpt.com)
 - [Science of the Heart](https://faseb.onlinelibrary.wiley.com/doi/epdf/10.1096/fj.202300201RR?utm_source=chatgpt.com)
 - [Magnetocardiography](https://en.wikipedia.org/wiki/Magnetocardiography?utm_source=chatgpt.com)
