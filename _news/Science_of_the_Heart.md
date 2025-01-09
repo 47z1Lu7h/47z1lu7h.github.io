@@ -19,14 +19,12 @@ New research shows the human heart is much more than an efficient pump that sust
 
 ---
 
-<ul>
-    <li>Neurological communication (`nervous system`)</li
-    <li>Biochemical communication (`hormones`)</li>
-    <li>Biophysical communication (`pulse wave``)</li>
-    <li>Energetic communication (`electromagnetic fields`)</li>
-</ul>
-
----
+    <ul>
+        <li>Neurological communication (nervous system)</li
+        <li>Biochemical communication (hormones)</li>
+        <li>Biophysical communication (pulse wave)</li>
+        <li>Energetic communication (electromagnetic fields)</li>
+    </ul>
 
 ## Energetic Communication
 
