@@ -8,7 +8,7 @@ related_posts: true
 news: true
 ---
 
-## Heart-Brain Communication
+# Heart-Brain Communication
 
 ---
 
@@ -18,6 +18,8 @@ New research shows the human heart is much more than an efficient pump that sust
 
 ##### `The heart communicates with the brain and body in four ways:`
 
+---
+
 <ul>
     <li>Neurological communication (nervous system)</li>
     <li>Biochemical communication (hormones)</li>
@@ -25,7 +27,7 @@ New research shows the human heart is much more than an efficient pump that sust
     <li>Energetic communication (electromagnetic fields)</li>
 </ul>
 
-## Energetic Communication
+# Energetic Communication
 
 ---
 
@@ -45,15 +47,15 @@ The magnetic field produced by the human heart is more than 100 times greater in
 </div>
 <br>
 
-#### For a visual explanation of the heart's electromagnetic field, you might find the following video informative:
+> "The heart's electromagnetic field is not just a pulse within—it is a symphony of energy, reaching out to connect us to one another and the world around us, a silent reminder that we are all deeply intertwined."
+
+---
 
 <div class="rcontainer">
     <div class="row justify-content-md-center">
         <iframe width="1280" height="720" src="https://www.youtube.com/embed/yAoLbbyjHjQ?si=d3D8U0BxDHuzQr9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
-
-> "The heart's electromagnetic field is not just a pulse within—it is a symphony of energy, reaching out to connect us to one another and the world around us, a silent reminder that we are all deeply intertwined."
 
 ##### Press releases:
 
