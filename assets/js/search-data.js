@@ -450,16 +450,16 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
             },},{id: "projects-alien-wisdom",
           title: 'Alien Wisdom',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/bashar/";
+            },},{id: "projects-pentesting",
+          title: 'Pentesting',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/oscp/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
