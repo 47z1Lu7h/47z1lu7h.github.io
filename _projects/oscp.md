@@ -18,7 +18,7 @@ discus_comments: true
 `tree /F`
 
 </aside>
-
+git@github.com:Kitsun3Sec/Pentest-Cheat-Sheets.git
 ## Important Locations
 
 <details>
@@ -680,7 +680,7 @@ sudo ip r add <subnet> dev ligolo
         - filetype
         - intitle
         - GHDB - Google hacking database
-    - OS and Service Information using [searchdns.netcraft.com](http://searchdns.netcraft.com)
+    - OS and Service Information 
     - Github Dorking
         - filename
         - user
@@ -690,7 +690,6 @@ sudo ip r add <subnet> dev ligolo
         - port
         - Then gather information by going through the options
     - Scanning Security headers and SSL/TLS using [https://securityheaders.com/](https://securityheaders.com/)
-
 
 ## Port Scanning
 
