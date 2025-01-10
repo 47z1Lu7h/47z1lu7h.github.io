@@ -409,7 +409,6 @@ git show <commit-id>
 ```
 
 - If you identify `.git` active on the website. Use https://github.com/arthaud/git-dumper now it downloads all the files and saves it locally. Perform the same above commands and escalate.
-- Some useful GitHub dorks: [https://book.hacktricks.xyz/generic-methodologies-and-resources/external-recon-methodology/github-leaked-secrets](https://book.hacktricks.xyz/generic-methodologies-and-resources/external-recon-methodology/github-leaked-secrets) → this might not be relevant to the exam environment.
 
 ## Connecting to RDP
 
@@ -491,8 +490,6 @@ useradd -u <UID> -g <group> <uname>  #UID can be something new than existing, th
 ```
 
 ## Password-Hash Cracking
-
-_Hash Analyzer_: [https://www.tunnelsup.com/hash-analyzer/](https://www.tunnelsup.com/hash-analyzer/)
 
 ### fcrackzip
 
@@ -1471,8 +1468,6 @@ pth-winexe -U JEEVES/administrator%aad3b43XXXXXXXX35b51404ee:e0fb1fb857XXXXXXXX2
 ---
 
 # Linux Privilege Escalation
-
-- [Privesc through TAR wildcard](https://medium.com/@polygonben/linux-privilege-escalation-wildcards-with-tar-f79ab9e407fa)
 
 ## TTY Shell
 
