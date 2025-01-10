@@ -105,15 +105,11 @@ Bashar’s message helps to expand your capacity for learning and change. It rea
 
 ---
 
-- I: `You exist`
-
-- II: `Everything is here and now`
-
-- III: `The One is the All and the All are the One`
-
-- IV: `What you put out is what you get back`
-
-- V: `Everything changes except the first 4 Laws`
+1 - `You exist`
+2 - `Everything is here and now`
+3 - `The One is the All and the All are the One`
+4 - `What you put out is what you get back`
+5 - `Everything changes except the first 4 Laws`
 
 ---
 
