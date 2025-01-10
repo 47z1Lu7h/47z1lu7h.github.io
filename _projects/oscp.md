@@ -11,19 +11,12 @@ discus_comments: true
 
 # General
 
-<aside>
-💡 For Finding all important files in Windows (CTF Style)
-
-`cd c:\Users` then
-`tree /F`
-
-</aside>
+eee
 
 ## Important Locations
 
 <details>
-<summary>Windows</summary>
-Windows
+<summary>Windows</summary> Windows
     
 ```powershell
 C:/Users/Administrator/NTUser.dat
