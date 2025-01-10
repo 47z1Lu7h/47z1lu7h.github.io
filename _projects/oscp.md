@@ -680,7 +680,6 @@ sudo ip r add <subnet> dev ligolo
         - hostname
         - port
         - Then gather information by going through the options
-    - Scanning Security headers and SSL/TLS using [https://securityheaders.com/](https://securityheaders.com/)
 
 ## Port Scanning
 
