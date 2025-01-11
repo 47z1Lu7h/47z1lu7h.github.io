@@ -1,3 +1,19 @@
+---
+layout: default
+title: Pentesting
+description:
+img: assets/img/pentest/h4Ck/mixNumbers.png
+importance: 2
+category: Pentesting
+tag: pentesting
+discus_comments: true
+comments: true
+toc:
+  sidebar: left
+related_posts: true
+news: true
+---
+
 # Windows HashDump without metasploit
 
 ## Windows Passwords
