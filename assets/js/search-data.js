@@ -450,6 +450,11 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
+            },},{id: "projects-dns",
+          title: 'DNS',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/DNS/";
             },},{id: "projects-alien-wisdom",
           title: 'Alien Wisdom',
           description: "",
