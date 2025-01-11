@@ -6,6 +6,7 @@ img: assets/img/logos/alien.png
 importance: 1
 category: "Alien Wisdom"
 discus_comments: true
+comments: true
 ---
 
 ## `Who is Bashar?`
