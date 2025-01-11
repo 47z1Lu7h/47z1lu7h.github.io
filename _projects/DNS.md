@@ -2,7 +2,7 @@
 layout: page
 title: DNS
 description:
-img: assets/img/term/dir.jpg
+img: assets/img/pentest/matrix/VdarkMatrx.png
 importance: 1
 category: Linux
 discus_comments: true
