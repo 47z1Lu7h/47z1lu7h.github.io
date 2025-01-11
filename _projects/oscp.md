@@ -18,7 +18,6 @@ eee
 <details>
 <summary>Windows</summary> Windows
     
-```powershell
 C:/Users/Administrator/NTUser.dat
 C:/Documents and Settings/Administrator/NTUser.dat
 C:/apache/logs/access.log
@@ -87,12 +86,11 @@ C:/Program Files/MySQL/MySQL Server 5.1/my.ini
 C:/Windows/System32/inetsrv/config/schema/ASPNET_schema.xml
 C:/Windows/System32/inetsrv/config/applicationHost.config
 C:/inetpub/logs/LogFiles/W3SVC1/u_ex[YYMMDD].log
-```
+
 </details>
 <details>
 <summary>Linux</summary>
 
-```powershell
 /etc/passwd
 /etc/shadow
 /etc/aliases
@@ -331,7 +329,7 @@ C:/inetpub/logs/LogFiles/W3SVC1/u_ex[YYMMDD].log
 /var/run/utmp
 /var/spool/cron/crontabs/root
 /var/webmin/miniserv.log
-/var/www/html<VHOST>/__init__.py
+/var/www/html<VHOST>/**init**.py
 /var/www/html/db_connect.php
 /var/www/html/utils.php
 /var/www/log/access_log
@@ -367,7 +365,6 @@ C:/inetpub/logs/LogFiles/W3SVC1/u_ex[YYMMDD].log
 ~/.xinitrc
 ~/.Xresources
 ~/.xsession
-```
 
 </details>
 
@@ -504,7 +501,7 @@ john hashfile --wordlist=rockyou.txt
 
 ### Hashcat
 
-> [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
+> [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat. net/wiki/doku.php?id=example_hashes)
 
 ```powershell
 #Obtain the Hash module number
