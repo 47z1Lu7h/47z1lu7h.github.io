@@ -470,6 +470,21 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/tres/";
+            },},{id: "projects-pentesting",
+          title: 'Pentesting',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/windows_enum/";
+            },},{id: "projects-pentesting",
+          title: 'Pentesting',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/windows_hashdump/";
+            },},{id: "projects-pentesting",
+          title: 'Pentesting',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/windows_priv_esc/";
             },},{
         id: 'social-github',
         title: 'GitHub',
