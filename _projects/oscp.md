@@ -501,8 +501,6 @@ john hashfile --wordlist=rockyou.txt
 
 ### Hashcat
 
-> [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat. net/wiki/doku.php?id=example_hashes)
-
 ```powershell
 #Obtain the Hash module number
 hashcat -m <number> hash wordlists.txt --force
