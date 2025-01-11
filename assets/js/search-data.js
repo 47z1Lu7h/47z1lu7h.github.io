@@ -452,7 +452,7 @@ ninja.data = [{
               window.location.href = "/projects/7_project/";
             },},{id: "projects-dns",
           title: 'DNS',
-          description: "",
+          description: "eeeelaa pee",
           section: "Projects",handler: () => {
               window.location.href = "/projects/DNS/";
             },},{id: "projects-alien-wisdom",
