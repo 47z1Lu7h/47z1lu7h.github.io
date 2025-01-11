@@ -3,7 +3,8 @@ layout: page
 title: h0m3
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
+related posts: true
+news: true
 profile:
   align: right
   image: logos/47z1Right.jpg
@@ -12,9 +13,6 @@ profile:
   more_info: >
     <p>Life is not a period or a question mark,</p>
     <p>It's an exclamation point.</p>
-
-related posts: true
-news: true
 ---
 
 # Welcome to the Awakening Nexus

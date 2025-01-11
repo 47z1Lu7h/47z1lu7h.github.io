@@ -6,6 +6,8 @@ img: assets/img/term/dir.jpg
 importance: 1
 category: Linux
 discus_comments: true
+toc:
+  sidebar: left
 ---
 
 # DNS Enumaration
