@@ -1,13 +1,17 @@
 ---
-layout: page
+layout: default
 title: DNS
-description:
+description: eeeelaa pee
 img: assets/img/pentest/matrix/VdarkMatrx.png
 importance: 1
-category: Linux
+category: Pentesting
+categories: linux pentesting
 discus_comments: true
+comments: true
 toc:
   sidebar: left
+related_posts: true
+news: true
 ---
 
 # DNS Enumaration

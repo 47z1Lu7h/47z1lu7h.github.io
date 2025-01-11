@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Pentesting
 description:
 img: assets/img/pentest/h4Ck/mixNumbers.png
@@ -10,6 +10,8 @@ discus_comments: true
 comments: true
 toc:
   sidebar: left
+related_posts: true
+news: true
 ---
 
 # General
