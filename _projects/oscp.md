@@ -7,6 +7,9 @@ importance: 2
 category: Pentesting
 tag: pentesting
 discus_comments: true
+comments: true
+toc:
+  sidebar: left
 ---
 
 # General
