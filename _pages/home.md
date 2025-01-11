@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: about
 title: h0m3
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
@@ -34,6 +34,7 @@ Conspiracies Unveiled
 ---
 
 What if you are more than flesh and bone? Discover the profound truth that we are infinite, eternal beings experiencing a temporary human reality. Through ancient wisdom, quantum physics, and personal exploration, we uncover the limitless potential within us all.
+<br>
 
 ##### Highlights
 
