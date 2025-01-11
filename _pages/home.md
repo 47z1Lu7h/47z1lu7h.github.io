@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: h0m3
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
