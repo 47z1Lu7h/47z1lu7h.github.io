@@ -1,3 +1,19 @@
+---
+layout: default
+title: mathJax
+description:
+img: assets/img/pentest/h4Ck/mixNumbers.png
+importance: 2
+category: Linux
+tag: mathJax
+discus_comments: true
+comments: true
+toc:
+  sidebar: left
+related_posts: true
+news: true
+---
+
 # Text Color
 
 Using MathJax syntax:

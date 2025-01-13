@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pentesting
+title: win priv esc
 description:
 img: assets/img/pentest/h4Ck/mixNumbers.png
 importance: 2

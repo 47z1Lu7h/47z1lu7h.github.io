@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pentesting
+title: hashdump
 description:
 img: assets/img/pentest/h4Ck/mixNumbers.png
 importance: 2

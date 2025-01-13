@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pentesting
+title: win enum
 description:
 img: assets/img/pentest/h4Ck/mixNumbers.png
 importance: 2

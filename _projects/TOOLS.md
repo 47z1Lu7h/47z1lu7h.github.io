@@ -1,3 +1,19 @@
+---
+layout: default
+title: tools
+description:
+img: assets/img/pentest/h4Ck/mixNumbers.png
+importance: 2
+category: Linux
+tag: pentesting
+discus_comments: true
+comments: true
+toc:
+  sidebar: left
+related_posts: true
+news: true
+---
+
 - [Tools](#tools)
   - [Active Directory](#active-directory)
   - [Cloud Pentesting](#cloud-pentesting)
