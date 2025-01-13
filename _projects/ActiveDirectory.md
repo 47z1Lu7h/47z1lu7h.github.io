@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: AD
 description:
 img: assets/img/pentest/h4Ck/mixNumbers.png
