@@ -450,38 +450,53 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
+            },},{id: "projects-ad",
+          title: 'AD',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ActiveDirectory/";
+            },},{id: "projects-pent3st1ng",
+          title: 'Pent3st1ng',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/AllAboutPentesting/";
             },},{id: "projects-dns",
           title: 'DNS',
           description: "eeeelaa pee",
           section: "Projects",handler: () => {
               window.location.href = "/projects/DNS/";
+            },},{id: "projects-tools",
+          title: 'tools',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/TOOLS/";
             },},{id: "projects-alien-wisdom",
           title: 'Alien Wisdom',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/bashar/";
-            },},{id: "projects-pentesting",
-          title: 'Pentesting',
+            },},{id: "projects-mathjax",
+          title: 'mathJax',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/oscp/";
+              window.location.href = "/projects/mathJax/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/tres/";
-            },},{id: "projects-pentesting",
-          title: 'Pentesting',
+            },},{id: "projects-win-enum",
+          title: 'win enum',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/windows_enum/";
-            },},{id: "projects-pentesting",
-          title: 'Pentesting',
+            },},{id: "projects-hashdump",
+          title: 'hashdump',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/windows_hashdump/";
-            },},{id: "projects-pentesting",
-          title: 'Pentesting',
+            },},{id: "projects-win-priv-esc",
+          title: 'win priv esc',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/windows_priv_esc/";
