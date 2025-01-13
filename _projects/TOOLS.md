@@ -1,4 +1,3 @@
-
 - [Tools](#tools)
   - [Active Directory](#active-directory)
   - [Cloud Pentesting](#cloud-pentesting)
@@ -20,10 +19,10 @@
   - [Wordlists](#wordlists)
   - [Other Important](#other-important)
 
-
 ## Tools
 
 ### Active Directory
+
 1. [NetExec](https://github.com/Pennyw0rth/NetExec)
 2. [Responder](https://github.com/lgandx/Responder)
 3. [BloodHound](https://github.com/BloodHoundAD/BloodHound)
@@ -32,11 +31,13 @@
 6. [enum4linux](#enum4linux)
 
 ### Cloud Pentesting
+
 1. [cloudfrunt](https://github.com/MindPointGroup/cloudfrunt)
 2. [Bucket Finder](https://digi.ninja/projects/bucket_finder.php)
 3. [CloudFail](https://github.com/m0rtem/CloudFail)
 
 ### Cryptography
+
 1. [Hashidentifier: hashid](https://psypanda.github.io/hashID/)
 2. [Ares](https://github.com/bee-san/Ares)
 3. [quipqiup Auto Cipher Decoder](https://quipqiup.com/)
@@ -50,9 +51,10 @@
 11. [Zero Width Char Encoder 1](https://www.irongeek.com/i.php?page=security/unicode-steganography-homoglyph-encoder)
 12. [Zero Width Char Encoder 2](https://330k.github.io/misc_tools/unicode_steganography.html)
 13. [RSA CTF Tool](https://github.com/RsaCtfTool/RsaCtfTool)
-14. [All ROT](https://theblob.org/rot.cgi) 
+14. [All ROT](https://theblob.org/rot.cgi)
 
 ### File Inclusion
+
 1. [LFISuite](https://github.com/D35m0nd142/LFISuite)
 2. [fimap](https://github.com/kurobeats/fimap)
 
@@ -62,14 +64,17 @@
 2. [rustscan](https://github.com/RustScan/RustScan)
 
 ### Note Taking
+
 1. Cherry Tree FOSS Note Taking
 2. [draw.io](https://app.diagrams.net)
 3. EverNote Free
 
 ### Open Redirect
+
 1. [Open Redirect Scanner](https://github.com/ak1t4/open-redirect-scanner)
 
 ### OSINT
+
 1. [Name to Social Media](https://whatsmyname.app/)
 2. [Face Image Search](https://pimeyes.com/en)
 3. [Image Time](http://suncalc.net/)
@@ -81,30 +86,35 @@
 9. News by Location: [Instagram Locations](https://www.instagram.com/explore/locations/?hl=en), [Snapchat Map](https://map.snapchat.com/)
 
 ### Proxy and Scanners
+
 1. mitmproxy
 2. Burp Suite
 3. OWASP ZAP
 
 ### Reversing
+
 1. [Radare GUI](https://github.com/rizinorg/cutter)
 2. [dogbolt online reversing](https://dogbolt.org)
 
 ### Server-Side Request Forgery (SSRF)
+
 1. [See-SURF](https://github.com/In3tinct/See-SURF)
 2. [AllThingsSSRF](https://github.com/jdonsec/AllThingsSSRF)
 3. [ssrf-sheriff](https://github.com/teknogeek/ssrf-sheriff)
 4. Burpsuite Extension: Collaborator Everywhere
 
 ### Social Engineering Tools
+
 1. [Fake SMS](https://github.com/machine1337/fake-sms)
 
 ### Steganography
+
 1. [AperiSolve](https://www.aperisolve.com/)
 2. strings file.wav
 3. exiftool file.wav
 4. exiv2 file.wav
 5. foremost -i file.wav
-6. binwalk --dd ".*" file.wav
+6. binwalk --dd ".\*" file.wav
 7. steghide extract -sf file.wav
 8. [stegseek](https://github.com/RickdeJager/stegseek/releases)
 9. outguess -r file.mp3 output.txt
@@ -117,24 +127,29 @@
 16. Spectogram Tools: Audacity, Sonic Visualiser, [Spectrum Analyzer](https://academo.org/demos/spectrum-analyzer/), [sciencemusic](https://spectrogram.sciencemusic.org/)
 
 ### Subdomain
+
 1. `curl -s https://raw.githubusercontent.com/ZishanAdThandar/pentest/main/scripts/subauto.sh | bash -s domain.com`
 2. `curl -s "http://web.archive.org/cdx/search/cdx?url=*.hackerone.com/*&output=text&fl=original&collapse=urlkey" | sort | sed -e 's_https*://__' -e "s//.//" -e 's/:.//' -e 's/^www.//' | uniq`
 3. [Subdomain Takeover](https://github.com/antichown/subdomain-takeover)
 
 ### SQL Injection
+
 1. [sqlmap](https://github.com/sqlmapproject/sqlmap)
 2. [jSQL Injection](https://github.com/ron190/jsql-injection)
 
 ### Template Injection
+
 1. [tplmap](https://github.com/epinna/tplmap)
 
 ### XML External Entity (XXE) Injection
+
 1. [XXExploiter](https://github.com/luisfontes19/xxexploiter)
 2. [XXEinjector](https://github.com/enjoiz/XXEinjector)
 3. [oxml_xxe](https://github.com/BuffaloWill/oxml_xxe)
 4. [xxer](https://github.com/TheTwitchy/xxer)
 
 ### Wordlists
+
 1. [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 2. [SecLists](https://github.com/danielmiessler/SecLists)
 3. [FuzzDB](https://github.com/fuzzdb-project/fuzzdb)
@@ -142,10 +157,10 @@
 5. rockyou.txt
 
 ### Other Important
+
 1. [HackiFy Tools and Wordlists Auto Installer](https://github.com/ZishanAdThandar/hackify)
 2. [CheatSheet-God](https://github.com/OlivierLaflamme/Cheatsheet-God)
 3. [ctf-wiki](https://github.com/ctf-wiki/ctf-wiki)
 4. [Awesome CTF](https://github.com/devploit/awesome-ctf-resources)
 5. [Hacker101](https://github.com/Hacker0x01/hacker101)
 6. [All CVE with PoC](https://github.com/trickest/cve)
-

