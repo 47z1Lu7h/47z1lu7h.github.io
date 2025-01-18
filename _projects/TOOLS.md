@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: tools
 description:
 img: assets/img/pentest/h4Ck/mixNumbers.png
