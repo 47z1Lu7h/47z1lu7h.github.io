@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: about
 title: tools
 description:
 img: assets/img/pentest/h4Ck/mixNumbers.png
