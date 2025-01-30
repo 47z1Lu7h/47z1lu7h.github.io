@@ -1,6 +1,7 @@
-<!--
+#<!--
 
 ---
+
 layout: post
 permalink: /r3p0s/
 title: repositories
@@ -9,6 +10,7 @@ nav: true
 nav_order: 4
 news: true
 social: true
+
 ---
 
 {% if site.data.repositories.github_users %}
