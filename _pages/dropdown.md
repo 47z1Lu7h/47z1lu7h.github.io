@@ -17,6 +17,6 @@ children:
   - title: divider
   - title: divider
   - title: repos
-    permalink: /repositories.md/
+    permalink: /r3p0s.md/
   - title: divider
 ---
