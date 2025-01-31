@@ -4,7 +4,7 @@ title: how to play hackthebox.com
 date: 2024-05-01
 description: write up machine broker
 tags: writeUp
-category: Hacking
+categories: Hacking Pentesting Hackthebox
 tabs: true
 related_posts: true
 comments: true

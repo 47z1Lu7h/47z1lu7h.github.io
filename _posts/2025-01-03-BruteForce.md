@@ -4,10 +4,10 @@ title: Brute Force Attack
 description: A brute force attack is a hacking method that uses trial and error to crack passwords, login credentials, and encryption keys. It is a simple yet reliable tactic for gaining unauthorized access to individual accounts and organizations' systems and networks.
 date: 2025-01-03
 tags: BruteForce
-category: Hacking
+categories: Hacking Hackthebox Pentesting
 thumbnail: assets/img/pentest/bruteForce/bruteForece-Red.jpeg
 img: assets/img/pentest/bruteForce/bruteForce-Blak.jpg
-category: 
+category:
 importance: 5
 comments: true
 related_posts: true
@@ -15,7 +15,6 @@ featured: true
 toc:
   beginning: true
   sideber: rigth
-
 ---
 
 # What Is a Brute Force Attack?
