@@ -26,15 +26,20 @@ social: true
 <br>
 <hr>
 
-# Categories
+# Separating the categories and sub-category
 
-{% for category in site.categories %}
-{% assign Linux = category[0] %}
+{% assign sorted_cats = site.categories | sort %}
+{% for category in sorted_cats %}
+{% assign sorted_posts = category[1] | reversed %}
 
-<h6><a href="#">{{ Linux }}</a></h6>
-{% for post in site.categories[Linux] %}
-<a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date }}</small>
-{% endfor %}
+  <h2 id="{{category[0] | uri_escape | downcase }}">{{ category[0] | capitalize }}</H2>
+     <p>
+      {% for p in sorted_posts %}
+     <a href="/{{p.type | downcase}}/"><img src="/assets/img/{{p.type |downcase }}.png" alt="{{p.type}}" title="{{p.type}}"/></a> <a href="{{ p.url }}">{{ p.title }}</a> ({{p.type}}/{{p.category}}) &raquo;  <span class="entry-date"><time datetime="{{ p.date | date_to_xmlschema }}" itemprop="datePublished">{{ p.date | date: "%B %d, %Y" }}</time></span>
+     <br />
+      {% endfor %} 
+    </p>
+  
 {% endfor %}
 
 <br>
