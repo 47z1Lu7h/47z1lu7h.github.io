@@ -4,7 +4,7 @@ title: DNS
 description: eeeelaa pee
 img: assets/img/pentest/matrix/VdarkMatrx.png
 importance: 1
-category: Pentesting
+category: pentesting
 categories: linux pentesting
 discus_comments: true
 comments: true

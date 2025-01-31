@@ -137,30 +137,6 @@ disqus_shortname: 47z1lu7h # put your disqus shortname
 # https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------
-# Collections
-# -----------------------------------------------------------------------------
-
-collections:
-  news:
-    defaults:
-      layout: post
-    output: true
-    permalink: /:collection/:title/
-  projects:
-    output: true
-    permalink: /:collection/:title/
-
-announcements:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
-
-# -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
 
@@ -270,7 +246,31 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: [pentesting, writeUp, hacking, hackthebox, linux, ctf, light, dark, awakening] # these tags will be displayed on the front page of your blog
-display_categories: ["Pentesting", "dark_side", "Linux", "htb", "hackthebox", "Hackthebox", "hacking", "external-services"] # these categories will be displayed on the front page of your blog
+display_categories: ["pentesting", "dark_side", "Linux", "htb", "hackthebox", "hacking", "external-services"] # these categories will be displayed on the front page of your blog
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /:collection/:title/
+  projects:
+    output: true
+    permalink: /:collection/:title/
+
+announcements:
+  enabled: true
+  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  limit: 5 # leave blank to include all the news in the `_news` folder
+
+latest_posts:
+  enabled: true
+  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: 3 # leave blank to include all the blog posts
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

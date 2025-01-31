@@ -4,7 +4,7 @@ title: project 1
 description: with background image
 img: assets/img/pentest/h4Ck/mixNumbers.png
 importance: 1
-category: Pentesting
+category: pentesting
 related_posts: true
 news: true
 ---

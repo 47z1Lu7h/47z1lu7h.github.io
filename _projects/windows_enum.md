@@ -4,7 +4,7 @@ title: win enum
 description:
 img: assets/img/pentest/h4Ck/mixNumbers.png
 importance: 2
-category: Pentesting
+category: pentesting
 tag: pentesting
 discus_comments: true
 comments: true
