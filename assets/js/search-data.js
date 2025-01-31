@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-awakening",
-          title: "awakening",
-          description: "A growing collection of things that make you thing/awake... if you want ☺️ 😜",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/awakening/";
-          },
         },{id: "nav-pentesting",
           title: "pentesting",
           description: "A growing collection of hacking stuff...",
@@ -366,6 +359,17 @@ ninja.data = [{
           window.location.href = "/blog/2021/distill/";
         
       },
+    },{id: "post-cats",
+      
+        title: "Cats",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/posts/code";
+        
+      },
     },{id: "post-a-post-with-twitter",
       
         title: "a post with twitter",
@@ -397,17 +401,6 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2015/math/";
-        
-      },
-    },{id: "post-a-post-with-code",
-      
-        title: "a post with code",
-      
-      description: "an example of a blog post with some code",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2015/code/";
         
       },
     },{id: "post-a-post-with-formatting-and-links",
