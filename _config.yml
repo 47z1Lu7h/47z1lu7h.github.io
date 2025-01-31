@@ -233,19 +233,15 @@ terser:
 jekyll-archives:
   enabled: all # enables year, tag and category archives (remove if you need to disable one of them).
   layouts:
-    year: archive/year
-    month: archive/month
-    day: archive/day
-    tag: archive/tag
-    category: archive/category
+    year: archive-year
+    tag: archive-tag
+    category: archive-category
   permalinks:
     year: "/blog/:year/"
-    month: "/blog/:year/:month/"
-    day: "/blog/:year/:month/:day/"
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: [pentesting, writeUp, hacking, hackthebox, linux, ctf, light, dark, awakening] # these tags will be displayed on the front page of your blog
+display_tags: [pentesting, writeUp, hacking, hackthebox, linux, ctf] # these tags will be displayed on the front page of your blog
 display_categories: ["pentesting", "dark_side", "Linux", "htb", "hackthebox", "hacking", "external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------

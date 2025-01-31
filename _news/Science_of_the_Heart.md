@@ -4,9 +4,10 @@ title: Science of the Heart
 description: Electromagnetic field of the heart
 date: 2015-11-01
 inline: false
-related_posts: true
 categories: sample-posts external-services hackthebox
+related_posts: true
 news: true
+discus_comments: true
 ---
 
 # Heart-Brain Communication
