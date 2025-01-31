@@ -80,12 +80,6 @@ The images in this post are all zoomable, arranged into different mini-galleries
     <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg">
         <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-200.jpg" />
     </a>
-    <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg">
-        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-200.jpg" />
-    </a>
-    <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg">
-        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" />
-    </a>
 </div>
 
 ---

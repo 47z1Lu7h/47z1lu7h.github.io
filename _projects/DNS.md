@@ -89,6 +89,5 @@ We can use -with-zonetransfer or -bruteforce-level
 ### Online Tools
 
 - https://dnsdumpster.com/
-- https://network-tools.com/nslook/
 - https://www.dnsqueries.com/en/
 - https://mxtoolbox.com/
