@@ -3,10 +3,7 @@ layout: page
 title: awakening
 permalink: /awakening/
 description: A growing collection of things that make you thing/awake... if you want ☺️ 😜
-nav: true
-nav_order: 3
 display_categories: [Light-Side, Dark-Side, System, "Alien Wisdom", Spirituality, Food]
-horizontal: false
 news: true
 social: true
 ---
