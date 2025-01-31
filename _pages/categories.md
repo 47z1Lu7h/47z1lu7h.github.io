@@ -4,29 +4,29 @@ permalink: /categories/
 title: Categories
 ---
 
-<!-- pages/categoriess.md -->
-<div class="categoriess">
+<!-- pages/categories.md -->
+<div class="categories">
 {% if site.enable_categories_projects and page.display_categories %}
-  <!-- Display categorized categoriess -->
+  <!-- Display categorized categories -->
   {% for category in page.display_categories %}
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
-  {% assign categorized_projects = site.categoriess | where: "category", category %}
-  {% assign sorted_categoriess = categorized_categoriess | sort: "importance" %}
+  {% assign categorized_projects = site.categories | where: "category", category %}
+  {% assign sorted_categories = categorized_categories | sort: "importance" %}
   <!-- Generate cards for each categories -->
   {% if page.horizontal %}
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2">
-    {% for categories in sorted_categoriess %}
-      {% include categoriess_horizontal.liquid %}
+    {% for categories in sorted_categories %}
+      {% include categories_horizontal.liquid %}
     {% endfor %}
     </div>
   </div>
   {% else %}
   <div class="row row-cols-1 row-cols-md-3">
-    {% for categories in sorted_categoriess %}
-      {% include categoriess.liquid %}
+    {% for categories in sorted_categories %}
+      {% include categories.liquid %}
     {% endfor %}
   </div>
   {% endif %}
@@ -34,9 +34,9 @@ title: Categories
 
 {% else %}
 
-<!-- Display categoriess without categories -->
+<!-- Display categories without categories -->
 
-{% assign sorted_categoriess = site.categoriess | sort: "importance" %}
+{% assign sorted_categories = site.categories | sort: "importance" %}
 
   <!-- Generate cards for each categories -->
 
@@ -44,15 +44,15 @@ title: Categories
 
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2">
-    {% for categories in sorted_categoriess %}
-      {% include categoriess_horizontal.liquid %}
+    {% for categories in sorted_categories %}
+      {% include categories_horizontal.liquid %}
     {% endfor %}
     </div>
   </div>
   {% else %}
   <div class="row row-cols-1 row-cols-md-3">
-    {% for categories in sorted_categoriess %}
-      {% include categoriess.liquid %}
+    {% for categories in sorted_categories %}
+      {% include categories.liquid %}
     {% endfor %}
   </div>
   {% endif %}
