@@ -29,10 +29,10 @@ social: true
 # Categories
 
 {% for category in site.categories %}
-{% assign cat = category[0] %}
+{% assign Linux = category[0] %}
 
-<h6><a href="#">{{ cat }}</a></h6>
-{% for post in site.categories[cat] %}
+<h6><a href="#">{{ Linux }}</a></h6>
+{% for post in site.categories[Linux] %}
 <a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date }}</small>
 {% endfor %}
 {% endfor %}
