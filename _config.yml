@@ -205,7 +205,7 @@ keep_files:
 
 # Plug-ins
 plugins:
-  - jekyll-tagories
+  #  - jekyll-tagories
   - jekyll-archives
   - jekyll-email-protect
   - jekyll-feed
