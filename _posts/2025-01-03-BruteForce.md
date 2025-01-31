@@ -14,7 +14,6 @@ related_posts: true
 featured: true
 toc:
   beginning: true
-  sideber: rigth
 ---
 
 # What Is a Brute Force Attack?
