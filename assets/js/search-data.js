@@ -421,18 +421,12 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-science-of-the-heart",
+    },{id: "news-science-of-the-heart",
           title: 'Science of the Heart',
           description: "Electromagnetic field of the heart",
           section: "News",handler: () => {
               window.location.href = "/news/Science_of_the_Heart/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-wink",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :wink:',
-          description: "",
-          section: "News",},{id: "projects-project-3-with-very-long-name",
+            },},{id: "projects-project-3-with-very-long-name",
           title: 'project 3 with very long name',
           description: "a project that redirects to another website",
           section: "Projects",handler: () => {
