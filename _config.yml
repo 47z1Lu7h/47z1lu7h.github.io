@@ -265,7 +265,7 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: [pentesting, writeUp, hacking, hackthebox, linux, ctf, light, dark, awakening] # these tags will be displayed on the front page of your blog
-display_categories: ["Pentesting", "dark_side", "Linux", "htb", "hackthebox", "hacking", "external-services"] # these categories will be displayed on the front page of your blog
+display_categories: ["Pentesting", "dark_side", "Linux", "htb", "hackthebox", "Hackthebox", "hacking", "external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
