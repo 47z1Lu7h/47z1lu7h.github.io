@@ -6,13 +6,13 @@ title: Categories
 
 <!-- pages/categoriess.md -->
 <div class="categoriess">
-{% if site.enable_categories_categories and page.display_categories %}
+{% if site.enable_categories_projects and page.display_categories %}
   <!-- Display categorized categoriess -->
   {% for category in page.display_categories %}
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
-  {% assign categorized_categoriess = site.categoriess | where: "category", category %}
+  {% assign categorized_projects = site.categoriess | where: "category", category %}
   {% assign sorted_categoriess = categorized_categoriess | sort: "importance" %}
   <!-- Generate cards for each categories -->
   {% if page.horizontal %}
