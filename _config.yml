@@ -263,20 +263,11 @@ jekyll-archives:
     tag: archive/tag
     category: archive/category
   permalinks:
-    year: "/:year/"
-    month: "/:year/:month/"
-    day: "/:year/:month/:day/"
-    tag: "/tags/:name/"
-    category: "/category/:name/"
-
-#  layouts:
-#    year: archive-year
-#    tag: archive-tag
-#    category: archive-category
-#  permalinks:
-#    year: "/blog/:year/"
-#    tag: "/blog/tag/:name/"
-#    category: "/blog/category/:name/"
+    year: "/blog/:year/"
+    month: "/blog/:year/:month/"
+    day: "/blog/:year/:month/:day/"
+    tag: "/blog/tag/:name/"
+    category: "/blog/category/:name/"
 
 display_tags: [pentesting, writeUp, hacking, hackthebox, linux, ctf, light, dark, awakening] # these tags will be displayed on the front page of your blog
 display_categories: ["Pentesting", "dark_side", "Linux", "htb", "hackthebox", "Hackthebox", "hacking", "external-services"] # these categories will be displayed on the front page of your blog
