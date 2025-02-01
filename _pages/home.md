@@ -35,7 +35,7 @@ En este espacio exploramos el hacking, la espiritualidad y las conspiraciones. �
 
 Soy un apasionado del hacking, la espiritualidad y las conspiraciones. Este blog es un reflejo de mi viaje personal y profesional.
 
-<!-->
+<!---
 
 ---
 
@@ -98,3 +98,5 @@ And for those who, like me, are fascinated by the unconventional, I delve into c
 This blog is more than just a collection of topics; it’s a community for those who seek to learn, question, and explore. Whether you’re here for cybersecurity insights, spiritual reflections, or to entertain new perspectives on hidden truths, you’ll find a home here.
 
 Let’s journey together—through the digital, the spiritual, and the conspiratorial—unearthing knowledge, challenging perceptions, and growing in understanding every step of the way.
+
+--->
