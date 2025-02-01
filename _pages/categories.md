@@ -4,8 +4,6 @@ permalink: /categories/
 title: Categorías
 ---
 
-# Categorías
-
 {% for category in site.categories %}
 
   <h2>{{ category[0] }}</h2>
@@ -19,7 +17,9 @@ title: Categorías
   </ul>
 {% endfor %}
 
-## <!-->
+## iepaaa
+
+<!--
 
 layout: page
 permalink: /categories/
@@ -61,3 +61,6 @@ title: Categories
   </li>
 {% endfor %}
 </ul>
+
+
+--->
