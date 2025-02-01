@@ -50,6 +50,7 @@ content: about_me.md
 image_circular: true
 content: about_me.md
 more_info: >
+
 <p>555 your office number</p>
 
 news: true
