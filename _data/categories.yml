@@ -1,4 +1,4 @@
-- name: Hacking
+- name: hacking
   subcategories:
     - name: Introducción
       description: Conceptos básicos de hacking.
