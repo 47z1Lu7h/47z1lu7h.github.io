@@ -199,7 +199,6 @@ plugins:
   - jekyll-twitter-plugin
   - jemoji
   - terser
-  - jekyll-spaceship
 
 # Sitemap settings
 defaults:
