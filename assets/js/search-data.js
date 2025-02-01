@@ -9,16 +9,16 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-bl0g",
-          title: "bl0g",
+  },{id: "nav-blog",
+          title: "Blog",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
           },
         },{id: "nav-pentesting",
-          title: "pentesting",
-          description: "A growing collection of hacking stuff...",
+          title: "Pentesting",
+          description: "Explora mis publicaciones sobre pentesting, metodologías y herramientas.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/pentesting/";
@@ -32,6 +32,13 @@ ninja.data = [{
               },
             },{id: "dropdown-news",
               title: "news",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "";
+              },
+            },{id: "dropdown-hacing",
+              title: "hacing",
               description: "",
               section: "Dropdown",
               handler: () => {
