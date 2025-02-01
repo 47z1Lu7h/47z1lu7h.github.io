@@ -1,7 +1,30 @@
 ---
 layout: page
 permalink: /categories/
+title: Categorías
+---
+
+# Categorías
+
+{% for category in site.categories %}
+
+  <h2>{{ category[0] }}</h2>
+  <ul>
+    {% for post in category[1] %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+## <!-->
+
+layout: page
+permalink: /categories/
 title: Categories
+
 ---
 
 # Archive of posts from {{ page.date | date: "%Y" }}

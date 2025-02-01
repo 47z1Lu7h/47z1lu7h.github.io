@@ -1,0 +1,4 @@
+Check the posts:
+
+- [https://www.alphabot.com/security/blog/2017/java/Misconfigured-JSF-ViewStates-can-lead-to-severe-RCE-vulnerabilities.html](https://www.alphabot.com/security/blog/2017/java/Misconfigured-JSF-ViewStates-can-lead-to-severe-RCE-vulnerabilities.html)
+- [https://0xrick.github.io/hack-the-box/arkham/](https://0xrick.github.io/hack-the-box/arkham/)

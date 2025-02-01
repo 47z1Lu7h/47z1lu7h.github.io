@@ -1,0 +1,28 @@
+- name: Hacking
+  subcategories:
+    - name: Introducción
+      description: Conceptos básicos de hacking.
+    - name: pentesting-web
+      description: pentesting web
+    - name: reverse-shells
+      description: reverse shells
+    - name: reversing-tools
+      description: eversing tools
+    - name: OWASP
+      description:
+    - name:
+      description:
+
+- name: Espiritualidad
+  subcategories:
+    - name:
+      description:
+    - name:
+      description:
+
+- name: Awakening
+  subcategories:
+    - name:
+      description:
+    - name:
+      description:
