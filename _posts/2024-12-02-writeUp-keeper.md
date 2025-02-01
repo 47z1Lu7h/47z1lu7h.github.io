@@ -5,6 +5,7 @@ date: 2024-12-02
 description: write up easy machine Keeper - hackthebox
 tags: writeUp hacking hackthebox
 category: Walkthrought
+featured: true
 toc:
   beginning: true
 ---
