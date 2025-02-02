@@ -16,7 +16,7 @@ children:
   - title: divider
   - title: divider
   - title: divider
-  - title: hacing
+  - title: hacking
     permalink: /pentesting/
   - title: divider
   - title: divider
