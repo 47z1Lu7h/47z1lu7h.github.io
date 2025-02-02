@@ -1,12 +1,13 @@
 ---
 layout: page
 title: Pentesting
-permalink: /pentesting/
-description: Explora mis publicaciones sobre pentesting, metodologías y herramientas.
+permalink: /hacking/
+description: A growing collection of hacking stuff...
 nav: true
 nav_order: 3
-display_categories: [hacking, Linux, hackthebox, Walkthrough, CTF]
+display_categories: [hacking, Windows, linux, hackthebox, walkthrought, cCtf]
 horizontal: false
+discus_comments: true
 comments: true
 toc:
   sidebar: left
@@ -22,21 +23,6 @@ news: true
 - [reverse-shell](/hacking/reverse-shells)
 - [reversing-tools](/hacking/reversing-tools)
 - [CTF](/hacking/ctf)
-
-layout: page
-title: pentesting
-permalink: /pentesting/
-description: A growing collection of hacking stuff...
-nav: true
-nav_order: 3
-display_categories: [hacking, Windows, Linux, hackthebox, Walkthrought, Ctf]
-horizontal: false
-discus_comments: true
-comments: true
-toc:
-sidebar: left
-related_posts: true
-news: true
 
 # Archive of posts from `hackthebox`
 
@@ -56,5 +42,3 @@ news: true
     </article>
   {% endfor %}
 </div>
-
---->

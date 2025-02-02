@@ -2,61 +2,17 @@
 layout: about
 title: h0m3
 permalink: /
-subtitle: Explorando el hacking, la espiritualidad y las conspiraciones.
+subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 profile:
   align: right
   image: logos/47z1Right.jpg
   image_circular: true
   more_info: >
     <p>You already own what you think you need.</p>
----
-
-# Bienvenido al Awakening Nexus
-
-En este espacio exploramos el hacking, la espiritualidad y las conspiraciones. ¿Listo para desafiar la realidad?
-
-## Categorías Principales
-
-- [Hacking](/hacking)
-- [Espiritualidad](/espiritualidad)
-- [Conspiraciones](/conspiraciones)
-
-## Posts Destacados
-
-{% for post in site.posts limit:3 %}
-
-  <div class="post-preview">
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p>{{ post.description }}</p>
-  </div>
-{% endfor %}
-
-## Sobre Mí
-
-Soy un apasionado del hacking, la espiritualidad y las conspiraciones. Este blog es un reflejo de mi viaje personal y profesional.
-
-<!---
-
----
-
-layout: about
-title: h0m3
-permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-profile:
-align: right
-image: logos/47z1Right.jpg
-content: about_me.md
-image_circular: true
-content: about_me.md
-more_info: >
-
-<p>555 your office number</p>
 
 news: true
 social: true
 related posts: true
-
 ---
 
 # Welcome to the Awakening Nexus
@@ -98,5 +54,3 @@ And for those who, like me, are fascinated by the unconventional, I delve into c
 This blog is more than just a collection of topics; it’s a community for those who seek to learn, question, and explore. Whether you’re here for cybersecurity insights, spiritual reflections, or to entertain new perspectives on hidden truths, you’ll find a home here.
 
 Let’s journey together—through the digital, the spiritual, and the conspiratorial—unearthing knowledge, challenging perceptions, and growing in understanding every step of the way.
-
---->
