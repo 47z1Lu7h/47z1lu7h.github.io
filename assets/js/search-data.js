@@ -18,10 +18,10 @@ ninja.data = [{
           },
         },{id: "nav-pentesting",
           title: "Pentesting",
-          description: "Explora mis publicaciones sobre pentesting, metodologías y herramientas.",
+          description: "A growing collection of hacking stuff...",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/pentesting/";
+            window.location.href = "/hacking/";
           },
         },{id: "dropdown-about",
               title: "about",
