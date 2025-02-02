@@ -27,7 +27,7 @@ news: true
 # Archive of posts from `hackthebox`
 
 <div class="posts">
-  {% for post in site.categories['hackthebox'] %}
+  {% for post in site.categories['hacking'] %}
     <article class="post">
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       <div>
