@@ -205,6 +205,248 @@ ninja.data = [{
           window.location.href = "/blog/2025/xssi-cross-site-script-inclusion/";
         
       },
+    },{id: "post-xslt-server-side-injection",
+      
+        title: "XSLT Server Side Injection",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/xslt-server-side-injection-extensible-stylesheet-language-transformations/";
+        
+      },
+    },{id: "post-xs-search-xs-leaks",
+      
+        title: "XS-Search/XS-Leaks",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/xs-search/";
+        
+      },
+    },{id: "post-xpath-injection",
+      
+        title: "XPATH injection",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/xpath-injection/";
+        
+      },
+    },{id: "post-websocket-attacks",
+      
+        title: "WebSocket Attacks",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/websocket-attacks/";
+        
+      },
+    },{id: "post-web-vulnerabilities-methodology",
+      
+        title: "Web Vulnerabilities Methodology",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/web-vulnerabilities-methodology/";
+        
+      },
+    },{id: "post-web-tool-wfuzz",
+      
+        title: "Web Tool - WFuzz",
+      
+      description: "Transmitting a file from your computer to another computer.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/web-tool-wfuzz/";
+        
+      },
+    },{id: "post-uuid-insecurities",
+      
+        title: "UUID Insecurities",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/uuid-insecurities/";
+        
+      },
+    },{id: "post-timing-attacks",
+      
+        title: "Timing Attacks",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/timing-attacks/";
+        
+      },
+    },{id: "post-erver-side-inclusion-edge-side-inclusion-injectio",
+      
+        title: "erver Side Inclusion/Edge Side Inclusion Injectio",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/server-side-inclusion-edge-side-inclusion-injection/";
+        
+      },
+    },{id: "post-reverse-tab-nabbing",
+      
+        title: "Reverse Tab Nabbing",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/reverse-tab-nabbing/";
+        
+      },
+    },{id: "post-reset-forgotten-password-bypass",
+      
+        title: "Reset/Forgotten Password Bypass",
+      
+      description: "Transmitting a file from your computer to another computer.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/reset-password/";
+        
+      },
+    },{id: "post-regular-expression-denial-of-service-redos",
+      
+        title: "Regular expression Denial of Service - ReDoS",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/regular-expression-denial-of-service-redos/";
+        
+      },
+    },{id: "post-registration-amp-takeover-vulnerabilities",
+      
+        title: "Registration &amp; Takeover Vulnerabilities",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/registration-vulnerabilities/";
+        
+      },
+    },{id: "post-rate-limit-bypass",
+      
+        title: "Rate Limit Bypass",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/rate-limit-bypass/";
+        
+      },
+    },{id: "post-rare-condition",
+      
+        title: "Rare Condition",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/race-condition/";
+        
+      },
+    },{id: "post-proxy-waf-protections-bypass",
+      
+        title: "Proxy / WAF Protections Bypass",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/proxy-waf-protections-bypass/";
+        
+      },
+    },{id: "post-phone-number-injections",
+      
+        title: "Phone Number Injections",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/phone-number-injections/";
+        
+      },
+    },{id: "post-parameter-pollution-json-injection",
+      
+        title: "Parameter Pollution | JSON Injection",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/parameter-pollution/";
+        
+      },
+    },{id: "post-orm-injection",
+      
+        title: "ORM Injection",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/orm-injection/";
+        
+      },
+    },{id: "post-open-redirect",
+      
+        title: "Open Redirect",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/open-redirect/";
+        
+      },
+    },{id: "post-oauth-to-account-takeover",
+      
+        title: "OAuth to Account takeover",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/oauth-to-account-takeover/";
+        
+      },
+    },{id: "post-nosql-injection",
+      
+        title: "NoSQL Injection",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/nosql-injection/";
+        
+      },
     },{id: "post-ldap-injection",
       
         title: "LDAP Injection",
@@ -216,6 +458,17 @@ ninja.data = [{
           window.location.href = "/blog/2025/ldap-injection/";
         
       },
+    },{id: "post-xssi",
+      
+        title: "XSSI",
+      
+      description: "Transmitting a file from your computer to another computer.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/iframe-traps/";
+        
+      },
     },{id: "post-idor",
       
         title: "Idor",
@@ -225,6 +478,248 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2025/idor/";
+        
+      },
+    },{id: "post-http-response-smuggling-desync",
+      
+        title: "HTTP Response Smuggling / Desync",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/http-response-smuggling-desync/";
+        
+      },
+    },{id: "post-http-connection-request-smuggling",
+      
+        title: "HTTP Connection Request Smuggling",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/http-connection-request-smuggling/";
+        
+      },
+    },{id: "post-http-connection-contamination",
+      
+        title: "HTTP Connection Contamination",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/http-connection-contamination/";
+        
+      },
+    },{id: "post-jwt-vulnerabilities-json-web-tokens",
+      
+        title: "JWT Vulnerabilities (Json Web Tokens)",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/hacking-jwt-json-web-tokens/";
+        
+      },
+    },{id: "post-pentesting-grpc-web",
+      
+        title: "Pentesting gRPC-Web",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/grpc-web-pentest/";
+        
+      },
+    },{id: "post-formula-csv-doc-latex-ghostscript-injection",
+      
+        title: "Formula/CSV/Doc/LaTeX/GhostScript Injection",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/formula-csv-doc-latex-ghostscript-injection/";
+        
+      },
+    },{id: "post-email-injections",
+      
+        title: "Email Injections",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/email-injections/";
+        
+      },
+    },{id: "post-domain-subdomain-takeover",
+      
+        title: "Domain/Subdomain takeover",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/domain-subdomain-takeover/";
+        
+      },
+    },{id: "post-dependency-confusion",
+      
+        title: "Dependency Confusion",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/dependency-confusion/";
+        
+      },
+    },{id: "post-csrf-cross-site-request-forgery",
+      
+        title: "CSRF (Cross Site Request Forgery)",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/csrf-cross-site-request-forgery/";
+        
+      },
+    },{id: "post-crlf-0d-0a-injection",
+      
+        title: "CRLF (%0D%0A) Injection",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/crlf-0d-0a/";
+        
+      },
+    },{id: "post-cors-misconfigurations-amp-bypass",
+      
+        title: "CORS - Misconfigurations &amp; Bypass",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/cors-bypass/";
+        
+      },
+    },{id: "post-command-injection",
+      
+        title: "Command Injection",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/command-injection/";
+        
+      },
+    },{id: "post-client-side-template-injection-csti",
+      
+        title: "Client Side Template Injection (CSTI)",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/client-side-template-injection-csti/";
+        
+      },
+    },{id: "post-client-side-path-traversal",
+      
+        title: "Client Side Path Traversal",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/client-side-path-traversal/";
+        
+      },
+    },{id: "post-clickjacking",
+      
+        title: "Clickjacking",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/clickjacking/";
+        
+      },
+    },{id: "post-captcha-bypass",
+      
+        title: "Captcha Bypass",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/captcha-bypass/";
+        
+      },
+    },{id: "post-bypass-payment-process",
+      
+        title: "Bypass Payment Process",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/bypass-payment-process/";
+        
+      },
+    },{id: "post-account-takeover",
+      
+        title: "Account Takeover",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/account-takeover/";
+        
+      },
+    },{id: "post-hop-by-hop-headers",
+      
+        title: "hop-by-hop headers",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/abusing-hop-by-hop-headers/";
+        
+      },
+    },{id: "post-2fa-mfa-otp-bypass",
+      
+        title: "2FA/MFA/OTP Bypass",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/2fa-bypass/";
+        
+      },
+    },{id: "post-h2c-smuggling",
+      
+        title: "H2c Smuggling",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/h2c-smuggling/";
         
       },
     },{id: "post-write-up-machine-keeper-hackthebox-easy",
