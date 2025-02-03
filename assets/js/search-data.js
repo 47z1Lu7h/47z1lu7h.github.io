@@ -44,6 +44,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/hacking/";
           },
+        },{id: "nav-wireless",
+          title: "Wireless",
+          description: "Explora contenido sobre hacking de redes inalámbricas.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/hacking/reverse-shells.md";
+          },
         },{id: "nav-repositories",
           title: "repositories",
           description: "Have a look at my repositories :)",
