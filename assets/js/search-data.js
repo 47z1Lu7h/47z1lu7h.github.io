@@ -37,8 +37,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/hacking/";
           },
-        },{id: "nav-wireless",
-          title: "Wireless",
+        },{id: "nav-reverse-shells",
+          title: "Reverse Shells",
           description: "Explora contenido sobre hacking de redes inalámbricas.",
           section: "Navigation",
           handler: () => {
