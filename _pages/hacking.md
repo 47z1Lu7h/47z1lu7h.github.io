@@ -24,7 +24,7 @@ Bienvenido a la sección de hacking. Aquí encontrarás contenido organizado por
 <div class="row">
   <div class="col-sm-4 mt-3">
     <div class="card hoverable">
-      <a href="/hacking/pentesting-web.md">
+      <a href="/hacking/pentesting-web/">
         <div class="card-body">
           <h3 class="card-title">Pentesting Web</h3>
           <p class="card-text">Pruebas de penetración y metodologías.</p>
