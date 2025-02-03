@@ -169,7 +169,7 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
-  - terser
+#  - terser
   - jekyll-multiple-languages-plugin
 
 # Sitemap settings
