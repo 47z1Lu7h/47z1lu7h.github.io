@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Pentesting
+title: h4Ck1n6
 permalink: /hacking/
 description: A growing collection of hacking stuff...
 nav: true
 nav_order: 3
-display_categories: [hacking, Windows, linux, hackthebox, walkthrought, cCtf]
+display_categories: [ctf, pentesting-web, reverse-shells, reversing-tools]
 horizontal: false
 discus_comments: true
 comments: true
@@ -15,30 +15,55 @@ related_posts: true
 news: true
 ---
 
-# Pentesting
+# Hacking
+
+Bienvenido a la sección de hacking. Aquí encontrarás contenido organizado por subcategorías.
 
 ## Subcategorías
 
-- [pentesting-web](/hacking/pentesting-web)
-- [reverse-shell](/hacking/reverse-shells)
-- [reversing-tools](/hacking/reversing-tools)
-- [CTF](/hacking/ctf)
-
-# Archive of posts from `hackthebox`
-
-<div class="posts">
-  {% for post in site.categories['hacking'] %}
-    <article class="post">
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      <div>
-        {{ post.date | date: "%B %e, %Y" }}
-      </div>
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
-          Read More
+<div class="row">
+  <div class="col-sm-4 mt-3">
+    <div class="card hoverable">
+      <a href="/hacking/pentesting-web/">
+        <div class="card-body">
+          <h3 class="card-title">Pentesting</h3>
+          <p class="card-text">Pruebas de penetración y metodologías.</p>
+        </div>
       </a>
-    </article>
-  {% endfor %}
+    </div>
+  </div>
+
+  <div class="col-sm-4 mt-3">
+    <div class="card hoverable">
+      <a href="/hacking/ctf/">
+        <div class="card-body">
+          <h3 class="card-title">CTF</h3>
+          <p class="card-text">Desafíos de Capture The Flag y write-ups.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mt-3">
+    <div class="card hoverable">
+      <a href="/hacking/reverse-shells/">
+        <div class="card-body">
+          <h3 class="card-title">Wireless</h3>
+          <p class="card-text">Hacking de redes inalámbricas y seguridad Wi-Fi.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mt-3">
+    <div class="card hoverable">
+      <a href="/hacking/reversing-tools/">
+        <div class="card-body">
+          <h3 class="card-title">CTF</h3>
+          <p class="card-text">Desafíos de Capture The Flag y write-ups.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
 </div>
