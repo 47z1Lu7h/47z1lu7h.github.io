@@ -169,8 +169,8 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
-#  - terser
-  - jekyll-multiple-languages-plugin
+  - terser
+#  - jekyll-multiple-languages-plugin
 
 # Sitemap settings
 defaults:
