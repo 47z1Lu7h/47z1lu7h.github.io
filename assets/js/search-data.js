@@ -165,7 +165,7 @@ ninja.data = [{
       },
     },{id: "post-reverse-shells",
       
-        title: "reverse shells",
+        title: "Reverse Shells",
       
       description: "",
       section: "Posts",
