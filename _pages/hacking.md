@@ -24,9 +24,9 @@ Bienvenido a la sección de hacking. Aquí encontrarás contenido organizado por
 <div class="row">
   <div class="col-sm-4 mt-3">
     <div class="card hoverable">
-      <a href="/hacking/pentesting-web/">
+      <a href="/hacking/pentesting-web.md">
         <div class="card-body">
-          <h3 class="card-title">Pentesting</h3>
+          <h3 class="card-title">Pentesting Web</h3>
           <p class="card-text">Pruebas de penetración y metodologías.</p>
         </div>
       </a>
@@ -48,8 +48,8 @@ Bienvenido a la sección de hacking. Aquí encontrarás contenido organizado por
     <div class="card hoverable">
       <a href="/hacking/reverse-shells/">
         <div class="card-body">
-          <h3 class="card-title">Wireless</h3>
-          <p class="card-text">Hacking de redes inalámbricas y seguridad Wi-Fi.</p>
+          <h3 class="card-title">Reverses Shells</h3>
+          <p class="card-text">.</p>
         </div>
       </a>
     </div>
@@ -59,8 +59,8 @@ Bienvenido a la sección de hacking. Aquí encontrarás contenido organizado por
     <div class="card hoverable">
       <a href="/hacking/reversing-tools/">
         <div class="card-body">
-          <h3 class="card-title">CTF</h3>
-          <p class="card-text">Desafíos de Capture The Flag y write-ups.</p>
+          <h3 class="card-title">Reversing Tools</h3>
+          <p class="card-text">.</p>
         </div>
       </a>
     </div>
