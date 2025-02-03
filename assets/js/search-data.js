@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-ctf-39-s",
           title: "Ctf&#39;s",
-          description: "Explora desafíos de Capture The Flag y write-ups.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/hacking/ctf/";
