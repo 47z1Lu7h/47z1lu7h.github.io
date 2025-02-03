@@ -16,40 +16,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/page/:num/";
           },
-        },{id: "nav-pentesting",
-          title: "Pentesting",
-          description: "Explora contenido sobre pruebas de penetración y metodologías.",
+        },{id: "nav-projects",
+          title: "projects",
+          description: "A growing collection of your cool projects.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/hacking/pentesting/";
-          },
-        },{id: "nav-ctf-39-s",
-          title: "Ctf&#39;s",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/hacking/ctf/";
-          },
-        },{id: "nav-h4ck1n6",
-          title: "h4Ck1n6",
-          description: "A growing collection of hacking stuff...",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/hacking/";
-          },
-        },{id: "nav-reverse-shells",
-          title: "Reverse Shells",
-          description: "Explora contenido sobre hacking de redes inalámbricas.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/hacking/reverse-shells.md";
-          },
-        },{id: "nav-wireless",
-          title: "Wireless",
-          description: "Explora contenido sobre hacking de redes inalámbricas.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/hacking/wireless/";
+            window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
           title: "repositories",
@@ -57,6 +29,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/r3p0s/";
+          },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "This is my curriculum.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
           },
         },{id: "dropdown-about",
               title: "about",
@@ -72,15 +51,8 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "dropdown-hacking",
-              title: "hacking",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-categories",
-              title: "categories",
+            },{id: "dropdown-projects",
+              title: "projects",
               description: "",
               section: "Dropdown",
               handler: () => {
@@ -95,171 +67,6 @@ ninja.data = [{
       handler: () => {
         
           window.location.href = "/blog/2025/BruteForce/";
-        
-      },
-    },{id: "post-how-to-aproach-ctf-39-s",
-      
-        title: "How to aproach CTF&#39;s",
-      
-      description: "How to of getting into CTF&#39;s challenges",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/how-to-aproach-CTF's/";
-        
-      },
-    },{id: "post-smt",
-      
-        title: "smt",
-      
-      description: "Transmitting a file from your computer to another computer.",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/satisfiability-modulo-theories-smt-z3/";
-        
-      },
-    },{id: "post-reversing-tools",
-      
-        title: "reversing tools",
-      
-      description: "Transmitting a file from your computer to another computer.",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/reversing-tools/";
-        
-      },
-    },{id: "post-file-upload",
-      
-        title: "file-upload",
-      
-      description: "Transmitting a file from your computer to another computer.",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/cheat-engine/";
-        
-      },
-    },{id: "post-file-upload",
-      
-        title: "file-upload",
-      
-      description: "Transmitting a file from your computer to another computer.",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/blobrunner/";
-        
-      },
-    },{id: "post-shells-windows",
-      
-        title: "Shells - Windows",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/windows/";
-        
-      },
-    },{id: "post-reverse-shells",
-      
-        title: "Reverse Shells",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/reverse-shell/";
-        
-      },
-    },{id: "post-msfvenom",
-      
-        title: "MSFVenom",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/msfvenom/";
-        
-      },
-    },{id: "post-shells-linux",
-      
-        title: "Shells - Linux",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/linux/";
-        
-      },
-    },{id: "post-fully-ttys",
-      
-        title: "fully ttys",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/full-ttys/";
-        
-      },
-    },{id: "post-expose-local-to-the-internet",
-      
-        title: "Expose local to the internet",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/expose-local-to-the-internet/";
-        
-      },
-    },{id: "post-xxe-xee-xml-external-entity",
-      
-        title: "XXE - XEE - XML External Entity",
-      
-      description: "Transmitting a file from your computer to another computer.",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/xxe-xee-xml-external-entity/";
-        
-      },
-    },{id: "post-xssi",
-      
-        title: "XSSI",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/xssi-cross-site-script-inclusion/";
-        
-      },
-    },{id: "post-ldap-injection",
-      
-        title: "LDAP Injection",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/ldap-injection/";
-        
-      },
-    },{id: "post-idor",
-      
-        title: "Idor",
-      
-      description: "",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2025/idor/";
         
       },
     },{id: "post-write-up-machine-keeper-hackthebox-easy",
@@ -289,81 +96,6 @@ ninja.data = [{
           description: "Electromagnetic field of the heart",
           section: "News",handler: () => {
               window.location.href = "/news/Science_of_the_Heart/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-ad",
-          title: 'AD',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ActiveDirectory/";
-            },},{id: "projects-p3nt3st1ng",
-          title: 'P3nt3st1ng',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/AllAboutPentesting/";
-            },},{id: "projects-dns",
-          title: 'DNS',
-          description: "eeeelaa pee",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/DNS/";
-            },},{id: "projects-tools",
-          title: 'tools',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/TOOLS/";
-            },},{id: "projects-alien-wisdom",
-          title: 'Alien Wisdom',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/bashar/";
-            },},{id: "projects-mathjax",
-          title: 'mathJax',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/mathJax/";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/tres/";
-            },},{id: "projects-win-enum",
-          title: 'win enum',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/windows_enum/";
-            },},{id: "projects-hashdump",
-          title: 'hashdump',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/windows_hashdump/";
-            },},{id: "projects-win-priv-esc",
-          title: 'win priv esc',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/windows_priv_esc/";
             },},{
         id: 'social-github',
         title: 'GitHub',
