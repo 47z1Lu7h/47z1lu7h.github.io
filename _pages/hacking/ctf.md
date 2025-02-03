@@ -2,17 +2,13 @@
 layout: page
 title: Ctf's
 permalink: /hacking/ctf/
-description: Explora desafíos de Capture The Flag y write-ups.
+description:
 thumbnail: assets/img/pentest/ctf/ctf-Red-mini.jpeg
 nav: true
 nav_order: 2
 ---
 
-# CTF
-
-Aquí encontrarás posts relacionados con desafíos de Capture The Flag.
-
-## Últimos Posts
+## Latest Posts
 
 {% for post in site.categories['ctf'] %}
 
