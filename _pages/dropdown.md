@@ -16,12 +16,7 @@ children:
   - title: divider
   - title: divider
   - title: divider
-  - title: hacking
-    permalink: /hacking/
-  - title: divider
-  - title: divider
-  - title: divider
-  - title: categories
-    permalink: /categories/
+  - title: projects
+    permalink: /projects/
   - title: divider
 ---

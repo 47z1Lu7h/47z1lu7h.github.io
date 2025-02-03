@@ -11,7 +11,7 @@ profile:
   image_circular: true
   content: about_me.md
   more_info: >
-    <p>555 your office number</p>
+    <p>You already own what you think you need.</p>
 
 news: true
 social: true
