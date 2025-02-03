@@ -23,19 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/hacking/pentesting/";
           },
-        },{id: "nav-ctf",
-          title: "CTF",
+        },{id: "nav-ctf-39-s",
+          title: "Ctf&#39;s",
           description: "Explora desafíos de Capture The Flag y write-ups.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/hacking/ctf/";
-          },
-        },{id: "nav-wireless",
-          title: "Wireless",
-          description: "Explora contenido sobre hacking de redes inalámbricas.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/hacking/wireless/";
           },
         },{id: "nav-h4ck1n6",
           title: "h4Ck1n6",
@@ -50,6 +43,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/hacking/reverse-shells.md";
+          },
+        },{id: "nav-wireless",
+          title: "Wireless",
+          description: "Explora contenido sobre hacking de redes inalámbricas.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/hacking/wireless/";
           },
         },{id: "nav-repositories",
           title: "repositories",
