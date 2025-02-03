@@ -1,6 +1,6 @@
 ---
 layout: post
-title: reverse shells
+title: Reverse Shells
 date: 2025-01-01 10:14:00-0400
 description:
 tags: docs
