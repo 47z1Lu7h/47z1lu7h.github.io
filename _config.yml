@@ -13,7 +13,7 @@ contact_note: >
 footer_text: >
   Love is life. And if you miss love, you miss life.
 keywords: # add your own keywords or leave empty
-lang: en, es # the language of your site (for example: en, fr, cn, ru, etc.)
+# lang: en, es # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: logos/M1n14tz1.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 url: https://47z1lu7h.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -97,6 +97,10 @@ related_blog_posts:
   enabled: true
   max_related: 5
 
+# Disqus comments (DEPRECATED)
+disqus_shortname: 47z1lu7h # put your disqus shortname
+# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
@@ -111,10 +115,6 @@ giscus:
   theme: preferred_color_scheme # name of the color scheme (preferred works well with al-folio light/dark mode)
   emit_metadata: 0
   lang: en, es
-
-# Disqus comments (DEPRECATED)
-disqus_shortname: 47z1lu7h # put your disqus shortname
-# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
@@ -199,6 +199,7 @@ plugins:
   - jekyll-twitter-plugin
   - jemoji
   - terser
+  - jekyll-polyglot
 
 # Sitemap settings
 defaults:
@@ -225,6 +226,18 @@ jekyll-minifier:
 terser:
   compress:
     drop_console: true
+
+# -----------------------------------------------------------------------------
+# Jekyll Polyglot
+# -----------------------------------------------------------------------------
+
+languages: ["en", "es"]
+default_lang: "en"
+exclude_from_localization: ["assets"]
+lang_from_path: true
+#url: https://polyglot.untra.io
+country_flag: false # set true for allowing flag symbol in language toggle
+parallel_localization: false
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
@@ -271,35 +284,6 @@ latest_posts:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
-
-# -----------------------------------------------------------------------------
-# Jekyll Scholar
-# -----------------------------------------------------------------------------
-
-scholar:
-  first_name: [47z!Lu7h]
-  last_name: []
-
-  style: apa
-  locale: en
-
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-  # Note: if you have latex math in your bibtex, the latex filter
-  # preprocessing may conflict with MathJAX if the latter is enabled.
-  # See https://github.com/alshedivat/al-folio/issues/357.
-  bibtex_filters: [latex, smallcaps, superscript]
-
-  replace_strings: true
-  join_strings: true
-
-  details_dir: bibliography
-  details_link: Details
-
-  query: "@*"
-  group_by: year
-  group_order: descending
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid

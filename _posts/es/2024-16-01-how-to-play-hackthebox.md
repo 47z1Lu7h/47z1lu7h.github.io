@@ -9,6 +9,7 @@ tabs: true
 related_posts: true
 comments: true
 featured: true
+lang: es
 toc:
   beginning: true
 ---
@@ -19,7 +20,7 @@ toc:
 
  <div class="row mt-3">
     <div class="col-lg mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pentest/h4Ck/Boxes.gif" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="/assets/img/hacking/h4Ck/Boxes.gif" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

@@ -6,6 +6,7 @@ description: write up easy machine Keeper - hackthebox
 tags: writeUp hacking hackthebox
 category: Walkthrought
 featured: true
+lang: en
 toc:
   beginning: true
 ---
