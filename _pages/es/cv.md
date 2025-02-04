@@ -8,5 +8,5 @@ cv_pdf: https://linkedin.com
 description: This is my curriculum.
 toc:
   sidebar: left
-lang: en
+lang: es
 ---

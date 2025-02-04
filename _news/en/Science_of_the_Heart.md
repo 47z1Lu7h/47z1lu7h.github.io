@@ -8,6 +8,7 @@ categories: sample-posts external-services hackthebox
 related_posts: true
 news: true
 discus_comments: true
+lang: en
 ---
 
 # Heart-Brain Communication

@@ -212,14 +212,6 @@ sass:
   style: compressed
 
 # -----------------------------------------------------------------------------
-# Jekyll Minifier
-# -----------------------------------------------------------------------------
-
-jekyll-minifier:
-  compress_javascript: false # set to false since we are using terser as the js minifier
-  # exclude: ["robots.txt", "assets/js/search/*.js"]
-
-# -----------------------------------------------------------------------------
 # Terser
 # -----------------------------------------------------------------------------
 
@@ -255,8 +247,8 @@ jekyll-archives:
     category: "/blog/category/:name/"
     # category: "category/:name/"
 
-display_tags: [pentesting, writeUp, hacking, hackthebox, linux, ctf] # these tags will be displayed on the front page of your blog
-display_categories: ["hackthebox", "hacking"] # these categories will be displayed on the front page of your blog
+display_tags: [writeUp, hacking, hackthebox] # these tags will be displayed on the front page of your blog
+display_categories: ["hacking"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Collections

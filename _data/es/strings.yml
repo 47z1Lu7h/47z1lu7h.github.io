@@ -1,0 +1,4 @@
+hello: "Hola"
+greetings:
+  morning: "Buenos dias"
+  evening: "Buenas tardes"

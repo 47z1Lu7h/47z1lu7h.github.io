@@ -15,6 +15,7 @@ profile:
 
 news: true
 social: true
+lang: es
 ---
 
 <hr>

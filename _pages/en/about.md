@@ -12,6 +12,7 @@ profile:
   more_info: >
     <p>You already own what you think you need.</p>
 
+lang: en
 news: true
 social: true
 ---

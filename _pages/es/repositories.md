@@ -7,7 +7,7 @@ nav: true
 nav_order: 4
 news: true
 social: true
-lang: en
+lang: es
 ---
 
 {% if site.data.repositories.github_users %}
