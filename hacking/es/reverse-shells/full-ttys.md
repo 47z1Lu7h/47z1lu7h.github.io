@@ -115,5 +115,3 @@ If for some reason you cannot obtain a full TTY you **still can interact with pr
 ```bash
 expect -c 'spawn sudo -S cat "/root/root.txt";expect "*password*";send "<THE_PASSWORD_OF_THE_USER>";send "\r\n";interact'
 ```
-
-{{#include ../../banners/hacktricks-training.md}}
