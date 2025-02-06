@@ -93,7 +93,7 @@
                           <a class="dropdown-item" target="_self" href="{{ child.redirectlink }}">
                             {{- child.title -}}
                           </a>
-                        {% else %%}
+                        {% else %}
                           <a class="dropdown-item {% if page.title == child.title %}active{% endif %}" href="{{ child.permalink | relative_url }}">
                             {{- child.title -}}
                           </a>
@@ -109,7 +109,7 @@
                       {{- p.title }}
                     </a>
                   </li>
-                {% else %%}
+                {% else %}
                   <li class="nav-item {% if page.url contains p.permalink %}active{% endif %}">
                     {% if p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
                     <a class="nav-link" href="{{ url | relative_url }}">

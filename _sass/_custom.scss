@@ -3,7 +3,6 @@
  ******************************************************************************/
 // General Typography
 table {
-
   td,
   th {
     font-size: 1rem;
@@ -13,7 +12,6 @@ table {
     font-weight: normal;
   }
 }
-
 
 // Footer
 footer.fixed-bottom {
@@ -83,7 +81,6 @@ footer.sticky-bottom {
     &:hover {
       transform: scale(1.01);
     }
-
   }
 }
 
@@ -105,7 +102,7 @@ footer.sticky-bottom {
           }
         }
 
-        >em {
+        > em {
           color: var(--global-theme-color);
         }
       }
@@ -132,7 +129,6 @@ footer.sticky-bottom {
   h2 {
     font-size: 1.75rem;
   }
-
 }
 
 .blog-metadata {
@@ -145,7 +141,6 @@ footer.sticky-bottom {
     padding-bottom: 0rem;
 
     ul {
-
       p,
       li {
         padding: 0rem 0rem;
@@ -156,7 +151,6 @@ footer.sticky-bottom {
       color: var(--global-text-color-light);
     }
   }
-
 }
 
 // Writing
@@ -179,7 +173,6 @@ footer.sticky-bottom {
     margin-bottom: 1rem;
     text-align: right;
   }
-
 
   .card {
     border-style: hidden;
@@ -208,6 +201,4 @@ footer.sticky-bottom {
   img {
     max-width: 20vw;
   }
-
-
 }

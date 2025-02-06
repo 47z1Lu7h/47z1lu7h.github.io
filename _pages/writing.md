@@ -30,12 +30,15 @@ nav_order: 7
   {% endfor %}
 
 {%- else -%}
+
 <!-- Display writing without categories -->
-  {%- if page.only_highlights -%}
-  {%- assign sorted_projects = site.writing | where: "highlighted", true | sort: "importance" | sort: "date" -%}
-  {%- else -%}
-  {%- assign sorted_projects = site.writing | sort: "importance" | sort: "date" -%}
-  {%- endif -%}
+
+{%- if page.only_highlights -%}
+{%- assign sorted_projects = site.writing | where: "highlighted", true | sort: "importance" | sort: "date" -%}
+{%- else -%}
+{%- assign sorted_projects = site.writing | sort: "importance" | sort: "date" -%}
+{%- endif -%}
+
   <!-- Generate cards for each project -->
   <div class="list-style mx-auto">
     {%- for project in sorted_projects -%}

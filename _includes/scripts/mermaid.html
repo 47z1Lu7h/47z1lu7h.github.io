@@ -3,18 +3,17 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
 
 <script>
-  let currentTheme = localStorage.getItem("theme")
-  document.addEventListener('DOMContentLoaded', function () {
+  let currentTheme = localStorage.getItem("theme");
+  document.addEventListener("DOMContentLoaded", function () {
     if (currentTheme == "light") {
-      mermaid_theme = "default"
+      mermaid_theme = "default";
     } else {
-      mermaid_theme = "dark"
+      mermaid_theme = "dark";
     }
     mermaid.initialize({
       startOnLoad: true,
       theme: mermaid_theme,
-    })
-    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'))
+    });
+    window.mermaid.init(undefined, document.querySelectorAll(".language-mermaid"));
   });
-
 </script>
