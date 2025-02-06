@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://dineshnatesan.com/ag-folio/sitemap.xml
