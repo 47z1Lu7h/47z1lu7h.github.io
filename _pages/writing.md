@@ -4,8 +4,8 @@ title: hacking
 permalink: /hacking/
 description: A collection of my hackings.
 nav: true
-only_highlights: false
-display_categories: [features, short]
+only_highlights: true
+#display_categories: [web-pentesting, hacking]
 nav_order: 7
 ---
 
