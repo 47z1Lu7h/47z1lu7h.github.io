@@ -6,7 +6,7 @@ title: 47z!h4Ck # the website title (if blank, full name will be used instead)
 first_name: 47z!Lu7h
 middle_name:
 last_name:
-email: 47z1lu7h@gmail.com
+# email: 47z1lu7h@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
 contact_note: >
   The biggest adventure you can take is to live the life of your dream
@@ -42,14 +42,35 @@ repo_trophies:
 # rss_icon: true
 
 # -----------------------------------------------------------------------------
+# Social
+# -----------------------------------------------------------------------------
+
+github_username: 47z1Lu7h
+instagram_id: 47z1lu7h
+custom_social: # can be any name here other than the ones already defined above
+  logo: assets/img/logos/hthW.png
+  title: h4CK
+  url: https://app.hackthebox.com/profile/642903
+facebook_id: 47z1lu7h
+x_username: 4tz1luth
+# linkedin_username: # your LinkedIn user name
+# youtube_id: 47z1lu7h
+# whatsapp_number: +34 610 616 357
+# telegram_username: A7Z1lU7h
+# discord_id:  780129867655807007
+# email: 47z1Lu7h@gamil.com # your email address
+# spotify_id: # your spotify id
+# stackoverflow_id: # your stackoverflow id
+
+# -----------------------------------------------------------------------------
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
-footer_fixed: false
+navbar_fixed: false
+footer_fixed: true
 
 # Dimensions
-max_width: 1000px
+max_width: 100px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -226,7 +247,7 @@ jekyll-minifier:
 # -----------------------------------------------------------------------------
 
 jekyll-archives:
-  enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+  enabled: [all] # enables year, tag and category archives (remove if you need to disable one of them).
   layouts:
     year: archive-year
     tag: archive-tag
@@ -236,8 +257,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["bruteforce", "", "code"] # these tags will be displayed on the front page of your blog
-display_categories: ["hacking"] # these categories will be displayed on the front page of your blog
+display_tags: ["tags"] # these tags will be displayed on the front page of your blog
+display_categories: ["categ"] # these categories will be displayed on the front page of your blog
 
 # Display different badges withs stats for your publications
 enable_publication_badges:
@@ -261,7 +282,7 @@ enable_publication_thumbnails: true
 
 # These are the defaults
 external_links:
-  enabled: true
+  enabled: false
   rel: external nofollow noopener
   target: _blank
   exclude:
