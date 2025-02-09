@@ -66,8 +66,8 @@ x_username: 4tz1luth
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: false
-footer_fixed: true
+navbar_fixed: true
+footer_fixed: false
 
 # Dimensions
 max_width: 100px
