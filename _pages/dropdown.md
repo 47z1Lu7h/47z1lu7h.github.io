@@ -16,8 +16,8 @@ children:
   - title: divider
   - title: divider
   - title: divider
-  - title: projects
-    permalink: /projects/
+  - title: Cheetsheets
+    permalink: /Cheetsheets/
   - title: divider
 lang: en
 ---
