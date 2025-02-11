@@ -3,7 +3,7 @@ layout: page
 title: Active Directory
 description: Active Directory Exploitation Cheat Sheet
 tags:
-img: assets/img/hacking/AD.jpg
+img: assets/img/hacking/cheetSheet/AD.jpg
 category: Windows
 toc:
   sidebar: left
