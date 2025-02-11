@@ -5,7 +5,7 @@ permalink: /
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 profile:
   align: right
-  image: logos/47z1Right.jpg
+  image: logos/47z1Down.jpg
   image_circular: true
   more_info: >
     <p>You already own what you think you need.</p>

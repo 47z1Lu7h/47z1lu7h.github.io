@@ -14,7 +14,7 @@ footer_text: >
   Love is life. And if you miss love, you miss life.
 keywords: # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # logos/M1n14tz1.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: logos/m1N147z1.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 url: https://47z1lu7h.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
