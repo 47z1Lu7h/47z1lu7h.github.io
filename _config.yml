@@ -47,7 +47,7 @@ repo_trophies:
 
 github_username: 47z1Lu7h
 instagram_id: 47z1lu7h
-custom_social: # can be any name here other than the ones already defined above
+custom_social:
   logo: assets/img/logos/hthW.png
   title: h4CK
   url: https://app.hackthebox.com/profile/642903
@@ -67,7 +67,9 @@ x_username: 4tz1luth
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: false
+footer_fixed: true
+search_enabled: true
+socials_in_search: true
 
 # Dimensions
 max_width: 1050px
@@ -149,7 +151,7 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
-  projects:
+  misc:
     output: true
     permalink: /projects/:path/
   hacking:

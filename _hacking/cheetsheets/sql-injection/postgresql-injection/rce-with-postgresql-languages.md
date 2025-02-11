@@ -2,8 +2,7 @@
 layout: page
 title: PostgreSQL Languages
 description:
-tags:
-category: Postgresql-injection
+category: postgresql-injection
 toc:
   sidebar: left
 ---

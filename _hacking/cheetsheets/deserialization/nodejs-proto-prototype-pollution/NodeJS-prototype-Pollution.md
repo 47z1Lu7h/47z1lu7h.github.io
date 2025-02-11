@@ -1,17 +1,10 @@
 ---
 layout: page
-title: NodeJS & prototype Pollution
-date: 2025-01-04 10:14:00-0400
-description:
-tags:
-categories: [hacking pentesting-web deserialization nodejs-proto-prototype-pollution]
-discus_comments: true
-related_posts: false
+title: NodeJS - __proto__ & prototype Pollution
+category: nodejs-deserialization
 toc:
   sidebar: left
 ---
-
-# NodeJS - \_\_proto\_\_ & prototype Pollution
 
 ## Objects in JavaScript <a href="#id-053a" id="id-053a"></a>
 

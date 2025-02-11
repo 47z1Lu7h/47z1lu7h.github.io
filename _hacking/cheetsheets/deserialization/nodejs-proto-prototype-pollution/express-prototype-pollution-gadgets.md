@@ -1,17 +1,10 @@
 ---
 layout: page
 title: Express Prototype Pollution Gadgets
-date: 2025-01-04 10:14:00-0400
-description:
-tags:
-categories: [hacking pentesting-web deserialization nodejs-proto-prototype-pollution]
-discus_comments: true
-related_posts: false
+category: nodejs-deserialization
 toc:
   sidebar: left
 ---
-
-# Express Prototype Pollution Gadgets
 
 ## Serve XSS responses
 

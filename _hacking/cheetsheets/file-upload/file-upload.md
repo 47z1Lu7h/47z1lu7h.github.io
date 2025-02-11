@@ -2,21 +2,17 @@
 layout: page
 title: file-upload
 description: Transmitting a file from your computer to another computer.
-tags:
-category: file-upload
+img: assets/img/hacking/cheetSheet/upload-file-icon.png
+category: Cheetsheets
 toc:
   sidebar: left
 ---
 
-# File Upload
-
-<!-->
-
-<-->
-
 To transfer (something, such as data or files) from a computer or other digital device to the memory of another device (such as a larger or remote computer) especially via the Internet.
 
 ## File Upload General Methodology
+
+---
 
 Other useful extensions:
 

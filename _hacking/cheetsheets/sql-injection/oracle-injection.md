@@ -2,7 +2,6 @@
 layout: page
 title: Oracle injection
 description:
-tags:
 category: sql-injection
 toc:
   sidebar: left

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: h4ck1ng
+title: h4Cking
 permalink: /hacking/
-description: A collection of my hacking stuff.
+description:
 nav: true
 nav_order: 3
 display_categories: [docs, vulns, misc]
@@ -11,6 +11,8 @@ tabs: true
 toc:
   sidebar:
 ---
+
+:face_in_clouds:
 
 <!-- pages/projects.md -->
 <div class="projects">

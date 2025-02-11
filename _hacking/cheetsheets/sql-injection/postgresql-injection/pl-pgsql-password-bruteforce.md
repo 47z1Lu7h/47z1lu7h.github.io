@@ -2,8 +2,7 @@
 layout: page
 title: PL/pgSQL Password Bruteforce
 description:
-tags:
-category: Postgresql-injection
+category: postgresql-injection
 toc:
   sidebar: left
 ---

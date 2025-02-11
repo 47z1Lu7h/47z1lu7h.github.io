@@ -1,17 +1,11 @@
 ---
 layout: page
 title: Deserialization
-date: 2025-01-05 10:14:00-0400
 description:
-tags:
-categories: [hacking Deserialization]
-discus_comments: true
-related_posts: false
+category: deserialization
 toc:
   sidebar: left
 ---
-
-# Deserialization
 
 ## Basic Information
 

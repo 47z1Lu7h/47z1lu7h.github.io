@@ -1,17 +1,11 @@
 ---
 layout: page
-title: Basic .Net deserialization
-date: 2025-01-05 10:14:00-0400
+title: Basic .Net deserialization (ObjectDataProvider gadget, ExpandedWrapper, and Json.Net)
 description:
-tags:
-categories: [hacking deserialization]
-discus_comments: true
-related_posts: false
+category: .net-deserialization
 toc:
   sidebar: left
 ---
-
-# Basic .Net deserialization (ObjectDataProvider gadget, ExpandedWrapper, and Json.Net)
 
 This post is dedicated to **understand how the gadget ObjectDataProvider is exploited** to obtain RCE and **how** the Serialization libraries **Json.Net and xmlSerializer can be abused** with that gadget.
 

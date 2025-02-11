@@ -1,17 +1,15 @@
 ---
-layout: page
+layout: post
 title: how to play hackthebox.com
 date: 2024-05-01
 description: write up machine broker
 tags: writeUp
-categories: Hacking pentesting hackthebox
 tabs: true
-related_posts: true
-comments: true
+giscus comments: true
 featured: true
-lang: es
-toc:
-  beginning: true
+news: true
+social: true
+related posts: true
 ---
 
 # Hack The Box

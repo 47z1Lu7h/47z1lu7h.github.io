@@ -1,17 +1,11 @@
 ---
 layout: page
-title:
-date: 2025-01-05 10:14:00-0400
+title: PHP - Deserialization + Autoload Classes
 description:
-tags:
-categories: [hacking pentesting-web deserialization]
-discus_comments: true
-related_posts: false
+category: php-deserialization
 toc:
   sidebar: left
 ---
-
-# PHP - Deserialization + Autoload Classes
 
 First, you should check what are [**Autoloading Classes**](https://www.php.net/manual/en/language.oop5.autoload.php).
 

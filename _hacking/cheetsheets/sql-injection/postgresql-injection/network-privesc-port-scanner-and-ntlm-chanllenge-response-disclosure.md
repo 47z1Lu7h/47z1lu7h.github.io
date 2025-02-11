@@ -2,8 +2,7 @@
 layout: page
 title: Network - Privesc, Port Scanner and NTLM chanllenge response disclosure
 description:
-tags:
-category: Postgresql-injection
+category: postgresql-injection
 toc:
   sidebar: left
 ---

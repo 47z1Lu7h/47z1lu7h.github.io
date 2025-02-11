@@ -1,17 +1,20 @@
 ---
-layout: page
+layout: post
 title: Write Up Machine Keeper, Hackthebox - Easy
 date: 2024-12-02
 description: write up easy machine Keeper - hackthebox
 tags: writeUp hacking hackthebox
-category: hacking
 featured: true
-lang: en
 toc:
   beginning: true
+
+news: true
+social: true
+related posts: true
 ---
 
-<hr>
-<div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/2nnOcIIZyqk?si=jb51iDUzDH7jxusO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br>
+<div class="vidjet-video-wrapper" style="width:100%; padding-bottom: 45%; position: relative; overflow: hidden; height: auto; margin: 0px auto; " > 
+    <iframe class="vidjet-embed-iframe" src="https://www.youtube.com/embed/2nnOcIIZyqk?si=jb51iDUzDH7jxusO" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px; " allow="clipboard-read; clipboard-write; fullscreen" frameborder="0" ></iframe> 
 </div>
+<br>

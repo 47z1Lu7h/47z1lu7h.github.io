@@ -13,7 +13,6 @@ profile:
 news: true
 social: true
 related posts: true
-lang: en
 ---
 
 # Welcome to the Awakening Nexus

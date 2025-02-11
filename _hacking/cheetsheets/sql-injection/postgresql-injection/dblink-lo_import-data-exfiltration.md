@@ -2,13 +2,10 @@
 layout: page
 title: dblink/lo_import data exfiltration
 description:
-tags:
-category: Postgresql-injection
+category: postgresql-injection
 toc:
   sidebar: left
 ---
-
-# dblink/lo_import data exfiltration
 
 **This is an example of how to exfiltrate data loading files in the database with `lo_import` and exfiltrate them using `dblink_connect`.**
 

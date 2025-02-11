@@ -10,14 +10,19 @@ children:
     permalink: /about/
   - title: divider
   - title: divider
+  - title: repositories
+    permalink: /repos/
+  - title: divider
+  - title: divider
+  - title: miscelanea
+    permalink: /misc/
+  - title: divider
+  - title: divider
+  - title: Cv
+    permalink: /cv/
+  - title: divider
   - title: divider
   - title: news
     permalink: /news/
-  - title: divider
-  - title: divider
-  - title: divider
-  - title: Cheetsheets
-    permalink: /Cheetsheets/
-  - title: divider
 lang: en
 ---

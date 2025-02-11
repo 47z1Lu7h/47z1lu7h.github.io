@@ -1,17 +1,11 @@
 ---
 layout: page
-title: DeseriaJava DNS Deserialization, GadgetProbe and Java Deserialization Scannerization
-date: 2025-01-05 10:14:00-0400
+title: Java DNS Deserialization, GadgetProbe and Java Deserialization Scanner
 description:
-tags:
-categories: [hacking deserialization]
-discus_comments: true
-related_posts: false
+category: java-deserialization
 toc:
   sidebar: left
 ---
-
-# Java DNS Deserialization, GadgetProbe and Java Deserialization Scanner
 
 ## DNS request on deserialization
 

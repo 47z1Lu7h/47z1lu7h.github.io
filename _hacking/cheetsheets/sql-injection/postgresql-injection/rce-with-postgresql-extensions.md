@@ -2,13 +2,10 @@
 layout: page
 title: RCE with PostgreSQL Extensions
 description:
-tags:
-category: Postgresql-injection
+category: postgresql-injection
 toc:
   sidebar: left
 ---
-
-# RCE with PostgreSQL Extensions
 
 ## PostgreSQL Extensions
 

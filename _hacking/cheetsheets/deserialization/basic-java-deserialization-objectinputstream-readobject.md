@@ -1,12 +1,7 @@
 ---
 layout: page
-title: Java Deserialization
-date: 2025-01-05 10:14:00-0400
-description:
-tags:
-categories: [hacking deserialization]
-discus_comments: true
-related_posts: false
+title: Basic java deserialization
+category: java-deserialization
 toc:
   sidebar: left
 ---

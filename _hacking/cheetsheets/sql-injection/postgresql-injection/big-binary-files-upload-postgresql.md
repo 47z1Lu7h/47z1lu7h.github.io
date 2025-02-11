@@ -2,8 +2,7 @@
 layout: page
 title: PostgreSQL Large Objects
 description:
-tags:
-category: Postgresql-injection
+category: postgresql-injection
 toc:
   sidebar: left
 ---

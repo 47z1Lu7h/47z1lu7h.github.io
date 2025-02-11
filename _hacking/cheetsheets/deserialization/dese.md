@@ -1,13 +1,22 @@
 ---
 layout: default
-title: SQL-Injection
-permalink: /sql-injection/
+title: deserialization
+permalink: /deserialization/
 description:
-nav: true
-nav_order: 5
+nav: false
+nav_order: 6
 category: Cheetsheets
-display_categories: [sql-injection, sqlmap, postgresql-injection, mysql-injection]
-img: assets/img/hacking/cheetSheet/sql-injection.avif
+display_categories:
+  [
+    deserialization,
+    python-deserialization,
+    php-deserialization,
+    java-deserialization,
+    jndi-deserialization,
+    .net-deserialization,
+    nodejs-deserialization,
+  ]
+img: assets/img/hacking/cheetSheet/deserialization-cheatsheet.jpg
 horizontal: true
 ---
 
@@ -32,7 +41,7 @@ horizontal: true
   <ul>
     {% assign sorted_projects = site.hacking | sort: "importance" %}
     {% for project in sorted_projects %}
-      <li><a href="{{ project.url }}">{{ project.title }}</a> - {{ project.date }}</li>
+      <li><a href="{{ project.url }}">{{ project.title }}</a></li>
     {% endfor %}
   </ul>
 {% endif %}

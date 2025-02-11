@@ -1,17 +1,11 @@
 ---
 layout: page
 title: JNDI - Java Naming and Directory Interface & Log4Shell
-date: 2025-01-05 10:14:00-0400
 description:
-tags:
-categories: [hacking deserialization]
-discus_comments: true
-related_posts: false
+category: jndi-deserialization
 toc:
   sidebar: left
 ---
-
-# JNDI - Java Naming and Directory Interface & Log4Shell
 
 ## Basic Information
 

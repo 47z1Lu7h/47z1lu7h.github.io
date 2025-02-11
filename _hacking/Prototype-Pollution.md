@@ -5,7 +5,7 @@ description:
 img:
 importance: 3
 category: vulns
-img: assets/img/hacking/prototypePollution.png
+img: assets/img/hacking/cheetSheet/prototype-pollution.jpg
 toc:
     sidebar: left
 ---

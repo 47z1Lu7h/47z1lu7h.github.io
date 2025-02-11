@@ -1,12 +1,11 @@
 ---
 layout: page
-title: m15c
+title: misc
 permalink: /misc/
 description:
-nav: true
-nav_order: 3
-display_categories: [file-upload, work, fun]
-horizontal: true
+tab: false
+display_categories: [1, 11, 111]
+horizontal: false
 ---
 
 <!-- pages/projects.md -->
@@ -17,7 +16,7 @@ horizontal: true
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
+  {% assign categorized_projects = site.misc | where: "category", category %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
@@ -41,7 +40,7 @@ horizontal: true
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+{% assign sorted_projects = site.misc | sort: "importance" %}
 
   <!-- Generate cards for each project -->
 

@@ -1,12 +1,8 @@
 ---
 layout: page
-title: CommonsCollection1 Payload - Java Transformers to Rutime exec() and Thread Sleep
-date: 2025-01-05 10:14:00-0400
+title:
 description:
-tags:
-categories: [hacking pentesting-web deserialization]
-discus_comments: true
-related_posts: false
+category: java-deserialization
 toc:
   sidebar: left
 ---

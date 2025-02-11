@@ -7,7 +7,7 @@ nav: true
 nav_order: 3
 category: docs
 display_categories: [Cheetsheets, Windows]
-img: assets/img/hacking/cheat.jpg
+img: assets/img/hacking/cheetSheet/cheetsheets.jpg
 horizontal: false
 ---
 
