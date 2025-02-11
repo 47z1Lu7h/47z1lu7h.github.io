@@ -1,6 +1,6 @@
 ---
 layout: page
-title: more
+title: ~|m0Re|~
 nav: true
 nav_order: 8
 dropdown: true

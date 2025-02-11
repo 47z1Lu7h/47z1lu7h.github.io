@@ -1,6 +1,6 @@
 ---
 layout: page
-title: h4Cking
+title: ~|h4Ck1n6|~
 permalink: /hacking/
 description:
 nav: true
