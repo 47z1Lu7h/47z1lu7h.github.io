@@ -82,11 +82,13 @@ _In this place you can find everything related to my journey:_
 <br>
 
 ---
-
+{:center: style="text-align: center"}
 _Thanks for stopping by, and I hope you find something here that sparks your curiosity!!_
+{:center}
 
+
+{:center: style="text-align: center"}
 ### `Feel free to explore!`
-
 {:center}
 
 ---
