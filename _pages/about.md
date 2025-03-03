@@ -21,18 +21,21 @@ images:
 
 <!--    # <p>  Dysfunctional systems will fall under their own weight. Let them. </p> -->
 
----
-
----
 {:center: style="text-align: center"}
+
 # Welcome! 😍
+
 {:center}
 
 ---
 
+> #### `Your purpose is to be YOU as fully as you can and the way that’s perhaps most easily done is to act on your highest joy.`
+
 ---
 
-Hello!! this is **Roi** :slightly_smiling_face:<br> A random guy from south of Galicia, north of Spain.<br> A really beatiful region with lot's of nature... and the sea :heart_eyes:<br> We have some big estuary around with not so big mountains that make some of nicest the views :smiling_face_with_three_hearts:
+##### Hello!!! this is **Roi** :slightly_smiling_face:<br>
+
+A random guy from south of Galicia, north of Spain.<br> A really beatiful region with lot's of nature... and the sea :heart_eyes:<br> We have some big estuary around with not so big mountains that make some of nicest the views :smiling_face_with_three_hearts:
 
 ---
 
@@ -69,4 +72,4 @@ Hello!! this is **Roi** :slightly_smiling_face:<br> A random guy from south of G
 
 ---
 
-<br>
+<br><br>

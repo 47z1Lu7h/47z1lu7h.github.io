@@ -25,9 +25,11 @@ related posts: true
 
 ---
 
+##### Hey there!!:wave::v::sparkling_heart: This is my avatar, **atziluth**. I know it’s written a bit cryptic... I like the hack style of rename things... hehehe :sweat_smile:
+
 <br>
 
-##### Hey there!! This is my avatar, **atziluth** . I know it’s written a bit cryptic... I like the hack style of rename things... hehehe :sweat_smile:
+---
 
 <br>
 
@@ -68,19 +70,23 @@ _In this place you can find everything related to my journey:_
 - [Interesting Content](news): I'll post things I like, including awakening stuff, interesting news, and many more things :wink:<br>
   - _Resources to help me promote myself and find a_ **Cybersecurity Company** _to complete my internship and kickstart my career._ :smile: <br><br>
 
----
-
----
-
 <br>
+
+---
+
+---
+
 {:center: style="text-align: center"}
 
 > `It’s a space to explore, learn, and connect. I believe in questioning the norm and finding deeper truths, and I hope you'll find something valuable here too.` :wink: <br>
 
 {:center}
-<br>
 
 ---
+
+---
+
+<br>
 
 {:center: style="text-align: center"}
 _Thanks for stopping by, and I hope you find something here that sparks your curiosity!!_
