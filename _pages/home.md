@@ -84,7 +84,6 @@ _In this place you can find everything related to my journey:_
 ---
 
 _Thanks for stopping by, and I hope you find something here that sparks your curiosity!!_
-{:center}
 
 ### `Feel free to explore!`
 

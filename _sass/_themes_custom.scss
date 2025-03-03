@@ -1,3 +1,4 @@
+@use "sass:color";
 /*******************************************************************************
  * ADDED: Custom colors
  ******************************************************************************/
@@ -9,7 +10,7 @@ $day-color-hover: #ff9800 !default; // orange 500 material.io
 // Night theme colors
 $night-background-color: $black-color !default;
 $night-color-main: #2ce0a1 !default;
-$night-color-hover: darken($night-color-main, 10%);
+$night-color-hover: color.adjust($night-color-main, $lightness: -10%);
 $night-card-color: #212121 !default;
 
 /*******************************************************************************
