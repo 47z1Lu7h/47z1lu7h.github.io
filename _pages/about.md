@@ -24,12 +24,11 @@ images:
 ---
 
 ---
-
 {:center: style="text-align: center"}
-
 # Welcome! 😍
+{:center}
 
-## {:center}
+---
 
 ---
 
