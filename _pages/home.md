@@ -1,37 +1,79 @@
 ---
 layout: about
-title: ~|h0m3|~
+title: \ h0m3 /
 permalink: /
-subtitle: <a href='#'>You already own what you think you need.</a>
-news: true
-related posts: true
+subtitle: <a href='#'>“The only thing you discover in the unknown, is more of yourself.” </a>
 
 profile:
   align: left
-  image: logos/47z1Down.jpg
+  image: logos/47z1-Right.jpg
   image_circular: true
   content: about_me.md
-  more_info: >
-    <p>You already own what you think you need.</p>
+  more_info: > 
+      You are unconditionally loved and supported.
+
+news: true
+related posts: true
 ---
 
 ---
-
-Welcome to my digital sanctuary, a space where the boundaries of curiosity, technology, and philosophy intertwine. This blog is a reflection of the many layers of my journey—part technical exploration, part personal odyssey, and entirely authentic.
-
-At its foundation, I’m deeply immersed in the world of cybersecurity, with a specific focus on pentesting. Uncovering vulnerabilities, understanding digital threats, and mastering the art of ethical hacking is more than a career or hobby for me—it’s a mission. I believe in the power of technology not just to connect but also to protect, and through my posts, I’ll share insights, techniques, and stories that shed light on the hidden corners of the online world.
-
-But life isn’t just about code and exploits. There’s another side to my story—a pursuit of meaning beyond the material. I’m deeply drawn to spirituality, a path that helps me navigate the unseen and explore the deeper layers of existence. Here, you’ll find musings on mindfulness, meditative practices, and philosophical inquiries into what it means to be human in a rapidly changing world.
-
-And for those who, like me, are fascinated by the unconventional, I delve into conspiracy theories. Not in blind acceptance, but with a curious and critical eye, seeking to understand the narratives, evidence, and cultural impacts of these ideas. From ancient mysteries to modern controversies, I believe in questioning the surface to uncover deeper truths.
-
-This blog is more than just a collection of topics; it’s a community for those who seek to learn, question, and explore. Whether you’re here for cybersecurity insights, spiritual reflections, or to entertain new perspectives on hidden truths, you’ll find a home here.
-
-Let’s journey together—through the digital, the spiritual, and the conspiratorial—unearthing knowledge, challenging perceptions, and growing in understanding every step of the way.
-
-#### Awakening to Infinity
-
+--- 
+# :black_small_square::black_medium_small_square::black_medium_square::black_large_square: Welcome to My Space!! :black_large_square::black_medium_square::black_medium_small_square::black_small_square:
 ---
-
-What if you are more than flesh and bone? Discover the profound truth that we are infinite, eternal beings experiencing a temporary human reality. Through ancient wisdom, quantum physics, and personal exploration, we uncover the limitless potential within us all.
+---
 <br>
+
+#####  Hey there!! This is my avatar, **atziluth** .  I  know it’s written a bit cryptic... I like the hack style of rename things... hehehe :sweat_smile:
+<br>
+
+#### ```This is my personal corner of the internet. I recently finished my Certificate of Higher Education (HNC), in Systems Administration, and during the first year of the course, I discovered my passion for cybersecurity. ```
+#### ```Since then, I’ve been diving deep into it, studying, experimenting, and falling in love with the field.```
+
+<br>
+
+---
+
+When I finnised the first year of the course **System Administrator**, *I never got into any IT field before*. And I thought *hmm... It's interessting*. <br>
+My classmates share a video in the class whatsapp group about a pentester doing a machine, thing that never seen before, and for me it was talking in Chinnese!!!<br>
+
+And I thought, **OMG**!! Shouldn't I understand at least a little thing from what he's doing ¿?¿?¿? :flushed: :flushed: I am studing this.. or I think so... <br>
+And there I got in love, and never stop viewing stremings from **S4vitar** :relaxed:
+I leave some of his social:
+- [github](https://github.com/s4vitar)
+- [twiter](https://x.com/s4vitar?lang=en)
+- [youtube](https://www.youtube.com/channel/UCgzsRmCl4BU-QmSVC4jFOlg)
+
+I got in love with the so configurable **Linux** and start to play in **Hackthebox**<br> 
+By that time I made a video with my brand new **[Bspwm!!!](/blog/2021/first_contact_with-bspwm/)**... I was so happy! :blush: :smile: hehehe<br><br> 
+
+--- 
+This space is not just for my studies but also for sharing content that inspires and informs. <br> Over time, I’ll also share things that inspire me, whether it’s awakening content, thought-provoking news, interesting videos, or hacking-related stuff.<br>
+
+
+---
+*In this place you can find everything related to my journey:*
+
+- [Cheatsheets](/docs) and study materials (like Payloads of the Things and HackTricks) that help me learn and grow.
+
+- [Repositories](repos) from my GitHub, where I upload projects and experiments.
+
+- [Interesting Content](news): I'll post things I like, including awakening stuff, interesting news, and many more things :wink:<br>
+  - *Resources to help me promote myself and find a* **Cybersecurity Company** *to complete my internship and kickstart my career.* :smile: <br><br>
+
+---
+
+
+---
+<br><br>
+{:center: style="text-align: center"}
+> ```It’s a space to explore, learn, and connect. I believe in questioning the norm and finding deeper truths, and I hope you'll find something valuable here too.``` :wink: <br>
+{:center}
+<br><br>
+
+--- 
+*Thanks for stopping by, and I hope you find something here that sparks your curiosity!!*
+{:center}
+### ```Feel free to explore!``` 
+{:center}
+
+---

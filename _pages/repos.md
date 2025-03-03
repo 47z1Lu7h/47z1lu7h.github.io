@@ -1,16 +1,15 @@
 ---
 layout: page
 permalink: /repos/
-title: Repositories
+title: Github Content
 description:
 nav: false
 ---
-
-## My User 😍
+<br>
 
 ---
-
-<br>
+## My User 😍
+---
 {% if site.data.repositories.github_users %}
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
@@ -19,7 +18,6 @@ nav: false
   {% endfor %}
 </div>
 
-<!--
 {% if site.repo_trophies.enabled %}
 {% for user in site.data.repositories.github_users %}
 {% if site.data.repositories.github_users.size > 1 %}
@@ -34,15 +32,11 @@ nav: false
 {% endif %}
 {% endif %}
 
---->
 <br>
-<br>
-
-## My Repos 😍
 
 ---
-
-<br>
+## My Repos 😍
+---
 
 {% if site.data.repositories.github_repos %}
 

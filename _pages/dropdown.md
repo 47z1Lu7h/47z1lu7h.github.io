@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ~|m0Re|~
+title: / m0Re \
 nav: true
 nav_order: 8
 dropdown: true
@@ -14,15 +14,12 @@ children:
     permalink: /repos/
   - title: divider
   - title: divider
-  - title: miscelanea
-    permalink: /misc/
-  - title: divider
-  - title: divider
   - title: Cv
     permalink: /cv/
   - title: divider
   - title: divider
   - title: news
     permalink: /news/
+  - title: divider
 lang: en
 ---

@@ -4,7 +4,7 @@ title: how to play hackthebox.com
 date: 2024-05-01
 description: write up machine broker
 tags: writeUp
-tabs: true
+
 giscus comments: true
 featured: true
 news: true
@@ -15,18 +15,19 @@ related posts: true
 # Hack The Box
 
 ---
+The Hack The Box platform provides a wealth of challenges - in the form of virtual machines - simulating real-world security issues and vulnerabilities that are constantly provided and updated by the community. Some of them simulate real-world scenarios, and some lean more toward a CTF-style of approach.
+
+<br>
+
+### Machines
+
+---
 
  <div class="row mt-3">
     <div class="col-lg mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="/assets/img/hacking/h4Ck/Boxes.gif" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
-The Hack The Box platform provides a wealth of challenges - in the form of virtual machines - simulating real-world security issues and vulnerabilities that are constantly provided and updated by the community. Some of them simulate real-world scenarios, and some lean more toward a CTF-style of approach.
-
-### Machines
-
----
 
 Machines are instances of vulnerable virtual machines. These are virtualized services, virtualized operating systems, and virtualized hardware that all run on our servers. Machines can be Easy, Medium, Hard or Insane and can host different Operating Systems; Linux, Windows, FreeBSD, and more.
 

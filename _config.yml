@@ -151,12 +151,9 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
-  misc:
+  docs:
     output: true
-    permalink: /projects/:path/
-  hacking:
-    output: true
-    permalink: /hacking/:path/
+    permalink: /docs/:path/
 
 announcements:
   enabled: true

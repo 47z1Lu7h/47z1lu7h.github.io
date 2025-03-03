@@ -4,7 +4,7 @@ title: Science of the Heart
 description: Electromagnetic field of the heart
 date: 2015-11-01
 inline: false
-categories: sample-posts external-services hackthebox
+categories: 
 related_posts: true
 news: true
 discus_comments: true
@@ -19,7 +19,8 @@ Traditionally, the study of communication pathways between the head and heart ha
 
 New research shows the human heart is much more than an efficient pump that sustains life. Our research suggests the heart also is an access point to a source of wisdom and intelligence that we can call upon to live our lives with more balance, greater creativity and enhanced intuitive capacities. All of these are important for increasing personal effectiveness, improving health and relationships and achieving greater fulfillment.
 
-##### `The heart communicates with the brain and body in four ways:`
+<br>
+### `The heart communicates with the brain and body in four ways:`
 
 ---
 
@@ -60,10 +61,9 @@ The magnetic field produced by the human heart is more than 100 times greater in
     </div>
 </div>
 ---
-
 <br>
 
-##### Press releases:
+### Press releases:
 
 ---
 

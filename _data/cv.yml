@@ -11,18 +11,17 @@
 - title: Education
   type: time_table
   contents:
-    - title: Grado Superior Administracion de Sistemas
+    - title: Certificate of Higher Education (HNC)
       institution: IES Teis, Vigo, Galicia, Spain
       year: 2024
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+      description: 
+        - title: Systems Administration
           contents:
             - Sub-description 1.
             - Sub-description 2.
-    - title: Grado medio
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+
+    - title: Vocational Education and Training (VET)
+      institution: 
       year: 2005
       description:
         - Description 1.

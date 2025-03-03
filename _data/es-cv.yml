@@ -1,0 +1,29 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Roi Diz Diéguez
+    - name: Date of Birth
+      value: 10th Decembre 1987
+    - name: Languages
+      value: Spanish, English
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Grado Superior Administracion de Sistemas
+      institution: IES Teis, Vigo, Galicia, Spain
+      year: 2024
+      description:
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
+    - title: Grado medio
+      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+      year: 2005
+      description:
+        - Description 1.
+        - Description 2.
