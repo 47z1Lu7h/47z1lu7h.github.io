@@ -195,6 +195,4 @@ ssh -CqN -D 1337 root@YUOR.DEST.NEW.IP
 
 ### AV Bypasses techniques
 
-(https://cmepw.github.io/BypassAV/)
-
-(https://raw.githubusercontent.com/CMEPW/BypassAV/main/img/Bypass-AV.png)
+[!](https://raw.githubusercontent.com/CMEPW/BypassAV/main/img/Bypass-AV.png)

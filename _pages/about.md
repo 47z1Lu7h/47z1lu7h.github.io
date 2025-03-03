@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /about/
-subtitle: <a href='#'></a>
+subtitle: <a href='#'>You are a dream of the infinite creation.</a>
 
 profile:
   align: rigght
@@ -25,9 +25,11 @@ images:
 
 ---
 
+{:center: style="text-align: center"}
+
 # Welcome! 😍
 
----
+## {:center}
 
 ---
 

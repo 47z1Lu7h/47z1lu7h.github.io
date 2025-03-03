@@ -2,7 +2,7 @@
 layout: about
 title: \ h0m3 /
 permalink: /
-subtitle: <a href='#'>“The only thing you discover in the unknown, is more of yourself.” </a>
+subtitle: <a href='#'>You are unconditionally loved and supported.</a>
 
 profile:
   align: left
@@ -10,8 +10,7 @@ profile:
   image_circular: true
   content: about_me.md
   more_info: >
-    You are unconditionally loved and supported.
-
+    The only thing you discover in the unknown, is more of yourself.
 news: true
 related posts: true
 ---

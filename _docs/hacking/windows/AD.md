@@ -414,7 +414,6 @@ $DomainUsers | ? {$_.name -match "User's Name"}
 - [Abusing Token Privileges](https://foxglovesecurity.com/2017/08/25/abusing-token-privileges-for-windows-local-privilege-escalation/)
 - [SMBGhost CVE-2020-0796](https://blog.zecops.com/vulnerabilities/exploiting-smbghost-cve-2020-0796-for-a-local-privilege-escalation-writeup-and-poc/) \
   [PoC](https://github.com/danigargu/CVE-2020-0796)
-- [CVE-2021-36934 (HiveNightmare/SeriousSAM)](https://github.com/cube0x0/CVE-2021-36934)
 
 <br>
 
@@ -993,9 +992,6 @@ Detailed Articles:
 Rubeus.exe tgtdeleg /nowrap
 ```
 
-Detailed Article:
-[Rubeus – Now With More Kekeo](https://www.harmj0y.net/blog/redteaming/rubeus-now-with-more-kekeo/)
-
 <br>
 
 ### DNSAdmins Abuse
@@ -1144,7 +1140,6 @@ lsadump::dcsync /domain:root.domain.local /all
 Detailed Articles:
 
 - [Kerberos Golden Tickets are Now More Golden](https://adsecurity.org/?p=1640)
-- [A Guide to Attacking Domain Trusts](http://www.harmj0y.net/blog/redteaming/a-guide-to-attacking-domain-trusts/)
 
 <br>
 
