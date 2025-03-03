@@ -45,7 +45,7 @@ Small summary of each tool with the features and results that I got. This sectio
 
 ### [amass](https://github.com/OWASP/Amass)
 
-- Author: [OWASP](https://github.com/OWASP) (mainly [caffix](https://github.com/caffix)).
+- Author: [caffix](https://github.com/caffix).
 - Language: Go.
 - Type: Passive, Active, Bruteforce, Alterations (only Active and Passive tested here).
 - Api Keys added: 16 (AlienVault, Binary Edge, Censys, Chaos, Cloudflare, Facebook, Github, NetworksDB, PassiveTotal, ReconDev, SecurityTrails, Shodan, SpySe, UrlScan, VirusTotal, WhoIsXML).

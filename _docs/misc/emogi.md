@@ -1,6 +1,6 @@
 ---
 layout: page
-title: emoji cheatsheet
+title: emoji
 category: misc
 img: assets/img/misc/emoji.jpg
 toc:

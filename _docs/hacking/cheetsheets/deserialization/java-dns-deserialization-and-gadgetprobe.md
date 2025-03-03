@@ -179,9 +179,7 @@ The **extension** has **passive** and active **capabilities**.
 
 ### Passive
 
-By default it **checks passively** all the requests and responses sent **looking** for **Java serialized magic bytes** and will present a vulnerability warning if any is found:
-
-![https://techblog.mediaservice.net/2017/05/reliable-discovery-and-exploitation-of-java-deserialization-vulnerabilities/](<../../images/image (765).png>)
+By default it **checks passively** all the requests and responses sent **looking** for **Java serialized magic bytes** and will present a vulnerability warning if any is found.
 
 <br>
 
@@ -192,16 +190,12 @@ By default it **checks passively** all the requests and responses sent **looking
 You can select a request, right click and `Send request to DS - Manual Testing`.\
 Then, inside the _Deserialization Scanner Tab_ --> _Manual testing tab_ you can select the **insertion point**. And **launch the testing** (Select the appropriate attack depending on the encoding used).
 
-![https://techblog.mediaservice.net/2017/05/reliable-discovery-and-exploitation-of-java-deserialization-vulnerabilities/](../../images/3-1.png)
-
 Even if this is called "Manual testing", it's pretty **automated**. It will automatically check if the **deserialization** is **vulnerable** to **any ysoserial payload** checking the libraries present on the web server and will highlight the ones vulnerable. In order to **check** for **vulnerable libraries** you can select to launch **Javas Sleeps**, **sleeps** via **CPU** consumption, or using **DNS** as it has previously being mentioned.
 
 **Exploiting**
 
 Once you have identified a vulnerable library you can send the request to the _Exploiting Tab_.\
 I this tab you have to **select** the **injection point** again, an **write** the **vulnerable library** you want to create a payload for, and the **command**. Then, just press the appropriate **Attack** button.
-
-![https://techblog.mediaservice.net/2017/05/reliable-discovery-and-exploitation-of-java-deserialization-vulnerabilities/](../../images/4.png)
 
 <br>
 
@@ -214,7 +208,3 @@ Make your payload execute something like the following:
 ```
 
 <br>
-
-### More Information
-
-- [https://techblog.mediaservice.net/2017/05/reliable-discovery-and-exploitation-of-java-deserialization-vulnerabilities/](https://techblog.mediaservice.net/2017/05/reliable-discovery-and-exploitation-of-java-deserialization-vulnerabilities/)

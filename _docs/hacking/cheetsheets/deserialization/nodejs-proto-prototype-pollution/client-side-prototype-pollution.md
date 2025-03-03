@@ -62,8 +62,6 @@ debugAccess(Object.prototype, "ppmap");
 
 When deciding which stack to investigate, it is often useful to target stacks associated with JavaScript library files, as prototype pollution frequently occurs within these libraries. Identify the relevant stack by examining its attachment to library files (visible on the right side, similar to an image provided for guidance). In scenarios with multiple stacks, such as those on lines 4 and 6, the logical choice is the stack on line 4, as it represents the initial occurrence of pollution and thereby the root cause of the vulnerability. Clicking on the stack will direct you to the vulnerable code.
 
-![https://miro.medium.com/max/1400/1*S8NBOl1a7f1zhJxlh-6g4w.jpeg](https://miro.medium.com/max/1400/1*S8NBOl1a7f1zhJxlh-6g4w.jpeg)
-
 ## Finding Script Gadgets
 
 The gadget is the **code that will be abused once a PP vulnerability is discovered**.

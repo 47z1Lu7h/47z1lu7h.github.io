@@ -1609,8 +1609,6 @@ winrs -r:<computername> -u:<user> -p:<password> "command"
 
 ### crackmapexec
 
-- If stuck make use of [Wiki](https://www.crackmapexec.wiki/)
-
 ```sh
 crackmapexec {smb/winrm/mssql/ldap/ftp/ssh/rdp} #supported services
 crackmapexec smb <Rhost/range> -u user.txt -p password.txt --continue-on-success # Bruteforcing attack, smb can be replaced. Shows "Pwned"
