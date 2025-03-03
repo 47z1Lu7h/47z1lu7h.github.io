@@ -35,8 +35,6 @@ toc:
 - [yougetsignal](https://www.yougetsignal.com/)
 - [intelx](https://intelx.io)
 - [pentest-tools](https://pentest-tools.com/)
-- [gofindwhois](https://gofindwhois.com/)
-- [gofindwho](https://gofindwho.com/)
 
 # Track website changes
 
@@ -58,7 +56,6 @@ toc:
 - [robtex](https://www.robtex.com/)
 - [centralops](https://centralops.net)
 - [viewdns](https://viewdns.info)
-- [phpinfo](https://phpinfo.me/domain)
 - [bgp](http://bgp.he.net/)
 - [bgpview](https://bgpview.io)
 - [suip](https://suip.biz/)
@@ -77,7 +74,6 @@ toc:
 
 ---
 
-- [herokuapp](https://mmhdan.herokuapp.com/)
 - [publicwww](https://publicwww.com/)
 - [intelx](https://intelx.io/tools?tab=analytics)
 - [dnslytics](https://dnslytics.com/reverse-analytics)
@@ -124,7 +120,7 @@ toc:
 
 ---
 
-- [](https://exif-viewer.com)
+- [](m)
 
 ## General / AIO
 
@@ -197,10 +193,10 @@ knockknock -n "companyORregistrant" -p
 - [melbadry9](https://github.com/melbadry9/WhoEnum)
 
 <br>
-### Dorks
----
 
-- [Dorks-collections](https://github.com/cipher387/Dorks-collections-list")
+### Dorks
+
+---
 
 # Google Tools
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Summary
-permalink: /docs/hacking/cheetsheets/
+permalink: /docs/hacking/cheetsheets/sum/
 category:
 img: assets/img/hacking/summary.webp
 toc:

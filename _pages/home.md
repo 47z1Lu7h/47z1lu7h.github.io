@@ -73,12 +73,13 @@ _In this place you can find everything related to my journey:_
 
 ---
 
-<br><br>
+<br>
 {:center: style="text-align: center"}
 
 > `It’s a space to explore, learn, and connect. I believe in questioning the norm and finding deeper truths, and I hope you'll find something valuable here too.` :wink: <br>
-> {:center}
-> <br><br>
+
+{:center}
+<br>
 
 ---
 
