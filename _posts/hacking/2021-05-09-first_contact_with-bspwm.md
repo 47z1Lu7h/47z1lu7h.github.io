@@ -2,7 +2,7 @@
 layout: post
 title: bspwm
 date: 2021-09-04
-description: first contact with bspwm 
+description: first contact with bspwm
 
 giscus comments: true
 discus comments: true
@@ -13,7 +13,8 @@ related posts: true
 ---
 
 # bspwm
---- 
+
+---
 
 <div class="row mt-3">
     <div class="col-lg mt-3 mt-md-0">
@@ -23,5 +24,3 @@ related posts: true
 <div class="caption">
     This is my first contact with bspm! 
 </div>
-
-

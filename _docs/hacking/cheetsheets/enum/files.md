@@ -5,11 +5,13 @@ category: enum
 toc:
   sidebar: left
 ---
+
 # Files
 
 <br>
 
 ### Common
+
 ---
 
 ```bash
@@ -59,6 +61,7 @@ rga "whatever" folder/
 <br>
 
 ### Disk files
+
 ---
 
 ```bash
@@ -70,6 +73,7 @@ guestmount --add yourVirtualDisk.vhdx --inspector --ro /mnt/anydirectory
 <br>
 
 ### Audio
+
 ---
 
 ```bash
@@ -84,6 +88,7 @@ hideme stego.mp3 -f && cat output.txt #AudioStego
 <br>
 
 ### Images
+
 ---
 
 ```bash
@@ -104,6 +109,5 @@ identify -verbose image.jpeg
 # Stegseek
 # https://github.com/RickdeJager/stegseek
 stegseek --seed file.jpg
-stegseek file.jpg rockyou.txt 
+stegseek file.jpg rockyou.txt
 ```
-

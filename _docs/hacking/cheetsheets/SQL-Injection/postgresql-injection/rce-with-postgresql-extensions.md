@@ -8,6 +8,7 @@ toc:
 ---
 
 ## PostgreSQL Extensions
+
 ---
 
 PostgreSQL has been developed with extensibility as a core feature, allowing it to seamlessly integrate extensions as if they were built-in functionalities. These extensions, essentially libraries written in C, enrich the database with additional functions, operators, or types.
@@ -19,6 +20,7 @@ Also, keep in mind that **if you don't know how to** [**upload files to the vict
 <br>
 
 ### RCE in Linux
+
 ---
 
 **For more information check: [https://www.dionach.com/blog/postgresql-9-x-remote-command-execution/](https://www.dionach.com/blog/postgresql-9-x-remote-command-execution/)**
@@ -101,6 +103,7 @@ Since PostgreSQL version 8.2, the process for an attacker to exploit the system 
 <br>
 
 ### Compile the library
+
 ---
 
 Get the PsotgreSQL version with:
@@ -150,6 +153,7 @@ You can find this **library precompiled** to several different PostgreSQL versio
 <br>
 
 ### RCE in Windows
+
 ---
 
 The following DLL takes as input the **name of the binary** and the **number** of **times** you want to execute it and executes it:
@@ -292,6 +296,7 @@ The [PolyUDF project](https://github.com/rop-la/PolyUDF) is also a good starting
 <br>
 
 ### RCE in newest Prostgres versions
+
 ---
 
 In the **latest versions** of PostgreSQL, restrictions have been imposed where the `superuser` is **prohibited** from **loading** shared library files except from specific directories, such as `C:\Program Files\PostgreSQL\11\lib` on Windows or `/var/lib/postgresql/11/lib` on \*nix systems. These directories are **secured** against write operations by either the NETWORK_SERVICE or postgres accounts.
@@ -303,6 +308,7 @@ A significant vulnerability arises from the `CREATE FUNCTION` command, which **p
 <br>
 
 ### Attack flow
+
 ---
 
 Once you have uploaded the extension (with the name of poc.dll for this example) to the data directory you can load it with:
@@ -357,6 +363,7 @@ print("    drop function connect_back(text, integer);")
 ```
 
 ## References
+
 ---
 
 - [https://www.dionach.com/blog/postgresql-9-x-remote-command-execution/](https://www.dionach.com/blog/postgresql-9-x-remote-command-execution/)

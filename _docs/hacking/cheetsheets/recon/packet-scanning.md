@@ -4,7 +4,7 @@ title: Packet Scanning
 category: recon
 toc:
   sidebar: left
---- 
+---
 
 ## tcpdump
 
@@ -31,4 +31,3 @@ https://packettotal.com/
 ./Pcredz -d /tmp/pcap-directory-to-parse/
 ./Pcredz -i eth0 -v
 ```
-

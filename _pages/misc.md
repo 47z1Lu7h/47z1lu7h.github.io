@@ -35,9 +35,7 @@ horizontal: false
 
 {% else %}
 
-
 {% assign sorted_projects = site.misc | sort: "importance" %}
-
 
 {% if page.horizontal %}
 

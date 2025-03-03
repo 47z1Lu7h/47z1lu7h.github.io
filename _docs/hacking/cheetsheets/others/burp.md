@@ -12,57 +12,67 @@ toc:
 
 ## Tips
 
-
 - If Render Page crash:
-sudo sysctl -w kernel.unprivileged_userns_clone=1
+  sudo sysctl -w kernel.unprivileged_userns_clone=1
 
 - If embedded browser crash due sandbox:
-find .BurpSuite -name chrome-sandbox -exec chown root:root {} \; -exec chmod 4755 {} \;
+  find .BurpSuite -name chrome-sandbox -exec chown root:root {} \; -exec chmod 4755 {} \;
 
 - Scope with all subdomains:
-.*\.test\.com$
+  .\*\.test\.com$
 
-- Use Intruder to target specific parameters for scanning 
-  - Right click: actively scan defined insertion points 
+- Use Intruder to target specific parameters for scanning
+  - Right click: actively scan defined insertion points
 
 # Configuration
+
 - Project Options -> HTTP -> Redirections -> Enable JavaScript-driven
 - User Options -> Misc -> Proxy Interception -> Always disabled
 - Target -> Site Map -> Show all && Show only in-scope items
 
 # XSS Validator extension
-1) Start xss.js phantomjs $HOME/.BurpSuite/bapps/xss.js
-2) Send Request to Intruder
-3) Mark Position 
-4) Import xss-payload-list from $Tools into xssValidator
-5) Change Payload Type to Extension Generated
-6) Change Payload Process to Invoke-Burp Extension - XSS Validator
-7) Add Grep-Match rule as per XSS Validator
-8) Start.
+
+1. Start xss.js phantomjs $HOME/.BurpSuite/bapps/xss.js
+2. Send Request to Intruder
+3. Mark Position
+4. Import xss-payload-list from $Tools into xssValidator
+5. Change Payload Type to Extension Generated
+6. Change Payload Process to Invoke-Burp Extension - XSS Validator
+7. Add Grep-Match rule as per XSS Validator
+8. Start.
 
 # Filter the noise
+
 https://gist.github.com/vsec7/d5518a432b70714bedad79e4963ff320
 
 # Filter the noise TLDR
+
 # TLS Pass Through
-.*\.google\.com
-.*\.gstatic\.com
-.*\.googleapis\.com
-.*\.pki\.goog
-.*\.mozilla\.com
+
+._\.google\.com
+._\.gstatic\.com
+._\.googleapis\.com
+._\.pki\.goog
+.\*\.mozilla\.com
 
 # Send swagger to burp
+
 https://github.com/RhinoSecurityLabs/Swagger-EZ
-# Hosted: 
+
+# Hosted:
+
 https://rhinosecuritylabs.github.io/Swagger-EZ/
 
 # If some request/response breaks or slow down Burp
+
 - Project options -> HTTP -> Streaming responses -> Add url and uncheck "Store streaming responses...."
 
 # Burp Extension rotate IP yo avoid IP restrictions
+
 https://github.com/RhinoSecurityLabs/IPRotate_Burp_Extension
 
 # Collab/SSRF/pingback alternative
+
 interactsh.com
 ceye.io
 requestcatcher.com
@@ -80,41 +90,54 @@ beeceptor.com
 <br>
 
 ### Run private collaborator instance in AWS
+
 [AWSBurpCollaborator](https://github.com/Leoid/AWSBurpCollaborator)
 
 <br>
 
 ### Run your own collab server
+
 [pwn-machine](https://github.com/yeswehack/pwn-machine)
 
 # Wordlist from burp project file
+
 cat project.burp | strings | tok | sort -u > custom_wordlist.txt
 
 # Autorize:
+
     1. Copy cookies from low priv user and paste in Autorize
     2. Set filters (scope, regex)
     3. Set Autorize ON
     4. Navigate as high priv user
-  
+
 # Turbo Intruder
+
 basic.py -> Set %s in the injection point and specify wordlist in script
 multipleParameters.py -> Set %s in all the injection points and specify the wordlists in script
 
 # Match and Replace
+
 https://github.com/daffainfo/match-replace-burp
 
 # Customize Audit Scans
+
 Configure your audit profile -> Issues reported -> Individual issues -> right-click on "Extension generated issues" -> "Edit detection methods"
 Works on most of issues like SQLi
 
 # Send to local Burp from VPS
+
 # In local computer
+
 ssh -R 8080:127.0.0.1:8080 root@VPS_IP -f -N
+
 # In VPS
+
 curl URL -x http://127.0.0.1:8080
 
 # Ip rotation
+
 https://github.com/ustayready/fireprox
+
 ```
 
 ## Preferred extensions
@@ -184,3 +207,4 @@ https://github.com/ustayready/fireprox
 ### DOM Invader
 
 (https://caramel-calcium-f39.notion.site/DOM-Invader-1a78e4ba7acc4ca3987b8136bcf1ddd5)
+```

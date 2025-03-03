@@ -6,12 +6,12 @@ importance: 1
 tags:
 category: sqlmap
 toc:
-    sidebar: left
+  sidebar: left
 ---
 
 <br>
 
-###  `Basic arguments for SQLmap`
+### `Basic arguments for SQLmap`
 
 <br>
 
@@ -215,6 +215,7 @@ Remember that **you can create your own tamper in python** and it's very simple.
 --tamper=name_of_the_tamper
 #In kali you can see all the tampers in /usr/share/sqlmap/tamper
 ```
+
 ```
 | Tamper                       | Description                                                                                                                        |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |

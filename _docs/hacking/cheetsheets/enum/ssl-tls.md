@@ -9,6 +9,7 @@ toc:
 <br>
 
 ### DROWN
+
 ---
 
 ```bash
@@ -18,7 +19,8 @@ nmap –p- –sV –sC example.com
 
 <br>
 
-### TLS\_FALLBACK\_SCSV
+### TLS_FALLBACK_SCSV
+
 ---
 
 ```bash
@@ -31,6 +33,7 @@ openssl s_client –tls1 -fallback_scsv -connect example.com:443
 <br>
 
 ### BEAST
+
 ---
 
 ```bash
@@ -41,6 +44,7 @@ openssl s_client -[sslv3/tls1] -cipher CBC_CIPHER -connect example.com:443
 <br>
 
 ### LUCKY13
+
 ---
 
 ```bash
@@ -50,6 +54,7 @@ openssl s_client -cipher CBC_CIPHER -connect example.com:443
 <br>
 
 ### Sweet32
+
 ---
 
 ```bash
@@ -59,6 +64,7 @@ openssl s_client -cipher 3DES -connect example.com:443
 <br>
 
 ### Logjam
+
 ---
 
 ```bash
@@ -69,6 +75,7 @@ openssl s_client -connect www.example.com:443 -cipher "EDH"
 <br>
 
 ### SSLv2 Support
+
 ---
 
 ```bash
@@ -79,6 +86,7 @@ openssl s_client –ssl2 -connect example.com:443
 <br>
 
 ### SSLv3 Support
+
 ---
 
 ```bash
@@ -89,6 +97,7 @@ openssl s_client -ssl3 -connect google.com:443
 <br>
 
 ### Cipher suites
+
 ---
 
 ```bash
@@ -123,6 +132,7 @@ openssl s_client -cipher EECDH, EDH NULL -connect example.com:443
 <br>
 
 ### Secure renegotiation
+
 ---
 
 ```bash
@@ -138,6 +148,7 @@ R
 <br>
 
 ### CRIME
+
 ---
 
 ```bash
@@ -148,6 +159,7 @@ openssl s_client -connect example.com:443
 <br>
 
 ### BREACH
+
 ---
 
 ```bash
@@ -161,6 +173,7 @@ Accept-Encoding: compress, gzip
 <br>
 
 ### Heartbleed
+
 ---
 
 ```bash
@@ -174,6 +187,7 @@ cat list.txt | while read line ; do echo "QUIT" | openssl s_client -connect $lin
 <br>
 
 ### Change cipher spec injection
+
 ---
 
 ```bash
@@ -183,6 +197,7 @@ nmap -p 443 --script ssl-ccs-injection example.com
 <br>
 
 ### Cipher order enforcement
+
 ---
 
 ```bash
@@ -192,4 +207,3 @@ nmap -p 443 --script ssl-enum-ciphers example.com
 openssl s_client –tls1_2 –cipher ‘AES128-GCM-SHA256:AES128-SHA’ –connect contextis.co.uk:443
 openssl s_client –tls1_2 –cipher ‘AES128-SHA:AES128-GCM-SHA256’ –connect contextis.co.uk:443
 ```
-

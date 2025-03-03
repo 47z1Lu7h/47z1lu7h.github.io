@@ -28,9 +28,9 @@ https://tempail.com
 http://www.yopmail.com
 https://temp-mail.org/en
 https://www.mohmal.com
-http://od.obagg.com 
+http://od.obagg.com
 http://onedrive.readmail.net
-http://xkx.me 
+http://xkx.me
 https://t.odmail.cn
 https://www.emailondeck.com
 https://anonbox.net
@@ -100,7 +100,7 @@ http://www.txtdrop.com/
 ## Ip loggers services
 
 ```
-ezstat.ru 
+ezstat.ru
 iplogger.org
 2no.co
 iplogger.com

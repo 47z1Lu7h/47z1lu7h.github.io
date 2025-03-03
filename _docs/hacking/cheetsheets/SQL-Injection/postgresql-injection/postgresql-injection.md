@@ -27,7 +27,6 @@ You can [**read this example**](dblink-lo_import-data-exfiltration.md) to see a 
 
 Check how to compromise the host and escalate privileges from PostgreSQL in:
 
-
 ## WAF bypass
 
 <br>

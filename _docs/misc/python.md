@@ -6,11 +6,13 @@ toc:
   sidebar: left
 related posts: true
 ---
+
 <br>
 
 ## Basics
 
 ### ABC Basics
+
 ---
 
 ```python
@@ -22,7 +24,8 @@ float("20.5") # converts string to float
 round(33.33333, 2) # round a number to two decimal places
 bool("true") # string to boolean
 ```
-+ `None` datatype is equal to `null` in Java.
+
+- `None` datatype is equal to `null` in Java.
 
 ### Import
 
@@ -30,7 +33,7 @@ bool("true") # string to boolean
 #!/us/bin/python
 
 import gi # import a package
-from games import NumberGuessing # import a class from 'games' package 
+from games import NumberGuessing # import a class from 'games' package
 ```
 
 ### Multi Import
@@ -62,7 +65,7 @@ text = "Hello World!"
 
 print(text*2) # print 'Hello World!' twice
 
-# add space automatically 
+# add space automatically
 
 name = "Mike"
 print("Hello", name, "How are you?") # print Hello Mike How are you?
@@ -73,7 +76,7 @@ print("Hello", name, "How are you?") # print Hello Mike How are you?
 ```python
 value = 4 * 20
 
-print("The value is {value}".format(value=value)) # print 'The value is 80' 
+print("The value is {value}".format(value=value)) # print 'The value is 80'
 
 # without specifying the parameter name explicitly
 
@@ -137,7 +140,7 @@ hello_str.strip() # removes all whitespaces from left and right sides of a strin
 hello_str.lstrip() # removes all whitespaces from left side of a string
 hello_str.rstrip() # removes all whitespaces from right side of a string
 
-# clipboard 
+# clipboard
 import pyperclip
 pyperclip.copy('Hello world!')
 pyperclip.paste()
@@ -172,7 +175,7 @@ batRegex = re.compile(r'Bat(wo)?man') # optional either should match Batman or B
 m = batRegex.search('The Adventures of Batman')
 print(m.group()) # prints Batman
 
-batRegex = re.compile(r'Bat(wo)*man') # optional either should match Batman or Batwoman or Batwowowoman `(wo)*` 
+batRegex = re.compile(r'Bat(wo)*man') # optional either should match Batman or Batwoman or Batwowowoman `(wo)*`
 # indicates either zero or more instance `wo` is matching
 m = batRegex.search('The Adventures of Batman')
 print(m.group()) # prints Batman
@@ -183,7 +186,7 @@ print(m.group()) # prints Batwowoman
 m = batRegex.search('The Adventures of Batwowowoman')
 print(m.group()) # prints Batwowowoman
 
-batRegex = re.compile(r'Bat(wo)+man') # optional either should match Batwoman or Batwowowoman `(wo)+` 
+batRegex = re.compile(r'Bat(wo)+man') # optional either should match Batwoman or Batwowowoman `(wo)+`
 # but no Batman. Indicates at least one instance `wo` is matching
 m = batRegex.search('The Adventures of Batman') # matches nothing
 m = batRegex.search('The Adventures of Batwoman')
@@ -212,7 +215,7 @@ print(m.group()) # prints HaHaHa which is none greedy
 
 # character classes
 # \d Any numeric digit from 0 to 9
-# \D Any character that is not a numeric digit from 0 to 9 
+# \D Any character that is not a numeric digit from 0 to 9
 # \w Any letter, numeric digit, or the underscore character (word)
 # \W Any character that is not a letter, numeric digit, or the underscore character
 # \s Any space, tab, or newline character. (Think of this as matching “space” characters.)
@@ -234,7 +237,7 @@ m = regex.search('world! hello') # returns hello
 atRegex = re.compile(r'.at') # matches anything at has at in it
 atRegex.findall('The cat in the hat sat on the flat mat.') # returns ['cat', 'hat', 'sat', 'lat', 'mat']
 
-nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)') # match anything started with First Name: and then anything 
+nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)') # match anything started with First Name: and then anything
 # and then followed by Last Name: anything
 m = nameRegex.search('First Name: Al Last Name: Sweigart')
 print(m.group(0)) # prints Al
@@ -256,7 +259,7 @@ lst = ["One", "Two", "Three", "Four", "Five"]
 # print a list elements one by one
 for element in lst:
     print(element)
-    
+
 print(len(lst)) # list length
 
 print(lst[2]) # get third element of a list
@@ -305,7 +308,7 @@ a_dict[2] # return 'two'
 
 a_dict[6] # throw exception
 
-a_dict.get(6) # return None 
+a_dict.get(6) # return None
 
 a_dict[6] = "Six" # append to dictionary
 
@@ -370,7 +373,7 @@ number = 3
 if number > 0 and number % 2 is not 0:
     print("Something")
 elif number > 0 or number == 3:
-    print("Something else")     
+    print("Something else")
 
 ```
 
@@ -387,12 +390,12 @@ for element in lst:
 # traditional for-loop
 for i in range(len(lst)):
     print(lst[i])
-    
+
 for i in range(10, 20):
     print(i) # print 10 to 19 NOT 20
 
 # while-loop
-i, n = 0, 20 
+i, n = 0, 20
 while i < n:
     print(i) # print 0 to 19
     i += 1
@@ -413,9 +416,9 @@ class Person:
 
     def get_gender(self):
         return self.__gender
-        
+
     def set_gender(self, gender = "Male"):
-        self.__gender = gender     
+        self.__gender = gender
 
 # class instantiation
 
@@ -531,17 +534,17 @@ class NumberGuessing(Game):
 
 # Defining parent and child classes
 class Parent:
-    
+
     def printHello(self):
         print("Hello")
-        
+
 class ChildOne(Parent):
-    
+
     def printHello(self):
         print("Hallo")
 
 class ChildTwo(Parent):
-    
+
     def printHello(self):
         print("Hola!")
 
@@ -553,6 +556,7 @@ for child in children:
 ```
 
 ### Get type and type comparison
+
 ```python
 tup = (1, 2, 3, 4)
 type(tup) # prints <class 'tuple'>
@@ -584,7 +588,7 @@ os.path.split("/home/john/notes.txt") # splits the path to a list of [filename, 
 os.path.getsize("notes.txt") # get file size in byte
 os.listdir(os.getcwd()) # ls of the current directory
 os.path.exists(path) # checks a path exists
-os.path.isdir(path) 
+os.path.isdir(path)
 os.path.isfile(path)
 ```
 
@@ -699,7 +703,7 @@ class Test:
 # new synatx recommended after python 2.2
 # supports metadata
 # supports getters and setter
-class Test(object): 
+class Test(object):
 
 ```
 
@@ -907,58 +911,57 @@ pyautogui.hotkey("altleft", "f4") # executing a hotkey
 | `pip install --user --upgrade youtube-dl` | Updates Youtube-dl |
 | `pip uninstall youtube-dl` | Removes Youtube-dl |
 
-
 ### Scaffold a project with pip
 
-+ Install `virtualenv`
+- Install `virtualenv`
 
 ```bash
 $ python3 -m pip install --user virtualenv
 ```
 
-+ Create project directory
+- Create project directory
 
 ```bash
 $ mkdir myproject && cd myproject
 ```
 
-+ Create `virtualenv`
+- Create `virtualenv`
 
 ```bash
 $ python3 -m venv env
 ```
 
-+ Activate `virtualenv`
+- Activate `virtualenv`
 
 ```bash
 $ source env/bin/activate
 ```
 
-+ Ensure `virtualenv` is working
+- Ensure `virtualenv` is working
 
 ```bash
 $ which python # should point to a virtualenv path
 ```
 
-+ Install packages
+- Install packages
 
 ```bash
 $ pip3 install [package name] # e.g., pip3 install python-socketio
 ```
 
-+ Save installed packages to `requirements.txt` file
+- Save installed packages to `requirements.txt` file
 
 ```bash
 $ pip3 freeze > requirements.txt
 ```
 
-+ Install all packages from requirements.txt
+- Install all packages from requirements.txt
 
 ```bash
 $ pip3 install -r requirements.txt
 ```
 
-+ Leave `virtualenv`
+- Leave `virtualenv`
 
 ```bash
 $ deactivate
@@ -966,4 +969,4 @@ $ deactivate
 
 ### Sources
 
-+ [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+- [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)

@@ -8,6 +8,7 @@ toc:
 ---
 
 ### Start hacking
+
 ---
 
 ```vim
@@ -18,6 +19,7 @@ echo "Hello, " . name
 You can either put this in a script (`script.vim`) and run it (`:source script.vim`), or you can type the commands individually in normal mode as `:let` and `:echo`.
 
 ### Learn by example
+
 ---
 
 ```vim
@@ -35,18 +37,18 @@ imap <Tab> <C-R>=SuperTab()<CR>
 
 [Here](http://www.vimbits.com/bits/46)'s another example with [functions](#functions), [variables](#variables) and [mapping](#mapping).
 
-Variables
----------
+## Variables
 
 ### Defining
----
 
+---
 
 ```vim
 let var = "hello"
 ```
 
 ### Variable prefixes
+
 ---
 
 ```vim
@@ -58,6 +60,7 @@ let l:foo = 'bar'              " l: local (to function)
 The `s:` prefix is also available in function names. See `:help local-variables`
 
 ### Other prefixes
+
 ---
 
 ```vim
@@ -132,10 +135,10 @@ toupper('Hello')
 Also see `:help functions`
 See: [String functions](http://learnvimscriptthehardway.stevelosh.com/chapters/27.html)
 
-Functions
----------
+## Functions
 
 ### Functions
+
 {: .-prime}
 
 ```vim
@@ -151,6 +154,7 @@ endfunction
 See: [Functions](http://learnvimscriptthehardway.stevelosh.com/chapters/23.html)
 
 ### Overwriting
+
 ```vim
 function f1()
   echo "f1"
@@ -208,10 +212,9 @@ endfunction
 infect('jake', 'bella')
 ```
 
-See `:help function-argument`.  See: [Var arguments](http://learnvimscriptthehardway.stevelosh.com/chapters/24.html)
+See `:help function-argument`. See: [Var arguments](http://learnvimscriptthehardway.stevelosh.com/chapters/24.html)
 
-Loops
------
+## Loops
 
 ```vim
 for s in list
@@ -226,10 +229,10 @@ while x < 5
 endwhile
 ```
 
-Custom commands
----------------
+## Custom commands
 
 ### Custom commands
+
 {: .-prime}
 
 ```vim
@@ -243,6 +246,7 @@ Custom commands start with uppercase letters. The `!` redefines a command if it 
 ```vim
 command! Save call <SID>foo()
 ```
+
 {: .-setup}
 
 ```vim
@@ -256,18 +260,18 @@ endfunction
 ```vim
 command! -nargs=? Save call script#foo(<args>)
 ```
+
 {: .-setup}
 
-| What | What |
-| ---- | ---- |
-| `-nargs=0` | 0 arguments, default |
-| `-nargs=1` | 1 argument, includes spaces |
-| `-nargs=?` | 0 or 1 argument |
+| What       | What                          |
+| ---------- | ----------------------------- |
+| `-nargs=0` | 0 arguments, default          |
+| `-nargs=1` | 1 argument, includes spaces   |
+| `-nargs=?` | 0 or 1 argument               |
 | `-nargs=*` | 0+ arguments, space separated |
 | `-nargs=+` | 1+ arguments, space reparated |
 
-Flow
-----
+## Flow
 
 ### Conditionals
 
@@ -358,8 +362,7 @@ if g:use_dispatch && s:has_dispatch
 endif
 ```
 
-Lists
------
+## Lists
 
 ### Lists
 
@@ -416,8 +419,7 @@ call map(files, "bufname(v:val)")  " use v:val for value
 call filter(files, 'v:val != ""')
 ```
 
-Dictionaries
-------------
+## Dictionaries
 
 ### Dictionaries
 
@@ -484,8 +486,7 @@ Prefixes (`s:`, `g:`, `l:`, etc) are actually dictionaries.
 let extend(s:fruits, { ... })
 ```
 
-Casting
--------
+## Casting
 
 ```vim
 str2float("2.3")
@@ -493,10 +494,10 @@ str2nr("3")
 float2nr("3.14")
 ```
 
-Numbers
--------
+## Numbers
 
 ### Numbers
+
 {: .-prime}
 
 ```vim
@@ -538,8 +539,7 @@ sinh() cosh() tanh()
 asin() acos() atan()
 ```
 
-Vim-isms
---------
+## Vim-isms
 
 ### Execute a command
 
@@ -593,7 +593,6 @@ echo 'hello'
 echohl WarningMsg | echomsg "=> " . a:msg | echohl None
 ```
 
-
 ### Settings
 
 ```vim
@@ -625,8 +624,8 @@ exists("+option")
 exists("g:...")
 ```
 
-Mapping
--------
+## Mapping
+
 {: .-three-column}
 
 ### Mapping commands
@@ -655,6 +654,7 @@ xnoremap
  └ normal, visual, insert,
    eX mode, select, operator-pending
 ```
+
 {: .-setup}
 
 ### Arguments
@@ -663,8 +663,7 @@ xnoremap
 | `<silent>` | no echo |
 | `<nowait>` | |
 
-Syntax
-------
+## Syntax
 
 ### Highlights
 

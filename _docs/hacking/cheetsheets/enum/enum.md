@@ -3,14 +3,16 @@ layout: page
 title: Enumeration
 description: A..
 category: "cheet sheets"
-display_categories: [ enum ]
+display_categories: [enum]
 nav: true
 nav_order: 10
 horizontal: true
 ---
 
 {:center: style="text-align: center"}
-### ```Enumaration Cheet sheets```
+
+### `Enumaration Cheet sheets`
+
 {:center}
 
 <div class="projects">

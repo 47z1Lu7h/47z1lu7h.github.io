@@ -4,7 +4,7 @@ title: Science of the Heart
 description: Electromagnetic field of the heart
 date: 2015-11-01
 inline: false
-categories: 
+categories:
 related_posts: true
 news: true
 discus_comments: true

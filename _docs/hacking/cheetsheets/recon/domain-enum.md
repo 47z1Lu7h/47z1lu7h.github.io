@@ -6,17 +6,16 @@ toc:
   sidebar: left
 ---
 
-
 <br>
 
 ### Basic
 
 ```bash
-# https://github.com/OWASP/Amass 
-amass intel -d domain.com -whois 
+# https://github.com/OWASP/Amass
+amass intel -d domain.com -whois
 
 # Search on Google
-https://google.com/search?q=united+airlines 
+https://google.com/search?q=united+airlines
 
 # Analyze owners on domainbigdata
 https://iqwhois.com/
@@ -36,8 +35,8 @@ https://tools.whoisxmlapi.com/reverse-whois-search
 ### ASN
 
 ```bash
-https://bgp.he.net/search?search%5Bsearch%5D=united+airlines&commit=Search 
-whois -h whois.radb.net -- '-i origin AS11535' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq 
+https://bgp.he.net/search?search%5Bsearch%5D=united+airlines&commit=Search
+whois -h whois.radb.net -- '-i origin AS11535' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
 whois -h whois.radb.net -- '-i origin AS20461' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq | mapcidr -silent | dnsx -ptr -resp-only -retry 3 -silent
 ```
 
@@ -47,10 +46,10 @@ whois -h whois.radb.net -- '-i origin AS20461' | grep -Eo "([0-9.]+){4}/[0-9]+" 
 
 ```bash
 # https://github.com/pielco11/fav-up
-python3 favUp.py -ff ~/favicon.ico --shodan-cli 
+python3 favUp.py -ff ~/favicon.ico --shodan-cli
 
 # https://github.com/devanshbatham/FavFreak
-cat urls.txt | python3 favfreak.py 
+cat urls.txt | python3 favfreak.py
 
 # https://faviconhasher.herokuapp.com/
 
@@ -76,9 +75,9 @@ https://api.hackertarget.com/analyticslookup/?q=UA-16316580
 ### DNS manual recon
 
 ```bash
-dnsrecon -d www.example.com -a 
+dnsrecon -d www.example.com -a
 dnsrecon -d www.example.com -t axfr
-dnsrecon -d 
+dnsrecon -d
 dnsrecon -d www.example.com -D  -t brt
 
 dig www.example.com + short

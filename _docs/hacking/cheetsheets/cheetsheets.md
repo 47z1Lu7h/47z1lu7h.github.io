@@ -2,12 +2,10 @@
 layout: default
 title: Cheetsheets
 category: ""
-display_categories: [ sql, enum, recon, expolitation, others ]
+display_categories: [sql, enum, recon, expolitation, others]
 img: assets/img/hacking/cheetsheets/cheat.jpg
 horizontal: true
 ---
-
-
 
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}

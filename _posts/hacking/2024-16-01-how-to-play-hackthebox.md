@@ -15,6 +15,7 @@ related posts: true
 # Hack The Box
 
 ---
+
 The Hack The Box platform provides a wealth of challenges - in the form of virtual machines - simulating real-world security issues and vulnerabilities that are constantly provided and updated by the community. Some of them simulate real-world scenarios, and some lean more toward a CTF-style of approach.
 
 <br>

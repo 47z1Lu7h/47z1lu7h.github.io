@@ -6,11 +6,13 @@ toc:
   sidebar: left
 related posts: true
 ---
+
 ##### IntelliJ IDEA
 
 <br>
 
 ### Symbols
+
 ---
 
 | `^` | Control |

@@ -3,23 +3,15 @@ layout: default
 title: Deserialization
 description:
 category: "cheet sheets"
-display_categories:
-  [
-    Deserialization,
-    python,
-    php,
-    java,
-    jndi,
-    .net,
-    nodejs
-  ]
+display_categories: [Deserialization, python, php, java, jndi, .net, nodejs]
 horizontal: true
 ---
 
 {:center: style="text-align: center"}
-### ```Deserialization Cheet sheets```
-{:center}
 
+### `Deserialization Cheet sheets`
+
+{:center}
 
 <!-- pages/projects.md -->
 <div class="projects">

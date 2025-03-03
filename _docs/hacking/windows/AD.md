@@ -12,7 +12,7 @@ This cheat sheet contains common enumeration and attack methods for Windows Acti
 
 <br>
 
-### *Summary*
+### _Summary_
 
 ---
 

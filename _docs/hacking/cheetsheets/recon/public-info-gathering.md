@@ -7,6 +7,7 @@ toc:
 ---
 
 ## OSINT resources
+
 ---
 
 - [Osint Framework](https://osintframework.com)
@@ -14,11 +15,13 @@ toc:
 - [the-ultimate-osint-collection](https://start.me/p/DPYPMz/the-ultimate-osint-collection)
 - [google-spreadsheets](https://docs.google.com/spreadsheets/d/18rtqh8EG2q1xBo2cLNyhIDuK9jrPGwYr9DI2UncoqJQ)
 - [cipher387](https://cipher387.github.io)
+
 ## OSINT websites
+
 ---
 
-
 # Multipurpose
+
 - [shodan](https://shodan.io)
 - [censys](https://censys.io)
 - [onyphe](https://onyphe.io)
@@ -36,17 +39,20 @@ toc:
 - [gofindwho](https://gofindwho.com/)
 
 # Track website changes
+
 ---
 
 - [](https://visualping.io)
 - [](https://web.archive.org)
 
 # Companies info
+
 ---
 
 - [](https://opencorporates.com/companies)
 
 # Domain Recon
+
 ---
 
 - [robtex](https://www.robtex.com/)
@@ -68,6 +74,7 @@ toc:
 - [completedns](https://completedns.com/dns-history/)
 
 # Analytics
+
 ---
 
 - [herokuapp](https://mmhdan.herokuapp.com/)
@@ -77,43 +84,50 @@ toc:
 - [builtwith](https://builtwith.com/)
 
 # Mailserver blacklists
+
 ---
 
 - [](http://multirbl.valli.org/)
 
 # Verify emails
+
 ---
 
 - [](https://tools.emailhippo.com/)
 
 # Dark web exposure
+
 ---
 
 - [](https://immuniweb.com/radar/)
 
 # New acquisitions
+
 ---
 
 - [](https://crunchbase.com/)
 
 # Public APIs
+
 ---
 
 - [](https://www.postman.com/explore/)
 - [](https://rapidapi.com/)
 
 # APIs Recon
+
 ---
 
 - [](https://serene-agnesi-57a014.netlify.app/)
 
-# Exif Data 
+# Exif Data
+
 ---
 
 - [](https://exif-viewer.com)
 
-
 ## General / AIO
+
 ---
 
 ```bash
@@ -142,6 +156,7 @@ recon-ng
 ```
 
 ## Whois/Registrant Tools
+
 ---
 
 ```bash
@@ -151,12 +166,12 @@ recon-ng
 # Standard whois tool
 whois
 ```
+
 <br>
 ### Whoxy api
 ---
 
- - [whoxy](https://www.whoxy.com/)
-
+- [whoxy](https://www.whoxy.com/)
 
 <br>
 ### Whoxy clients
@@ -164,6 +179,7 @@ whois
 - [vysecurity](https://github.com/vysecurity/DomLink)
 
 # Registrant's domains related
+
 ---
 
 <br>
@@ -178,7 +194,7 @@ knockknock -n "companyORregistrant" -p
 ### Bulk whois
 ---
 
- - [melbadry9](https://github.com/melbadry9/WhoEnum)
+- [melbadry9](https://github.com/melbadry9/WhoEnum)
 
 <br>
 ### Dorks
@@ -187,18 +203,20 @@ knockknock -n "companyORregistrant" -p
 - [Dorks-collections](https://github.com/cipher387/Dorks-collections-list")
 
 # Google Tools
+
 ---
 
 <br>
 
 ### Dorks
+
 ---
 
 <br>
 ### Google Dorks Cli
 ---
 
- - [dorks_hunter](https://github.com/six2dez/dorks_hunter)
+- [dorks_hunter](https://github.com/six2dez/dorks_hunter)
 
 ```bash
 python3 dorks_hunter.py -d domain.com
@@ -325,8 +343,11 @@ intitle:"Dashboard [Jenkins]"
 <br>
 
 ### GitHub
+
 ---
+
 ### Tools
+
 ---
 
 ```
@@ -337,6 +358,7 @@ python3 GitDorker.py -tf ~/Tools/.github_tokens -q united.com -p -ri -d Dorks/me
 <br>
 
 ### Dorks
+
 ---
 
 ```bash
@@ -690,11 +712,13 @@ org:facebookresearch login
 <br>
 
 ### Shodan
+
 ---
 
 <br>
 
 ### Dorks
+
 ---
 
 ```bash
@@ -704,10 +728,11 @@ product:"kubernetes"
 hostname:"target.com"
 host:"10.10.10.10"
 # Spring boot servers, look for /env or /heapdump
-org:YOUR_TAGET http.favicon.hash:116323821 
+org:YOUR_TAGET http.favicon.hash:116323821
 ```
 
 ## ASN/CIDR Tools
+
 ---
 
 ```bash
@@ -746,6 +771,7 @@ python3 hosthunter.py targets.txt
 ```
 
 ## Credentials leaks
+
 ---
 
 ```bash
@@ -774,6 +800,7 @@ breachdirectory.org + (hashes.com || md5decrypt.net || crackstation.net)# Nice c
 ```
 
 ## Email tools
+
 ---
 
 ```bash
@@ -811,6 +838,7 @@ python3 theHarvester.py -d domain.com -b "linkedin"
 ```
 
 ## GIT tools
+
 ---
 
 ```bash
@@ -835,6 +863,7 @@ python git-wild-hunt.py -s "extension:json filename:creds language:JSON"
 ```
 
 ## Metadata
+
 ---
 
 ```bash
@@ -843,6 +872,7 @@ metafinder -d "domain.com" -l 10 -go -bi -ba -o united
 ```
 
 ## Social Media
+
 ---
 
 ```bash

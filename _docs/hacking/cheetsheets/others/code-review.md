@@ -8,14 +8,16 @@ toc:
 
 ## General
 
-
 # Guidelines
+
 https://rules.sonarsource.com/
 
 # Resource
+
 https://vladtoie.gitbook.io/secure-coding/
 
 # Tools
+
 https://www.sonarqube.org/downloads/
 https://deepsource.io/signup/
 https://github.com/pyupio/safety
@@ -24,11 +26,13 @@ https://github.com/WhaleShark-Team/cobra
 https://github.com/mhaskar/Bughound
 
 # Find interesting strings
+
 https://github.com/s0md3v/hardcodes
 https://github.com/micha3lb3n/SourceWolf
 https://libraries.io/pypi/detect-secrets
 
 # Tips
+
 1.Important functions first
 2.Follow user input
 3.Hardcoded secrets and credentials
@@ -39,14 +43,15 @@ https://libraries.io/pypi/detect-secrets
 8.Missing security checks on user input and regex strength
 9.Missing cookie flags
 10.Unexpected behavior, conditionals, unnecessarily complex and verbose functions
-```
+
+````
 
 ## JavaScript
 
 ```text
 https://jshint.com/
 https://github.com/jshint/jshint/
-```
+````
 
 ## NodeJS
 
@@ -114,15 +119,14 @@ echo "Main-Class: test" > META-INF/MANIFEST.MF
 jar cmvf META-INF/MANIFEST.MF test.jar test.class
 ```
 
-| Task | Command |
-| :--- | :--- |
-| Execute Jar | java -jar \[jar\] |
-| Unzip Jar | unzip -d \[output directory\] \[jar\] |
-| Create Jar | jar -cmf META-INF/MANIFEST.MF \[output jar\] \* |
-| Base64 SHA256 | sha256sum \[file\] \| cut -d' ' -f1 \| xxd -r -p \| base64 |
-| Remove Signing | rm META-INF/_.SF META-INF/_.RSA META-INF/\*.DSA |
-| Delete from Jar | zip -d \[jar\] \[file to remove\] |
-| Decompile class | procyon -o . \[path to class\] |
-| Decompile Jar | procyon -jar \[jar\] -o \[output directory\] |
-| Compile class | javac \[path to .java file\] |
-
+| Task            | Command                                                    |
+| :-------------- | :--------------------------------------------------------- |
+| Execute Jar     | java -jar \[jar\]                                          |
+| Unzip Jar       | unzip -d \[output directory\] \[jar\]                      |
+| Create Jar      | jar -cmf META-INF/MANIFEST.MF \[output jar\] \*            |
+| Base64 SHA256   | sha256sum \[file\] \| cut -d' ' -f1 \| xxd -r -p \| base64 |
+| Remove Signing  | rm META-INF/_.SF META-INF/_.RSA META-INF/\*.DSA            |
+| Delete from Jar | zip -d \[jar\] \[file to remove\]                          |
+| Decompile class | procyon -o . \[path to class\]                             |
+| Decompile Jar   | procyon -jar \[jar\] -o \[output directory\]               |
+| Compile class   | javac \[path to .java file\]                               |

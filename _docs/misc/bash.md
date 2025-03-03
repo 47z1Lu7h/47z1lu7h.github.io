@@ -8,10 +8,10 @@ toc:
 ---
 
 ### Introduction
+
 ---
 
 {: .-intro}
-
 
 This is a quick reference to getting started with Bash scripting.
 
@@ -22,6 +22,7 @@ This is a quick reference to getting started with Bash scripting.
 <br>
 
 ### Example
+
 ---
 
 ```bash
@@ -34,6 +35,7 @@ echo "Hello $name!"
 <br>
 
 ### Variables
+
 ---
 
 ```bash
@@ -54,6 +56,7 @@ cp -$options $wildcard /tmp
 <br>
 
 ### String quotes
+
 ---
 
 ```bash
@@ -65,6 +68,7 @@ echo 'Hi $name'  #=> Hi $name
 <br>
 
 ### Shell execution
+
 ---
 
 ```bash
@@ -78,6 +82,7 @@ See [Command substitution](https://web.archive.org/web/20230326081741/https://wi
 <br>
 
 ### Conditional execution
+
 ---
 
 ```bash
@@ -88,6 +93,7 @@ git commit || echo "Commit failed"
 <br>
 
 ## Functions
+
 ---
 
 {: id='functions-example'}
@@ -105,6 +111,7 @@ See: [Functions](#functions)
 <br>
 
 ## Conditionals
+
 ---
 
 {: id='conditionals-example'}
@@ -122,6 +129,7 @@ See: [Conditionals](#conditionals)
 <br>
 
 ### Strict mode
+
 ---
 
 ```bash
@@ -134,29 +142,30 @@ See: [Unofficial bash strict mode](http://redsymbol.net/articles/unofficial-bash
 <br>
 
 ### Brace expansion
+
 ---
 
 ```bash
 echo {A,B}.js
 ```
 
-| Expression             | Description           |
-| ---------------------- | --------------------- |
-| `{A,B}`                | Same as `A B`         |
-| `{A,B}.js`             | Same as `A.js B.js`   |
-| `{1..5}`               | Same as `1 2 3 4 5`   |
+| Expression                        | Description           |
+| --------------------------------- | --------------------- |
+| `{A,B}`                           | Same as `A B`         |
+| `{A,B}.js`                        | Same as `A.js B.js`   |
+| `{1..5}`                          | Same as `1 2 3 4 5`   |
 | <code>&lcub;{1..3},{7..9}}</code> | Same as `1 2 3 7 8 9` |
 
 See: [Brace expansion](https://web.archive.org/web/20230207192110/https://wiki.bash-hackers.org/syntax/expansion/brace)
 <br>
 <br>
 
-
 ## Parameter expansions
 
 ---
 
 ### Basics
+
 ---
 
 ```bash
@@ -208,6 +217,7 @@ dir=${src%$base}  #=> "/path/to/" (dirpath)
 <br>
 
 ### Prefix name expansion
+
 ---
 
 ```bash
@@ -220,6 +230,7 @@ prefix_a prefix_b
 <br>
 
 ### Indirection
+
 ---
 
 ```bash
@@ -232,6 +243,7 @@ joe
 <br>
 
 ### Substitution
+
 ---
 
 | Code              | Description         |
@@ -253,6 +265,7 @@ joe
 <br>
 
 ### Comments
+
 ---
 
 ```bash1
@@ -271,6 +284,7 @@ comment
 <br>
 
 ### Substrings
+
 ---
 
 | Expression      | Description                    |
@@ -281,6 +295,7 @@ comment
 <br>
 
 ### Length
+
 ---
 
 | Expression | Description      |
@@ -290,6 +305,7 @@ comment
 <br>
 
 ### Manipulation
+
 ---
 
 ```bash
@@ -305,6 +321,7 @@ echo "${str^^}"  #=> "HELLO WORLD!" (all uppercase)
 <br>
 
 ### Default values
+
 ---
 
 | Expression        | Description                                              |
@@ -319,9 +336,11 @@ Omitting the `:` removes the (non)nullity checks, e.g. `${foo-val}` expands to `
 <br>
 
 ## Loops
+
 ---
 
 ### Basic for loop
+
 ---
 
 ```bash
@@ -333,6 +352,7 @@ done
 <br>
 
 ### C-like for loop
+
 ---
 
 ```bash
@@ -344,6 +364,7 @@ done
 <br>
 
 ### Ranges
+
 ---
 
 ```bash
@@ -355,6 +376,7 @@ done
 <br>
 
 ### With step size
+
 ---
 
 ```bash
@@ -366,6 +388,7 @@ done
 <br>
 
 ### Reading lines
+
 ---
 
 ```bash
@@ -377,6 +400,7 @@ done <file.txt
 <br>
 
 ### Forever
+
 ---
 
 ```bash
@@ -386,12 +410,13 @@ done
 ```
 
 ## Functions
----
 
+---
 
 <br>
 
 ### Defining functions
+
 ---
 
 ```bash
@@ -414,6 +439,7 @@ myfunc "John"
 <br>
 
 ### Returning values
+
 ---
 
 ```bash
@@ -430,6 +456,7 @@ result=$(myfunc)
 <br>
 
 ### Raising errors
+
 ---
 
 ```bash
@@ -449,6 +476,7 @@ fi
 <br>
 
 ### Arguments
+
 ---
 
 | Expression | Description                                    |
@@ -465,11 +493,13 @@ Otherwise, they do exactly the same thing (arguments as separate strings).
 See [Special parameters](https://web.archive.org/web/20230318164746/https://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
 
 ## Conditionals
+
 ---
 
 <br>
 
 ### Conditions
+
 ---
 
 Note that `[[` is actually a command/program that returns either `0` (true) or `1` (false). Any program that obeys the same logic (like all base utils, such as `grep(1)` or `ping(1)`) can be used as condition, see examples.
@@ -495,19 +525,21 @@ Note that `[[` is actually a command/program that returns either `0` (true) or `
 <br>
 
 ### More conditions
+
 ---
 
 | Condition            | Description              |
-| -------------------- | ------------------------ |
+| -------------------- | ------------------------ | ----- | --- |
 | `[[ -o noclobber ]]` | If OPTIONNAME is enabled |
 | ---                  | ---                      |
 | `[[ ! EXPR ]]`       | Not                      |
 | `[[ X && Y ]]`       | And                      |
-| `[[ X || Y ]]`       | Or                       |
+| `[[ X                |                          | Y ]]` | Or  |
 
 <br>
 
 ### File conditions
+
 ---
 
 | Condition               | Description             |
@@ -521,13 +553,14 @@ Note that `[[` is actually a command/program that returns either `0` (true) or `
 | `[[ -f FILE ]]`         | File                    |
 | `[[ -x FILE ]]`         | Executable              |
 | ---                     | ---                     |
-| `[[ FILE1 -nt FILE2 ]]` | 1 is more recent than 
+| `[[ FILE1 -nt FILE2 ]]` | 1 is more recent than   |
 | `[[ FILE1 -ot FILE2 ]]` | 2 is more recent than 1 |
 | `[[ FILE1 -ef FILE2 ]]` | Same files              |
 
 <br>
 
 ### Example
+
 ---
 
 ```bash
@@ -571,11 +604,13 @@ fi
 ```
 
 ## Arrays
+
 ---
 
 <br>
 
 ### Defining arrays
+
 ---
 
 ```bash
@@ -591,6 +626,7 @@ Fruits[2]="Orange"
 <br>
 
 ### Working with arrays
+
 ---
 
 ```bash
@@ -607,6 +643,7 @@ echo "${!Fruits[@]}"          # Keys of all elements, space-separated
 <br>
 
 ### Operations
+
 ---
 
 ```bash
@@ -622,6 +659,7 @@ lines=(`cat "logfile"`)                 # Read from file
 <br>
 
 # Iteration
+
 ---
 
 ```bash
@@ -629,6 +667,7 @@ for i in "${arrayName[@]}"; do
   echo "$i"
 done
 ```
+
 <br>
 ## Dictionaries
 ---
@@ -651,6 +690,7 @@ Declares `sound` as a Dictionary object (aka associative array).
 <br>
 
 ### Working with dictionaries
+
 ---
 
 ```bash
@@ -664,11 +704,13 @@ unset sounds[dog]     # Delete dog
 <br>
 
 ### Iteration
+
 ---
 
 <br>
 
 ### Iterate over values
+
 ---
 
 ```bash
@@ -680,6 +722,7 @@ done
 <br>
 
 ### Iterate over keys
+
 ---
 
 ```bash
@@ -691,6 +734,7 @@ done
 <br>
 
 ### Options
+
 ---
 
 ```bash
@@ -703,6 +747,7 @@ set -o nounset    # Exposes unset variables
 <br>
 
 ### Glob options
+
 ---
 
 ```bash
@@ -719,9 +764,11 @@ matches.
 <br>
 
 # History
+
 ---
 
 ### Commands
+
 ---
 
 | Command               | Description                               |
@@ -732,6 +779,7 @@ matches.
 <br>
 
 ### Expansions
+
 ---
 
 | Expression   | Description                                          |
@@ -745,6 +793,7 @@ matches.
 <br>
 
 ### Operations
+
 ---
 
 | Code                 | Description                                                           |
@@ -757,8 +806,8 @@ matches.
 
 `!!` and `!$` can be replaced with any valid expansion.
 
-
 ### Slices
+
 ---
 
 | Code     | Description                                                                              |
@@ -775,9 +824,11 @@ matches.
 <br>
 
 ## Misc
+
 ---
 
 ### Numeric calculations
+
 ---
 
 ```bash
@@ -796,6 +847,7 @@ count+=1          # Increment
 <br>
 
 ### Subshells
+
 ---
 
 ```bash
@@ -806,6 +858,7 @@ pwd # still in first directory
 <br>
 
 ### Redirection
+
 ---
 
 ```bash
@@ -827,6 +880,7 @@ diff <(ls -r) <(ls)            # Compare two stdout without files
 <br>
 
 ### Inspecting commands
+
 ---
 
 ```bash
@@ -837,6 +891,7 @@ command -V cd
 <br>
 
 ### Trap errors
+
 ---
 
 ```bash
@@ -857,6 +912,7 @@ trap traperr ERR
 <br>
 
 ### Case/switch
+
 ---
 
 ```bash
@@ -874,6 +930,7 @@ esac
 <br>
 
 ### Source relative
+
 ---
 
 ```bash
@@ -883,6 +940,7 @@ source "${0%/*}/../share/foo.sh"
 <br>
 
 ### printf
+
 ---
 
 ```bash
@@ -903,6 +961,7 @@ printf '%i+%i=%i\n' 1 2 3  4 5 9
 <br>
 
 ### Transform strings
+
 ---
 
 | Command option | Description                                         |
@@ -921,6 +980,7 @@ printf '%i+%i=%i\n' 1 2 3  4 5 9
 <br>
 
 ### Example
+
 ---
 
 ```bash
@@ -931,6 +991,7 @@ WELCOME TO DEVHINTS
 <br>
 
 ### Directory of script
+
 ---
 
 ```bash
@@ -940,6 +1001,7 @@ dir=${0%/*}
 <br>
 
 ### Getting options
+
 ---
 
 ```bash
@@ -961,6 +1023,7 @@ if [[ "$1" == '--' ]]; then shift; fi
 <br>
 
 ### Heredoc
+
 ---
 
 ```sh
@@ -972,6 +1035,7 @@ END
 <br>
 
 ### Reading input
+
 ---
 
 ```bash
@@ -989,6 +1053,7 @@ read -n 1 ans    # Just one character
 <br>
 
 ### Special variables
+
 ---
 
 | Expression         | Description                            |
@@ -1007,6 +1072,7 @@ read -n 1 ans    # Just one character
 <br>
 
 ### Go to previous directory
+
 ---
 
 ```bash
@@ -1020,6 +1086,7 @@ pwd # /home/user/foo
 <br>
 
 ### Check for command's result
+
 ---
 
 ```bash
@@ -1031,6 +1098,7 @@ fi
 <br>
 
 ### Grep check
+
 ---
 
 ```bash
@@ -1040,6 +1108,7 @@ fi
 ```
 
 ## Also see
+
 ---
 
 - [Bash-hackers wiki](https://web.archive.org/web/20230406205817/https://wiki.bash-hackers.org/) _(bash-hackers.org)_

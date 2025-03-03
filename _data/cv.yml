@@ -14,14 +14,14 @@
     - title: Certificate of Higher Education (HNC)
       institution: IES Teis, Vigo, Galicia, Spain
       year: 2024
-      description: 
+      description:
         - title: Systems Administration
           contents:
             - Sub-description 1.
             - Sub-description 2.
 
     - title: Vocational Education and Training (VET)
-      institution: 
+      institution:
       year: 2005
       description:
         - Description 1.

@@ -7,8 +7,8 @@ toc:
   sidebar: left
 ---
 
-Shortcuts
----------
+## Shortcuts
+
 {: .-one-column}
 
 ### Run Apache in Docker (for testing)

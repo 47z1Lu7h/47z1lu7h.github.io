@@ -3,14 +3,16 @@ layout: page
 title: Others
 description: A..
 category: "cheet sheets"
-display_categories: [ others ]
+display_categories: [others]
 nav: true
 nav_order: 10
 horizontal: true
 ---
 
 {:center: style="text-align: center"}
-### ```Others kind Cheet sheets```
+
+### `Others kind Cheet sheets`
+
 {:center}
 
 <div class="projects">

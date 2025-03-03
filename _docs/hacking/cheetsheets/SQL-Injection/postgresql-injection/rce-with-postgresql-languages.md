@@ -118,7 +118,6 @@ LANGUAGE 'plpythonu';
 SELECT findw("/"); #Find Writable folders from a folder (recursively)
 ```
 
-
 ```sql
 CREATE OR REPLACE FUNCTION find_file (exe_sea text)
 RETURNS VARCHAR(65535) stable
@@ -268,4 +267,3 @@ LANGUAGE 'plpythonu';
 
 SELECT req3('https://google.com'); #Request using python3
 ```
-

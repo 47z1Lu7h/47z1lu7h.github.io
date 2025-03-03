@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Subdomain Enum
-permalink: 
+permalink:
 category: recon
 toc:
   sidebar: left
@@ -127,7 +127,7 @@ cat subdomains.txt | analyticsrelationships
 
 Navigate through target main website with Burp:
 
-* Without passive scanner
-* Set forms auto submit
-* Scope in advanced, any protocol and one keyword ("tesla")
-* Last step, select all sitemap, Engagement Tools -> Analyze target
+- Without passive scanner
+- Set forms auto submit
+- Scope in advanced, any protocol and one keyword ("tesla")
+- Last step, select all sitemap, Engagement Tools -> Analyze target

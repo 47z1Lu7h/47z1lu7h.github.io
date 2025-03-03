@@ -16,7 +16,7 @@ cat subdomains/subdomains.txt | httpx -follow-redirects -random-agent -status-co
 ## WAF Checks
 
 ```bash
-# https://github.com/EnableSecurity/wafw00f 
+# https://github.com/EnableSecurity/wafw00f
 wafw00f -i websites.txt
 
 # IP Wafs/CDN lists
@@ -26,8 +26,8 @@ https://github.com/MISP/misp-warninglists
 ## CMS
 
 ```bash
-# https://github.com/Tuhinshubhra/CMSeeK 
-tr '\n' ',' < websites.txt > cms_test.txt 
+# https://github.com/Tuhinshubhra/CMSeeK
+tr '\n' ',' < websites.txt > cms_test.txt
 python3 cmseek.py -l cms_test.txt --batch -r
 ```
 
@@ -35,7 +35,7 @@ python3 cmseek.py -l cms_test.txt --batch -r
 
 ```bash
 # https://github.com/sensepost/gowitness
-gowitness file -f websites.txt 
+gowitness file -f websites.txt
 gowitness report serve -D gowitness.sqlite3
 ```
 
@@ -57,15 +57,15 @@ ffuf -mc all -fc 404 -ac -sf -s -w wordlist.txt -u https://www.domain.com/FUZZ
  gospider -S websites.txt --js -t 20 -d 2 --sitemap --robots -w -r > urls.txt
 
  # https://github.com/lc/gau
- cat websites.txt | gau --subs 
- 
- # https://github.com/tomnomnom/waybackurls 
- cat websites.txt | waybackurls 
- 
- # https://github.com/gwen001/github-endpoints 
- github-endpoints -q -k -d united.com -t tokens_github.txt 
- 
- # https://github.com/Josue87/roboxtractor 
+ cat websites.txt | gau --subs
+
+ # https://github.com/tomnomnom/waybackurls
+ cat websites.txt | waybackurls
+
+ # https://github.com/gwen001/github-endpoints
+ github-endpoints -q -k -d united.com -t tokens_github.txt
+
+ # https://github.com/Josue87/roboxtractor
  cat webs.txt | roboxtractor -m 1 -wb
 
  # https://github.com/projectdiscovery/katana
@@ -84,15 +84,15 @@ ffuf -mc all -fc 404 -ac -sf -s -w wordlist.txt -u https://www.domain.com/FUZZ
 # https://github.com/tomnomnom/qsreplace
 cat urls.txt | qsreplace -a
 
-# https://github.com/s0md3v/uro 
+# https://github.com/s0md3v/uro
 cat urls.txt | uro
 ```
 
 &#x20; Patterns
 
 ```bash
-# https://github.com/tomnomnom/gf 
-# https://github.com/1ndianl33t/Gf-Patterns 
+# https://github.com/tomnomnom/gf
+# https://github.com/1ndianl33t/Gf-Patterns
 gf sqli urls.txt
 ```
 
@@ -101,13 +101,13 @@ gf sqli urls.txt
 ### JS
 
 ```bash
-# https://github.com/w9w/JSA 
-cat urls.txt | python3 jsa.py 
+# https://github.com/w9w/JSA
+cat urls.txt | python3 jsa.py
 
-# https://github.com/lc/subjs 
-cat js.txt | subjs | httpx 
+# https://github.com/lc/subjs
+cat js.txt | subjs | httpx
 
-# https://github.com/GerbenJavado/LinkFinder 
+# https://github.com/GerbenJavado/LinkFinder
 python3 linkfinder.py -d -i https://domain.com/whatever.js -o cli
 ```
 
@@ -116,7 +116,7 @@ python3 linkfinder.py -d -i https://domain.com/whatever.js -o cli
 ### Wordlists generation
 
 ```bash
-# https://github.com/tomnomnom/unfurl 
-cat urls.txt | unfurl -u keys 
+# https://github.com/tomnomnom/unfurl
+cat urls.txt | unfurl -u keys
 cat urls.txt | unfurl -u values
 ```

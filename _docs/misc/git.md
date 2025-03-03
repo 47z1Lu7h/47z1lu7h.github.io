@@ -9,7 +9,6 @@ related posts: true
 
 ## Shortcuts
 
-
 ### Basics
 
 | `git init .` | Create a local repo |

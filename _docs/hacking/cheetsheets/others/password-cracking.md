@@ -5,7 +5,9 @@ category: others
 toc:
   sidebar: left
 ---
+
 ## Identify hash
+
 ---
 
 ```bash
@@ -14,6 +16,7 @@ haiti [hash]
 ```
 
 ## Dictionary creation
+
 ---
 
 ```bash
@@ -33,6 +36,7 @@ https://app.wgen.io/
 <br>
 
 ### Examples
+
 ---
 
 ```bash
@@ -64,6 +68,7 @@ python3 pydictor.py --sedb
 <br>
 
 ### Options
+
 ---
 
 ```bash
@@ -72,6 +77,7 @@ python3 pydictor.py --sedb
 ```
 
 ## jtr
+
 ---
 
 ```bash
@@ -80,11 +86,13 @@ john --rules --wordlist=/usr/share/wordlists/rockyou.txt hash
 ```
 
 ## Hashcat
+
 ---
 
 <br>
 
 ### Wiki
+
 ---
 
 (https://hashcat.net/wiki/doku.php?id=hashcat)
@@ -92,6 +100,7 @@ john --rules --wordlist=/usr/share/wordlists/rockyou.txt hash
 <br>
 
 ### Hashes
+
 ---
 
 (https://openwall.info/wiki/john/sample-hashes)
@@ -101,6 +110,7 @@ john --rules --wordlist=/usr/share/wordlists/rockyou.txt hash
 <br>
 
 ### Examples
+
 ---
 
 ```bash
@@ -116,7 +126,7 @@ hashcat -m 0 -w 3 -a 3 hashfile suffix?1?1?1 -i -1 --user ?l?d
 
 # Modes
 -a 0 = Dictionary (also with rules)
--a 3 = Bruteforce with mask 
+-a 3 = Bruteforce with mask
 
 # Max performance options
 --force -O -w 3 --opencl-device-types 1,2
@@ -139,11 +149,13 @@ hashcat -m 0 -w 3 -a 3 hashfile suffix?1?1?1 -i -1 --user ?l?d
 <br>
 
 ### Useful hashes
+
 ---
 
 <br>
 
 ### Linux Hashes - /etc/shadow
+
 ---
 
 | ID   | Description                   |
@@ -156,6 +168,7 @@ hashcat -m 0 -w 3 -a 3 hashfile suffix?1?1?1 -i -1 --user ?l?d
 <br>
 
 ### Windows Hashes
+
 ---
 
 | ID   | Description |
@@ -166,6 +179,7 @@ hashcat -m 0 -w 3 -a 3 hashfile suffix?1?1?1 -i -1 --user ?l?d
 <br>
 
 ### Common Hashes
+
 ---
 
 | ID    | Description | Type     |
@@ -181,6 +195,7 @@ hashcat -m 0 -w 3 -a 3 hashfile suffix?1?1?1 -i -1 --user ?l?d
 <br>
 
 ### Common Files with password
+
 ---
 
 | ID    | Description                                     |
@@ -211,6 +226,7 @@ hashcat -m 0 -w 3 -a 3 hashfile suffix?1?1?1 -i -1 --user ?l?d
 <br>
 
 ### Database Hashes
+
 ---
 
 | ID    | Description                 | Type            | Example Hash                                                                                                                                                     |
@@ -229,8 +245,8 @@ hashcat -m 0 -w 3 -a 3 hashfile suffix?1?1?1 -i -1 --user ?l?d
 <br>
 
 ### Kerberos Hashes
----
 
+---
 
 | ID    | Type          | Example        |
 | ----- | ------------- | -------------- |
@@ -240,6 +256,7 @@ hashcat -m 0 -w 3 -a 3 hashfile suffix?1?1?1 -i -1 --user ?l?d
 | 18200 | ASREP Type 23 | $krb5asrep$23$ |
 
 ## Files
+
 ---
 
 ```bash

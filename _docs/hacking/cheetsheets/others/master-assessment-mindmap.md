@@ -4,6 +4,4 @@
 
 ![](https://blog.it-securityguard.com/pbbt.png)
 
-
-
-![](../.gitbook/assets/Methodology\[1].png)
+![](../.gitbook/assets/Methodology[1].png)

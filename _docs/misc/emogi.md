@@ -16,9 +16,11 @@ related posts: true
 ---
 
 # :space_invader:
+
 ---
 
 ## Table of Contents
+
 ---
 
 - [Smileys & Emotion](#smileys--emotion)
@@ -35,6 +37,7 @@ related posts: true
 <br>
 
 ### Smileys & Emotion
+
 ---
 
 - [Face Smiling](#face-smiling)
@@ -56,8 +59,8 @@ related posts: true
 
 <br>
 
-
 ### Face Smiling
+
 ---
 
 |                          |           ico           | shortcode                         |        ico         | shortcode            |                           |
@@ -72,8 +75,8 @@ related posts: true
 
 <br>
 
-
 ### Face Affection
+
 ---
 
 |                          |               ico                | shortcode                          |          ico           | shortcode                |                           |
@@ -86,8 +89,8 @@ related posts: true
 
 <br>
 
-
 ### Face Tongue
+
 ---
 
 |                          |              ico               | shortcode                        |        ico         | shortcode            |                           |
@@ -98,8 +101,8 @@ related posts: true
 
 <br>
 
-
 ### Face Hand
+
 ---
 
 |                          |       ico       | shortcode         |        ico        | shortcode           |                           |
@@ -109,8 +112,8 @@ related posts: true
 
 <br>
 
-
 ### Face Neutral Skeptical
+
 ---
 
 |                          |         ico         | shortcode             |       ico        | shortcode          |                           |
@@ -124,8 +127,8 @@ related posts: true
 
 <br>
 
-
 ### Face Sleepy
+
 ---
 
 |                          |    ico     | shortcode    |       ico       | shortcode         |                           |
@@ -136,8 +139,8 @@ related posts: true
 
 <br>
 
-
 ### Face Unwell
+
 ---
 
 |                          |           ico            | shortcode                  |           ico           | shortcode                 |                           |
@@ -151,8 +154,8 @@ related posts: true
 
 <br>
 
-
 ### Face Hat
+
 ---
 
 |                          |        ico        | shortcode           |       ico       | shortcode         |                           |
@@ -162,8 +165,8 @@ related posts: true
 
 <br>
 
-
 ### Face Glasses
+
 ---
 
 |                          |      ico       | shortcode        |     ico     | shortcode     |                           |
@@ -173,8 +176,8 @@ related posts: true
 
 <br>
 
-
 ### Face Concerned
+
 ---
 
 |                          |           ico            | shortcode                  |           ico           | shortcode                 |                           |
@@ -194,8 +197,8 @@ related posts: true
 
 <br>
 
-
 ### Face Negative
+
 ---
 
 |                          |      ico      | shortcode       |          ico           | shortcode                |                           |
@@ -207,8 +210,8 @@ related posts: true
 
 <br>
 
-
 ### Face Costume
+
 ---
 
 |                          |       ico       | shortcode                                  |        ico        | shortcode           |                           |
@@ -220,8 +223,8 @@ related posts: true
 
 <br>
 
-
 ### Cat Face
+
 ---
 
 |                          |      ico      | shortcode       |        ico        | shortcode           |                           |
@@ -234,8 +237,8 @@ related posts: true
 
 <br>
 
-
 ### Monkey Face
+
 ---
 
 |                          |       ico       | shortcode         |      ico       | shortcode        |                           |
@@ -245,8 +248,8 @@ related posts: true
 
 <br>
 
-
 ### Heart
+
 ---
 
 |                          |        ico         | shortcode            |            ico            | shortcode                   |                           |
@@ -265,8 +268,8 @@ related posts: true
 
 <br>
 
-
 ### Emotion
+
 ---
 
 |                          |         ico          | shortcode              |         ico          | shortcode                     |                           |
@@ -278,10 +281,11 @@ related posts: true
 | [top](#smileys--emotion) |   :speech_balloon:   | `:speech_balloon:`     | :eye_speech_bubble:  | `:eye_speech_bubble:`         | [top](#table-of-contents) |
 | [top](#smileys--emotion) | :left_speech_bubble: | `:left_speech_bubble:` | :right_anger_bubble: | `:right_anger_bubble:`        | [top](#table-of-contents) |
 | [top](#smileys--emotion) |  :thought_balloon:   | `:thought_balloon:`    |        :zzz:         | `:zzz:`                       | [top](#table-of-contents) |
+
 <br>
 
-
 ### People & Body
+
 ---
 
 - [Hand Fingers Open](#hand-fingers-open)
@@ -303,8 +307,8 @@ related posts: true
 
 <br>
 
-
 ### Hand Fingers Open
+
 ---
 
 |                      |                ico                 | shortcode                            |          ico          | shortcode                       |                           |
@@ -315,8 +319,8 @@ related posts: true
 
 <br>
 
-
 ### Hand Fingers Partial
+
 ---
 
 |                      |        ico        | shortcode           |        ico         | shortcode            |                           |
@@ -328,8 +332,8 @@ related posts: true
 
 <br>
 
-
 ### Hand Single Finger
+
 ---
 
 |                      |     ico      | shortcode      |      ico      | shortcode                       |                           |
@@ -340,8 +344,8 @@ related posts: true
 
 <br>
 
-
 ### Hand Fingers Closed
+
 ---
 
 |                      |     ico     | shortcode                       |     ico      | shortcode                                               |                           |
@@ -352,8 +356,8 @@ related posts: true
 
 <br>
 
-
 ### Hands
+
 ---
 
 |                      |     ico      | shortcode      |         ico         | shortcode             |                           |
@@ -364,8 +368,8 @@ related posts: true
 
 <br>
 
-
 ### Hand Prop
+
 ---
 
 |                      |      ico       | shortcode        |     ico     | shortcode     |                           |
@@ -375,8 +379,8 @@ related posts: true
 
 <br>
 
-
 ### Body Parts
+
 ---
 
 |                      |          ico           | shortcode                |        ico         | shortcode            |                           |
@@ -393,8 +397,8 @@ related posts: true
 
 <br>
 
-
 ### Person
+
 ---
 
 |                      |         ico         | shortcode             |          ico          | shortcode                                      |                           |
@@ -416,8 +420,8 @@ related posts: true
 
 <br>
 
-
 ### Person Gesture
+
 ---
 
 |                      |            ico            | shortcode                                                  |         ico          | shortcode                                 |                           |
@@ -439,7 +443,6 @@ related posts: true
 | [top](#people--body) |      :man_shrugging:      | `:man_shrugging:`                                          |  :woman_shrugging:   | `:woman_shrugging:`                       | [top](#table-of-contents) |
 
 <br>
-
 
 ### Person Role
 
@@ -490,8 +493,8 @@ related posts: true
 
 <br>
 
-
 ### Person Fantasy
+
 ---
 
 |                      |        ico         | shortcode            |         ico          | shortcode              |                           |
@@ -515,8 +518,8 @@ related posts: true
 
 <br>
 
-
 ### Person Activity
+
 ---
 
 |                      |               ico                | shortcode                          |              ico              | shortcode                           |                           |
@@ -544,8 +547,8 @@ related posts: true
 
 <br>
 
-
 ### Person Sport
+
 ---
 
 |                      |            ico             | shortcode                                           |           ico            | shortcode                                       |                           |
@@ -575,8 +578,8 @@ related posts: true
 
 <br>
 
-
 ### Person Resting
+
 ---
 
 |                      |          ico           | shortcode                |         ico          | shortcode              |                           |
@@ -587,8 +590,8 @@ related posts: true
 
 <br>
 
-
 ### Family
+
 ---
 
 |                      |              ico               | shortcode                        |               ico               | shortcode                         |                           |
@@ -615,8 +618,8 @@ related posts: true
 
 <br>
 
-
 ### Person Symbol
+
 ---
 
 |                      |          ico          | shortcode               |         ico          | shortcode              |                           |
@@ -628,6 +631,7 @@ related posts: true
 <br>
 
 ### Animals & Nature
+
 ---
 
 - [Animal Mammal](#animal-mammal)
@@ -641,8 +645,8 @@ related posts: true
 
 <br>
 
-
 ### Animal Mammal
+
 ---
 
 |                         |        ico        | shortcode           |       ico       | shortcode                      |                           |
@@ -682,8 +686,8 @@ related posts: true
 
 <br>
 
-
 ### Animal Bird
+
 ---
 
 |                         |     ico      | shortcode      |       ico        | shortcode          |                           |
@@ -700,8 +704,8 @@ related posts: true
 
 <br>
 
-
 ### Animal Amphibian
+
 ---
 
 |                         |  ico   | shortcode |                           |
@@ -710,8 +714,8 @@ related posts: true
 
 <br>
 
-
 ### Animal Reptile
+
 ---
 
 |                         |      ico      | shortcode       |   ico    | shortcode  |                           |
@@ -723,8 +727,8 @@ related posts: true
 
 <br>
 
-
 ### Animal Marine
+
 ---
 
 |                         |    ico     | shortcode                      |       ico       | shortcode         |                           |
@@ -737,8 +741,8 @@ related posts: true
 
 <br>
 
-
 ### Animal Bug
+
 ---
 
 |                         |      ico      | shortcode                   |     ico     | shortcode     |                           |
@@ -754,8 +758,8 @@ related posts: true
 
 <br>
 
-
 ### Plant Flower
+
 ---
 
 |                         |      ico       | shortcode        |       ico        | shortcode          |                           |
@@ -768,8 +772,8 @@ related posts: true
 
 <br>
 
-
 ### Plant Other
+
 ---
 
 |                         |       ico        | shortcode          |        ico         | shortcode            |                           |
@@ -785,6 +789,7 @@ related posts: true
 <br>
 
 ### Food & Drink
+
 ---
 
 - [Food Fruit](#food-fruit)
@@ -798,8 +803,8 @@ related posts: true
 
 <br>
 
-
 ### Food Fruit
+
 ---
 
 |                     |      ico      | shortcode       |      ico      | shortcode                                           |                           |
@@ -817,8 +822,8 @@ related posts: true
 
 <br>
 
-
 ### Food Vegetable
+
 ---
 
 |                     |      ico      | shortcode       |     ico      | shortcode      |                           |
@@ -833,8 +838,8 @@ related posts: true
 
 <br>
 
-
 ### Food Prepared
+
 ---
 
 |                     |        ico        | shortcode           |          ico          | shortcode               |                           |
@@ -859,8 +864,8 @@ related posts: true
 
 <br>
 
-
 ### Food Asian
+
 ---
 
 |                     |      ico       | shortcode        |       ico        | shortcode          |                           |
@@ -877,8 +882,8 @@ related posts: true
 
 <br>
 
-
 ### Food Marine
+
 ---
 
 |                     |   ico    | shortcode  |    ico    | shortcode   |                           |
@@ -889,8 +894,8 @@ related posts: true
 
 <br>
 
-
 ### Food Sweet
+
 ---
 
 |                     |     ico     | shortcode     |       ico       | shortcode         |                           |
@@ -905,8 +910,8 @@ related posts: true
 
 <br>
 
-
 ### Drink
+
 ---
 
 |                     |        ico         | shortcode            |       ico        | shortcode          |                           |
@@ -924,8 +929,8 @@ related posts: true
 
 <br>
 
-
 ### Dishware
+
 ---
 
 |                     |       ico        | shortcode                  |         ico          | shortcode              |                           |
@@ -936,8 +941,8 @@ related posts: true
 
 <br>
 
-
 ### Travel & Places
+
 ---
 
 - [Place Map](#place-map)
@@ -954,8 +959,8 @@ related posts: true
 
 <br>
 
-
 ### Place Map
+
 ---
 
 |                        |      ico       | shortcode        |          ico           | shortcode                |                           |
@@ -967,8 +972,8 @@ related posts: true
 
 <br>
 
-
 ### Place Geographic
+
 ---
 
 |                        |       ico       | shortcode         |       ico        | shortcode          |                           |
@@ -981,8 +986,8 @@ related posts: true
 
 <br>
 
-
 ### Place Building
+
 ---
 
 |                        |           ico           | shortcode                 |          ico           | shortcode                |                           |
@@ -1004,8 +1009,8 @@ related posts: true
 
 <br>
 
-
 ### Place Religious
+
 ---
 
 |                        |       ico       | shortcode         |     ico     | shortcode     |                           |
@@ -1016,8 +1021,8 @@ related posts: true
 
 <br>
 
-
 ### Place Other
+
 ---
 
 |                        |      ico       | shortcode        |           ico            | shortcode                  |                           |
@@ -1033,8 +1038,8 @@ related posts: true
 
 <br>
 
-
 ### Transport Ground
+
 ---
 
 |                        |           ico            | shortcode                  |          ico           | shortcode                |                           |
@@ -1067,8 +1072,8 @@ related posts: true
 
 <br>
 
-
 ### Transport Water
+
 ---
 
 |                        |       ico        | shortcode          |     ico     | shortcode                    |                           |
@@ -1080,8 +1085,8 @@ related posts: true
 
 <br>
 
-
 ### Transport Air
+
 ---
 
 |                        |          ico           | shortcode                |         ico          | shortcode              |                           |
@@ -1096,8 +1101,8 @@ related posts: true
 
 <br>
 
-
 ### Hotel
+
 ---
 
 |                        |      ico       | shortcode        |    ico    | shortcode   |                           |
@@ -1106,8 +1111,8 @@ related posts: true
 
 <br>
 
-
 ### Time
+
 ---
 
 |                        |         ico         | shortcode             |           ico            | shortcode                  |                           |
@@ -1131,8 +1136,8 @@ related posts: true
 
 <br>
 
-
 ### Sky & Weather
+
 ---
 
 |                        |              ico               | shortcode                        |               ico               | shortcode                               |                           |
@@ -1165,6 +1170,7 @@ related posts: true
 <br>
 
 ### Activities
+
 ---
 
 - [Event](#event)
@@ -1175,8 +1181,8 @@ related posts: true
 
 <br>
 
-
 ### Event
+
 ---
 
 |                    |        ico        | shortcode           |       ico        | shortcode          |                           |
@@ -1195,8 +1201,8 @@ related posts: true
 
 <br>
 
-
 ### Award Medal
+
 ---
 
 |                    |        ico        | shortcode           |        ico        | shortcode           |                           |
@@ -1207,8 +1213,8 @@ related posts: true
 
 <br>
 
-
 ### Sport
+
 ---
 
 |                    |       ico        | shortcode          |            ico            | shortcode                   |                           |
@@ -1230,8 +1236,8 @@ related posts: true
 
 <br>
 
-
 ### Game
+
 ---
 
 |                    |          ico           | shortcode                |      ico       | shortcode        |                           |
@@ -1251,8 +1257,8 @@ related posts: true
 
 <br>
 
-
 ### Arts & Crafts
+
 ---
 
 |                    |        ico        | shortcode           |       ico        | shortcode          |                           |
@@ -1265,6 +1271,7 @@ related posts: true
 <br>
 
 ### Objects
+
 ---
 
 - [Clothing](#clothing)
@@ -1288,8 +1295,8 @@ related posts: true
 
 <br>
 
-
 ### Clothing
+
 ---
 
 |                 |          ico           | shortcode                     |         ico          | shortcode              |                           |
@@ -1320,8 +1327,8 @@ related posts: true
 
 <br>
 
-
 ### Sound
+
 ---
 
 |                 |      ico      | shortcode       |     ico      | shortcode      |                           |
@@ -1334,8 +1341,8 @@ related posts: true
 
 <br>
 
-
 ### Music
+
 ---
 
 |                 |       ico       | shortcode         |         ico         | shortcode             |                           |
@@ -1348,8 +1355,8 @@ related posts: true
 
 <br>
 
-
 ### Musical Instrument
+
 ---
 
 |                 |     ico     | shortcode     |        ico         | shortcode            |                           |
@@ -1362,8 +1369,8 @@ related posts: true
 
 <br>
 
-
 ### Phone
+
 ---
 
 |                 |   ico    | shortcode                      |         ico          | shortcode              |                           |
@@ -1374,8 +1381,8 @@ related posts: true
 
 <br>
 
-
 ### Computer
+
 ---
 
 |                 |       ico        | shortcode          |        ico         | shortcode            |                           |
@@ -1390,8 +1397,8 @@ related posts: true
 
 <br>
 
-
 ### Light & Video
+
 ---
 
 |                 |        ico        | shortcode                              |      ico       | shortcode        |                           |
@@ -1407,8 +1414,8 @@ related posts: true
 
 <br>
 
-
 ### Book Paper
+
 ---
 
 |                 |               ico                | shortcode                          |       ico        | shortcode          |                           |
@@ -1425,8 +1432,8 @@ related posts: true
 
 <br>
 
-
 ### Money
+
 ---
 
 |                 |        ico         | shortcode            |      ico      | shortcode       |                           |
@@ -1439,8 +1446,8 @@ related posts: true
 
 <br>
 
-
 ### Mail
+
 ---
 
 |                 |          ico           | shortcode                |          ico          | shortcode                   |                           |
@@ -1455,8 +1462,8 @@ related posts: true
 
 <br>
 
-
 ### Writing
+
 ---
 
 |                 |      ico       | shortcode                  |     ico     | shortcode     |                           |
@@ -1468,8 +1475,8 @@ related posts: true
 
 <br>
 
-
 ### Office
+
 ---
 
 |                 |             ico              | shortcode                      |            ico             | shortcode                    |                           |
@@ -1489,8 +1496,8 @@ related posts: true
 
 <br>
 
-
 ### Lock
+
 ---
 
 |                 |         ico         | shortcode             |          ico           | shortcode                |                           |
@@ -1501,8 +1508,8 @@ related posts: true
 
 <br>
 
-
 ### Tool
+
 ---
 
 |                 |         ico         | shortcode             |        ico        | shortcode           |                           |
@@ -1523,8 +1530,8 @@ related posts: true
 
 <br>
 
-
 ### Science
+
 ---
 
 |                 |     ico      | shortcode      |     ico     | shortcode     |                           |
@@ -1536,8 +1543,8 @@ related posts: true
 
 <br>
 
-
 ### Medical
+
 ---
 
 |                 |      ico      | shortcode       |        ico         | shortcode            |                           |
@@ -1548,8 +1555,8 @@ related posts: true
 
 <br>
 
-
 ### Household
+
 ---
 
 |                 |         ico         | shortcode             |       ico        | shortcode          |                           |
@@ -1569,8 +1576,8 @@ related posts: true
 
 <br>
 
-
 ### Other Object
+
 ---
 
 |                 |      ico       | shortcode        |      ico      | shortcode       |                           |
@@ -1583,6 +1590,7 @@ related posts: true
 <br>
 
 ### Symbols
+
 ---
 
 - [Transport Sign](#transport-sign)
@@ -1602,8 +1610,8 @@ related posts: true
 
 <br>
 
-
 ### Transport Sign
+
 ---
 
 |                 |       ico       | shortcode         |            ico            | shortcode                   |                           |
@@ -1618,8 +1626,8 @@ related posts: true
 
 <br>
 
-
 ### Warning
+
 ---
 
 |                 |       ico        | shortcode          |         ico         | shortcode             |                           |
@@ -1634,8 +1642,8 @@ related posts: true
 
 <br>
 
-
 ### Arrow
+
 ---
 
 |                 |             ico             | shortcode                     |            ico            | shortcode                   |                           |
@@ -1654,8 +1662,8 @@ related posts: true
 
 <br>
 
-
 ### Religion
+
 ---
 
 |                 |         ico         | shortcode             |        ico         | shortcode            |                           |
@@ -1669,8 +1677,8 @@ related posts: true
 
 <br>
 
-
 ### Zodiac
+
 ---
 
 |                 |      ico      | shortcode       |     ico     | shortcode     |                           |
@@ -1685,8 +1693,8 @@ related posts: true
 
 <br>
 
-
 ### Av Symbol
+
 ---
 
 |                 |             ico             | shortcode                     |           ico           | shortcode                 |                           |
@@ -1706,8 +1714,8 @@ related posts: true
 
 <br>
 
-
 ### Gender
+
 ---
 
 |                 |         ico          | shortcode              |     ico     | shortcode     |                           |
@@ -1717,8 +1725,8 @@ related posts: true
 
 <br>
 
-
 ### Math
+
 ---
 
 |                 |           ico            | shortcode                  |          ico          | shortcode               |                           |
@@ -1729,8 +1737,8 @@ related posts: true
 
 <br>
 
-
 ### Punctuation
+
 ---
 
 |                 |        ico         | shortcode            |       ico       | shortcode                                         |                           |
@@ -1742,8 +1750,8 @@ related posts: true
 
 <br>
 
-
 ### Currency
+
 ---
 
 |                 |         ico         | shortcode             |         ico         | shortcode             |                           |
@@ -1752,8 +1760,8 @@ related posts: true
 
 <br>
 
-
 ### Other Symbol
+
 ---
 
 |                 |            ico             | shortcode                    |              ico              | shortcode                       |                           |
@@ -1772,8 +1780,8 @@ related posts: true
 
 <br>
 
-
 ### Keycap
+
 ---
 
 |                 |     ico      | shortcode      |    ico     | shortcode    |                           |
@@ -1788,8 +1796,8 @@ related posts: true
 
 <br>
 
-
 ### Alphanum
+
 ---
 
 |                 |      ico       | shortcode        |          ico          | shortcode               |                           |
@@ -1817,8 +1825,8 @@ related posts: true
 
 <br>
 
-
 ### Geometric
+
 ---
 
 |                 |                ico                | shortcode                           |             ico             | shortcode                     |                           |
@@ -1844,6 +1852,7 @@ related posts: true
 <br>
 
 ### Flags
+
 ---
 
 - [Flag](#flag)
@@ -1852,8 +1861,8 @@ related posts: true
 
 <br>
 
-
 ### Flag
+
 ---
 
 |               |        ico         | shortcode            |            ico            | shortcode                   |                           |
@@ -1865,8 +1874,8 @@ related posts: true
 
 <br>
 
-
 ### Country Flag
+
 ---
 
 |               |                  ico                   | shortcode                                |               ico                | shortcode                          |                           |
@@ -2003,8 +2012,8 @@ related posts: true
 
 <br>
 
-
 ### Subdivision Flag
+
 ---
 
 |               |    ico    | shortcode   |    ico     | shortcode    |                           |
@@ -2015,6 +2024,7 @@ related posts: true
 <br>
 
 ### GitHub Custom Emoji
+
 ---
 
 |                             |       ico       | shortcode         |     ico      | shortcode      |                           |

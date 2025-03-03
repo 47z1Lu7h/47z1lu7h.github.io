@@ -9,8 +9,8 @@ profile:
   image: logos/47z1-Left.jpg
   image_circular: true
   content: about_me.md
-  more_info: > 
-    Any exciting goal will arrange exciting ways to achieve it. 😍 
+  more_info: >
+    Any exciting goal will arrange exciting ways to achieve it. 😍
 
 news: true
 social: true
@@ -22,16 +22,21 @@ images:
 <!--    # <p>  Dysfunctional systems will fall under their own weight. Let them. </p> -->
 
 ---
+
 ---
+
 # Welcome! 😍
+
 ---
+
 ---
 
 Hello!! this is **Roi** :slightly_smiling_face:<br> A random guy from south of Galicia, north of Spain.<br> A really beatiful region with lot's of nature... and the sea :heart_eyes:<br> We have some big estuary around with not so big mountains that make some of nicest the views :smiling_face_with_three_hearts:
 
 ---
 
-##### ```the Galician Coastline, is located in the far north western corner of Spain on the Atlantic Coast. It borders Asturias to the east and Portugal to the south and is the longest coastline of all the communities in Spain.```
+##### `the Galician Coastline, is located in the far north western corner of Spain on the Atlantic Coast. It borders Asturias to the east and Portugal to the south and is the longest coastline of all the communities in Spain.`
+
 ---
 
 <div>
@@ -54,10 +59,13 @@ Hello!! this is **Roi** :slightly_smiling_face:<br> A random guy from south of G
 <br>
 
 ---
----
-
->  ```Physical reality is a reflection of what’s going on in our belief systems and in our energy. (…) Physical reality is really nothing more than a mirror of the energetic state of being that we choose to be in, based on the beliefs we hold to be true. (…) It’s possible to learn the lesson that allows us to change ourselves and get a different reflection.```
 
 ---
+
+> `Physical reality is a reflection of what’s going on in our belief systems and in our energy. (…) Physical reality is really nothing more than a mirror of the energetic state of being that we choose to be in, based on the beliefs we hold to be true. (…) It’s possible to learn the lesson that allows us to change ourselves and get a different reflection.`
+
 ---
+
+---
+
 <br>

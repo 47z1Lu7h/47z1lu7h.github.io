@@ -5,11 +5,15 @@ title: Github Content
 description:
 nav: false
 ---
+
 <br>
 
 ---
+
 ## My User 😍
+
 ---
+
 {% if site.data.repositories.github_users %}
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
@@ -35,7 +39,9 @@ nav: false
 <br>
 
 ---
+
 ## My Repos 😍
+
 ---
 
 {% if site.data.repositories.github_repos %}

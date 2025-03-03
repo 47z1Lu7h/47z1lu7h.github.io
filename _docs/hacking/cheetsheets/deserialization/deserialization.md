@@ -156,7 +156,6 @@ Before checking the bypass technique, try using `print(base64.b64encode(pickle.d
 
 The following page present the technique to **abuse an unsafe deserialization in yamls** python libraries and finishes with a tool that can be used to generate RCE deserialization payload for **Pickle, PyYAML, jsonpickle and ruamel.yaml**:
 
-
 <br>
 
 ### Class Pollution (Python Prototype Pollution)
@@ -667,6 +666,7 @@ ObjectInputFilter.Config.setSerialFilter(filter);
 ## JNDI Injection & log4Shell
 
 Find whats is **JNDI Injection, how to abuse it via RMI, CORBA & LDAP and how to exploit log4shell** (and example of this vuln) in the following page:
+
 ## JMS - Java Message Service
 
 > The **Java Message Service** (**JMS**) API is a Java message-oriented middleware API for sending messages between two or more clients. It is an implementation to handle the producer–consumer problem. JMS is a part of the Java Platform, Enterprise Edition (Java EE), and was defined by a specification developed at Sun Microsystems, but which has since been guided by the Java Community Process. It is a messaging standard that allows application components based on Java EE to create, send, receive, and read messages. It allows the communication between different components of a distributed application to be loosely coupled, reliable, and asynchronous. (From [Wikipedia](https://en.wikipedia.org/wiki/Java_Message_Service)).

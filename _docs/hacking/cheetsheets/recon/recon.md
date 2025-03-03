@@ -3,14 +3,16 @@ layout: page
 title: Recon
 description: A..
 category: "cheet sheets"
-display_categories: [ recon ]
+display_categories: [recon]
 nav: true
 nav_order: 10
 horizontal: true
 ---
 
 {:center: style="text-align: center"}
-### ```Recon Cheet sheets```
+
+### `Recon Cheet sheets`
+
 {:center}
 
 <div class="projects">
