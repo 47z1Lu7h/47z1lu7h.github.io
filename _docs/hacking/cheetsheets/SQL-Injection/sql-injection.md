@@ -86,10 +86,6 @@ page.asp?id=1 and 1=2 -- results in false
 
 This word-list was created to try to **confirm SQLinjections** in the proposed way:
 
-{{#file}}
-sqli-logic.txt
-{{#endfile}}
-
 <br>
 
 ### Confirming with Timing
@@ -363,10 +359,6 @@ admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055'
 
 You should use as username each line of the list and as password always: _**Pass1234.**_\
 _(This payloads are also included in the big list mentioned at the beginning of this section)_
-
-{{#file}}
-sqli-hashbypass.txt
-{{#endfile}}
 
 <br>
 

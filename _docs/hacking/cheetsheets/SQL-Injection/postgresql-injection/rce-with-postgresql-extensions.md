@@ -193,10 +193,6 @@ pgsql_exec(PG_FUNCTION_ARGS)
 
 You can find the DLL compiled in this zip:
 
-{{#file}}
-pgsql_exec.zip
-{{#endfile}}
-
 You can indicate to this DLL **which binary to execute** and the number of time to execute it, in this example it will execute `calc.exe` 2 times:
 
 ```bash
