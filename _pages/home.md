@@ -52,7 +52,7 @@ at [youtube](https://www.youtube.com/channel/UCgzsRmCl4BU-QmSVC4jFOlg) _channel_
 
 I got in love with the so configurable **Linux** and start to play in **Hackthebox**.<br>
 By that time I made a video with my brand new **Bspwm**... I was so happy! :blush: :smile: hehehe<br>
-If you wanna check, you can find the video in this **[blog](/blog/2021/first_contact_with-bspwm/)**. :wink:
+If you wanna check it, you can find the video in this **[blog](/blog/2021/first_contact_with-bspwm/)**. :wink:
 
 ---
 
@@ -91,7 +91,9 @@ _Thanks for stopping by, and I hope you find something here that sparks your cur
 {:center}
 
 {:center: style="text-align: center"}
+
 ### **`Feel free to explore!`**
+
 {:center}
 
 ---
