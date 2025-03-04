@@ -91,9 +91,7 @@ _Thanks for stopping by, and I hope you find something here that sparks your cur
 {:center}
 
 {:center: style="text-align: center"}
-
 ### **`Feel free to explore!`**
-
 {:center}
 
 ---
