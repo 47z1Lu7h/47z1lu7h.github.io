@@ -25,8 +25,9 @@ related posts: true
 
 ---
 
-##### Hey there!!:wave::v::sparkling_heart: This is my avatar, **atziluth**. I know it’s written a bit cryptic... I like the hack style of rename things... hehehe :sweat_smile:
+##### Hey there!!:wave::v::sparkling_heart:<br>
 
+This is my avatar, **atziluth**. I know it’s written a bit cryptic... I like the hack style of rename things... hehehe :sweat_smile:
 <br>
 
 ---
@@ -45,12 +46,9 @@ When I finnised the first year of the course **System Administrator**, _I never 
 My classmates share a video in the class whatsapp group about a pentester doing a machine, thing that never seen before, and for me it was talking in Chinnese!!!<br>
 
 And I thought, **OMG**!! Shouldn't I understand at least a little thing from what he's doing ¿?¿?¿? :flushed: :flushed: I am studing this.. or I think so... <br>
-And there I got in love, and never stop viewing stremings from **S4vitar** :relaxed:
-I leave some of his social:
-
-- [github](https://github.com/s4vitar)
-- [twiter](https://x.com/s4vitar?lang=en)
-- [youtube](https://www.youtube.com/channel/UCgzsRmCl4BU-QmSVC4jFOlg)
+And there I got in love, and never stop viewing streamings from **S4vitar** :relaxed:<br>
+I leave here some of his social: _@s4vitar_ at [github](https://github.com/s4vitar), _@s4vitar_ at [twiter](https://x.com/s4vitar?lang=en) and _@S4viOnLive_
+at [youtube](https://www.youtube.com/channel/UCgzsRmCl4BU-QmSVC4jFOlg) _channel_ of his live streamings.<br>
 
 I got in love with the so configurable **Linux** and start to play in **Hackthebox**<br>
 By that time I made a video with my brand new **[Bspwm!!!](/blog/2021/first_contact_with-bspwm/)**... I was so happy! :blush: :smile: hehehe<br><br>
@@ -77,8 +75,9 @@ _In this place you can find everything related to my journey:_
 ---
 
 {:center: style="text-align: center"}
+
 > `It’s a space to explore, learn, and connect. I believe in questioning the norm and finding deeper truths, and I hope you'll find something valuable here too.` :wink: <br>
-{:center}
+> {:center}
 
 ---
 
@@ -91,6 +90,7 @@ _Thanks for stopping by, and I hope you find something here that sparks your cur
 {:center}
 
 ### `Feel free to explore!`
+
 {:center}
 
 ---
