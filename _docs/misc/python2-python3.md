@@ -2,7 +2,7 @@
 layout: page
 title: Python 2 vs Python 3
 permalink: /docs/misc/python2-3/
-category: misc
+category: code
 img: assets/img/misc/python2-3.webp
 toc:
   sidebar: left

@@ -2,7 +2,7 @@
 layout: page
 title: Web fuzzers review
 permalink: /docs/hacking/cheetseets/others/web-fuzzers-comparision/
-category: others
+category: hacking
 toc:
   sidebar: left
 ---

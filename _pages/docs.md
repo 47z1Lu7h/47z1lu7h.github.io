@@ -3,7 +3,7 @@ layout: page
 title: / d0Cs \
 nav: true
 permalink: /docs/
-display_categories: [hacking, "cheet sheets", misc]
+display_categories: [code, hacking, "cheet sheets", misc]
 horizontal: true
 ---
 

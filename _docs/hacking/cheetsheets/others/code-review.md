@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Code review
-category: others
+category: code
 toc:
   sidebar: left
 ---

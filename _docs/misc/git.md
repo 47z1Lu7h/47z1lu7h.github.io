@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Git
-category: misc
+category: code
 toc:
   sidebar: left
 related posts: true

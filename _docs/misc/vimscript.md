@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Vim scripting
-category: "cheet sheets"
+category: code
 img: assets/img/hacking/matrix/cryptogram.jpg
 toc:
   sidebar: left

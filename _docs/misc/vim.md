@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Vim
-category: "cheet sheets"
+category: code
 img: assets/img/hacking/matrix/chinese-matrix.jpg
 toc:
   sidebar: left

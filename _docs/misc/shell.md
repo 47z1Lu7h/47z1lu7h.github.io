@@ -1,7 +1,7 @@
 ---
 layout: page
 title: shell
-category: "cheet sheets"
+category: code
 img: assets/img/hacking/h4Ck/mixNumbers.png
 ---
 

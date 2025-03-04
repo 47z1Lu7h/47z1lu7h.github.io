@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Apache
-category: "cheet sheets"
+category: code
 img: assets/img/hacking/cheetsheets/apache.png
 toc:
   sidebar: left

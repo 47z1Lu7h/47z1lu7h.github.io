@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bash scripting
-category: "cheet sheets"
+category: code
 img: assets/img/hacking/h4Ck/mixNumbers.png
 toc:
   sidebar: left
