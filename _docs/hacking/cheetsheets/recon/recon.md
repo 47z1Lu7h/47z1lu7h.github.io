@@ -8,12 +8,11 @@ nav: true
 nav_order: 10
 horizontal: true
 ---
-
+<br>
 {:center: style="text-align: center"}
-
 ### `Recon Cheet sheets`
-
 {:center}
+<br>
 
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
