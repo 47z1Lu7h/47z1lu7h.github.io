@@ -50,8 +50,9 @@ And there I got in love, and never stop viewing streamings from **S4vitar** :rel
 I leave here some of his social: _@s4vitar_ at [github](https://github.com/s4vitar), _@s4vitar_ at [twiter](https://x.com/s4vitar?lang=en) and _@S4viOnLive_
 at [youtube](https://www.youtube.com/channel/UCgzsRmCl4BU-QmSVC4jFOlg) _channel_ of his live streamings.<br>
 
-I got in love with the so configurable **Linux** and start to play in **Hackthebox**<br>
-By that time I made a video with my brand new **[Bspwm!!!](/blog/2021/first_contact_with-bspwm/)**... I was so happy! :blush: :smile: hehehe<br><br>
+I got in love with the so configurable **Linux** and start to play in **Hackthebox**.<br>
+By that time I made a video with my brand new **Bspwm**... I was so happy! :blush: :smile: hehehe<br>
+If you wanna check, you can find the video in this **[blog](/blog/2021/first_contact_with-bspwm/)**. :wink:
 
 ---
 
@@ -89,7 +90,9 @@ _In this place you can find everything related to my journey:_
 _Thanks for stopping by, and I hope you find something here that sparks your curiosity!!_
 {:center}
 
-### `Feel free to explore!`
+{:center: style="text-align: center"}
+
+### **`Feel free to explore!`**
 
 {:center}
 

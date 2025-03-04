@@ -7,7 +7,12 @@ display_categories: [hacking, "cheet sheets", misc]
 horizontal: true
 ---
 
-####
+---
+
+<br>
+
+- ##### **Here I have all the cheetsheets that I find interesting**.
+  - ##### **Many from kown repositories and people, and some mine.** :ok_hand::slightly_smiling_face::wink:
 
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
