@@ -32,7 +32,7 @@ horizontal: true
 {% else %}
   <!-- Display projects without categories -->
   <ul>
-    {% assign sorted_projects = site.hacking | sort: "importance" %}
+    {% assign sorted_projects = site.docs | sort: "importance" %}
     {% for project in sorted_projects %}
       <li><a href="{{ project.url }}">{{ project.title }}</a></li>
     {% endfor %}

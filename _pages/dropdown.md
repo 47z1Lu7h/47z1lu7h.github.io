@@ -21,5 +21,4 @@ children:
   - title: news
     permalink: /news/
   - title: divider
-lang: en
 ---

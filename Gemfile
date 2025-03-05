@@ -19,6 +19,8 @@ group :jekyll_plugins do
     gem 'mini_racer'
     gem 'unicode_utils'
     gem 'webrick'
+    gem 'jekyll-polyglot'
+
 end
 group :other_plugins do
     gem 'feedjira'

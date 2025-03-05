@@ -10,7 +10,8 @@ profile:
   image_circular: true
   content: about_me.md
   more_info: >
-    Any exciting goal will arrange exciting ways to achieve it. 😍
+    <p>-  Any exciting goal will arrange exciting ways to achieve it. 😍 </p>
+    <p>-  Two things define you: Your patience when you have nothing and your attitude when you have everything.</p>
 
 news: true
 social: true

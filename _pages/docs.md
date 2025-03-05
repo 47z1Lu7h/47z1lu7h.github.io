@@ -30,7 +30,7 @@ horizontal: true
   {% endfor %}
 {% else %}
   <ul>
-    {% assign sorted_projects = site.hacking | sort: "importance" %}
+    {% assign sorted_projects = site.docs | sort: "importance" %}
     {% for project in sorted_projects %}
       <li><a href="{{ project.url }}">{{ project.title }}</a> - {{ project.date }}</li>
     {% endfor %}

@@ -26,7 +26,7 @@ display_categories: [sql, sqlmap, mysql, oracle, mssql, postgresql ]
 {% else %}
   <!-- Display projects without categories -->
   <ul>
-    {% assign sorted_projects = site.hacking | sort: "importance" %}
+    {% assign sorted_projects = site.docs | sort: "importance" %}
     {% for project in sorted_projects %}
       <li><a href="{{ project.url }}">{{ project.title }}</a> - {{ project.date }}</li>
     {% endfor %}
